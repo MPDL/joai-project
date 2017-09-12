@@ -1520,8 +1520,8 @@ public class XMLDocReader extends FileIndexingServiceDocReader {
 	private HashMap inProgressAnnosByFormat = null;
 	private int numCompletedAnnos = 0;
 	private int numInProgressAnnos = 0;
-//	private String[] relatedResourceIds = null;
-//	private String[] relatedResourceUrls = null;
+	private String[] relatedResourceIds = null;
+	private String[] relatedResourceUrls = null;
 	private String[] allIds = null;
 
 
@@ -1815,7 +1815,7 @@ public class XMLDocReader extends FileIndexingServiceDocReader {
 		for (int i = 0; i < annoResults.size(); i++) {
 			DleseAnnoDocReader anno = (DleseAnnoDocReader) annoResults.get(i).getDocReader();
 			String annoType = anno.getType();
-//			String annoStatus = anno.getStatus();
+			String annoStatus = anno.getStatus();
 			String annoFormat = anno.getFormat();
 			isCompleted = anno.getIsCompleted();
 			isInProgress = anno.getIsInProgress();

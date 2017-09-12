@@ -26,9 +26,11 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import org.dlese.dpc.ndr.NdrUtils;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.reader.MetadataProviderReader;
 import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.propertiesmgr.PropertiesManager;
 import org.dlese.dpc.repository.PutCollectionException;
 import org.dlese.dpc.repository.indexing.CollectionIndexer;
 import org.dlese.dpc.repository.indexing.CollectionIndexingSession;
@@ -404,7 +406,7 @@ public class NDRIndexer implements ItemIndexer {
 	}
 
 
-//	private boolean printOutput = true;
+	private boolean printOutput = true;
 
 
 	private void indexCollection(String collectionKey, MetadataProviderReader mdpReader, String format, String additionalMetadata) throws Exception {
@@ -588,7 +590,7 @@ public class NDRIndexer implements ItemIndexer {
 			Document fetched = Dom4jUtils.getXmlDocument(Dom4jUtils.localizeXml(TimedURLConnection.importURL(serviceRequestUrl, timoutMs)));
 			String numResults = fetched.valueOf("/DDSWebService/Search/resultInfo/totalNumResults");
 			String numReturned = fetched.valueOf("/DDSWebService/Search/resultInfo/numReturned");
-//			String offset = fetched.valueOf("/DDSWebService/Search/resultInfo/offset");
+			String offset = fetched.valueOf("/DDSWebService/Search/resultInfo/offset");
 			String ddsErrorCode = fetched.valueOf("/DDSWebService/error/@code");
 
 			if (ddsErrorCode != null && ddsErrorCode.equals("noRecordsMatch")) {

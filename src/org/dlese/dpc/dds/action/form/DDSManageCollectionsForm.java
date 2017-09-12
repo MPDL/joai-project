@@ -18,6 +18,8 @@
 package org.dlese.dpc.dds.action.form;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *  A Struts Form bean for managing the items in the DDS collections. This class works in
@@ -27,7 +29,7 @@ import java.io.Serializable;
  * @author    John Weatherley
  */
 public final class DDSManageCollectionsForm extends VocabForm implements Serializable {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 
 	private String statusComment = null;
 
@@ -59,38 +61,38 @@ public final class DDSManageCollectionsForm extends VocabForm implements Seriali
 
 	//================================================================
 
-//	/**
-//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-//	 *
-//	 * @param  s  The String that will be output.
-//	 */
-//	private final void prtln(String s) {
-//		if (debug) {
-//			System.out.println(getDateStamp() + " " + s);
-//		}
-//	}
+	/**
+	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+	 *
+	 * @param  s  The String that will be output.
+	 */
+	private final void prtln(String s) {
+		if (debug) {
+			System.out.println(getDateStamp() + " " + s);
+		}
+	}
 
 
-//	/**
-//	 *  Return a string for the current time and date, sutiable for display in log files and
-//	 *  output to standout:
-//	 *
-//	 * @return    The dateStamp value
-//	 */
-//	private final static String getDateStamp() {
-//		return
-//			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-//	}
+	/**
+	 *  Return a string for the current time and date, sutiable for display in log files and
+	 *  output to standout:
+	 *
+	 * @return    The dateStamp value
+	 */
+	private final static String getDateStamp() {
+		return
+			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+	}
 
 
-//	/**
-//	 *  Sets the debug attribute of the object
-//	 *
-//	 * @param  db  The new debug value
-//	 */
-//	public static void setDebug(boolean db) {
-//		debug = db;
-//	}
+	/**
+	 *  Sets the debug attribute of the object
+	 *
+	 * @param  db  The new debug value
+	 */
+	public static void setDebug(boolean db) {
+		debug = db;
+	}
 }
 
 

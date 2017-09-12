@@ -99,12 +99,12 @@ public class KeywordsHighlightTag extends BodyTagSupport {
 			if ( keysHighlight != null ) {
 				String text = body.getString();
 				if ( truncateString ) {
-//					boolean foundPeriod = false;
+					boolean foundPeriod = false;
 					int pos = keysHighlight.getFirstHighlightIndex();
 					if ( ( pos < maxStringLength ) && ( pos > minStringLength ) ) {
 						pos = text.indexOf( '.', pos );
 						if ( pos < maxStringLength ) {
-//							foundPeriod = true;
+							foundPeriod = true;
 						}
 						else {
 							pos = text.indexOf( ' ', maxStringLength );
@@ -113,7 +113,7 @@ public class KeywordsHighlightTag extends BodyTagSupport {
 					else {
 						pos = text.indexOf( '.', minStringLength );
 						if ( pos < maxStringLength ) {
-//							foundPeriod = true;
+							foundPeriod = true;
 						}
 						else {
 							pos = text.indexOf( ' ', maxStringLength );

@@ -32,6 +32,7 @@ import org.apache.struts.action.ActionForm;
 import org.dlese.dpc.action.SimpleQueryAction;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.repository.RepositoryManager;
 
 /**
@@ -49,7 +50,7 @@ public final class SimpleQueryForm extends ActionForm implements Serializable {
 
 	private String queryString = null;
 	private String refineQueryString = null;
-//	private XMLDocReader docReader = null;
+	private XMLDocReader docReader = null;
 	private String metadata = null;
 	private String reportTitle = null;
 	private String selectedCollection = null;

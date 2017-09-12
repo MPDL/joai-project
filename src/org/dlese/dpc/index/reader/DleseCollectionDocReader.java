@@ -37,7 +37,7 @@ import org.dlese.dpc.xml.XMLFileFilter;
  * @see       org.dlese.dpc.index.writer.DleseCollectionFileIndexingWriter
  */
 public class DleseCollectionDocReader extends XMLDocReader {
-//	private final String DEFAULT = "(null)";
+	private final String DEFAULT = "(null)";
 	private final String metadataFormat = "dlese_collect";
 
 
@@ -384,7 +384,7 @@ public class DleseCollectionDocReader extends XMLDocReader {
 	 */
 	public String[] getGradeRanges() {
 		String t = doc.get(getFieldId("gradeRange", metadataFormat)).trim();
-//		String[] vals;
+		String[] vals;
 		if (t == null || t.length() == 0) {
 			return null;
 		}
@@ -399,7 +399,7 @@ public class DleseCollectionDocReader extends XMLDocReader {
 	 */
 	public String[] getSubjects() {
 		String t = doc.get(getFieldId("subject", metadataFormat)).trim();
-//		String[] vals;
+		String[] vals;
 		if (t == null || t.length() == 0) {
 			return null;
 		}

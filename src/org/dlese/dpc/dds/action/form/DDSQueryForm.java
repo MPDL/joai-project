@@ -31,6 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
 import org.dlese.dpc.index.reader.ItemDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.vocab.MetadataVocabInputState;
 
 /**
@@ -49,7 +50,7 @@ public final class DDSQueryForm extends DDSViewResourceForm implements Serializa
 	private HttpServletRequest request;
 	private String queryString = null;
 	private String refineQueryString = null;
-//	private XMLDocReader docReader = null;
+	private XMLDocReader docReader = null;
 	private String metadata = null;
 	private String contextURL = null;
 	private String gradeLevel = null;
@@ -720,7 +721,7 @@ public final class DDSQueryForm extends DDSViewResourceForm implements Serializa
 				String searchType = getSearchType();
 				int first = start;
 				int last = start + numPagingRecords;
-//				int end = Math.min( last, resultDocs.size() );
+				int end = Math.min( last, resultDocs.size() );
 				String PAGING_URL;
 				if ( searchType != null && searchType.equals( "hist" ) ) {
 					PAGING_URL = "browse" + getPagingCriteriaParams( searchType );
@@ -772,11 +773,11 @@ public final class DDSQueryForm extends DDSViewResourceForm implements Serializa
 				}
 				// Get total number of pages (Math.round() doesn't do the trick,
 				// because you never know if it's rounding UP or DOWN...)
-//				int totalPages = 0;
+				int totalPages = 0;
 				int totalCountDown = resultDocs.size();
 				while ( totalCountDown > 0 ) {
 					totalCountDown -= 10;
-//					totalPages++;
+					totalPages++;
 				}
 
 				// Print the links:

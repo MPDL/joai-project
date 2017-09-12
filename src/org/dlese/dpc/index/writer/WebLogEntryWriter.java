@@ -317,7 +317,7 @@ public class WebLogEntryWriter implements DocWriter {
 			Pattern p = Pattern.compile("(\"[^\"]*\"|\\[[^\\[\\]]*\\]|[^ ]+)");
 
 			Matcher m = p.matcher(logEntry);
-//			StringBuffer sb = new StringBuffer();
+			StringBuffer sb = new StringBuffer();
 			String match;
 			while (m.find()) {
 				match = m.group(1);

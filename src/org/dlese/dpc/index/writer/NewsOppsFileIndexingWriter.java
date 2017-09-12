@@ -27,6 +27,7 @@ import org.apache.lucene.document.Field;
 import org.dlese.dpc.index.document.DateFieldTools;
 import org.dlese.dpc.util.MetadataUtils;
 import org.dlese.dpc.xml.XMLValidator;
+import org.dom4j.Attribute;
 import org.dom4j.Element;
 import org.dom4j.Node;
 
@@ -207,7 +208,7 @@ public class NewsOppsFileIndexingWriter extends XMLFileIndexingWriter {
 		Node node;
 		List nodes;
 		Element element;
-//		Attribute attribute;
+		Attribute attribute;
 		Date date;
 
 		// Archive date:

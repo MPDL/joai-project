@@ -66,7 +66,7 @@ public class PerFieldAnalyzer extends Analyzer {
 	 *      provided here.
 	 */
 	public PerFieldAnalyzer(Analyzer defaultAnalyzer) {
-//		prtln("PerFieldAnalyzer() constructor");
+		prtln("PerFieldAnalyzer() constructor");
 		if (defaultAnalyzer == null)
 			this.defaultAnalyzer = new StandardAnalyzer(SimpleLuceneIndex.getLuceneVersion());
 		this.defaultAnalyzer = defaultAnalyzer;
@@ -78,7 +78,7 @@ public class PerFieldAnalyzer extends Analyzer {
 	 *  not otherwise configured.
 	 */
 	public PerFieldAnalyzer() {
-//		prtln("PerFieldAnalyzer() constructor");
+		prtln("PerFieldAnalyzer() constructor");
 		defaultAnalyzer = new StandardAnalyzer(SimpleLuceneIndex.getLuceneVersion());
 	}
 
@@ -242,19 +242,19 @@ public class PerFieldAnalyzer extends Analyzer {
 		if (zer == null)
 			zer = defaultAnalyzer;
 
-//		prtln("Using: " + zer.getClass().getName() + " for field: " + fieldName);
+		prtln("Using: " + zer.getClass().getName() + " for field: " + fieldName);
 
 		return zer.tokenStream(fieldName, reader);
 	}
 
 
-//	private final static void prtln(String s) {
-//		//System.out.println("PerFieldAnalyzer: " + s);
-//	}
+	private final static void prtln(String s) {
+		//System.out.println("PerFieldAnalyzer: " + s);
+	}
 
 
-//	private final static void prtlnErr(String s) {
-//		System.err.println("PerFieldAnalyzer Error: " + s);
-//	}
+	private final static void prtlnErr(String s) {
+		System.err.println("PerFieldAnalyzer Error: " + s);
+	}
 }
 

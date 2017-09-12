@@ -80,7 +80,7 @@ public class DDSServlet extends HttpServlet {
 	private static boolean isInitialized = false;
 	private SimpleLuceneIndex index;
 	private RepositoryManager rm;
-//	private static String docRoot = null;
+	private static String docRoot = null;
 
 	// Possible values: fileSystem, external
 	private String recordDataSource = "fileSystem";
@@ -113,8 +113,8 @@ public class DDSServlet extends HttpServlet {
 			ServletContext servletContext = getServletContext();
 
 			//String analysisType = (String) config.getInitParameter( "analysisType" );
-//			String defaultField = (String) config.getInitParameter("defaultField");
-//			String collectionKey = (String) config.getInitParameter("collectionKey");
+			String defaultField = (String) config.getInitParameter("defaultField");
+			String collectionKey = (String) config.getInitParameter("collectionKey");
 
 			// Context init params set in the context definition in server.xml or web.xml:
 			String queryLogFile = getAbsolutePath((String) servletContext.getInitParameter("queryLogFile"));
@@ -234,13 +234,13 @@ public class DDSServlet extends HttpServlet {
 			prtln("Using index located at " + indexLocation);
 
 			// Load metadata controlled vocabularies:
-//			String vocabConfigDir = getAbsolutePath((String) servletContext.getInitParameter("vocabConfigDir"));
-//			String sqlDriver = (String) servletContext.getInitParameter("sqlDriver");
-//			String sqlURL = (String) servletContext.getInitParameter("sqlURL");
-//			String sqlUser = (String) servletContext.getInitParameter("sqlUser");
-//			String sqlPassword = (String) servletContext.getInitParameter("sqlPassword");
+			String vocabConfigDir = getAbsolutePath((String) servletContext.getInitParameter("vocabConfigDir"));
+			String sqlDriver = (String) servletContext.getInitParameter("sqlDriver");
+			String sqlURL = (String) servletContext.getInitParameter("sqlURL");
+			String sqlUser = (String) servletContext.getInitParameter("sqlUser");
+			String sqlPassword = (String) servletContext.getInitParameter("sqlPassword");
 			String annotationPathwaysSchemaUrl = (String) servletContext.getInitParameter("annotationPathwaysSchemaUrl");
-//			String vocabTextFile = (String) servletContext.getInitParameter("vocabTextFile");
+			String vocabTextFile = (String) servletContext.getInitParameter("vocabTextFile");
 
 			//String idmapProps = (String) context.getInitParameter("idmapProps");
 

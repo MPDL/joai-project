@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -68,7 +69,7 @@ public final class NoscriptAction extends Action {
 		 *  all variables via method signatures rather than instance vars.
 		 */
 		DDSQueryForm noscriptForm = (DDSQueryForm)form;
-//		ActionErrors errors = new ActionErrors();
+		ActionErrors errors = new ActionErrors();
 		MetadataVocab vocab = (MetadataVocab)getServlet().getServletContext().getAttribute( "MetadataVocab" );
 		noscriptForm.setVocab( vocab );
 		try {
@@ -106,14 +107,14 @@ public final class NoscriptAction extends Action {
 	}
 
 
-//	/**
-//	 *  Output a line of text to error out, with datestamp.
-//	 *
-//	 * @param  s  The text that will be output to error out.
-//	 */
-//	private final void prtlnErr( String s ) {
-//		System.err.println( getDateStamp() + " " + s );
-//	}
+	/**
+	 *  Output a line of text to error out, with datestamp.
+	 *
+	 * @param  s  The text that will be output to error out.
+	 */
+	private final void prtlnErr( String s ) {
+		System.err.println( getDateStamp() + " " + s );
+	}
 
 
 	/**

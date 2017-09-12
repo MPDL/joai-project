@@ -18,6 +18,8 @@
 package org.dlese.dpc.dds.action;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -77,26 +79,26 @@ public final class DDSViewResourceAction extends Action {
 	}
 
 
-//	/**
-//	 *  Return a string for the current time and date, sutiable for display in log
-//	 *  files and output to standout:
-//	 *
-//	 * @return    The dateStamp value
-//	 */
-//	private final static String getDateStamp() {
-//		return
-//			new SimpleDateFormat( "MMM d, yyyy h:mm:ss a zzz" ).format( new Date() );
-//	}
+	/**
+	 *  Return a string for the current time and date, sutiable for display in log
+	 *  files and output to standout:
+	 *
+	 * @return    The dateStamp value
+	 */
+	private final static String getDateStamp() {
+		return
+			new SimpleDateFormat( "MMM d, yyyy h:mm:ss a zzz" ).format( new Date() );
+	}
 
 
-//	/**
-//	 *  Output a line of text to error out, with datestamp.
-//	 *
-//	 * @param  s  The text that will be output to error out.
-//	 */
-//	private final void prtlnErr( String s ) {
-//		System.err.println( getDateStamp() + " " + s );
-//	}
+	/**
+	 *  Output a line of text to error out, with datestamp.
+	 *
+	 * @param  s  The text that will be output to error out.
+	 */
+	private final void prtlnErr( String s ) {
+		System.err.println( getDateStamp() + " " + s );
+	}
 
 }
 

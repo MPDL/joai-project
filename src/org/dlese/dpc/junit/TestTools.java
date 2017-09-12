@@ -99,7 +99,7 @@ public class TestTools
 	
 	public static void print_char_values()
 	{
-//		StringBuffer ret = new StringBuffer();
+		StringBuffer ret = new StringBuffer();
 		char c;
 		for(int j = 0; j < 256; j++) 
 		{

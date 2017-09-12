@@ -19,6 +19,8 @@ package org.dlese.dpc.datamgr;
 
 //import org.dlese.dpc.oai.datamgr.*;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.Random;
 
 import org.dlese.dpc.junit.TestTools;
 
@@ -95,7 +97,7 @@ public class SerializedDataManagerTest extends TestCase
 	{
 		int NUM_RECORDS = 20;
 		int locked_count = 0;
-//		int unlocked_count = 0;
+		int unlocked_count = 0;
 		
 		int ID_LEN = 10;
 		String payload = "hi";
@@ -104,7 +106,7 @@ public class SerializedDataManagerTest extends TestCase
 		String [] original_ids = new String [NUM_RECORDS];
 		boolean [] is_locked = new boolean [NUM_RECORDS];
 		String [] lock_keys = new String [NUM_RECORDS];
-//		Object o = null;
+		Object o = null;
 		
 		
 		// Load up a corpus of records:
@@ -126,8 +128,8 @@ public class SerializedDataManagerTest extends TestCase
 				lock_keys[i] = dm.lock(original_ids[i]);
 				locked_count++;
 			}
-//			else
-//				unlocked_count++;
+			else
+				unlocked_count++;
 			
 		}
 		
@@ -278,8 +280,8 @@ public class SerializedDataManagerTest extends TestCase
 		dm.decodeFileName("init first run"); // Init on first run. 
 		
 		String original,encoded,decoded;
-//		Random randgen = new Random(new Date().getTime());
-//		char c;
+		Random randgen = new Random(new Date().getTime());
+		char c;
 		
 		final int ID_LEN = 15;
 		final int NUM_IDS = 60;

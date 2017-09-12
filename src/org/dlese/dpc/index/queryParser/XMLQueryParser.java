@@ -20,6 +20,8 @@ package org.dlese.dpc.index.queryParser;
 import java.io.File;
 import java.io.StringReader;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -48,7 +50,7 @@ import org.dom4j.Element;
  * @see       org.dlese.dpc.index.VirtualSearchFieldMapper
  */
 public class XMLQueryParser {
-//	private boolean debug = true;
+	private boolean debug = true;
 
 
 	/**

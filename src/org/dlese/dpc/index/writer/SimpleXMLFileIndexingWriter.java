@@ -34,7 +34,7 @@ import org.dlese.dpc.xml.XMLValidator;
  * @see       org.dlese.dpc.index.reader.XMLDocReader
  */
 public class SimpleXMLFileIndexingWriter extends XMLFileIndexingWriter {
-//	private String doctype = null;
+	private String doctype = null;
 
 
 	/**  Constructor for the SimpleXMLFileIndexingWriter object */

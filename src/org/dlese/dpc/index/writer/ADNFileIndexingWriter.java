@@ -62,8 +62,8 @@ public class ADNFileIndexingWriter extends ItemFileIndexingWriter {
 	private String myContent = null;
 	private String myContentType = null;
 	private boolean singleRecord = false;
-//	private boolean isDupDoc = false;
-//	private boolean indexTheMultiDoc = true;
+	private boolean isDupDoc = false;
+	private boolean indexTheMultiDoc = true;
 	private ArrayList additionalCollections = new ArrayList();
 	private ArrayList additionalIds = new ArrayList();
 	private ArrayList additionalIdsFiles = new ArrayList();
@@ -91,7 +91,7 @@ public class ADNFileIndexingWriter extends ItemFileIndexingWriter {
 	public ADNFileIndexingWriter(boolean isDupDoc) {
 		//prtln("ADNFileIndexingWriter() isDupDoc: " + isDupDoc + " NumInstances: " + num_instances);
 		num_instances++;
-//		this.isDupDoc = isDupDoc;
+		this.isDupDoc = isDupDoc;
 	}
 
 
@@ -680,7 +680,7 @@ public class ADNFileIndexingWriter extends ItemFileIndexingWriter {
 	protected String getKeywords() throws Exception {
 		ArrayList kw = new ArrayList();
 		HashMap kwMap = new HashMap();
-//		String keyword;
+		String keyword;
 		String stdKeyword;
 		for (int i = 0; i < adnXmlDoc.length; i++) {
 			String[] keywords = adnXmlDoc[i].getXmlFields("general/keywords/keyword");
