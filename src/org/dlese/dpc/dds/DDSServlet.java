@@ -720,25 +720,25 @@ public class DDSServlet extends HttpServlet {
 	}
 
 
-	/**
-	 *  Gets the absolute path to a given file or directory. Assumes the path passed in is eithr already absolute
-	 *  (has leading slash) or is relative to the context root (no leading slash). If the string passed in does
-	 *  not begin with a slash ("/"), then the string is converted. For example, an init parameter to a config
-	 *  file might be passed in as "WEB-INF/conf/serverParms.conf" and this method will return the corresponding
-	 *  absolute path "/export/devel/tomcat/webapps/myApp/WEB-INF/conf/serverParms.conf." <p>
-	 *
-	 *  If the string that is passed in already begings with "/", nothing is done. <p>
-	 *
-	 *  Note: the super.init() method must be called prior to using this method, else a ServletException is
-	 *  thrown.
-	 *
-	 * @param  fname    An absolute or relative file name or path (relative the the context root).
-	 * @param  docRoot  The context document root as obtained by calling getServletContext().getRealPath("/");
-	 * @return          The absolute path to the given file or path.
-	 */
-	private String getAbsolutePath(String fname, String docRoot) {
-		return GeneralServletTools.getAbsolutePath(fname, docRoot);
-	}
+//	/**
+//	 *  Gets the absolute path to a given file or directory. Assumes the path passed in is eithr already absolute
+//	 *  (has leading slash) or is relative to the context root (no leading slash). If the string passed in does
+//	 *  not begin with a slash ("/"), then the string is converted. For example, an init parameter to a config
+//	 *  file might be passed in as "WEB-INF/conf/serverParms.conf" and this method will return the corresponding
+//	 *  absolute path "/export/devel/tomcat/webapps/myApp/WEB-INF/conf/serverParms.conf." <p>
+//	 *
+//	 *  If the string that is passed in already begings with "/", nothing is done. <p>
+//	 *
+//	 *  Note: the super.init() method must be called prior to using this method, else a ServletException is
+//	 *  thrown.
+//	 *
+//	 * @param  fname    An absolute or relative file name or path (relative the the context root).
+//	 * @param  docRoot  The context document root as obtained by calling getServletContext().getRealPath("/");
+//	 * @return          The absolute path to the given file or path.
+//	 */
+//	private String getAbsolutePath(String fname, String docRoot) {
+//		return GeneralServletTools.getAbsolutePath(fname, docRoot);
+//	}
 
 
 	/**

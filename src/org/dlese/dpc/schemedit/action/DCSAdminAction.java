@@ -422,65 +422,65 @@ public final class DCSAdminAction extends DCSAction {
 	}
 
 
-	/**
-	 *  Checks to see if the given set is valid.
-	 *
-	 * @param  setName            DESCRIPTION
-	 * @param  setSpec            DESCRIPTION
-	 * @param  setDescription     DESCRIPTION
-	 * @param  daf                DESCRIPTION
-	 * @param  req                DESCRIPTION
-	 * @param  checkSetSpec       DESCRIPTION
-	 * @param  repositoryManager  DESCRIPTION
-	 * @return                    The validSet value
-	 */
-	private final boolean isValidSet(String setName,
-	                                 String setSpec,
-	                                 String setDescription,
-	                                 DCSAdminForm daf,
-	                                 HttpServletRequest req,
-	                                 boolean checkSetSpec,
-	                                 RepositoryManager repositoryManager) {
-		ActionErrors errors = new ActionErrors();
-
-		if (checkSetSpec) {
-			if (setSpec.indexOf(' ') >= 0 || setSpec.indexOf(':') >= 0 || setSpec.length() == 0) {
-				errors.add("currentSetSpec", new ActionError("errors.setSpecSyntax"));
-			}
-			else if (repositoryManager.isSetConfigured(setSpec)) {
-				errors.add("currentSetSpec", new ActionError("errors.setSpecExists"));
-			}
-		}
-		if (setName.length() == 0) {
-			errors.add("currentSetName", new ActionError("errors.setName"));
-		}
-
-		if (setDescription != null && setDescription.length() > 0) {
-			String validationReport = validateXML(setDescription);
-			if (validationReport != null) {
-				daf.setXmlError(validationReport);
-				return false;
-			}
-		}
-
-		/*
-		 *  if (set.getFormat().indexOf(' ') >= 0 || set.getFormat().length() == 0)
-		 *  errors.add("currentSetFormat", new ActionError("errors.setFormat"));
-		 *  File f = new File(set.getDirectory());
-		 *  prtln("directory: " + f.getAbsolutePath());
-		 *  if (!f.isDirectory())
-		 *  errors.add("currentSetDirectory", new ActionError("errors.setDirectory"));
-		 */
-		if (errors.isEmpty()) {
-			prtln("\n\n\nsetIsValid() returning no errors...\n\n\n");
-			return true;
-		}
-		else {
-			prtln("\n\n\nsetIsValid() had errors...\n\n\n");
-			saveErrors(req, errors);
-			return false;
-		}
-	}
+//	/**
+//	 *  Checks to see if the given set is valid.
+//	 *
+//	 * @param  setName            DESCRIPTION
+//	 * @param  setSpec            DESCRIPTION
+//	 * @param  setDescription     DESCRIPTION
+//	 * @param  daf                DESCRIPTION
+//	 * @param  req                DESCRIPTION
+//	 * @param  checkSetSpec       DESCRIPTION
+//	 * @param  repositoryManager  DESCRIPTION
+//	 * @return                    The validSet value
+//	 */
+//	private final boolean isValidSet(String setName,
+//	                                 String setSpec,
+//	                                 String setDescription,
+//	                                 DCSAdminForm daf,
+//	                                 HttpServletRequest req,
+//	                                 boolean checkSetSpec,
+//	                                 RepositoryManager repositoryManager) {
+//		ActionErrors errors = new ActionErrors();
+//
+//		if (checkSetSpec) {
+//			if (setSpec.indexOf(' ') >= 0 || setSpec.indexOf(':') >= 0 || setSpec.length() == 0) {
+//				errors.add("currentSetSpec", new ActionError("errors.setSpecSyntax"));
+//			}
+//			else if (repositoryManager.isSetConfigured(setSpec)) {
+//				errors.add("currentSetSpec", new ActionError("errors.setSpecExists"));
+//			}
+//		}
+//		if (setName.length() == 0) {
+//			errors.add("currentSetName", new ActionError("errors.setName"));
+//		}
+//
+//		if (setDescription != null && setDescription.length() > 0) {
+//			String validationReport = validateXML(setDescription);
+//			if (validationReport != null) {
+//				daf.setXmlError(validationReport);
+//				return false;
+//			}
+//		}
+//
+//		/*
+//		 *  if (set.getFormat().indexOf(' ') >= 0 || set.getFormat().length() == 0)
+//		 *  errors.add("currentSetFormat", new ActionError("errors.setFormat"));
+//		 *  File f = new File(set.getDirectory());
+//		 *  prtln("directory: " + f.getAbsolutePath());
+//		 *  if (!f.isDirectory())
+//		 *  errors.add("currentSetDirectory", new ActionError("errors.setDirectory"));
+//		 */
+//		if (errors.isEmpty()) {
+//			prtln("\n\n\nsetIsValid() returning no errors...\n\n\n");
+//			return true;
+//		}
+//		else {
+//			prtln("\n\n\nsetIsValid() had errors...\n\n\n");
+//			saveErrors(req, errors);
+//			return false;
+//		}
+//	}
 
 
 	/**
@@ -537,56 +537,56 @@ public final class DCSAdminAction extends DCSAction {
 	}
 
 
-	/**
-	 *  Validate an XML string. The string must contain a schema location that is
-	 *  defined in the root element by the attribute <code>schemaLocation,</code>
-	 *  which is case-sensitive.
-	 *
-	 * @param  s  The string to validate
-	 * @return    Null iff no validation errors were found, else a String
-	 *      containing an appropriate error message.
-	 */
-	private final String validateXML(String s) {
-		if (s == null) {
-			return null;
-		}
-
-		if (s.indexOf("schemaLocation") == -1) {
-			return
-				"SCHEMA NOT PRESENT: The schema location must be defined in the " +
-				"root element by the schemaLocation attribute, which is case-sensitive.";
-		}
-		else {
-			return XMLValidator.validateString(s);
-		}
-	}
-
-
-	/**
-	 *  Gets the index associated with a request parameter of the form
-	 *  myParameter[i] where the collection index is indicated in brackets.
-	 *
-	 * @param  paramName  The request parameter String
-	 * @return            The index value
-	 */
-	private final int getIndex(String paramName) {
-		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
-	}
+//	/**
+//	 *  Validate an XML string. The string must contain a schema location that is
+//	 *  defined in the root element by the attribute <code>schemaLocation,</code>
+//	 *  which is case-sensitive.
+//	 *
+//	 * @param  s  The string to validate
+//	 * @return    Null iff no validation errors were found, else a String
+//	 *      containing an appropriate error message.
+//	 */
+//	private final String validateXML(String s) {
+//		if (s == null) {
+//			return null;
+//		}
+//
+//		if (s.indexOf("schemaLocation") == -1) {
+//			return
+//				"SCHEMA NOT PRESENT: The schema location must be defined in the " +
+//				"root element by the schemaLocation attribute, which is case-sensitive.";
+//		}
+//		else {
+//			return XMLValidator.validateString(s);
+//		}
+//	}
 
 
-	/**
-	 *  Gets the intValue attribute of the DCSAdminAction object
-	 *
-	 * @param  isInt  Description of the Parameter
-	 * @return        The intValue value
-	 */
-	private final int getIntValue(String isInt) {
-		try {
-			return Integer.parseInt(isInt);
-		} catch (Throwable e) {
-			return -1;
-		}
-	}
+//	/**
+//	 *  Gets the index associated with a request parameter of the form
+//	 *  myParameter[i] where the collection index is indicated in brackets.
+//	 *
+//	 * @param  paramName  The request parameter String
+//	 * @return            The index value
+//	 */
+//	private final int getIndex(String paramName) {
+//		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
+//	}
+
+
+//	/**
+//	 *  Gets the intValue attribute of the DCSAdminAction object
+//	 *
+//	 * @param  isInt  Description of the Parameter
+//	 * @return        The intValue value
+//	 */
+//	private final int getIntValue(String isInt) {
+//		try {
+//			return Integer.parseInt(isInt);
+//		} catch (Throwable e) {
+//			return -1;
+//		}
+//	}
 
 
 	// ---------------------- Debug info --------------------
@@ -603,14 +603,14 @@ public final class DCSAdminAction extends DCSAction {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " " + s);
+//	}
 
 
 	/**

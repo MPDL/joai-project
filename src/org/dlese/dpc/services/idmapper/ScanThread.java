@@ -40,7 +40,7 @@ ScanThread(
 {
 	super( thdgrp, "" + threadId);
 	this.bugs = bugs;
-	this.threadgrp = threadgrp;
+	this.threadgrp = thdgrp;
 	this.threadId = threadId;
 	this.timeoutSeconds = timeoutSeconds;
 	this.page = page;

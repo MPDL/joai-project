@@ -107,21 +107,21 @@ public class DleseStandardsManager implements StandardsManager {
 	}
 
 
-	/**
-	 *  NOT YET DOCUMENTED
-	 *
-	 * @param  dataTypeNames  NOT YET DOCUMENTED
-	 * @return                NOT YET DOCUMENTED
-	 */
-	private List makeDataTypesList(List dataTypeNames) {
-		List types = new ArrayList();
-		for (Iterator i = dataTypeNames.iterator(); i.hasNext(); ) {
-			String typeName = (String) i.next();
-			GlobalDef typeDef = schemaHelper.getGlobalDef(typeName);
-			types.add(typeDef);
-		}
-		return types;
-	}
+//	/**
+//	 *  NOT YET DOCUMENTED
+//	 *
+//	 * @param  dataTypeNames  NOT YET DOCUMENTED
+//	 * @return                NOT YET DOCUMENTED
+//	 */
+//	private List makeDataTypesList(List dataTypeNames) {
+//		List types = new ArrayList();
+//		for (Iterator i = dataTypeNames.iterator(); i.hasNext(); ) {
+//			String typeName = (String) i.next();
+//			GlobalDef typeDef = schemaHelper.getGlobalDef(typeName);
+//			types.add(typeDef);
+//		}
+//		return types;
+//	}
 
 
 	/**

@@ -1177,50 +1177,50 @@ public final class DDSQueryAction extends Action {
 	}
 
 
-	/**
-	 *  Examines the term for the presence of the string url: http: or site: and then encodes it appropriately
-	 *  for searching in the urlenc Lucene field, or returns term if no encoding is needed.
-	 *
-	 * @param  term  The term to encode
-	 * @return       The encoded fieldTerm value, or term if no encoding needed.
-	 */
-	private final static String getFieldTerm(String term) {
-		if (term.startsWith("http://")) {
-			term = "urlenc:" + SimpleLuceneIndex.encodeToTerm(term, false);
-			return term;
-		}
-		else if (term.startsWith("url:")) {
-			term = term.substring(4, term.length());
-			term = "urlenc:" + SimpleLuceneIndex.encodeToTerm(term, false);
-			return term;
-		}
-		else if (term.startsWith("site:")) {
-			term = term.substring(5, term.length());
-			if (term.startsWith("http://")) {
-				term = term.substring(7, term.length());
-			}
-
-			URL url;
-			try {
-				url = new URL("http://" + term);
-			} catch (MalformedURLException e) {
-				return term;
-			}
-			term = "(urlenc:" + SimpleLuceneIndex.encodeToTerm("http://" + url.getHost(), false) +
-				"* OR urlenc:" + SimpleLuceneIndex.encodeToTerm("http://www." + url.getHost(), false) + "*)";
-			return term;
-		}
-		/*
-		 *else if (term.startsWith("id:")) {
-		 *term = term.substring(3, term.length());
-		 *term = "id:" + SimpleLuceneIndex.encodeToTerm(term, false);
-		 *return term;
-		 *}
-		 */
-		else {
-			return term;
-		}
-	}
+//	/**
+//	 *  Examines the term for the presence of the string url: http: or site: and then encodes it appropriately
+//	 *  for searching in the urlenc Lucene field, or returns term if no encoding is needed.
+//	 *
+//	 * @param  term  The term to encode
+//	 * @return       The encoded fieldTerm value, or term if no encoding needed.
+//	 */
+//	private final static String getFieldTerm(String term) {
+//		if (term.startsWith("http://")) {
+//			term = "urlenc:" + SimpleLuceneIndex.encodeToTerm(term, false);
+//			return term;
+//		}
+//		else if (term.startsWith("url:")) {
+//			term = term.substring(4, term.length());
+//			term = "urlenc:" + SimpleLuceneIndex.encodeToTerm(term, false);
+//			return term;
+//		}
+//		else if (term.startsWith("site:")) {
+//			term = term.substring(5, term.length());
+//			if (term.startsWith("http://")) {
+//				term = term.substring(7, term.length());
+//			}
+//
+//			URL url;
+//			try {
+//				url = new URL("http://" + term);
+//			} catch (MalformedURLException e) {
+//				return term;
+//			}
+//			term = "(urlenc:" + SimpleLuceneIndex.encodeToTerm("http://" + url.getHost(), false) +
+//				"* OR urlenc:" + SimpleLuceneIndex.encodeToTerm("http://www." + url.getHost(), false) + "*)";
+//			return term;
+//		}
+//		/*
+//		 *else if (term.startsWith("id:")) {
+//		 *term = term.substring(3, term.length());
+//		 *term = "id:" + SimpleLuceneIndex.encodeToTerm(term, false);
+//		 *return term;
+//		 *}
+//		 */
+//		else {
+//			return term;
+//		}
+//	}
 
 
 	/**
@@ -1398,60 +1398,60 @@ public final class DDSQueryAction extends Action {
 	}
 
 
-	/**
-	 *  Gets the metadata vocab criteria selected at the time of the query formatted in a mannor suitable to be
-	 *  output in the free-text portion of the query log entry.
-	 *
-	 * @param  metadataVocabString  The metadata input criteria as returned by the current
-	 *      MetadataVocabInputState object
-	 * @return                      The metadata vocab criteria selected at the time of the query formatted in a
-	 *      mannor suitable to be output in the free-text portion of the query log entry.
-	 */
-	private String getVocabLogString(String metadataVocabString) {
-		StringBuffer out = new StringBuffer();
-		out.append("<lc>" + getVocabStripped("learningcontext", metadataVocabString) + "</lc>");
-		out.append("<rt>" + getVocabStripped("resourcetype", metadataVocabString) + "</rt>");
-		return out.toString();
-	}
+//	/**
+//	 *  Gets the metadata vocab criteria selected at the time of the query formatted in a mannor suitable to be
+//	 *  output in the free-text portion of the query log entry.
+//	 *
+//	 * @param  metadataVocabString  The metadata input criteria as returned by the current
+//	 *      MetadataVocabInputState object
+//	 * @return                      The metadata vocab criteria selected at the time of the query formatted in a
+//	 *      mannor suitable to be output in the free-text portion of the query log entry.
+//	 */
+//	private String getVocabLogString(String metadataVocabString) {
+//		StringBuffer out = new StringBuffer();
+//		out.append("<lc>" + getVocabStripped("learningcontext", metadataVocabString) + "</lc>");
+//		out.append("<rt>" + getVocabStripped("resourcetype", metadataVocabString) + "</rt>");
+//		return out.toString();
+//	}
 
 
-	/**
-	 *  Creates a comma-separated string of all user-selected terms for a particular vocab category. Assumens
-	 *  that the string passed out is in the format output by the MetadataVocabInputState object.
-	 *
-	 * @param  vocabCategory        The category of vocab terms that should be extracted, for example
-	 *      'learningcontext' or 'resourcetype'
-	 * @param  metadataVocabString  The MetadataVocabInputState object's output string containing the current
-	 *      vocabs selected.
-	 * @return                      A comma-separated list of terms of the given type.
-	 */
-	private String getVocabStripped(String vocabCategory, String metadataVocabString) {
-		//System.out.println("### the string to parse: " + metadataVocabString + " ###");
-
-		Pattern pattern = Pattern.compile(vocabCategory + ":\"[^\"]*\"");
-		Matcher matcher = pattern.matcher(metadataVocabString);
-		String stripped = "";
-		while (matcher.find()) {
-			stripped += matcher.group();
-		}
-		//System.out.println("\n\nRegex: " + stripped + "\n\n");
-		pattern = Pattern.compile(vocabCategory + ":");
-		matcher = pattern.matcher(stripped);
-		stripped = matcher.replaceAll("");
-		//System.out.println("\n\nRegex2: " + stripped + "\n\n");
-
-		pattern = Pattern.compile("\"\"");
-		matcher = pattern.matcher(stripped);
-		stripped = matcher.replaceAll(",");
-		//System.out.println("\n\nRegex3: " + stripped + "\n\n");
-
-		pattern = Pattern.compile("\"");
-		matcher = pattern.matcher(stripped);
-		stripped = matcher.replaceAll("");
-		//System.out.println("\n\nRegex4: " + stripped + "\n\n");
-
-		return stripped;
-	}
+//	/**
+//	 *  Creates a comma-separated string of all user-selected terms for a particular vocab category. Assumens
+//	 *  that the string passed out is in the format output by the MetadataVocabInputState object.
+//	 *
+//	 * @param  vocabCategory        The category of vocab terms that should be extracted, for example
+//	 *      'learningcontext' or 'resourcetype'
+//	 * @param  metadataVocabString  The MetadataVocabInputState object's output string containing the current
+//	 *      vocabs selected.
+//	 * @return                      A comma-separated list of terms of the given type.
+//	 */
+//	private String getVocabStripped(String vocabCategory, String metadataVocabString) {
+//		//System.out.println("### the string to parse: " + metadataVocabString + " ###");
+//
+//		Pattern pattern = Pattern.compile(vocabCategory + ":\"[^\"]*\"");
+//		Matcher matcher = pattern.matcher(metadataVocabString);
+//		String stripped = "";
+//		while (matcher.find()) {
+//			stripped += matcher.group();
+//		}
+//		//System.out.println("\n\nRegex: " + stripped + "\n\n");
+//		pattern = Pattern.compile(vocabCategory + ":");
+//		matcher = pattern.matcher(stripped);
+//		stripped = matcher.replaceAll("");
+//		//System.out.println("\n\nRegex2: " + stripped + "\n\n");
+//
+//		pattern = Pattern.compile("\"\"");
+//		matcher = pattern.matcher(stripped);
+//		stripped = matcher.replaceAll(",");
+//		//System.out.println("\n\nRegex3: " + stripped + "\n\n");
+//
+//		pattern = Pattern.compile("\"");
+//		matcher = pattern.matcher(stripped);
+//		stripped = matcher.replaceAll("");
+//		//System.out.println("\n\nRegex4: " + stripped + "\n\n");
+//
+//		return stripped;
+//	}
 
 
 	// -------------- Debug ------------------

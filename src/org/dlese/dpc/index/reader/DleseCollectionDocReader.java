@@ -524,29 +524,29 @@ public class DleseCollectionDocReader extends XMLDocReader {
 	}
 
 
-	private Contributor getContributor() {
-		// Needs implementation!
-
-		org.dom4j.Document xmlDoc = getXmlDoc();
-		String nameTitle = null;
-		String nameFirst = null;
-		String nameLast = null;
-		String instName = null;
-		String instDept = null;
-		String emailPrimary = null;
-		String emailAlt = null;
-		String contactID = null;
-
-		return new PersonContributor(
-			nameTitle,
-			nameFirst,
-			nameLast,
-			instName,
-			instDept,
-			emailPrimary,
-			emailAlt,
-			contactID);
-	}
+//	private Contributor getContributor() {
+//		// Needs implementation!
+//
+//		org.dom4j.Document xmlDoc = getXmlDoc();
+//		String nameTitle = null;
+//		String nameFirst = null;
+//		String nameLast = null;
+//		String instName = null;
+//		String instDept = null;
+//		String emailPrimary = null;
+//		String emailAlt = null;
+//		String contactID = null;
+//
+//		return new PersonContributor(
+//			nameTitle,
+//			nameFirst,
+//			nameLast,
+//			instName,
+//			instDept,
+//			emailPrimary,
+//			emailAlt,
+//			contactID);
+//	}
 
 
 	/**

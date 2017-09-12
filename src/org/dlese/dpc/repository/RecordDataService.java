@@ -413,57 +413,57 @@ public class RecordDataService {
 	}
 
 
-	/**
-	 *  Gets random test associatedIDs for the given ID (records that reference the same resource) or null if
-	 *  none exist. *** For testing purposes only ***
-	 *
-	 * @param  ID  An ID to an item-level resource.
-	 * @return     The associatedIDs value
-	 */
-	private String[] getRandomAssociatedIDs(String ID) {
-		// Note: should these associations be stored in a separate index altogether?
+//	/**
+//	 *  Gets random test associatedIDs for the given ID (records that reference the same resource) or null if
+//	 *  none exist. *** For testing purposes only ***
+//	 *
+//	 * @param  ID  An ID to an item-level resource.
+//	 * @return     The associatedIDs value
+//	 */
+//	private String[] getRandomAssociatedIDs(String ID) {
+//		// Note: should these associations be stored in a separate index altogether?
+//
+//		if (getIndex() == null || ID == null) {
+//			return null;
+//		}
+//
+//		String query = "collection:0* AND !valid:false AND readerclass:ItemDocReader";
+//
+//		ResultDocList resultDocs = null;
+//		if (getIndex() != null) {
+//			resultDocs = getIndex().searchDocs(query);
+//		}
+//		if (resultDocs == null || resultDocs.size() == 0) {
+//			return null;
+//		}
+//
+//		int random_num_ids = Utils.getRandomIntBetween(0, 4);
+//		if (random_num_ids == 0) {
+//			return null;
+//		}
+//		String[] ids = new String[random_num_ids];
+//		// Add 0 to 2 random ids:
+//		for (int i = 0; i < random_num_ids; i++) {
+//			ids[i] = (((ItemDocReader) resultDocs.get(Utils.getRandomIntBetween(0, resultDocs.size())).getDocReader()).getId());
+//		}
+//
+//		return ids;
+//	}
 
-		if (getIndex() == null || ID == null) {
-			return null;
-		}
 
-		String query = "collection:0* AND !valid:false AND readerclass:ItemDocReader";
-
-		ResultDocList resultDocs = null;
-		if (getIndex() != null) {
-			resultDocs = getIndex().searchDocs(query);
-		}
-		if (resultDocs == null || resultDocs.size() == 0) {
-			return null;
-		}
-
-		int random_num_ids = Utils.getRandomIntBetween(0, 4);
-		if (random_num_ids == 0) {
-			return null;
-		}
-		String[] ids = new String[random_num_ids];
-		// Add 0 to 2 random ids:
-		for (int i = 0; i < random_num_ids; i++) {
-			ids[i] = (((ItemDocReader) resultDocs.get(Utils.getRandomIntBetween(0, resultDocs.size())).getDocReader()).getId());
-		}
-
-		return ids;
-	}
-
-
-	private String[] getRandomIdMapperErrors() {
-
-		int random_num = Utils.getRandomIntBetween(0, 4);
-		if (random_num == 0 || random_num == 1) {
-			return null;
-		}
-		else if (random_num == 2) {
-			return new String[]{"41040", "41110"};
-		}
-		else {
-			return new String[]{"41030"};
-		}
-	}
+//	private String[] getRandomIdMapperErrors() {
+//
+//		int random_num = Utils.getRandomIntBetween(0, 4);
+//		if (random_num == 0 || random_num == 1) {
+//			return null;
+//		}
+//		else if (random_num == 2) {
+//			return new String[]{"41040", "41110"};
+//		}
+//		else {
+//			return new String[]{"41030"};
+//		}
+//	}
 
 
 	// ------ Index services ----------------
@@ -819,33 +819,33 @@ public class RecordDataService {
 
 
 
-	/**
-	 *  Return a HasMap of valid DRC pathways from the pathways.xsd schema. Both the keys and values cantain the
-	 *  exact Strings of the valid pathways.
-	 *
-	 * @return    HashMap of valid DRC pathways.
-	 */
-	private HashMap getValidDrcPathways() {
-
-		if (annotationPathwaysSchemaUrl == null)
-			return null;
-
-		HashMap pathways = new HashMap();
-
-		try {
-			SAXReader reader = new SAXReader();
-			Document document = reader.read(new URL(annotationPathwaysSchemaUrl));
-			List nodes = document.selectNodes("//xsd:simpleType[@name='pathwayType']/xsd:restriction/xsd:enumeration");
-			for (Iterator iter = nodes.iterator(); iter.hasNext(); ) {
-				Node node = (Node) iter.next();
-				pathways.put(node.valueOf("@value"), node.valueOf("@value"));
-			}
-		} catch (Throwable e) {
-			prtlnErr("Error getValidDrcPathways(): " + e);
-		}
-
-		return pathways;
-	}
+//	/**
+//	 *  Return a HasMap of valid DRC pathways from the pathways.xsd schema. Both the keys and values cantain the
+//	 *  exact Strings of the valid pathways.
+//	 *
+//	 * @return    HashMap of valid DRC pathways.
+//	 */
+//	private HashMap getValidDrcPathways() {
+//
+//		if (annotationPathwaysSchemaUrl == null)
+//			return null;
+//
+//		HashMap pathways = new HashMap();
+//
+//		try {
+//			SAXReader reader = new SAXReader();
+//			Document document = reader.read(new URL(annotationPathwaysSchemaUrl));
+//			List nodes = document.selectNodes("//xsd:simpleType[@name='pathwayType']/xsd:restriction/xsd:enumeration");
+//			for (Iterator iter = nodes.iterator(); iter.hasNext(); ) {
+//				Node node = (Node) iter.next();
+//				pathways.put(node.valueOf("@value"), node.valueOf("@value"));
+//			}
+//		} catch (Throwable e) {
+//			prtlnErr("Error getValidDrcPathways(): " + e);
+//		}
+//
+//		return pathways;
+//	}
 
 
 

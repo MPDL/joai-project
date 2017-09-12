@@ -409,26 +409,26 @@ public final class BatchOperationsAction extends DCSAction {
 	}
 
 
-	/**
-	 *  Returns true if the given array of ResultDocs contains a collection format.
-	 *
-	 *@param  recordBatch  an array of ResultDoc instances
-	 *@return              true if ResultDoc[] contains record having xmlFormat of
-	 *      "dlese_collect"
-	 */
-	private boolean containsCollectionRecords(RecordList recordBatch) {
-		if (recordBatch == null) {
-			return false;
-		}
-		for (Iterator i = recordBatch.iterator(); i.hasNext(); ) {
-			ResultDoc result = recordBatch.getResultDoc((String) i.next(), repositoryManager.getIndex());
-			XMLDocReader docReader = (XMLDocReader) result.getDocReader();
-			if (docReader.getNativeFormat().equals("dlese_collect")) {
-				return true;
-			}
-		}
-		return false;
-	}
+//	/**
+//	 *  Returns true if the given array of ResultDocs contains a collection format.
+//	 *
+//	 *@param  recordBatch  an array of ResultDoc instances
+//	 *@return              true if ResultDoc[] contains record having xmlFormat of
+//	 *      "dlese_collect"
+//	 */
+//	private boolean containsCollectionRecords(RecordList recordBatch) {
+//		if (recordBatch == null) {
+//			return false;
+//		}
+//		for (Iterator i = recordBatch.iterator(); i.hasNext(); ) {
+//			ResultDoc result = recordBatch.getResultDoc((String) i.next(), repositoryManager.getIndex());
+//			XMLDocReader docReader = (XMLDocReader) result.getDocReader();
+//			if (docReader.getNativeFormat().equals("dlese_collect")) {
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
 
 
 	/**

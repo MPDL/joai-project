@@ -324,26 +324,26 @@ public class StdDocument {
 	}
 
 
-	/**
-	 *  Gets the standardTest attribute of the StdDocument class
-	 *
-	 * @param  stdDoc  Description of the Parameter
-	 * @param  asnId   Description of the Parameter
-	 */
-	private static void getStandardTest(StdDocument stdDoc, String asnId) {
-		Standard std = stdDoc.getStandard(asnId);
-		List children = std.getChildren();
-		prtln("children (" + children.size() + ")");
-		for (Iterator i = children.iterator(); i.hasNext(); ) {
-			Standard childStd = (Standard) i.next();
-			if (childStd == null) {
-				prtln("NULL");
-			}
-			else {
-				prtln(childStd.getId());
-			}
-		}
-	}
+//	/**
+//	 *  Gets the standardTest attribute of the StdDocument class
+//	 *
+//	 * @param  stdDoc  Description of the Parameter
+//	 * @param  asnId   Description of the Parameter
+//	 */
+//	private static void getStandardTest(StdDocument stdDoc, String asnId) {
+//		Standard std = stdDoc.getStandard(asnId);
+//		List children = std.getChildren();
+//		prtln("children (" + children.size() + ")");
+//		for (Iterator i = children.iterator(); i.hasNext(); ) {
+//			Standard childStd = (Standard) i.next();
+//			if (childStd == null) {
+//				prtln("NULL");
+//			}
+//			else {
+//				prtln(childStd.getId());
+//			}
+//		}
+//	}
 
 
 	/**

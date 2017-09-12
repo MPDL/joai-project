@@ -937,18 +937,18 @@ public class DcsDataRecord implements Serializable {
 	}
 
 
-	/**
-	 *  Sets the statusNote of most recent StatusEntry.
-	 *
-	 * @param  statusNote  The new statusNote value
-	 */
-	private void setStatusNote(String statusNote) {
-		try {
-			getCurrentEntry().setStatusNote(statusNote);
-		} catch (Throwable e) {
-			prtlnErr("setStatusNote failed: " + e.getMessage());
-		}
-	}
+//	/**
+//	 *  Sets the statusNote of most recent StatusEntry.
+//	 *
+//	 * @param  statusNote  The new statusNote value
+//	 */
+//	private void setStatusNote(String statusNote) {
+//		try {
+//			getCurrentEntry().setStatusNote(statusNote);
+//		} catch (Throwable e) {
+//			prtlnErr("setStatusNote failed: " + e.getMessage());
+//		}
+//	}
 
 
 	/**
@@ -967,18 +967,18 @@ public class DcsDataRecord implements Serializable {
 	}
 
 
-	/**
-	 *  Sets the changeDate of most recent StatusEntry.
-	 *
-	 * @param  changeDate  The new changeDate value
-	 */
-	private void setChangeDate(String changeDate) {
-		try {
-			getCurrentEntry().setChangeDate(changeDate);
-		} catch (Throwable e) {
-			prtlnErr("setChangeDate failed: " + e.getMessage());
-		}
-	}
+//	/**
+//	 *  Sets the changeDate of most recent StatusEntry.
+//	 *
+//	 * @param  changeDate  The new changeDate value
+//	 */
+//	private void setChangeDate(String changeDate) {
+//		try {
+//			getCurrentEntry().setChangeDate(changeDate);
+//		} catch (Throwable e) {
+//			prtlnErr("setChangeDate failed: " + e.getMessage());
+//		}
+//	}
 
 
 	/**

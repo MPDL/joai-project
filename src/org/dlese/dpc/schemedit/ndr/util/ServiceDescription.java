@@ -184,7 +184,7 @@ public class ServiceDescription {
 	 *
 	 * @param  type  The new identifier value
 	 */
-	public void setIdentifier(String type) {
+	public void setIdentifier(String identifier) {
 		this.identifier = identifier;
 	}
 

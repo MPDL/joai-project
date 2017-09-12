@@ -162,29 +162,29 @@ public class DCSBrowseForm extends ActionForm implements Serializable {
 
 	//================================================================
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to
-	 *  true.
-	 *
-	 *@param  s  The String that will be output.
-	 */
-	private final void prtln(String s) {
-		if (debug) {
-			System.out.println("DCSBrowseForm: " + s);
-		}
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to
+//	 *  true.
+//	 *
+//	 *@param  s  The String that will be output.
+//	 */
+//	private final void prtln(String s) {
+//		if (debug) {
+//			System.out.println("DCSBrowseForm: " + s);
+//		}
+//	}
 
 
-	/**
-	 *  Return a string for the current time and date, sutiable for display in log
-	 *  files and output to standout:
-	 *
-	 *@return    The dateStamp value
-	 */
-	private final static String getDateStamp() {
-		return
-				new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-	}
+//	/**
+//	 *  Return a string for the current time and date, sutiable for display in log
+//	 *  files and output to standout:
+//	 *
+//	 *@return    The dateStamp value
+//	 */
+//	private final static String getDateStamp() {
+//		return
+//				new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+//	}
 
 
 	/**

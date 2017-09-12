@@ -141,20 +141,20 @@ public class SchemaReader {
 		return source;
 	}
 
-	/**
-	 *  Determines the targetNamespace of the schema document. If a "targetNamespace" is explicitly declared, then
-	 this is returned. Otherwise, the "defaultTargetNamespaceURI" is used.
-	 *
-	 * @param  defaultTargetNamespaceURI  NOT YET DOCUMENTED
-	 * @return                            The targetNamespace value
-	 */
-	private String getTargetNamespaceUri(String defaultTargetNamespaceURI) {
-		Attribute tnsAttribute = root.attribute("targetNamespace");
-		if (tnsAttribute != null)
-			return tnsAttribute.getText();
-		else
-			return defaultTargetNamespaceURI;
-	}
+//	/**
+//	 *  Determines the targetNamespace of the schema document. If a "targetNamespace" is explicitly declared, then
+//	 this is returned. Otherwise, the "defaultTargetNamespaceURI" is used.
+//	 *
+//	 * @param  defaultTargetNamespaceURI  NOT YET DOCUMENTED
+//	 * @return                            The targetNamespace value
+//	 */
+//	private String getTargetNamespaceUri(String defaultTargetNamespaceURI) {
+//		Attribute tnsAttribute = root.attribute("targetNamespace");
+//		if (tnsAttribute != null)
+//			return tnsAttribute.getText();
+//		else
+//			return defaultTargetNamespaceURI;
+//	}
 
 
 	/**

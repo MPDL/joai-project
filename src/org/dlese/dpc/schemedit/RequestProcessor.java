@@ -218,22 +218,22 @@ public final class RequestProcessor extends org.apache.struts.action.RequestProc
 	}
 
 	// print out the roles known to "mapping"
-	/**
-	 *  NOT YET DOCUMENTED
-	 *
-	 * @param  mapping  NOT YET DOCUMENTED
-	 */
-	private void showRoleNames(ActionMapping mapping) {
-		String roles[] = mapping.getRoleNames();
-		if (roles != null && roles.length > 0) {
-			prtln("Roles");
-			for (int i = 0; i < roles.length; i++) {
-				prtln("\t" + roles[i]);
-			}
-		}
-		else
-			prtln("no roles defined");
-	}
+//	/**
+//	 *  NOT YET DOCUMENTED
+//	 *
+//	 * @param  mapping  NOT YET DOCUMENTED
+//	 */
+//	private void showRoleNames(ActionMapping mapping) {
+//		String roles[] = mapping.getRoleNames();
+//		if (roles != null && roles.length > 0) {
+//			prtln("Roles");
+//			for (int i = 0; i < roles.length; i++) {
+//				prtln("\t" + roles[i]);
+//			}
+//		}
+//		else
+//			prtln("no roles defined");
+//	}
 
 
 	/**

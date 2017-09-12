@@ -140,33 +140,33 @@ public class NamespaceCacheTester {
 		}
 	}
 	
-	private Map getUrisFromScratch () {
-		Map uris = new HashMap ();
-		Namespace namedDefaultNamespace = namespaces.getNamedDefaultNamespace();
-		uris.put (namedDefaultNamespace.getPrefix(), namedDefaultNamespace.getURI());
-		return uris;
-	}
+//	private Map getUrisFromScratch () {
+//		Map uris = new HashMap ();
+//		Namespace namedDefaultNamespace = namespaces.getNamedDefaultNamespace();
+//		uris.put (namedDefaultNamespace.getPrefix(), namedDefaultNamespace.getURI());
+//		return uris;
+//	}
 	
-	private Map getUrisFromNR () {
-		Map uris = new HashMap ();
-		for (Iterator i=namespaces.getPrefixMap().keySet().iterator();i.hasNext();) {
-			String prefix = (String)i.next();
-			Namespace ns = namespaces.getNSforPrefix(prefix);
-/* 			if (prefix.trim().length() > 0)
-				uris.put(prefix, ns.getURI()); */
-			uris.put(prefix, ns.getURI());
-		}
-		return uris;
-	}
+//	private Map getUrisFromNR () {
+//		Map uris = new HashMap ();
+//		for (Iterator i=namespaces.getPrefixMap().keySet().iterator();i.hasNext();) {
+//			String prefix = (String)i.next();
+//			Namespace ns = namespaces.getNSforPrefix(prefix);
+///* 			if (prefix.trim().length() > 0)
+//				uris.put(prefix, ns.getURI()); */
+//			uris.put(prefix, ns.getURI());
+//		}
+//		return uris;
+//	}
 	
-	/**
-	 *  NOT YET DOCUMENTED
-	 *
-	 * @param  n  NOT YET DOCUMENTED
-	 */
-	private static void pp(Node n) {
-		prtln(Dom4jUtils.prettyPrint(n));
-	}
+//	/**
+//	 *  NOT YET DOCUMENTED
+//	 *
+//	 * @param  n  NOT YET DOCUMENTED
+//	 */
+//	private static void pp(Node n) {
+//		prtln(Dom4jUtils.prettyPrint(n));
+//	}
 
 
 	/**

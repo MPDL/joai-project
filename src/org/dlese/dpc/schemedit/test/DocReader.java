@@ -73,14 +73,14 @@ public class DocReader {
 		prtln (namespaces.toString());
 	}
 
-	private void showStack () {
-		String s = "\nNamespace Stack";
-		for (int i=0;i<stack.size();i++) {
-			Namespace ns = stack.getNamespace (i);
-			s += "\n\t" + i + ":  " + ns.getPrefix() + ": " + ns.getURI();
-		}
-		prtln (s);
-	}
+//	private void showStack () {
+//		String s = "\nNamespace Stack";
+//		for (int i=0;i<stack.size();i++) {
+//			Namespace ns = stack.getNamespace (i);
+//			s += "\n\t" + i + ":  " + ns.getPrefix() + ": " + ns.getURI();
+//		}
+//		prtln (s);
+//	}
 	
 	/**
 	 *  The main program for the DocReader class

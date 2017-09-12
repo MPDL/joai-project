@@ -67,15 +67,15 @@ public abstract class CATWebService {
 	protected abstract String getMethod();
 
 
-	private void displayConstraints(CATRequestConstraints constraints) {
-		prtln("----------------------");
-		prtln("baseUrl: " + this.baseUrl);
-		prtln("username: " + username);
-		prtln("password: " + password);
-		prtln("method: " + this.getMethod());
-		prtln(constraints.toString());
-		prtln("----------------------\n");
-	}
+//	private void displayConstraints(CATRequestConstraints constraints) {
+//		prtln("----------------------");
+//		prtln("baseUrl: " + this.baseUrl);
+//		prtln("username: " + username);
+//		prtln("password: " + password);
+//		prtln("method: " + this.getMethod());
+//		prtln(constraints.toString());
+//		prtln("----------------------\n");
+//	}
 
 
 	/**

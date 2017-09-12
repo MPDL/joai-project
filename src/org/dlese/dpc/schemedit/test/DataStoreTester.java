@@ -47,18 +47,18 @@ public class DataStoreTester {
 		}
 	}
 	
-	private void addExportingMessage(String msg) {
-		ArrayList exportingMessages =
-			(ArrayList) dataStore.get("EXPORTING_STATUS_MESSAGES");
-		if (exportingMessages == null) {
-			exportingMessages = new ArrayList(NUM_EXPORTING_MESSAGES);
-		}
-		exportingMessages.add(getSimpleDateStamp() + " " + msg);
-		if (exportingMessages.size() > NUM_EXPORTING_MESSAGES) {
-			exportingMessages.remove(0);
-		}
-		dataStore.put("EXPORTING_STATUS_MESSAGES", exportingMessages);
-	}
+//	private void addExportingMessage(String msg) {
+//		ArrayList exportingMessages =
+//			(ArrayList) dataStore.get("EXPORTING_STATUS_MESSAGES");
+//		if (exportingMessages == null) {
+//			exportingMessages = new ArrayList(NUM_EXPORTING_MESSAGES);
+//		}
+//		exportingMessages.add(getSimpleDateStamp() + " " + msg);
+//		if (exportingMessages.size() > NUM_EXPORTING_MESSAGES) {
+//			exportingMessages.remove(0);
+//		}
+//		dataStore.put("EXPORTING_STATUS_MESSAGES", exportingMessages);
+//	}
 	
 	public ArrayList getExportingMessages() {
 		ArrayList exportingMessages =
@@ -70,9 +70,9 @@ public class DataStoreTester {
 		return exportingMessages;
 	}
 	
-	private String getSimpleDateStamp () {
-		return SchemEditUtils.fullDateString(new Date());
-	}
+//	private String getSimpleDateStamp () {
+//		return SchemEditUtils.fullDateString(new Date());
+//	}
 	
 	public static void main (String [] args) {
 		// String dataDir = "/dpc/tremor/devel/ostwald/SchemEdit/testers/dataStore";

@@ -623,19 +623,19 @@ public class SimpleSchemaHelperTester {
 	}
 
 	
-	/**
-	 *  Description of the Method
-	 *
-	 * @param  o  Description of the Parameter
-	 */
-	private void write(Object o) {
-		try {
-			writer.write(o);
-			prtln("");
-		} catch (Exception e) {
-			prtln("couldn write");
-		}
-	}
+//	/**
+//	 *  Description of the Method
+//	 *
+//	 * @param  o  Description of the Parameter
+//	 */
+//	private void write(Object o) {
+//		try {
+//			writer.write(o);
+//			prtln("");
+//		} catch (Exception e) {
+//			prtln("couldn write");
+//		}
+//	}
 
 
 	/**

@@ -35,7 +35,6 @@ import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.schemedit.FrameworkRegistry;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
 
 /**
  *  Checks for duplicate and similar urls within a specific collection.
@@ -356,20 +355,20 @@ public class DupSimUrlChecker {
 	 *  =====================================================
 	 *  Utilities to get servlet context attributes
 	 */
-	/**
-	 *  Gets the collectionRegistry attribute of the DupSimUrlChecker class
-	 *
-	 *@return                The collectionRegistry value
-	 *@exception  Exception  NOT YET DOCUMENTED
-	 */
-	private CollectionRegistry getCollectionRegistry() throws Exception {
-		CollectionRegistry cr =
-				(CollectionRegistry) servletContext.getAttribute("collectionRegistry");
-		if (cr == null) {
-			throw new Exception("CollectionRegistry not found");
-		}
-		return cr;
-	}
+//	/**
+//	 *  Gets the collectionRegistry attribute of the DupSimUrlChecker class
+//	 *
+//	 *@return                The collectionRegistry value
+//	 *@exception  Exception  NOT YET DOCUMENTED
+//	 */
+//	private CollectionRegistry getCollectionRegistry() throws Exception {
+//		CollectionRegistry cr =
+//				(CollectionRegistry) servletContext.getAttribute("collectionRegistry");
+//		if (cr == null) {
+//			throw new Exception("CollectionRegistry not found");
+//		}
+//		return cr;
+//	}
 
 
 	/**

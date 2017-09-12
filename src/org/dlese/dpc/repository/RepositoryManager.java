@@ -400,27 +400,27 @@ public class RepositoryManager {
 	}
 
 
-	/**
-	 *  Changes the frequency of reindexing to the new value. Same as {@link #startTimerThread(long
-	 *  updateFrequency)}.
-	 *
-	 * @param  updateFrequency  The number of seconds between index updates.
-	 */
-	private void changeIndexingTimerFrequency(long updateFrequency) {
-		startIndexingTimer(updateFrequency);
-	}
+//	/**
+//	 *  Changes the frequency of reindexing to the new value. Same as {@link #startTimerThread(long
+//	 *  updateFrequency)}.
+//	 *
+//	 * @param  updateFrequency  The number of seconds between index updates.
+//	 */
+//	private void changeIndexingTimerFrequency(long updateFrequency) {
+//		startIndexingTimer(updateFrequency);
+//	}
 
 
 
-	/**
-	 *  Start or restarts the indexer thread with the given update frequency. Same as {@link
-	 *  #changeUpdateFrequency(long updateFrequency)}.
-	 *
-	 * @param  updateFrequency  The number of seconds between index updates.
-	 */
-	private void startIndexingTimer(long updateFrequency) {
-		startIndexingTimer(updateFrequency, null);
-	}
+//	/**
+//	 *  Start or restarts the indexer thread with the given update frequency. Same as {@link
+//	 *  #changeUpdateFrequency(long updateFrequency)}.
+//	 *
+//	 * @param  updateFrequency  The number of seconds between index updates.
+//	 */
+//	private void startIndexingTimer(long updateFrequency) {
+//		startIndexingTimer(updateFrequency, null);
+//	}
 
 
 
@@ -1860,19 +1860,19 @@ public class RepositoryManager {
 	}
 
 
-	private Query getFullOaiFilterQuery(String format) {
-
-		// If the requested format is not available, return null
-		String convertableFormatsQuery = getConvertableFormatsQuery(format);
-		if (convertableFormatsQuery == null)
-			return null;
-
-		String query = getDiscoverableRecordsQuery()
-			 + " AND " + convertableFormatsQuery;
-		if (removeInvalidRecords)
-			query += " AND !valid:false";
-		return null;
-	}
+//	private Query getFullOaiFilterQuery(String format) {
+//
+//		// If the requested format is not available, return null
+//		String convertableFormatsQuery = getConvertableFormatsQuery(format);
+//		if (convertableFormatsQuery == null)
+//			return null;
+//
+//		String query = getDiscoverableRecordsQuery()
+//			 + " AND " + convertableFormatsQuery;
+//		if (removeInvalidRecords)
+//			query += " AND !valid:false";
+//		return null;
+//	}
 
 
 	private List indexedFormats = null;
@@ -3098,14 +3098,14 @@ public class RepositoryManager {
 	}
 
 
-	/**  Deletes all SetInfos (directories of files) that are configured. */
-	private void deleteSetInfos() {
-		try {
-			synchronized (setInfosLock) {
-				adminData.delete(Keys.SET_INFOS);
-			}
-		} catch (Throwable e) {}
-	}
+//	/**  Deletes all SetInfos (directories of files) that are configured. */
+//	private void deleteSetInfos() {
+//		try {
+//			synchronized (setInfosLock) {
+//				adminData.delete(Keys.SET_INFOS);
+//			}
+//		} catch (Throwable e) {}
+//	}
 
 
 	/**

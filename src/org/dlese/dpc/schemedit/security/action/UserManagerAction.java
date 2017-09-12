@@ -46,13 +46,11 @@ import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.SessionBean;
 import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
 import org.dlese.dpc.schemedit.security.access.Roles;
 import org.dlese.dpc.schemedit.security.action.form.UserManagerForm;
 import org.dlese.dpc.schemedit.security.user.FullNameComparator;
 import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.security.util.AccessUtils;
-import org.dlese.dpc.schemedit.security.util.CollectionLabelValueSorter;
 
 /**
  *  Controller for Manage Users page, which displays users and their roles for
@@ -330,39 +328,39 @@ public final class UserManagerAction extends DCSAction {
 	}
 
 
-	/**
-	 *  Return a list representing the collections for which this user has no role
-	 *  explicitly assigned
-	 *
-	 * @param  user  the user
-	 * @return       The collectionOptions value
-	 */
-	private List getCollectionOptions(User user) {
-
-		List options = new ArrayList();
-
-		if (user == null) {
-			prtln("WARNING getCollectionOptions got a null user");
-			return options;
-		}
-
-		prtln("getCollectionOptions for " + user.getUsername());
-
-		for (Iterator i = collectionRegistry.getIds().iterator(); i.hasNext(); ) {
-			String collection = (String) i.next();
-			prtln("\t getting info for " + collection);
-			try {
-				CollectionConfig info = collectionRegistry.getCollectionConfig(collection);
-				// only add collection if user does not already have a role assigned for it
-				if (info != null && user.getAssignedRole(collection) == null)
-					options.add(new LabelValueBean(info.getSetInfo(repositoryManager).getName(), collection));
-			} catch (Throwable t) {
-				prtln("getCollectionOptions error: " + t.getMessage());
-			}
-		}
-		Collections.sort(options, new CollectionLabelValueSorter());
-		return options;
-	}
+//	/**
+//	 *  Return a list representing the collections for which this user has no role
+//	 *  explicitly assigned
+//	 *
+//	 * @param  user  the user
+//	 * @return       The collectionOptions value
+//	 */
+//	private List getCollectionOptions(User user) {
+//
+//		List options = new ArrayList();
+//
+//		if (user == null) {
+//			prtln("WARNING getCollectionOptions got a null user");
+//			return options;
+//		}
+//
+//		prtln("getCollectionOptions for " + user.getUsername());
+//
+//		for (Iterator i = collectionRegistry.getIds().iterator(); i.hasNext(); ) {
+//			String collection = (String) i.next();
+//			prtln("\t getting info for " + collection);
+//			try {
+//				CollectionConfig info = collectionRegistry.getCollectionConfig(collection);
+//				// only add collection if user does not already have a role assigned for it
+//				if (info != null && user.getAssignedRole(collection) == null)
+//					options.add(new LabelValueBean(info.getSetInfo(repositoryManager).getName(), collection));
+//			} catch (Throwable t) {
+//				prtln("getCollectionOptions error: " + t.getMessage());
+//			}
+//		}
+//		Collections.sort(options, new CollectionLabelValueSorter());
+//		return options;
+//	}
 
 
 	/**

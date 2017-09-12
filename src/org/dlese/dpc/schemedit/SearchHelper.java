@@ -425,42 +425,42 @@ public class SearchHelper {
 
 	// ---------- predicates ---------------------
 
-	/**
-	 *  Compares provided sortWidget to the cached sortSpec.
-	 *
-	 *@param  sortWidget  SortWidget to compare to cached sort
-	 *@return             true if cashedSort is not null and field or order of
-	 *      cashed sort differs from that of provided SortWidget.
-	 */
-	private boolean isNewSort(SortWidget sortWidget) {
-		return (this.cachedSort == null || this.cachedSort.isNewSort(sortWidget));
-	}
+//	/**
+//	 *  Compares provided sortWidget to the cached sortSpec.
+//	 *
+//	 *@param  sortWidget  SortWidget to compare to cached sort
+//	 *@return             true if cashedSort is not null and field or order of
+//	 *      cashed sort differs from that of provided SortWidget.
+//	 */
+//	private boolean isNewSort(SortWidget sortWidget) {
+//		return (this.cachedSort == null || this.cachedSort.isNewSort(sortWidget));
+//	}
 
 
-	/**
-	 *  Gets the newSortField attribute of the SearchHelper object
-	 *
-	 *@param  sortWidget  NOT YET DOCUMENTED
-	 *@return             The newSortField value
-	 */
-	private boolean isNewSortField(SortWidget sortWidget) {
-		return (this.cachedSort == null || this.cachedSort.isNewSortField(sortWidget));
-	}
+//	/**
+//	 *  Gets the newSortField attribute of the SearchHelper object
+//	 *
+//	 *@param  sortWidget  NOT YET DOCUMENTED
+//	 *@return             The newSortField value
+//	 */
+//	private boolean isNewSortField(SortWidget sortWidget) {
+//		return (this.cachedSort == null || this.cachedSort.isNewSortField(sortWidget));
+//	}
 
 
-	/**
-	 *  Compares given query string to cached query string.
-	 *
-	 *@param  query  Description of the Parameter
-	 *@return        Returns true if provided query is different than current
-	 *      query.
-	 */
-	private boolean isNewQuery(Query query) {
-		if (query == null) {
-			return this.cachedQuery != query;
-		}
-		return !query.equals(this.cachedQuery);
-	}
+//	/**
+//	 *  Compares given query string to cached query string.
+//	 *
+//	 *@param  query  Description of the Parameter
+//	 *@return        Returns true if provided query is different than current
+//	 *      query.
+//	 */
+//	private boolean isNewQuery(Query query) {
+//		if (query == null) {
+//			return this.cachedQuery != query;
+//		}
+//		return !query.equals(this.cachedQuery);
+//	}
 
 
 	/**
@@ -491,18 +491,18 @@ public class SearchHelper {
 	/**
 	 *  Debugging
 	 */
-	private void showSearchResultsHits() {
-		int n = 50;
-		prtln("SEARCH RESULT LIST");
-		if (this.isEmpty()) {
-			prtln("\t EMPTY");
-			return;
-		}
-		for (Iterator i = getHits(0, n).iterator(); i.hasNext(); ) {
-			ResultDoc resultDoc = (ResultDoc) i.next();
-			prtln("\t" + getIdFromResultDoc(resultDoc));
-		}
-	}
+//	private void showSearchResultsHits() {
+//		int n = 50;
+//		prtln("SEARCH RESULT LIST");
+//		if (this.isEmpty()) {
+//			prtln("\t EMPTY");
+//			return;
+//		}
+//		for (Iterator i = getHits(0, n).iterator(); i.hasNext(); ) {
+//			ResultDoc resultDoc = (ResultDoc) i.next();
+//			prtln("\t" + getIdFromResultDoc(resultDoc));
+//		}
+//	}
 
 
 	/**
@@ -559,16 +559,16 @@ public class SearchHelper {
 		public String field;
 
 
-		/**
-		 *  Constructor for the SortSpec object
-		 *
-		 *@param  field  sort field
-		 *@param  order  sort order
-		 */
-		public SortSpec(String field, int order) {
-			this.field = field;
-			this.order = order;
-		}
+//		/**
+//		 *  Constructor for the SortSpec object
+//		 *
+//		 *@param  field  sort field
+//		 *@param  order  sort order
+//		 */
+//		public SortSpec(String field, int order) {
+//			this.field = field;
+//			this.order = order;
+//		}
 
 
 		/**
@@ -583,47 +583,47 @@ public class SearchHelper {
 		}
 
 
-		/**
-		 *  Compares the order and field attributes of the provided sortWidget to the
-		 *  corresponding fields of this sortSpec.
-		 *
-		 *@param  widget  the sortWidget
-		 *@return         true if the provided sortWidget specifies a sort other than
-		 *      this sortSpec
-		 */
-		public boolean isNewSort(SortWidget widget) {
-			if (widget == null) {
-				return false;
-			}
-			return (widget.getOrder() != this.order ||
-					!widget.getFieldName().equals(this.field));
-		}
+//		/**
+//		 *  Compares the order and field attributes of the provided sortWidget to the
+//		 *  corresponding fields of this sortSpec.
+//		 *
+//		 *@param  widget  the sortWidget
+//		 *@return         true if the provided sortWidget specifies a sort other than
+//		 *      this sortSpec
+//		 */
+//		public boolean isNewSort(SortWidget widget) {
+//			if (widget == null) {
+//				return false;
+//			}
+//			return (widget.getOrder() != this.order ||
+//					!widget.getFieldName().equals(this.field));
+//		}
 
 
-		/**
-		 *  Returns true if the provided widget specifies a different sort field than
-		 *  the sort field of this SortSpec.
-		 *
-		 *@param  widget  provided SortWidget
-		 *@return         true if provided sortWidget is not null and sort fields do
-		 *      not match
-		 */
-		public boolean isNewSortField(SortWidget widget) {
-			if (widget == null) {
-				return false;
-			}
-			return (!widget.getFieldName().equals(this.field));
-		}
+//		/**
+//		 *  Returns true if the provided widget specifies a different sort field than
+//		 *  the sort field of this SortSpec.
+//		 *
+//		 *@param  widget  provided SortWidget
+//		 *@return         true if provided sortWidget is not null and sort fields do
+//		 *      not match
+//		 */
+//		public boolean isNewSortField(SortWidget widget) {
+//			if (widget == null) {
+//				return false;
+//			}
+//			return (!widget.getFieldName().equals(this.field));
+//		}
 
 
-		/**
-		 *  Gets the widget attribute of the SortSpec object
-		 *
-		 *@return    The widget value
-		 */
-		public SortWidget getWidget() {
-			return this.widget;
-		}
+//		/**
+//		 *  Gets the widget attribute of the SortSpec object
+//		 *
+//		 *@return    The widget value
+//		 */
+//		public SortWidget getWidget() {
+//			return this.widget;
+//		}
 	}
 }
 

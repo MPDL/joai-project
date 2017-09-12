@@ -1199,19 +1199,19 @@ public final class FileIndexingService {
 		File sourceDir = null;
 
 
-		/**
-		 *  Constructor for the UpdateThread object
-		 *
-		 * @param  filesToUpdate  DESCRIPTION
-		 * @param  sourceDir      DESCRIPTION
-		 * @param  reindexAll     DESCRIPTION
-		 */
-		public UpdateThread(File[] filesToUpdate, File sourceDir, boolean reindexAll) {
-			this.updateObjects = filesToUpdate;
-			this.reindexAll = reindexAll;
-			this.sourceDir = sourceDir;
-			setDaemon(true);
-		}
+//		/**
+//		 *  Constructor for the UpdateThread object
+//		 *
+//		 * @param  filesToUpdate  DESCRIPTION
+//		 * @param  sourceDir      DESCRIPTION
+//		 * @param  reindexAll     DESCRIPTION
+//		 */
+//		public UpdateThread(File[] filesToUpdate, File sourceDir, boolean reindexAll) {
+//			this.updateObjects = filesToUpdate;
+//			this.reindexAll = reindexAll;
+//			this.sourceDir = sourceDir;
+//			setDaemon(true);
+//		}
 
 
 		/**

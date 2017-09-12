@@ -577,27 +577,27 @@ public final class SchemEditServlet extends HttpServlet {
 	}
 
 
-	/**
-	 *  Debugging
-	 */
-	private void showContextParams() {
-
-		prtln("\ninit parameters from CONFIG");
-		Enumeration e1 = this.getServletConfig().getInitParameterNames();
-		while (e1.hasMoreElements()) {
-			String paramName = (String) e1.nextElement();
-			String paramValue = (String) this.getServletConfig().getInitParameter(paramName);
-			prtln("\t" + paramName + ": " + paramValue);
-		}
-
-		prtln("\ninit parameters from CONTEXT");
-		Enumeration e2 = this.getServletContext().getInitParameterNames();
-		while (e2.hasMoreElements()) {
-			String paramName = (String) e2.nextElement();
-			String paramValue = (String) this.getServletContext().getInitParameter(paramName);
-			prtln("\t" + paramName + ": " + paramValue);
-		}
-	}
+//	/**
+//	 *  Debugging
+//	 */
+//	private void showContextParams() {
+//
+//		prtln("\ninit parameters from CONFIG");
+//		Enumeration e1 = this.getServletConfig().getInitParameterNames();
+//		while (e1.hasMoreElements()) {
+//			String paramName = (String) e1.nextElement();
+//			String paramValue = (String) this.getServletConfig().getInitParameter(paramName);
+//			prtln("\t" + paramName + ": " + paramValue);
+//		}
+//
+//		prtln("\ninit parameters from CONTEXT");
+//		Enumeration e2 = this.getServletContext().getInitParameterNames();
+//		while (e2.hasMoreElements()) {
+//			String paramName = (String) e2.nextElement();
+//			String paramValue = (String) this.getServletContext().getInitParameter(paramName);
+//			prtln("\t" + paramName + ": " + paramValue);
+//		}
+//	}
 
 }
 

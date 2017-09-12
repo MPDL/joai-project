@@ -72,14 +72,14 @@ public class Dom4jTester {
 		prtln (namespaces.toString());
 	}
 
-	private void showStack () {
-		String s = "\nNamespace Stack";
-		for (int i=0;i<stack.size();i++) {
-			Namespace ns = stack.getNamespace (i);
-			s += "\n\t" + i + ":  " + ns.getPrefix() + ": " + ns.getURI();
-		}
-		prtln (s);
-	}
+//	private void showStack () {
+//		String s = "\nNamespace Stack";
+//		for (int i=0;i<stack.size();i++) {
+//			Namespace ns = stack.getNamespace (i);
+//			s += "\n\t" + i + ":  " + ns.getPrefix() + ": " + ns.getURI();
+//		}
+//		prtln (s);
+//	}
 	
 	/**
 	 *  The main program for the Dom4jTester class
@@ -171,24 +171,24 @@ public class Dom4jTester {
 		}
 	}
 	
-	private Map getUrisFromScratch () {
-		Map uris = new HashMap ();
-		Namespace namedDefaultNamespace = namespaces.getNamedDefaultNamespace();
-		uris.put (namedDefaultNamespace.getPrefix(), namedDefaultNamespace.getURI());
-		return uris;
-	}
+//	private Map getUrisFromScratch () {
+//		Map uris = new HashMap ();
+//		Namespace namedDefaultNamespace = namespaces.getNamedDefaultNamespace();
+//		uris.put (namedDefaultNamespace.getPrefix(), namedDefaultNamespace.getURI());
+//		return uris;
+//	}
 	
-	private Map getUrisFromNR () {
-		Map uris = new HashMap ();
-		for (Iterator i=namespaces.getPrefixMap().keySet().iterator();i.hasNext();) {
-			String prefix = (String)i.next();
-			Namespace ns = namespaces.getNSforPrefix(prefix);
-/* 			if (prefix.trim().length() > 0)
-				uris.put(prefix, ns.getURI()); */
-			uris.put(prefix, ns.getURI());
-		}
-		return uris;
-	}
+//	private Map getUrisFromNR () {
+//		Map uris = new HashMap ();
+//		for (Iterator i=namespaces.getPrefixMap().keySet().iterator();i.hasNext();) {
+//			String prefix = (String)i.next();
+//			Namespace ns = namespaces.getNSforPrefix(prefix);
+///* 			if (prefix.trim().length() > 0)
+//				uris.put(prefix, ns.getURI()); */
+//			uris.put(prefix, ns.getURI());
+//		}
+//		return uris;
+//	}
 	
 	/**
 	 *  NOT YET DOCUMENTED

@@ -652,28 +652,28 @@ public class NDRIndexer implements ItemIndexer {
 
 
 
-	/**
-	 *  Gets a metadataProviderReader given a collection key.<p>
-	 *
-	 *
-	 *
-	 * @param  collection     collection key
-	 * @return                The metadataProvider value
-	 * @exception  Exception  If error
-	 */
-	private MetadataProviderReader getMetadataProvider(String collection) throws Exception {
-		return NdrUtils.getMetadataProvider(collection);
-	}
+//	/**
+//	 *  Gets a metadataProviderReader given a collection key.<p>
+//	 *
+//	 *
+//	 *
+//	 * @param  collection     collection key
+//	 * @return                The metadataProvider value
+//	 * @exception  Exception  If error
+//	 */
+//	private MetadataProviderReader getMetadataProvider(String collection) throws Exception {
+//		return NdrUtils.getMetadataProvider(collection);
+//	}
 
 
-	private PropertiesManager getProperties(File configDir) throws Exception {
-		// First look in the configuration directory...
-		if (configDir != null && configDir.isDirectory())
-			return new PropertiesManager(new File(configDir, "org.dlese.dpc.dds.ndr.NDRIndexer.properties").toString());
-		// Then look in the classpath...
-		else
-			return new PropertiesManager("org.dlese.dpc.dds.ndr.NDRIndexer.properties");
-	}
+//	private PropertiesManager getProperties(File configDir) throws Exception {
+//		// First look in the configuration directory...
+//		if (configDir != null && configDir.isDirectory())
+//			return new PropertiesManager(new File(configDir, "org.dlese.dpc.dds.ndr.NDRIndexer.properties").toString());
+//		// Then look in the classpath...
+//		else
+//			return new PropertiesManager("org.dlese.dpc.dds.ndr.NDRIndexer.properties");
+//	}
 
 
 	private void printStatusMessage(String msg) {

@@ -690,47 +690,47 @@ public abstract class ItemFileIndexingWriter extends XMLFileIndexingWriter {
 	}
 
 
-	/**
-	 *  Indexes the annotation rating information and tabulated statistics.
-	 *
-	 * @param  annoResultDocs  An array of anno ResultDocs
-	 * @param  newDoc          The Document to add the fields to
-	 */
-	private void indexAnnoRatings(ResultDocList annoResultDocs, Document newDoc) {
-
-		float numRatings = 0;
-		float totalRating = 0;
-		String ratings = null;
-		if (annoResultDocs != null && annoResultDocs.size() > 0) {
-			ratings = "";
-			for (int i = 0; i < annoResultDocs.size(); i++) {
-				String rating = ((DleseAnnoDocReader) annoResultDocs.get(i).getDocReader()).getRating();
-				if (rating != null && rating.length() > 0) {
-					try {
-						totalRating += Float.parseFloat(rating);
-						numRatings++;
-						ratings += rating + " ";
-					} catch (Exception nfe) {}
-				}
-			}
-		}
-
-		// The total number of ratings assigned to this resource
-		newDoc.add(new Field("itemannonumratings", new DecimalFormat("00000").format(numRatings), Field.Store.YES, Field.Index.NOT_ANALYZED));
-
-		// A String of all the ratings assigned to this resource, as numbers (e.g. '1 1 2 4 2 3')
-		if (ratings != null && ratings.length() > 0)
-			newDoc.add(new Field("itemannoratingvalues", ratings, Field.Store.YES, Field.Index.ANALYZED));
-
-		// The average rating for this resource
-		if (numRatings > 0 || totalRating > 0) {
-			float aveRating = (totalRating / numRatings);
-
-			NumberFormat formatter = new DecimalFormat("0.000");
-			//prtln("ave rating: " + aveRating + " string: " + formatter.format(aveRating));
-			newDoc.add(new Field("itemannoaveragerating", formatter.format(aveRating), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		}
-	}
+//	/**
+//	 *  Indexes the annotation rating information and tabulated statistics.
+//	 *
+//	 * @param  annoResultDocs  An array of anno ResultDocs
+//	 * @param  newDoc          The Document to add the fields to
+//	 */
+//	private void indexAnnoRatings(ResultDocList annoResultDocs, Document newDoc) {
+//
+//		float numRatings = 0;
+//		float totalRating = 0;
+//		String ratings = null;
+//		if (annoResultDocs != null && annoResultDocs.size() > 0) {
+//			ratings = "";
+//			for (int i = 0; i < annoResultDocs.size(); i++) {
+//				String rating = ((DleseAnnoDocReader) annoResultDocs.get(i).getDocReader()).getRating();
+//				if (rating != null && rating.length() > 0) {
+//					try {
+//						totalRating += Float.parseFloat(rating);
+//						numRatings++;
+//						ratings += rating + " ";
+//					} catch (Exception nfe) {}
+//				}
+//			}
+//		}
+//
+//		// The total number of ratings assigned to this resource
+//		newDoc.add(new Field("itemannonumratings", new DecimalFormat("00000").format(numRatings), Field.Store.YES, Field.Index.NOT_ANALYZED));
+//
+//		// A String of all the ratings assigned to this resource, as numbers (e.g. '1 1 2 4 2 3')
+//		if (ratings != null && ratings.length() > 0)
+//			newDoc.add(new Field("itemannoratingvalues", ratings, Field.Store.YES, Field.Index.ANALYZED));
+//
+//		// The average rating for this resource
+//		if (numRatings > 0 || totalRating > 0) {
+//			float aveRating = (totalRating / numRatings);
+//
+//			NumberFormat formatter = new DecimalFormat("0.000");
+//			//prtln("ave rating: " + aveRating + " string: " + formatter.format(aveRating));
+//			newDoc.add(new Field("itemannoaveragerating", formatter.format(aveRating), Field.Store.YES, Field.Index.NOT_ANALYZED));
+//		}
+//	}
 
 
 	/**

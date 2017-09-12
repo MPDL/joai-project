@@ -93,16 +93,16 @@ public class UrlValidator {
 	}
 
 
-	/**
-	 *  Construct query string to be used by the Search Service to search for
-	 *  records containing matches to the provided url.
-	 *
-	 * @param  url  Description of the Parameter
-	 * @return      Description of the Return Value
-	 */
-	private static String makeUrlQueryStr(String url) {
-		return makeUrlQueryStr(url, null);
-	}
+//	/**
+//	 *  Construct query string to be used by the Search Service to search for
+//	 *  records containing matches to the provided url.
+//	 *
+//	 * @param  url  Description of the Parameter
+//	 * @return      Description of the Return Value
+//	 */
+//	private static String makeUrlQueryStr(String url) {
+//		return makeUrlQueryStr(url, null);
+//	}
 
 
 	/**

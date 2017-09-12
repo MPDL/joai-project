@@ -131,67 +131,67 @@ public class LinkifyTester {
 		return s;
 	}
 	
-	private String linkifyOriginal (String s, String xpath) {
-		String baseUrl = "/schemedit/schema/schema.do?command=doPath&path=";
-		Pattern p = Pattern.compile("<");
-		s = p.matcher(s).replaceAll("&lt;");
-
-		// linkify element names
-		Namespace schemaNamespace = (Namespace)getFramework().getSchemaHelper().getSchemaProps().getProp("namespace");
-		String elementPat = "&lt;" + schemaNamespace.getPrefix() + ":element name=\"";
-		String namePatStr = elementPat + ".+?\"";
-		// String namePatStr = "&lt;xsd:element name=\".+?\"";
-		p = Pattern.compile(namePatStr);
-		Matcher m;
-		int index = 0;
-		while (true) {
-			m = p.matcher(s);
-
-			// replace occurrences one by one
-			if (m.find(index)) {
-				// prtln("group: " + m.group());
-				String content = s.substring(m.start(), m.end());
-				// prtln ("content: " + content + "(" + content.length() + ")");
-				String name = content.substring(elementPat.length(), content.length() - 1);
-				// prtln ("name: " + name);
-				String href = baseUrl + xpath + "/" + name;
-				String replaceStr = "<a href=\'" + href + "\'>" + name + "</a>";
-				s = s.substring(0, m.start() + elementPat.length()) + replaceStr + s.substring(m.end() - 1);
-				index = m.end();
-			}
-			else {
-				break;
-			}
-		}
-
-		// linkify dataTypes
-		baseUrl = "/schemedit/schema/schema.do?command=doType&typeName=";
-		String prefix = "type=\"";
-		String typePatStr = prefix + ".+?\"";
-		// String namePatStr = "&lt;xsd:element name=\".+?\"";
-		p = Pattern.compile(typePatStr);
-		index = 0;
-		while (true) {
-			m = p.matcher(s);
-
-			// replace occurrences one by one
-			if (m.find(index)) {
-				// prtln("group: " + m.group());
-				String content = s.substring(m.start(), m.end());
-				// prtln ("content: " + content + "(" + content.length() + ")");
-				String typeName = content.substring(prefix.length(), content.length() - 1);
-				// prtln ("typeName: " + typeName);
-				String href = baseUrl + typeName + "&path=" + xpath;
-				String replaceStr = "<a href=\'" + href + "\'>" + typeName + "</a>";
-				s = s.substring(0, m.start() + prefix.length()) + replaceStr + s.substring(m.end() - 1);
-				index = m.end();
-			}
-			else {
-				break;
-			}
-		}
-		return s;
-	}
+//	private String linkifyOriginal (String s, String xpath) {
+//		String baseUrl = "/schemedit/schema/schema.do?command=doPath&path=";
+//		Pattern p = Pattern.compile("<");
+//		s = p.matcher(s).replaceAll("&lt;");
+//
+//		// linkify element names
+//		Namespace schemaNamespace = (Namespace)getFramework().getSchemaHelper().getSchemaProps().getProp("namespace");
+//		String elementPat = "&lt;" + schemaNamespace.getPrefix() + ":element name=\"";
+//		String namePatStr = elementPat + ".+?\"";
+//		// String namePatStr = "&lt;xsd:element name=\".+?\"";
+//		p = Pattern.compile(namePatStr);
+//		Matcher m;
+//		int index = 0;
+//		while (true) {
+//			m = p.matcher(s);
+//
+//			// replace occurrences one by one
+//			if (m.find(index)) {
+//				// prtln("group: " + m.group());
+//				String content = s.substring(m.start(), m.end());
+//				// prtln ("content: " + content + "(" + content.length() + ")");
+//				String name = content.substring(elementPat.length(), content.length() - 1);
+//				// prtln ("name: " + name);
+//				String href = baseUrl + xpath + "/" + name;
+//				String replaceStr = "<a href=\'" + href + "\'>" + name + "</a>";
+//				s = s.substring(0, m.start() + elementPat.length()) + replaceStr + s.substring(m.end() - 1);
+//				index = m.end();
+//			}
+//			else {
+//				break;
+//			}
+//		}
+//
+//		// linkify dataTypes
+//		baseUrl = "/schemedit/schema/schema.do?command=doType&typeName=";
+//		String prefix = "type=\"";
+//		String typePatStr = prefix + ".+?\"";
+//		// String namePatStr = "&lt;xsd:element name=\".+?\"";
+//		p = Pattern.compile(typePatStr);
+//		index = 0;
+//		while (true) {
+//			m = p.matcher(s);
+//
+//			// replace occurrences one by one
+//			if (m.find(index)) {
+//				// prtln("group: " + m.group());
+//				String content = s.substring(m.start(), m.end());
+//				// prtln ("content: " + content + "(" + content.length() + ")");
+//				String typeName = content.substring(prefix.length(), content.length() - 1);
+//				// prtln ("typeName: " + typeName);
+//				String href = baseUrl + typeName + "&path=" + xpath;
+//				String replaceStr = "<a href=\'" + href + "\'>" + typeName + "</a>";
+//				s = s.substring(0, m.start() + prefix.length()) + replaceStr + s.substring(m.end() - 1);
+//				index = m.end();
+//			}
+//			else {
+//				break;
+//			}
+//		}
+//		return s;
+//	}
 	
 	public static void main (String [] args) throws Exception {
 		String xmlFormat = "status_report_simple";

@@ -331,46 +331,46 @@ public class XMLQueryParser {
 
 	//================================================================
 
-	/**
-	 *  Return a string for the current time and date, sutiable for display in log files and output to standout:
-	 *
-	 * @return    The dateStamp value
-	 */
-	private static String getDateStamp() {
-		return
-			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-	}
+//	/**
+//	 *  Return a string for the current time and date, sutiable for display in log files and output to standout:
+//	 *
+//	 * @return    The dateStamp value
+//	 */
+//	private static String getDateStamp() {
+//		return
+//			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+//	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " XMLQueryParser Error: " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " XMLQueryParser Error: " + s);
+//	}
 
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-	 *
-	 * @param  s  The String that will be output.
-	 */
-	private final void prtln(String s) {
-		if (debug)
-			System.out.println(getDateStamp() + " XMLQueryParser: " + s);
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+//	 *
+//	 * @param  s  The String that will be output.
+//	 */
+//	private final void prtln(String s) {
+//		if (debug)
+//			System.out.println(getDateStamp() + " XMLQueryParser: " + s);
+//	}
 
 
-	/**
-	 *  Sets the debug attribute of the DocumentService object
-	 *
-	 * @param  db  The new debug value
-	 */
-	private final void setDebug(boolean db) {
-		debug = db;
-	}
+//	/**
+//	 *  Sets the debug attribute of the DocumentService object
+//	 *
+//	 * @param  db  The new debug value
+//	 */
+//	private final void setDebug(boolean db) {
+//		debug = db;
+//	}
 }
 
 

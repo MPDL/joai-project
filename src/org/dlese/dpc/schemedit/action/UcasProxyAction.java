@@ -134,35 +134,35 @@ public final class UcasProxyAction extends Action {
 	}
 
 
-	/**
-	 *  Gets the request referer, attempting to overcome IE but that referer is not
-	 *  sent in the header from event handlers. First looks for a request param
-	 *  named "referer" and uses this if found, otherwise uses the "referer" from
-	 *  the header.
-	 *
-	 * @param  request  NOT YET DOCUMENTED
-	 * @return          The referer value
-	 */
-	private String getReferer(HttpServletRequest request) {
-		String referer = request.getParameter("referer");
-		return (referer != null) ? referer : request.getHeader("referer");
-	}
+//	/**
+//	 *  Gets the request referer, attempting to overcome IE but that referer is not
+//	 *  sent in the header from event handlers. First looks for a request param
+//	 *  named "referer" and uses this if found, otherwise uses the "referer" from
+//	 *  the header.
+//	 *
+//	 * @param  request  NOT YET DOCUMENTED
+//	 * @return          The referer value
+//	 */
+//	private String getReferer(HttpServletRequest request) {
+//		String referer = request.getParameter("referer");
+//		return (referer != null) ? referer : request.getHeader("referer");
+//	}
 
 
-	/**
-	 *  Debugging 
-	 *
-	 * @param  request  the request
-	 */
-	private void showHeaders(HttpServletRequest request) {
-		prtln("\n REQUEST HEADERS");
-		Enumeration headerNames = request.getHeaderNames();
-		while (headerNames.hasMoreElements()) {
-			String name = (String) headerNames.nextElement();
-			prtln(name + ": " + request.getHeader(name));
-		}
-		prtln("-----------\n");
-	}
+//	/**
+//	 *  Debugging 
+//	 *
+//	 * @param  request  the request
+//	 */
+//	private void showHeaders(HttpServletRequest request) {
+//		prtln("\n REQUEST HEADERS");
+//		Enumeration headerNames = request.getHeaderNames();
+//		while (headerNames.hasMoreElements()) {
+//			String name = (String) headerNames.nextElement();
+//			prtln(name + ": " + request.getHeader(name));
+//		}
+//		prtln("-----------\n");
+//	}
 
 
 

@@ -430,51 +430,51 @@ public class SchemEditUtils {
 	}
 
 
-	/**
-	 *  Gets the editableDocument attribute of the SchemEditUtils class
-	 *
-	 * @param  docUri                 Description of the Parameter
-	 * @return                        The editableDocument value
-	 * @exception  DocumentException  Description of the Exception
-	 */
-	private static Document getEditableDocument(String docUri)
-		 throws DocumentException {
-		return getEditableDocument(docUri, true);
-	}
+//	/**
+//	 *  Gets the editableDocument attribute of the SchemEditUtils class
+//	 *
+//	 * @param  docUri                 Description of the Parameter
+//	 * @return                        The editableDocument value
+//	 * @exception  DocumentException  Description of the Exception
+//	 */
+//	private static Document getEditableDocument(String docUri)
+//		 throws DocumentException {
+//		return getEditableDocument(docUri, true);
+//	}
 
 
-	/**
-	 *  Returns the localized dom4j.Document (with ampersands expanded) from the
-	 *  given uri.
-	 *
-	 * @param  docUri                 Description of the Parameter
-	 * @param  localize               Description of the Parameter
-	 * @return                        The editableDocument value
-	 * @exception  DocumentException  Description of the Exception
-	 */
-	private static Document getEditableDocument(String docUri, boolean localize)
-		 throws DocumentException {
-		try {
-			String xml = getEditableXml(docUri, null);
-			Document doc = Dom4jUtils.getXmlDocument(xml);
-			Element root = doc.getRootElement();
-			// return Dom4jUtils.localizeXml(doc, root.getName());
-
-			// prtln("schemEditUtils.getEditableDocument before localizing:" + Dom4jUtils.prettyPrint(doc));
-
-			if (localize) {
-				Document localizedDoc = localizeXml(doc);
-				// prtln("\n\n\nschemEditUtils.getEditableDocument AFTER localizing:" + Dom4jUtils.prettyPrint(localizedDoc));
-				return localizedDoc;
-			}
-			else {
-				// prtln("\n\n\nschemEditUtils.getEditableDocument NOT localized:" + Dom4jUtils.prettyPrint(doc));
-				return doc;
-			}
-		} catch (Exception e) {
-			throw new DocumentException(e.getMessage());
-		}
-	}
+//	/**
+//	 *  Returns the localized dom4j.Document (with ampersands expanded) from the
+//	 *  given uri.
+//	 *
+//	 * @param  docUri                 Description of the Parameter
+//	 * @param  localize               Description of the Parameter
+//	 * @return                        The editableDocument value
+//	 * @exception  DocumentException  Description of the Exception
+//	 */
+//	private static Document getEditableDocument(String docUri, boolean localize)
+//		 throws DocumentException {
+//		try {
+//			String xml = getEditableXml(docUri, null);
+//			Document doc = Dom4jUtils.getXmlDocument(xml);
+//			Element root = doc.getRootElement();
+//			// return Dom4jUtils.localizeXml(doc, root.getName());
+//
+//			// prtln("schemEditUtils.getEditableDocument before localizing:" + Dom4jUtils.prettyPrint(doc));
+//
+//			if (localize) {
+//				Document localizedDoc = localizeXml(doc);
+//				// prtln("\n\n\nschemEditUtils.getEditableDocument AFTER localizing:" + Dom4jUtils.prettyPrint(localizedDoc));
+//				return localizedDoc;
+//			}
+//			else {
+//				// prtln("\n\n\nschemEditUtils.getEditableDocument NOT localized:" + Dom4jUtils.prettyPrint(doc));
+//				return doc;
+//			}
+//		} catch (Exception e) {
+//			throw new DocumentException(e.getMessage());
+//		}
+//	}
 
 
 	/**
@@ -863,29 +863,29 @@ public class SchemEditUtils {
 	}
 
 
-	/**
-	 *  Displays the request attributes for debugging..
-	 *
-	 * @param  request  Description of the Parameter
-	 */
-	private void showRequestAttributes(HttpServletRequest request) {
-		if (debug) {
-			prtln("Request Attributes");
-			for (Enumeration e = request.getAttributeNames(); e.hasMoreElements(); ) {
-				String attribute = (String) e.nextElement();
-				Object o = request.getAttribute(attribute);
-				if (o instanceof String) {
-					System.out.println("\t" + attribute + ": " + (String) o);
-				}
-				else {
-					System.out.println("\t" + attribute + " (" + o.getClass().getName() + ")");
-					try {
-						System.out.println("\t\t" + o.toString());
-					} catch (Throwable t) {}
-				}
-			}
-		}
-	}
+//	/**
+//	 *  Displays the request attributes for debugging..
+//	 *
+//	 * @param  request  Description of the Parameter
+//	 */
+//	private void showRequestAttributes(HttpServletRequest request) {
+//		if (debug) {
+//			prtln("Request Attributes");
+//			for (Enumeration e = request.getAttributeNames(); e.hasMoreElements(); ) {
+//				String attribute = (String) e.nextElement();
+//				Object o = request.getAttribute(attribute);
+//				if (o instanceof String) {
+//					System.out.println("\t" + attribute + ": " + (String) o);
+//				}
+//				else {
+//					System.out.println("\t" + attribute + " (" + o.getClass().getName() + ")");
+//					try {
+//						System.out.println("\t\t" + o.toString());
+//					} catch (Throwable t) {}
+//				}
+//			}
+//		}
+//	}
 
 
 	/**

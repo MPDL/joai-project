@@ -143,16 +143,16 @@ public final class StaticRecordForm extends ActionForm implements Serializable {
 		System.out.println("StaticRecordForm: " + s);
 	}
 
-	/**
-	 *  Return a string for the current time and date, sutiable for display in log files and
-	 *  output to standout:
-	 *
-	 * @return    The dateStamp value
-	 */
-	private final static String getDateStamp() {
-		return
-			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-	}
+//	/**
+//	 *  Return a string for the current time and date, sutiable for display in log files and
+//	 *  output to standout:
+//	 *
+//	 * @return    The dateStamp value
+//	 */
+//	private final static String getDateStamp() {
+//		return
+//			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+//	}
 
 
 	/**

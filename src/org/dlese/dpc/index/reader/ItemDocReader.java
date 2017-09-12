@@ -284,28 +284,28 @@ public class ItemDocReader extends XMLDocReader {
 	}
 
 
-	private String getFieldedQueryTerms(String query) {
-		String[] terms = query.split("\\s+");
-		if (terms == null) {
-			return query;
-		}
-		StringBuffer newQuery = new StringBuffer();
-		boolean hasRealTerm = false;
-		for (int i = 0; i < terms.length; i++) {
-			//prtln("term: " + terms[i]);
-
-			if (terms[i].matches(".*\\(.*:.*|.*\\).*:.*|.*:.*")) {
-				newQuery.append(terms[i]);
-				newQuery.append(" ");
-				hasRealTerm = true;
-			}
-			else if (hasRealTerm && terms[i].matches(".*AND.*|.*OR.*")) {
-				newQuery.append(terms[i]);
-				newQuery.append(" ");
-			}
-		}
-		return newQuery.toString();
-	}
+//	private String getFieldedQueryTerms(String query) {
+//		String[] terms = query.split("\\s+");
+//		if (terms == null) {
+//			return query;
+//		}
+//		StringBuffer newQuery = new StringBuffer();
+//		boolean hasRealTerm = false;
+//		for (int i = 0; i < terms.length; i++) {
+//			//prtln("term: " + terms[i]);
+//
+//			if (terms[i].matches(".*\\(.*:.*|.*\\).*:.*|.*:.*")) {
+//				newQuery.append(terms[i]);
+//				newQuery.append(" ");
+//				hasRealTerm = true;
+//			}
+//			else if (hasRealTerm && terms[i].matches(".*AND.*|.*OR.*")) {
+//				newQuery.append(terms[i]);
+//				newQuery.append(" ");
+//			}
+//		}
+//		return newQuery.toString();
+//	}
 
 
 	/**

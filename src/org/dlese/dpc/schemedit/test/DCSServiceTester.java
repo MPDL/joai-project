@@ -99,57 +99,57 @@ public class DCSServiceTester {
 	}
 
 
-	/**
-	 *  Perform GetId by directly issuing request URL
-	 *
-	 *@param  collection  Description of the Parameter
-	 */
-	private void getIdDirect(String collection) {
-		String qs = "verb=" + verb;
-		qs += "&collection=" + collection;
-		URL url;
-		Document doc;
-		try {
-			url = new URL(baseUrl + "?" + qs);
-			doc = Dom4jUtils.getXmlDocument(url);
-		} catch (MalformedURLException mue) {
-			prtln("URL error: " + mue.getCause());
-			return;
-		} catch (org.dom4j.DocumentException de) {
-			prtln(de.getMessage());
-			return;
-		}
+//	/**
+//	 *  Perform GetId by directly issuing request URL
+//	 *
+//	 *@param  collection  Description of the Parameter
+//	 */
+//	private void getIdDirect(String collection) {
+//		String qs = "verb=" + verb;
+//		qs += "&collection=" + collection;
+//		URL url;
+//		Document doc;
+//		try {
+//			url = new URL(baseUrl + "?" + qs);
+//			doc = Dom4jUtils.getXmlDocument(url);
+//		} catch (MalformedURLException mue) {
+//			prtln("URL error: " + mue.getCause());
+//			return;
+//		} catch (org.dom4j.DocumentException de) {
+//			prtln(de.getMessage());
+//			return;
+//		}
+//
+//		prtln(Dom4jUtils.prettyPrint(doc));
+//	}
 
-		prtln(Dom4jUtils.prettyPrint(doc));
-	}
 
+//	/**
+//	 *  Perform GetId via the {@link org.dlese.dpc.schemedit.WebServiceClient#doGetId(String)} helper method
+//	 *
+//	 *@param  collection  Description of the Parameter
+//	 */
+//	private void getIdViaHelper(String collection) {
+//		String newId = null;
+//		try {
+//			newId = webServiceClient.doGetId(collection);
+//		} catch (Exception e) {
+//			prtln("webservice error: " + e.getMessage());
+//			return;
+//		}
+//		prtln("newId: " + newId);
+//	}
 
-	/**
-	 *  Perform GetId via the {@link org.dlese.dpc.schemedit.WebServiceClient#doGetId(String)} helper method
-	 *
-	 *@param  collection  Description of the Parameter
-	 */
-	private void getIdViaHelper(String collection) {
-		String newId = null;
-		try {
-			newId = webServiceClient.doGetId(collection);
-		} catch (Exception e) {
-			prtln("webservice error: " + e.getMessage());
-			return;
-		}
-		prtln("newId: " + newId);
-	}
-
-	/**
-	* returns xmlRecord with namespace info removed for the purpose of testing error handling
-	*/
-	private static String getLocalizedDocStr (String recordXml) throws Exception {
-		Document doc = Dom4jUtils.getXmlDocument (recordXml);
-		String rootElementName = doc.getRootElement().getName();
-		String nameSpaceInfo = Dom4jUtils.getNameSpaceInfo(doc, rootElementName);
-		doc = Dom4jUtils.localizeXml(doc, rootElementName);
-		return doc.asXML();
-	}
+//	/**
+//	* returns xmlRecord with namespace info removed for the purpose of testing error handling
+//	*/
+//	private static String getLocalizedDocStr (String recordXml) throws Exception {
+//		Document doc = Dom4jUtils.getXmlDocument (recordXml);
+//		String rootElementName = doc.getRootElement().getName();
+//		String nameSpaceInfo = Dom4jUtils.getNameSpaceInfo(doc, rootElementName);
+//		doc = Dom4jUtils.localizeXml(doc, rootElementName);
+//		return doc.asXML();
+//	}
 	
 
 	/**

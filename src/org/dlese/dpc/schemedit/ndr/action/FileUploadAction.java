@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.schemedit.ndr.action;
 
-import java.io.BufferedReader;
-import java.nio.CharBuffer;
 import java.util.Enumeration;
 
 import javax.servlet.ServletInputStream;
@@ -213,25 +211,25 @@ public class FileUploadAction extends Action {
 	}
 
 
-	/**
-	 *  Gets the content attribute of the FileUploadAction object
-	 *
-	 * @param  request        NOT YET DOCUMENTED
-	 * @exception  Exception  NOT YET DOCUMENTED
-	 */
-	private void getContent(HttpServletRequest request) throws Exception {
-		int contentLength = request.getContentLength();
-		String contentType = request.getContentType();
-		prtln("content: " + contentType + " (" + contentLength + ")");
-
-		BufferedReader reader = request.getReader();
-		CharBuffer buffer = CharBuffer.allocate(contentLength);
-		int charsRead = reader.read(buffer);
-		prtln(charsRead + " characters read from buffer");
-		prtln("\n--------------------------------");
-		prtln(buffer.toString());
-		prtln("\n--------------------------------");
-	}
+//	/**
+//	 *  Gets the content attribute of the FileUploadAction object
+//	 *
+//	 * @param  request        NOT YET DOCUMENTED
+//	 * @exception  Exception  NOT YET DOCUMENTED
+//	 */
+//	private void getContent(HttpServletRequest request) throws Exception {
+//		int contentLength = request.getContentLength();
+//		String contentType = request.getContentType();
+//		prtln("content: " + contentType + " (" + contentLength + ")");
+//
+//		BufferedReader reader = request.getReader();
+//		CharBuffer buffer = CharBuffer.allocate(contentLength);
+//		int charsRead = reader.read(buffer);
+//		prtln(charsRead + " characters read from buffer");
+//		prtln("\n--------------------------------");
+//		prtln(buffer.toString());
+//		prtln("\n--------------------------------");
+//	}
 
 
 	/**

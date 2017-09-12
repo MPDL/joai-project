@@ -258,14 +258,14 @@ public class TreeCache {
 		}
 
 
-		/**
-		 *  NOT YET DOCUMENTED
-		 *
-		 * @param  index  NOT YET DOCUMENTED
-		 */
-		public void removeItem(int index) {
-			items.remove(index);
-		}
+//		/**
+//		 *  NOT YET DOCUMENTED
+//		 *
+//		 * @param  index  NOT YET DOCUMENTED
+//		 */
+//		public void removeItem(int index) {
+//			items.remove(index);
+//		}
 
 
 		/**
