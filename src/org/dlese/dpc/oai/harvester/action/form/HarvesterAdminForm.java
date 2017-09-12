@@ -34,6 +34,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.dlese.dpc.oai.harvester.ScheduledHarvestManager;
 import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
+import org.dlese.dpc.webapps.tools.FormValidationTools;
 
 
 
@@ -1788,29 +1789,29 @@ public final class HarvesterAdminForm extends ActionForm {
 
 
 
-//	/**
-//
-//	 *  Validates the format of an e-mail address.
-//
-//	 *
-//
-//	 * @param  email  The e-mail address to validate.
-//
-//	 * @return        True iff this e-mail has a valid format.
-//
-//	 */
-//
-//	private final boolean emailIsValid(String email) {
-//
-//		if (email == null || email.trim().length() == 0) {
-//
-//			return true;
-//
-//		}
-//
-//		return FormValidationTools.isValidEmail(email);
-//
-//	}
+	/**
+
+	 *  Validates the format of an e-mail address.
+
+	 *
+
+	 * @param  email  The e-mail address to validate.
+
+	 * @return        True iff this e-mail has a valid format.
+
+	 */
+
+	private final boolean emailIsValid(String email) {
+
+		if (email == null || email.trim().length() == 0) {
+
+			return true;
+
+		}
+
+		return FormValidationTools.isValidEmail(email);
+
+	}
 
 
 

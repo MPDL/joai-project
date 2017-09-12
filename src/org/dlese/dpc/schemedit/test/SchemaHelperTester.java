@@ -23,6 +23,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeMap;
 
 import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
 import org.dlese.dpc.xml.Dom4jUtils;
@@ -373,72 +375,72 @@ public class SchemaHelperTester {
 	}
 
 
-//	/**
-//	 *  Print a listing of the globalDefs that are used more than once in the
-//	 *  InstanceDoc
-//	 */
-//	private void displayTypeUsers() {
-//		TreeMap map = new TreeMap();
-//		List paths = schemaNodeMap.getKeys();
-//		for (Iterator i = paths.iterator(); i.hasNext(); ) {
-//			String xpath = (String) i.next();
-//			SchemaNode schemaNode = (SchemaNode) schemaNodeMap.getValue(xpath);
-//			// String typeName = schemaNode.getDataTypeName();
-//			String typeName = schemaNode.getTypeDef().getName();
-//			GlobalDef globalDef = (GlobalDef) globalDefMap.getValue(typeName);
-//			if (globalDef == null) {
-//				String schemaNSPrefix = this.sh.getSchemaNamespace().getPrefix();
-//				if (!typeName.startsWith(schemaNSPrefix + ":")) {
-//					prtln(typeName + " - not found in globalDefMap");
-//				}
-//				continue;
-//			}
-//			if (globalDef.getDataType() == GlobalDef.COMPLEX_TYPE) {
-//				// prtln (globalDef.getName());
-//				if (map.containsKey(typeName)) {
-//					ArrayList l = (ArrayList) map.get(typeName);
-//					l.add(xpath);
-//					map.put(typeName, l);
-//				}
-//				else {
-//					ArrayList a = new ArrayList();
-//					a.add(xpath);
-//					map.put(typeName, a);
-//				}
-//			}
-//		}
-//		Set keys = map.keySet();
-//		for (Iterator i = keys.iterator(); i.hasNext(); ) {
-//			String key = (String) i.next();
-//			List list = (List) map.get(key);
-//			if (list.size() > 1) {
-//				prtln("\n" + key + "(" + list.size() + " items)");
-//				for (Iterator x = list.iterator(); x.hasNext(); ) {
-//					String path = (String) x.next();
-//					prtln("\t" + path);
-//				}
-//			}
-//		}
-//	}
+	/**
+	 *  Print a listing of the globalDefs that are used more than once in the
+	 *  InstanceDoc
+	 */
+	private void displayTypeUsers() {
+		TreeMap map = new TreeMap();
+		List paths = schemaNodeMap.getKeys();
+		for (Iterator i = paths.iterator(); i.hasNext(); ) {
+			String xpath = (String) i.next();
+			SchemaNode schemaNode = (SchemaNode) schemaNodeMap.getValue(xpath);
+			// String typeName = schemaNode.getDataTypeName();
+			String typeName = schemaNode.getTypeDef().getName();
+			GlobalDef globalDef = (GlobalDef) globalDefMap.getValue(typeName);
+			if (globalDef == null) {
+				String schemaNSPrefix = this.sh.getSchemaNamespace().getPrefix();
+				if (!typeName.startsWith(schemaNSPrefix + ":")) {
+					prtln(typeName + " - not found in globalDefMap");
+				}
+				continue;
+			}
+			if (globalDef.getDataType() == GlobalDef.COMPLEX_TYPE) {
+				// prtln (globalDef.getName());
+				if (map.containsKey(typeName)) {
+					ArrayList l = (ArrayList) map.get(typeName);
+					l.add(xpath);
+					map.put(typeName, l);
+				}
+				else {
+					ArrayList a = new ArrayList();
+					a.add(xpath);
+					map.put(typeName, a);
+				}
+			}
+		}
+		Set keys = map.keySet();
+		for (Iterator i = keys.iterator(); i.hasNext(); ) {
+			String key = (String) i.next();
+			List list = (List) map.get(key);
+			if (list.size() > 1) {
+				prtln("\n" + key + "(" + list.size() + " items)");
+				for (Iterator x = list.iterator(); x.hasNext(); ) {
+					String path = (String) x.next();
+					prtln("\t" + path);
+				}
+			}
+		}
+	}
 
 
-//	/**
-//	 *  Description of the Method
-//	 */
-//	private void displayComplexTypes() {
-//		// List keys = globalDefMap.getKeys(GlobalDef.COMPLEX_TYPE);
-//		List complexTypes = globalDefMap.getComplexTypes();
-//		prtln("\n** Complex types (" + complexTypes.size() + ") **");
-//		for (Iterator i = complexTypes.iterator(); i.hasNext(); ) {
-//			GlobalDef def = (GlobalDef) i.next();
-//			prtln(def.toString());
-//			try {
-//				write(def.getElement());
-//			} catch (Exception e) {
-//				prtln(e.getMessage());
-//			}
-//		}
-//	}
+	/**
+	 *  Description of the Method
+	 */
+	private void displayComplexTypes() {
+		// List keys = globalDefMap.getKeys(GlobalDef.COMPLEX_TYPE);
+		List complexTypes = globalDefMap.getComplexTypes();
+		prtln("\n** Complex types (" + complexTypes.size() + ") **");
+		for (Iterator i = complexTypes.iterator(); i.hasNext(); ) {
+			GlobalDef def = (GlobalDef) i.next();
+			prtln(def.toString());
+			try {
+				write(def.getElement());
+			} catch (Exception e) {
+				prtln(e.getMessage());
+			}
+		}
+	}
 
 
 	/**
@@ -536,19 +538,19 @@ public class SchemaHelperTester {
 	}
 
 
-//	/**
-//	 *  Description of the Method
-//	 *
-//	 * @param  o  Description of the Parameter
-//	 */
-//	private void write(Object o) {
-//		try {
-//			writer.write(o);
-//			prtln("");
-//		} catch (Exception e) {
-//			prtln("couldn write");
-//		}
-//	}
+	/**
+	 *  Description of the Method
+	 *
+	 * @param  o  Description of the Parameter
+	 */
+	private void write(Object o) {
+		try {
+			writer.write(o);
+			prtln("");
+		} catch (Exception e) {
+			prtln("couldn write");
+		}
+	}
 
 
 	/**

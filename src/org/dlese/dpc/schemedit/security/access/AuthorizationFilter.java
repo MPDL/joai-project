@@ -257,15 +257,15 @@ public class AuthorizationFilter implements Filter {
 				servletPath.endsWith (".css"));
 	}
 	
-//	private static boolean isActionUri (String uri) {
-//		return (uri.endsWith (".do"));
-//	}
+	private static boolean isActionUri (String uri) {
+		return (uri.endsWith (".do"));
+	}
 	
-//	private static String getActionUri (String uri) {
-//		if (!isActionUri (uri))
-//			return null;
-//		return uri.substring(0, uri.length()-3);
-//	}
+	private static String getActionUri (String uri) {
+		if (!isActionUri (uri))
+			return null;
+		return uri.substring(0, uri.length()-3);
+	}
 
 	private void autoLogon (HttpSession session) throws Exception {
 		prtln ("autoLogin");
@@ -312,28 +312,28 @@ public class AuthorizationFilter implements Filter {
 	} */
 	
 
-//	private void showRequestInfoVerbose (HttpServletRequest request) {
-//		prtln ("\n Request Info:");
-//		prtln ("\t requestURI: " + request.getRequestURI());
-//		prtln ("\t queryString: " + request.getQueryString());
-//		prtln ("\t requestURL: " + request.getRequestURL().toString());
-//		prtln ("\t servletPath: " + request.getServletPath());
-//		prtln ("\t contextPath: " + request.getContextPath());
-//		prtln ("\t pathTranslated: " + request.getPathTranslated());
-//		prtln ("\t pathInfo: " + request.getPathInfo());
-//		HttpSession session = request.getSession();
-//		if (session == null)
-//		    prtln ("Session: NULL");
-//		else
-//		    prtln ("Session: " + session.getId());
-//		prtln ("\nrequest attributes");
-//		for (Enumeration e=request.getAttributeNames();e.hasMoreElements();) {
-//			String name = (String)e.nextElement();
-//			Object attribute = (Object)request.getAttribute(name);
-//			prtln ("\t name: " + name + "  class: " + attribute.getClass().getName());
-//		}
-//		prtln ("------------------------------\n");
-//	}
+	private void showRequestInfoVerbose (HttpServletRequest request) {
+		prtln ("\n Request Info:");
+		prtln ("\t requestURI: " + request.getRequestURI());
+		prtln ("\t queryString: " + request.getQueryString());
+		prtln ("\t requestURL: " + request.getRequestURL().toString());
+		prtln ("\t servletPath: " + request.getServletPath());
+		prtln ("\t contextPath: " + request.getContextPath());
+		prtln ("\t pathTranslated: " + request.getPathTranslated());
+		prtln ("\t pathInfo: " + request.getPathInfo());
+		HttpSession session = request.getSession();
+		if (session == null)
+		    prtln ("Session: NULL");
+		else
+		    prtln ("Session: " + session.getId());
+		prtln ("\nrequest attributes");
+		for (Enumeration e=request.getAttributeNames();e.hasMoreElements();) {
+			String name = (String)e.nextElement();
+			Object attribute = (Object)request.getAttribute(name);
+			prtln ("\t name: " + name + "  class: " + attribute.getClass().getName());
+		}
+		prtln ("------------------------------\n");
+	}
 
 		/**
 	 *  Return a string for the current time and date, sutiable for display in log files and output to standout:

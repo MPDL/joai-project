@@ -229,26 +229,26 @@ public final class FrameworkAdminAction extends DCSAction {
 		faForm.setUnloadedFrameworks (frameworkRegistry.getUnloadedFrameworks());
 	}
 
-//	/**
-//	 *  Description of the Method
-//	 *
-//	 *@param  path        Description of the Parameter
-//	 *@param  propertyId  Description of the Parameter
-//	 *@return             Description of the Return Value
-//	 */
-//	private ActionErrors validateFilePath(String path, String propertyId) {
-//
-//		ActionErrors errors = new ActionErrors();
-//
-//		File file = new File(path);
-//		if (!file.exists()) {
-//			prtln("caught an error for " + propertyId);
-//			errors.add(propertyId,
-//					new ActionError("generic.error", "warning: file does not exist"));
-//		}
-//
-//		return errors;
-//	}
+	/**
+	 *  Description of the Method
+	 *
+	 *@param  path        Description of the Parameter
+	 *@param  propertyId  Description of the Parameter
+	 *@return             Description of the Return Value
+	 */
+	private ActionErrors validateFilePath(String path, String propertyId) {
+
+		ActionErrors errors = new ActionErrors();
+
+		File file = new File(path);
+		if (!file.exists()) {
+			prtln("caught an error for " + propertyId);
+			errors.add(propertyId,
+					new ActionError("generic.error", "warning: file does not exist"));
+		}
+
+		return errors;
+	}
 
 
 	/**

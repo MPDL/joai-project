@@ -107,7 +107,7 @@ public class IndexingHarvestMsgHandler implements HarvestMessageHandler {
 
 		this.numRecordsForNotification = numRecordsForNotification;
 
-//		this.harvester = harvester;
+		this.harvester = harvester;
 
 		this.harvestDir = hd;
 

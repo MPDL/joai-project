@@ -223,23 +223,23 @@ public final class NDRServlet extends HttpServlet {
 		return fullname;
 	}
 	
-//	/**
-//	* debugging method to show config and context params
-//	*/
-//	private void showContextParams () {
-//		
-//		prtln ("\ninit parameters from CONFIG");
-//		Enumeration e1 = this.getServletConfig().getInitParameterNames();
-//		while (e1.hasMoreElements()) {
-//			prtln ("\t" + (String)e1.nextElement());
-//		}
-//		
-//		prtln ("\ninit parameters from CONTEXT");
-//		Enumeration e2 = this.getServletContext().getInitParameterNames();
-//		while (e2.hasMoreElements()) {
-//			prtln ("\t" + (String)e2.nextElement());
-//		} 
-//	}
+	/**
+	* debugging method to show config and context params
+	*/
+	private void showContextParams () {
+		
+		prtln ("\ninit parameters from CONFIG");
+		Enumeration e1 = this.getServletConfig().getInitParameterNames();
+		while (e1.hasMoreElements()) {
+			prtln ("\t" + (String)e1.nextElement());
+		}
+		
+		prtln ("\ninit parameters from CONTEXT");
+		Enumeration e2 = this.getServletContext().getInitParameterNames();
+		while (e2.hasMoreElements()) {
+			prtln ("\t" + (String)e2.nextElement());
+		} 
+	}
 
 	
 }

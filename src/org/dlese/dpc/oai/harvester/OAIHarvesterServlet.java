@@ -39,6 +39,7 @@ import org.dlese.dpc.oai.harvester.action.HarvesterAdminAction;
 import org.dlese.dpc.oai.harvester.action.form.HarvesterAdminForm;
 import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XMLConversionService;
 
 
 /**
@@ -187,37 +188,37 @@ public final class OAIHarvesterServlet extends HttpServlet {
 	}
 
 
-//	private void addXslConverter(String paramVal, XMLConversionService xmlConversionService)
-//		 throws ServletException {
-//		String[] vals = paramVal.split("\\|");
-//		if (vals.length != 3) {
-//			prtlnErr("addXslConverter() error: could not parse parameter '" + paramVal + "'");
-//			return;
-//		}
-//
-//		prtln("addXslConverter() adding converter " + vals[0] + " " + vals[1] + " " + vals[2]);
-//
-//		xmlConversionService.addXslStylesheet(vals[1], vals[2],
-//			GeneralServletTools.getAbsolutePath(
-//			"WEB-INF/xsl_files/" + vals[0], getServletContext()));
-//
-//	}
+	private void addXslConverter(String paramVal, XMLConversionService xmlConversionService)
+		 throws ServletException {
+		String[] vals = paramVal.split("\\|");
+		if (vals.length != 3) {
+			prtlnErr("addXslConverter() error: could not parse parameter '" + paramVal + "'");
+			return;
+		}
+
+		prtln("addXslConverter() adding converter " + vals[0] + " " + vals[1] + " " + vals[2]);
+
+		xmlConversionService.addXslStylesheet(vals[1], vals[2],
+			GeneralServletTools.getAbsolutePath(
+			"WEB-INF/xsl_files/" + vals[0], getServletContext()));
+
+	}
 
 
-//	private void addJavaConverter(String paramVal, XMLConversionService xmlConversionService)
-//		 throws ServletException {
-//		prtln("addJavaConverter() adding converter " + paramVal);
-//
-//		String[] vals = paramVal.split("\\|");
-//		if (vals.length != 3) {
-//			prtlnErr("addJavaConverter() error: could not parse parameter '" + paramVal + "'");
-//			return;
-//		}
-//
-//		prtln("addJavaConverterClass() adding converter " + vals[0] + " " + vals[1] + " " + vals[2]);
-//
-//		xmlConversionService.addJavaConverterClass(vals[1], vals[2], vals[0],getServletContext());
-//	}
+	private void addJavaConverter(String paramVal, XMLConversionService xmlConversionService)
+		 throws ServletException {
+		prtln("addJavaConverter() adding converter " + paramVal);
+
+		String[] vals = paramVal.split("\\|");
+		if (vals.length != 3) {
+			prtlnErr("addJavaConverter() error: could not parse parameter '" + paramVal + "'");
+			return;
+		}
+
+		prtln("addJavaConverterClass() adding converter " + vals[0] + " " + vals[1] + " " + vals[2]);
+
+		xmlConversionService.addJavaConverterClass(vals[1], vals[2], vals[0],getServletContext());
+	}
 
 
 
@@ -340,32 +341,32 @@ public final class OAIHarvesterServlet extends HttpServlet {
 
 
 
-//	/**
-//	 *  DESCRIPTION
-//	 *
-//	 * @param  date  DESCRIPTION
-//	 * @return       DESCRIPTION
-//	 */
-//	private String mkOaiResponseDate(Date date) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-//		String datestg = df.format(date);
-//		return datestg;
-//	}
+	/**
+	 *  DESCRIPTION
+	 *
+	 * @param  date  DESCRIPTION
+	 * @return       DESCRIPTION
+	 */
+	private String mkOaiResponseDate(Date date) {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+		String datestg = df.format(date);
+		return datestg;
+	}
 
 
 	//================================================================
 
-//	/**
-//	 *  DESCRIPTION
-//	 *
-//	 * @param  date  DESCRIPTION
-//	 * @return       DESCRIPTION
-//	 */
-//	private String mkOaiDatestamp(Date date) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//		String datestg = df.format(date);
-//		return datestg;
-//	}
+	/**
+	 *  DESCRIPTION
+	 *
+	 * @param  date  DESCRIPTION
+	 * @return       DESCRIPTION
+	 */
+	private String mkOaiDatestamp(Date date) {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		String datestg = df.format(date);
+		return datestg;
+	}
 
 
 	//================================================================

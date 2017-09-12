@@ -438,32 +438,32 @@ public final class OAIProviderServlet extends HttpServlet {
 
 
 
-//	/**
-//	 *  DESCRIPTION
-//	 *
-//	 * @param  date  DESCRIPTION
-//	 * @return       DESCRIPTION
-//	 */
-//	private String mkOaiResponseDate(Date date) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-//		String datestg = df.format(date);
-//		return datestg;
-//	}
+	/**
+	 *  DESCRIPTION
+	 *
+	 * @param  date  DESCRIPTION
+	 * @return       DESCRIPTION
+	 */
+	private String mkOaiResponseDate(Date date) {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+		String datestg = df.format(date);
+		return datestg;
+	}
 
 
 	//================================================================
 
-//	/**
-//	 *  DESCRIPTION
-//	 *
-//	 * @param  date  DESCRIPTION
-//	 * @return       DESCRIPTION
-//	 */
-//	private String mkOaiDatestamp(Date date) {
-//		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-//		String datestg = df.format(date);
-//		return datestg;
-//	}
+	/**
+	 *  DESCRIPTION
+	 *
+	 * @param  date  DESCRIPTION
+	 * @return       DESCRIPTION
+	 */
+	private String mkOaiDatestamp(Date date) {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		String datestg = df.format(date);
+		return datestg;
+	}
 
 
 	//================================================================

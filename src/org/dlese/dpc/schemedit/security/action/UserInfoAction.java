@@ -362,20 +362,20 @@ public final class UserInfoAction extends DCSAction {
 	}
 
 
-//	/**
-//	 *  Debugging 
-//	 *
-//	 * @param  request  the request
-//	 */
-//	private void showHeaders(HttpServletRequest request) {
-//		prtln("\n REQUEST HEADERS");
-//		Enumeration headerNames = request.getHeaderNames();
-//		while (headerNames.hasMoreElements()) {
-//			String name = (String) headerNames.nextElement();
-//			prtln(name + ": " + request.getHeader(name));
-//		}
-//		prtln("-----------\n");
-//	}
+	/**
+	 *  Debugging 
+	 *
+	 * @param  request  the request
+	 */
+	private void showHeaders(HttpServletRequest request) {
+		prtln("\n REQUEST HEADERS");
+		Enumeration headerNames = request.getHeaderNames();
+		while (headerNames.hasMoreElements()) {
+			String name = (String) headerNames.nextElement();
+			prtln(name + ": " + request.getHeader(name));
+		}
+		prtln("-----------\n");
+	}
 
 	/**
 	 *  Initialize form bean with values to be edited

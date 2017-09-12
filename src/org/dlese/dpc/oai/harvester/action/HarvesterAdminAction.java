@@ -585,55 +585,55 @@ public final class HarvesterAdminAction extends Action {
 	}
 
 
-//	/**
-//	 *  Validate an XML string. The string must contain a schema location that is
-//	 *  defined in the root element by the attribute <code>schemaLocation,</code>
-//	 *  which is case-sensitive.
-//	 *
-//	 * @param  s  The string to validate
-//	 * @return    Null iff no validation errors were found, else a String
-//	 *      containing an appropriate error message.
-//	 */
-//	private final String validateXML(String s) {
-//		if (s == null) {
-//			return null;
-//		}
-//
-//		if (s.indexOf("schemaLocation") == -1) {
-//			return
-//					"SCHEMA NOT PRESENT: The schema location must be defined in the " +
-//					"root element by the schemaLocation attribute, which is case-sensitive.";
-//		} else {
-//			return XMLValidator.validateString(s);
-//		}
-//	}
+	/**
+	 *  Validate an XML string. The string must contain a schema location that is
+	 *  defined in the root element by the attribute <code>schemaLocation,</code>
+	 *  which is case-sensitive.
+	 *
+	 * @param  s  The string to validate
+	 * @return    Null iff no validation errors were found, else a String
+	 *      containing an appropriate error message.
+	 */
+	private final String validateXML(String s) {
+		if (s == null) {
+			return null;
+		}
+
+		if (s.indexOf("schemaLocation") == -1) {
+			return
+					"SCHEMA NOT PRESENT: The schema location must be defined in the " +
+					"root element by the schemaLocation attribute, which is case-sensitive.";
+		} else {
+			return XMLValidator.validateString(s);
+		}
+	}
 
 
-//	/**
-//	 *  Gets the index associated with a request parameter of the form
-//	 *  myParameter[i] where the collection index is indicated in brackets.
-//	 *
-//	 * @param  paramName  The request parameter String
-//	 * @return            The index value
-//	 */
-//	private final int getIndex(String paramName) {
-//		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
-//	}
+	/**
+	 *  Gets the index associated with a request parameter of the form
+	 *  myParameter[i] where the collection index is indicated in brackets.
+	 *
+	 * @param  paramName  The request parameter String
+	 * @return            The index value
+	 */
+	private final int getIndex(String paramName) {
+		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
+	}
 
 
-//	/**
-//	 *  Gets the intValue attribute of the HarvesterAdminAction object
-//	 *
-//	 * @param  isInt  String as an integer
-//	 * @return        The intValue value
-//	 */
-//	private final int getIntValue(String isInt) {
-//		try {
-//			return Integer.parseInt(isInt);
-//		} catch (Throwable e) {
-//			return -1;
-//		}
-//	}
+	/**
+	 *  Gets the intValue attribute of the HarvesterAdminAction object
+	 *
+	 * @param  isInt  String as an integer
+	 * @return        The intValue value
+	 */
+	private final int getIntValue(String isInt) {
+		try {
+			return Integer.parseInt(isInt);
+		} catch (Throwable e) {
+			return -1;
+		}
+	}
 
 
 	/**

@@ -189,15 +189,15 @@ public class RepositoryService {
 	}
 
 
-//	/**
-//	 *  Start or restarts the indexer thread with the given update frequency. Same
-//	 *  as {@link #changeautoExportFrequency(long autoExportFrequency)}.
-//	 *
-//	 * @param  autoExportFrequency  The number of seconds between index updates.
-//	 */
-//	private void startAutoExportTimer(long autoExportFrequency) {
-//		startAutoExportTimer(autoExportFrequency, null);
-//	}
+	/**
+	 *  Start or restarts the indexer thread with the given update frequency. Same
+	 *  as {@link #changeautoExportFrequency(long autoExportFrequency)}.
+	 *
+	 * @param  autoExportFrequency  The number of seconds between index updates.
+	 */
+	private void startAutoExportTimer(long autoExportFrequency) {
+		startAutoExportTimer(autoExportFrequency, null);
+	}
 
 
 	/**
@@ -255,10 +255,10 @@ public class RepositoryService {
 	}
 
 
-//	/**  NOT YET DOCUMENTED */
-//	private void destroy() {
-//		this.stopAutoExportTimer();
-//	}
+	/**  NOT YET DOCUMENTED */
+	private void destroy() {
+		this.stopAutoExportTimer();
+	}
 
 
 	/**

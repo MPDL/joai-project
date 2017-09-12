@@ -330,15 +330,15 @@ public class RepositoryWriter {
 	}
 
 
-//	/**
-//	 *  Gets the metaDataFramework attribute of the RepositoryWriter object
-//	 *
-//	 * @param  xmlFormat  NOT YET DOCUMENTED
-//	 * @return            The metaDataFramework value
-//	 */
-//	private MetaDataFramework getMetaDataFramework(String xmlFormat) {
-//		return frameworkRegistry.getFramework(xmlFormat);
-//	}
+	/**
+	 *  Gets the metaDataFramework attribute of the RepositoryWriter object
+	 *
+	 * @param  xmlFormat  NOT YET DOCUMENTED
+	 * @return            The metaDataFramework value
+	 */
+	private MetaDataFramework getMetaDataFramework(String xmlFormat) {
+		return frameworkRegistry.getFramework(xmlFormat);
+	}
 
 
 	/**
@@ -386,14 +386,14 @@ public class RepositoryWriter {
 			}
 		}
 	} */
-//	/**
-//	 *  Gets the dateString attribute of the RepositoryWriter class
-//	 *
-//	 * @return    The dateString value
-//	 */
-//	private static String getDateString() {
-//		return SchemEditUtils.fullDateString(new Date());
-//	}
+	/**
+	 *  Gets the dateString attribute of the RepositoryWriter class
+	 *
+	 * @return    The dateString value
+	 */
+	private static String getDateString() {
+		return SchemEditUtils.fullDateString(new Date());
+	}
 
 
 	/**

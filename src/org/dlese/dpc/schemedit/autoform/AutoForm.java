@@ -390,19 +390,19 @@ public class AutoForm {
 	}
 
 
-//	/**
-//	 *  Prints string representation of XML element using XMLWriter.
-//	 *
-//	 * @param  o  Description of the Parameter
-//	 */
-//	private void write(Object o) {
-//		try {
-//			writer.write(o);
-//			prtln("");
-//		} catch (Exception e) {
-//			prtln("couldn write");
-//		}
-//	}
+	/**
+	 *  Prints string representation of XML element using XMLWriter.
+	 *
+	 * @param  o  Description of the Parameter
+	 */
+	private void write(Object o) {
+		try {
+			writer.write(o);
+			prtln("");
+		} catch (Exception e) {
+			prtln("couldn write");
+		}
+	}
 
 
 	/**

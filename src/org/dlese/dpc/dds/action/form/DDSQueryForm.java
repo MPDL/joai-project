@@ -874,33 +874,33 @@ public final class DDSQueryForm extends DDSViewResourceForm implements Serializa
 	}
 
 
-//	/**
-//	 *  Gets all the parameters that existed in the request other than those used
-//	 *  for paiging.
-//	 *
-//	 * @return    The additionalParams returned as an HTTP query string.
-//	 */
-//	private final String getAdditionalParams() {
-//		if ( request == null ) {
-//			return null;
-//		}
-//
-//		Enumeration params = request.getParameterNames();
-//		String param;
-//		String vals[];
-//		StringBuffer addParams = new StringBuffer();
-//		while ( params.hasMoreElements() ) {
-//			param = (String)params.nextElement();
-//			if ( !param.equals( "q" ) &&
-//				!param.equals( "s" ) ) {
-//				vals = request.getParameterValues( param );
-//				for ( int i = 0; i < vals.length; i++ ) {
-//					addParams.append( "&" + param + "=" + vals[i] );
-//				}
-//			}
-//		}
-//		return addParams.toString();
-//	}
+	/**
+	 *  Gets all the parameters that existed in the request other than those used
+	 *  for paiging.
+	 *
+	 * @return    The additionalParams returned as an HTTP query string.
+	 */
+	private final String getAdditionalParams() {
+		if ( request == null ) {
+			return null;
+		}
+
+		Enumeration params = request.getParameterNames();
+		String param;
+		String vals[];
+		StringBuffer addParams = new StringBuffer();
+		while ( params.hasMoreElements() ) {
+			param = (String)params.nextElement();
+			if ( !param.equals( "q" ) &&
+				!param.equals( "s" ) ) {
+				vals = request.getParameterValues( param );
+				for ( int i = 0; i < vals.length; i++ ) {
+					addParams.append( "&" + param + "=" + vals[i] );
+				}
+			}
+		}
+		return addParams.toString();
+	}
 
 
 	//================================================================

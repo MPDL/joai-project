@@ -724,40 +724,40 @@ public final class DCSQueryForm extends ActionForm implements Serializable {
 		return "";
 	}
 
-//	/**
-//	* for sort debugging
-//	*/
-//	private void printResults (ResultDocList results) {
-//		prtln ("-- Results --");
-//		if (results == null){
-//			prtln ("no results provided");
-//			return;
-//		}
-//		int limiter=20;
-//		for (int i=0;i<results.size() && i<limiter;i++) {
-//			ResultDoc result = results.get(i);
-//			DocumentMap docMap = result.getDocMap();
-//			XMLDocReader docReader = (XMLDocReader)result.getDocReader();
-//			/* String id = docReader.getId(); */
-//			String id = (String)docMap.get("id");
-//			String editor = (String)docMap.get("dcslastEditor");
-//			String idvalue = (String)docMap.get("idvalue");
-//			String status = (String)docMap.get("dcsstatus");
-//			
-//			String t = (String)docMap.get ("dcslastTouchDate");
-//			long modTime = -1;
-//			try {
-//				modTime = DateFieldTools.stringToTime(t);
-//			} catch (ParseException pe) {
-//				System.err.println("Error in printResults(): " + pe);
-//			}			
-//			SimpleDateFormat df = new SimpleDateFormat("MMM' 'dd', 'yyyy");
-//			String lastTouchDate = df.format(new Date(modTime));
-//			
-//			// prtln (i+"\t"+idvalue+"\t"+editor+"\t"+status+"\t"+lastTouchDate+"  ("+t+")");
-//			prtln (i+"\t"+idvalue+"\t\t"+editor+"\t\t"+status);
-//		}
-//	}
+	/**
+	* for sort debugging
+	*/
+	private void printResults (ResultDocList results) {
+		prtln ("-- Results --");
+		if (results == null){
+			prtln ("no results provided");
+			return;
+		}
+		int limiter=20;
+		for (int i=0;i<results.size() && i<limiter;i++) {
+			ResultDoc result = results.get(i);
+			DocumentMap docMap = result.getDocMap();
+			XMLDocReader docReader = (XMLDocReader)result.getDocReader();
+			/* String id = docReader.getId(); */
+			String id = (String)docMap.get("id");
+			String editor = (String)docMap.get("dcslastEditor");
+			String idvalue = (String)docMap.get("idvalue");
+			String status = (String)docMap.get("dcsstatus");
+			
+			String t = (String)docMap.get ("dcslastTouchDate");
+			long modTime = -1;
+			try {
+				modTime = DateFieldTools.stringToTime(t);
+			} catch (ParseException pe) {
+				System.err.println("Error in printResults(): " + pe);
+			}			
+			SimpleDateFormat df = new SimpleDateFormat("MMM' 'dd', 'yyyy");
+			String lastTouchDate = df.format(new Date(modTime));
+			
+			// prtln (i+"\t"+idvalue+"\t"+editor+"\t"+status+"\t"+lastTouchDate+"  ("+t+")");
+			prtln (i+"\t"+idvalue+"\t\t"+editor+"\t\t"+status);
+		}
+	}
 
 	/**
 	 *  Sets the search results returned by the {@link
@@ -1212,16 +1212,16 @@ public final class DCSQueryForm extends ActionForm implements Serializable {
 	}
 
 
-//	/**
-//	 *  Return a string for the current time and date, sutiable for display in log
-//	 *  files and output to standout:
-//	 *
-//	 *@return    The dateStamp value
-//	 */
-//	private final static String getDateStamp() {
-//		return
-//				new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-//	}
+	/**
+	 *  Return a string for the current time and date, sutiable for display in log
+	 *  files and output to standout:
+	 *
+	 *@return    The dateStamp value
+	 */
+	private final static String getDateStamp() {
+		return
+				new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+	}
 
 
 	/**

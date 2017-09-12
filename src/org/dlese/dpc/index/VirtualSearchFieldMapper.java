@@ -779,43 +779,43 @@ public class VirtualSearchFieldMapper {
 
 
 
-//	/**
-//
-//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-//
-//	 *
-//
-//	 * @param  s  The String that will be output.
-//
-//	 */
-//
-//	private final void prtln(String s) {
-//
-//		if (debug)
-//
-//			System.out.println(getDateStamp() + " VirtualSearchFieldMapper: " + s);
-//
-//	}
+	/**
+
+	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+
+	 *
+
+	 * @param  s  The String that will be output.
+
+	 */
+
+	private final void prtln(String s) {
+
+		if (debug)
+
+			System.out.println(getDateStamp() + " VirtualSearchFieldMapper: " + s);
+
+	}
 
 
 
 
 
-//	/**
-//
-//	 *  Sets the debug attribute of the DocumentService object
-//
-//	 *
-//
-//	 * @param  db  The new debug value
-//
-//	 */
-//
-//	private final void setDebug(boolean db) {
-//
-//		debug = db;
-//
-//	}
+	/**
+
+	 *  Sets the debug attribute of the DocumentService object
+
+	 *
+
+	 * @param  db  The new debug value
+
+	 */
+
+	private final void setDebug(boolean db) {
+
+		debug = db;
+
+	}
 
 }
 

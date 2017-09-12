@@ -135,15 +135,15 @@ public class CollapseUtils {
 		return encodeId (ret);
 	}
 
-//	/**
-//	 *  Description of the Method
-//	 *
-//	 *@param  s  Description of the Parameter
-//	 *@return    Description of the Return Value
-//	 */
-//	private static String ppKey(String s) {
-//		return idToPath(s);
-//	}
+	/**
+	 *  Description of the Method
+	 *
+	 *@param  s  Description of the Parameter
+	 *@return    Description of the Return Value
+	 */
+	private static String ppKey(String s) {
+		return idToPath(s);
+	}
 
 	/**
 	 *  Description of the Method

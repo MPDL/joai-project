@@ -520,37 +520,37 @@ public class StructureWalker {
 
 
 
-//	/**
-//	 *  Test if the "type" (or "ref") attribute of the given Schema Element
-//	 *  designates a built-in datatype, as opposed to a derived type.<p>
-//	 *
-//	 *  An qualified attribute value is determined to be BuiltIn if it has the same
-//	 *  prefix as the qualified name of the element in which it is defined.<p>
-//	 *
-//	 *  E.g., in the following element, the type is "xs:string", which is a
-//	 *  built-in type: &lt;xs:element name="artist" type="xs:string"/>.
-//	 *
-//	 * @param  e  Description of the Parameter
-//	 * @return    true if the given schema element refers to a built-in datatype.
-//	 */
-//	private boolean isBuiltInType(Element e) {
-//		String prefix = e.getNamespacePrefix();
-//		String type = e.attributeValue("type", null);
-//		if (type == null) {
-//			type = e.attributeValue("ref", null);
-//		}
-//		if (type == null) {
-//			return false;
-//		}
-//
-//		String typePrefix = NamespaceRegistry.getNamespacePrefix(type);
-//		if (prefix != null && (prefix.equals(typePrefix) || typePrefix.equals("xml"))) {
-//			return true;
-//		}
-//		else {
-//			return false;
-//		}
-//	}
+	/**
+	 *  Test if the "type" (or "ref") attribute of the given Schema Element
+	 *  designates a built-in datatype, as opposed to a derived type.<p>
+	 *
+	 *  An qualified attribute value is determined to be BuiltIn if it has the same
+	 *  prefix as the qualified name of the element in which it is defined.<p>
+	 *
+	 *  E.g., in the following element, the type is "xs:string", which is a
+	 *  built-in type: &lt;xs:element name="artist" type="xs:string"/>.
+	 *
+	 * @param  e  Description of the Parameter
+	 * @return    true if the given schema element refers to a built-in datatype.
+	 */
+	private boolean isBuiltInType(Element e) {
+		String prefix = e.getNamespacePrefix();
+		String type = e.attributeValue("type", null);
+		if (type == null) {
+			type = e.attributeValue("ref", null);
+		}
+		if (type == null) {
+			return false;
+		}
+
+		String typePrefix = NamespaceRegistry.getNamespacePrefix(type);
+		if (prefix != null && (prefix.equals(typePrefix) || typePrefix.equals("xml"))) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 
 	/**
@@ -1361,24 +1361,24 @@ public class StructureWalker {
 	}
 
 
-//	/**
-//	 *  Gets the urisFromNR attribute of the StructureWalker object
-//	 *
-//	 * @return    The urisFromNR value
-//	 */
-//	private Map getUrisFromNR() {
-//		Map uris = new HashMap();
-//		for (Iterator i = namespaces.getPrefixMap().keySet().iterator(); i.hasNext(); ) {
-//			String prefix = (String) i.next();
-//			Namespace ns = namespaces.getNSforPrefix(prefix);
-//			/*
-//			 *  if (prefix.trim().length() > 0)
-//			 *  uris.put(prefix, ns.getURI());
-//			 */
-//			uris.put(prefix, ns.getURI());
-//		}
-//		return uris;
-//	}
+	/**
+	 *  Gets the urisFromNR attribute of the StructureWalker object
+	 *
+	 * @return    The urisFromNR value
+	 */
+	private Map getUrisFromNR() {
+		Map uris = new HashMap();
+		for (Iterator i = namespaces.getPrefixMap().keySet().iterator(); i.hasNext(); ) {
+			String prefix = (String) i.next();
+			Namespace ns = namespaces.getNSforPrefix(prefix);
+			/*
+			 *  if (prefix.trim().length() > 0)
+			 *  uris.put(prefix, ns.getURI());
+			 */
+			uris.put(prefix, ns.getURI());
+		}
+		return uris;
+	}
 
 
 	/**

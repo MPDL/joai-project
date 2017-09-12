@@ -136,18 +136,18 @@ class PageDesc {
 	}
 
 
-//	/**
-//	 *  This will parse a PDF document.
-//	 *
-//	 * @param  input         The input stream for the document.
-//	 * @return               The document.
-//	 * @throws  IOException  If there is an error parsing the document.
-//	 */
-//	private static PDDocument parseDocument(InputStream input) throws IOException {
-//		PDFParser parser = new PDFParser(input);
-//		parser.parse();
-//		return parser.getPDDocument();
-//	}
+	/**
+	 *  This will parse a PDF document.
+	 *
+	 * @param  input         The input stream for the document.
+	 * @return               The document.
+	 * @throws  IOException  If there is an error parsing the document.
+	 */
+	private static PDDocument parseDocument(InputStream input) throws IOException {
+		PDFParser parser = new PDFParser(input);
+		parser.parse();
+		return parser.getPDDocument();
+	}
 
 
 

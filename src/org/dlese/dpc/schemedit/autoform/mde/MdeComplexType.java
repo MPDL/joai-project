@@ -368,17 +368,17 @@ public class MdeComplexType extends MdeNode {
 	}
 
 
-//	/**
-//	 *  Debugging utility
-//	 *
-//	 * @param  elements  NOT YET DOCUMENTED
-//	 */
-//	private void showSubElements(List elements) {
-//		for (Iterator i = elements.iterator(); i.hasNext(); ) {
-//			Element e = (Element) i.next();
-//			prtln("\t" + e.asXML());
-//		}
-//	}
+	/**
+	 *  Debugging utility
+	 *
+	 * @param  elements  NOT YET DOCUMENTED
+	 */
+	private void showSubElements(List elements) {
+		for (Iterator i = elements.iterator(); i.hasNext(); ) {
+			Element e = (Element) i.next();
+			prtln("\t" + e.asXML());
+		}
+	}
 
 
 	/**

@@ -456,26 +456,26 @@ public class AsnDocument {
 	}
 
 
-//	/**
-//	 *  Gets the standardTest attribute of the AsnDocument class
-//	 *
-//	 * @param  asnDoc  Description of the Parameter
-//	 * @param  asnId   Description of the Parameter
-//	 */
-//	private static void getStandardTest(AsnDocument asnDoc, String asnId) {
-//		AsnStandard std = asnDoc.getStandard(asnId);
-//		List children = std.getChildren();
-//		prtln("children (" + children.size() + ")");
-//		for (Iterator i = children.iterator(); i.hasNext(); ) {
-//			AsnStandard childStd = (AsnStandard) i.next();
-//			if (childStd == null) {
-//				prtln("NULL");
-//			}
-//			else {
-//				prtln(childStd.getId());
-//			}
-//		}
-//	}
+	/**
+	 *  Gets the standardTest attribute of the AsnDocument class
+	 *
+	 * @param  asnDoc  Description of the Parameter
+	 * @param  asnId   Description of the Parameter
+	 */
+	private static void getStandardTest(AsnDocument asnDoc, String asnId) {
+		AsnStandard std = asnDoc.getStandard(asnId);
+		List children = std.getChildren();
+		prtln("children (" + children.size() + ")");
+		for (Iterator i = children.iterator(); i.hasNext(); ) {
+			AsnStandard childStd = (AsnStandard) i.next();
+			if (childStd == null) {
+				prtln("NULL");
+			}
+			else {
+				prtln(childStd.getId());
+			}
+		}
+	}
 
 
 	/**

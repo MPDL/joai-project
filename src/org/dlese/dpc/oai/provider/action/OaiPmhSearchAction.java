@@ -120,25 +120,25 @@ public final class OaiPmhSearchAction extends Action {
 	}
 
 
-//	/**
-//	 *  Gets the index associated with a request parameter of the form myParameter[i] where
-//	 *  the collection index is indicated in brackets.
-//	 *
-//	 * @param  paramName  The request parameter String
-//	 * @return            The index value
-//	 */
-//	private final int getIndex(String paramName) {
-//		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
-//	}
+	/**
+	 *  Gets the index associated with a request parameter of the form myParameter[i] where
+	 *  the collection index is indicated in brackets.
+	 *
+	 * @param  paramName  The request parameter String
+	 * @return            The index value
+	 */
+	private final int getIndex(String paramName) {
+		return getIntValue(paramName.substring(paramName.indexOf("[") + 1, paramName.indexOf("]")));
+	}
 
 
-//	private final int getIntValue(String isInt) {
-//		try {
-//			return Integer.parseInt(isInt);
-//		} catch (Throwable e) {
-//			return -1;
-//		}
-//	}
+	private final int getIntValue(String isInt) {
+		try {
+			return Integer.parseInt(isInt);
+		} catch (Throwable e) {
+			return -1;
+		}
+	}
 
 
 	/**

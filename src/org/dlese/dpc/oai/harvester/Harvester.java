@@ -877,37 +877,37 @@ public class Harvester implements ErrorHandler {
 	}
 
 
-//	/**
-//	 *  Counts the number of files in a directory
-//	 *
-//	 * @param  dir             the directory in question
-//	 * @return                 the total number of files in dir
-//	 * @exception  Hexception  If error
-//	 */
-//	private int Count(File dir) throws Hexception {
-//		//return 0;
-//
-//		if (!dir.isDirectory()) {
-//			throw new Hexception("File " + dir.getName() + " is not a directory.");
-//		}
-//
-//		int total = 0;
-//		String[] files = dir.list();
-//		String thisDir = dir.getPath();
-//
-//		// count non-directory files in this directory and recurse for each
-//		// that IS a directory
-//		for (int k = 0; k < files.length; k++) {
-//			File f = new File(thisDir + File.separator + files[k]);
-//			if (!f.isDirectory()) {
-//				total++;
-//			}
-//			else {
-//				total += Count(f);
-//			}
-//		}
-//		return total;
-//	}
+	/**
+	 *  Counts the number of files in a directory
+	 *
+	 * @param  dir             the directory in question
+	 * @return                 the total number of files in dir
+	 * @exception  Hexception  If error
+	 */
+	private int Count(File dir) throws Hexception {
+		//return 0;
+
+		if (!dir.isDirectory()) {
+			throw new Hexception("File " + dir.getName() + " is not a directory.");
+		}
+
+		int total = 0;
+		String[] files = dir.list();
+		String thisDir = dir.getPath();
+
+		// count non-directory files in this directory and recurse for each
+		// that IS a directory
+		for (int k = 0; k < files.length; k++) {
+			File f = new File(thisDir + File.separator + files[k]);
+			if (!f.isDirectory()) {
+				total++;
+			}
+			else {
+				total += Count(f);
+			}
+		}
+		return total;
+	}
 
 
 	/**

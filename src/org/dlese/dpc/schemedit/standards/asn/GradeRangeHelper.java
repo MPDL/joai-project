@@ -174,14 +174,14 @@ public class GradeRangeHelper {
 	}
 
 
-//	/**
-//	 *  Creates a mapping from a gradeRange vocab values to {@link GradeRangeItem}
-//	 *  instance which stores the vocab value, the UI label, the UI value, and the
-//	 *  start and end grades.
-//	 */
-//	private void init() {
-//		gradeRangeMap = new HashMap();
-//	}
+	/**
+	 *  Creates a mapping from a gradeRange vocab values to {@link GradeRangeItem}
+	 *  instance which stores the vocab value, the UI label, the UI value, and the
+	 *  start and end grades.
+	 */
+	private void init() {
+		gradeRangeMap = new HashMap();
+	}
 
 
 	/**

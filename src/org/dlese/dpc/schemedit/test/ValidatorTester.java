@@ -59,16 +59,16 @@ public class ValidatorTester {
 		this.validator = schema.newValidator();
 	}
 		
-//	private boolean hasProtocol (String xml) {
-//		return true;
-//	}
+	private boolean hasProtocol (String xml) {
+		return true;
+	}
 	
-//	private String preprocessXML (String xml) {
-//		if (!hasProtocol (xml))
-//			return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" + xml;
-//		else
-//			return xml;
-//	}
+	private String preprocessXML (String xml) {
+		if (!hasProtocol (xml))
+			return "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" + xml;
+		else
+			return xml;
+	}
 	
 	private final boolean doValidate(String xml, StringBuffer messages, boolean showWarnings) {
 		boolean isValid = true;
@@ -173,41 +173,41 @@ public class ValidatorTester {
 		// vt.validateDocTester();
 	}
 		
-//	private void validateFileTester () {
-//		String path = "C:/tmp/validate/adn.xml";
-//		String msg = validateFile (new File(path));
-//		
-//		prtln ("\nvalidateFileTester()");
-//		prtln ("\t source: " + path);
-//		if (msg == null)
-//			prtln ("VALID");
-//		else
-//			prtln (msg);
-//	}
+	private void validateFileTester () {
+		String path = "C:/tmp/validate/adn.xml";
+		String msg = validateFile (new File(path));
+		
+		prtln ("\nvalidateFileTester()");
+		prtln ("\t source: " + path);
+		if (msg == null)
+			prtln ("VALID");
+		else
+			prtln (msg);
+	}
 	
-//	private void validateDocTester () {
-//		String path = "C:/tmp/validate/adn.xml";
-//		prtln ("\nvalidateDocTester()");
-//		String msg = null;
-//		try {
-//			org.dom4j.Document doc = Dom4jUtils.getXmlDocument(new File (path));
-//			msg = validateString (doc.asXML());
-//		} catch (Throwable t) {
-//			msg = t.getMessage();
-//		}
-//		
-//		prtln ("\t source: " + path);
-//		if (msg == null)
-//			prtln ("VALID");
-//		else
-//			prtln (msg);
-//	}
+	private void validateDocTester () {
+		String path = "C:/tmp/validate/adn.xml";
+		prtln ("\nvalidateDocTester()");
+		String msg = null;
+		try {
+			org.dom4j.Document doc = Dom4jUtils.getXmlDocument(new File (path));
+			msg = validateString (doc.asXML());
+		} catch (Throwable t) {
+			msg = t.getMessage();
+		}
+		
+		prtln ("\t source: " + path);
+		if (msg == null)
+			prtln ("VALID");
+		else
+			prtln (msg);
+	}
 	
-//	private void validateDirTester () {
-//		String collection = "1176742803770";
-//		String path = "C:/Documents and Settings/ostwald/devel/records/adn/" + collection;
-//		validateDir (path);
-//	}
+	private void validateDirTester () {
+		String collection = "1176742803770";
+		String path = "C:/Documents and Settings/ostwald/devel/records/adn/" + collection;
+		validateDir (path);
+	}
 	
 	private static void prtln (String s) {
 		System.out.println (s);

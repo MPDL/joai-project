@@ -244,11 +244,11 @@ public class VocabForm extends ActionForm implements Serializable {
 	}
 
 
-//	private String getVocabNodeString(VocabNode node) {
-//		if (node == null)
-//			return "null";
-//		return "name: " + node.getName() + " id: " + node.getId() + " label: " + node.getLabel();
-//	}
+	private String getVocabNodeString(VocabNode node) {
+		if (node == null)
+			return "null";
+		return "name: " + node.getName() + " id: " + node.getId() + " label: " + node.getLabel();
+	}
 
 
 	/**

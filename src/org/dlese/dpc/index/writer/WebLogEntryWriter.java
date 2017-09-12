@@ -350,15 +350,15 @@ public class WebLogEntryWriter implements DocWriter {
 	}
 
 
-//	/**
-//	 *  Tokenizes a URI by replacing the chars /, ?, &, :, = and . with a blank space.
-//	 *
-//	 * @param  uri  A URL or URI
-//	 * @return      The tokenized URI
-//	 */
-//	private final String tokenizeURI(String uri) {
-//		return uri.replaceAll("/| |\\?|=|\\.|\\&|:", " ");
-//	}
+	/**
+	 *  Tokenizes a URI by replacing the chars /, ?, &, :, = and . with a blank space.
+	 *
+	 * @param  uri  A URL or URI
+	 * @return      The tokenized URI
+	 */
+	private final String tokenizeURI(String uri) {
+		return uri.replaceAll("/| |\\?|=|\\.|\\&|:", " ");
+	}
 
 
 	/**

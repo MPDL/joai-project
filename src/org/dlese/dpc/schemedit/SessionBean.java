@@ -609,42 +609,42 @@ public class SessionBean implements HttpSessionBindingListener, Serializable {
 	}
 
 
-//	/**
-//	 *  Gets this session's DCSViewForm from the session attribute.
-//	 *
-//	 *@return    The viewForm value
-//	 */
-//	private DCSViewForm getViewForm() {
-//		if (viewForm == null) {
-//			if (session == null) {
-//				prtln("  .. couldn't find session ... returning null");
-//				return null;
-//			}
-//			try {
-//				viewForm = (DCSViewForm) session.getAttribute("viewForm");
-//			} catch (java.lang.IllegalStateException e) {}
-//		}
-//		return viewForm;
-//	}
+	/**
+	 *  Gets this session's DCSViewForm from the session attribute.
+	 *
+	 *@return    The viewForm value
+	 */
+	private DCSViewForm getViewForm() {
+		if (viewForm == null) {
+			if (session == null) {
+				prtln("  .. couldn't find session ... returning null");
+				return null;
+			}
+			try {
+				viewForm = (DCSViewForm) session.getAttribute("viewForm");
+			} catch (java.lang.IllegalStateException e) {}
+		}
+		return viewForm;
+	}
 
 
-//	/**
-//	 *  Gets this session's SchemEditForm from the session attribute.
-//	 *
-//	 *@return    The schemEditForm value
-//	 */
-//	private SchemEditForm getSchemEditForm() {
-//		if (schemEditForm == null) {
-//			if (session == null) {
-//				prtln("  .. couldn't find session ... returning null");
-//				return null;
-//			}
-//			try {
-//				schemEditForm = (SchemEditForm) session.getAttribute("sef");
-//			} catch (java.lang.IllegalStateException e) {}
-//		}
-//		return schemEditForm;
-//	}
+	/**
+	 *  Gets this session's SchemEditForm from the session attribute.
+	 *
+	 *@return    The schemEditForm value
+	 */
+	private SchemEditForm getSchemEditForm() {
+		if (schemEditForm == null) {
+			if (session == null) {
+				prtln("  .. couldn't find session ... returning null");
+				return null;
+			}
+			try {
+				schemEditForm = (SchemEditForm) session.getAttribute("sef");
+			} catch (java.lang.IllegalStateException e) {}
+		}
+		return schemEditForm;
+	}
 	
 	/**
 	 *  Gets the authorized attribute of the SessionBean object

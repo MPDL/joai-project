@@ -233,18 +233,18 @@ public class StandardsRegistry {
 		}
 	}
 
-//	/**
-//	 *  delete standards doc from registry and tree cache
-//	 *
-//	 *@param  docInfo  the docInfo for the document to be deleted
-//	 */
-//	private void del(AsnDocInfo docInfo) {
-//		synchronized (lock) {
-//			docMap.remove(docInfo.key);
-//			this.treeCache.removeTree(docInfo.key);
-//			docIdMap.remove(docInfo.identifier);
-//		}
-//	}
+	/**
+	 *  delete standards doc from registry and tree cache
+	 *
+	 *@param  docInfo  the docInfo for the document to be deleted
+	 */
+	private void del(AsnDocInfo docInfo) {
+		synchronized (lock) {
+			docMap.remove(docInfo.key);
+			this.treeCache.removeTree(docInfo.key);
+			docIdMap.remove(docInfo.identifier);
+		}
+	}
 
 
 	/**
@@ -276,25 +276,25 @@ public class StandardsRegistry {
 	}
 
 
-//	/**
-//	 *  Remove a standards doc from the registry
-//	 *
-//	 *@param  key            key designating the doc to unregister
-//	 *@exception  Exception  NOT YET DOCUMENTED
-//	 */
-//	private synchronized void unregister(String key) throws Exception {
-//		docMap.remove(key);
-//		// treeMap.remove(key);
-//		this.treeCache.removeTree(key);
-//		for (Iterator i = this.docIdMap.keySet().iterator(); i.hasNext(); ) {
-//			String docId = (String) i.next();
-//			String docKey = (String) docIdMap.get(docId);
-//			if (key.equals(docKey)) {
-//				docIdMap.remove(docId);
-//				return;
-//			}
-//		}
-//	}
+	/**
+	 *  Remove a standards doc from the registry
+	 *
+	 *@param  key            key designating the doc to unregister
+	 *@exception  Exception  NOT YET DOCUMENTED
+	 */
+	private synchronized void unregister(String key) throws Exception {
+		docMap.remove(key);
+		// treeMap.remove(key);
+		this.treeCache.removeTree(key);
+		for (Iterator i = this.docIdMap.keySet().iterator(); i.hasNext(); ) {
+			String docId = (String) i.next();
+			String docKey = (String) docIdMap.get(docId);
+			if (key.equals(docKey)) {
+				docIdMap.remove(docId);
+				return;
+			}
+		}
+	}
 
 
 	/**
@@ -566,18 +566,18 @@ public class StandardsRegistry {
 		String year = "*";
 
 
-//		/**
-//		 *  Constructor for the DocMatchKey object
-//		 *
-//		 *@param  author  the author field
-//		 *@param  topic   the topic field
-//		 *@param  year    the year field
-//		 */
-//		DocMatchKey(String author, String topic, String year) {
-//			this.author = valueOrWildcard(author);
-//			this.topic = valueOrWildcard(topic);
-//			this.year = valueOrWildcard(year);
-//		}
+		/**
+		 *  Constructor for the DocMatchKey object
+		 *
+		 *@param  author  the author field
+		 *@param  topic   the topic field
+		 *@param  year    the year field
+		 */
+		DocMatchKey(String author, String topic, String year) {
+			this.author = valueOrWildcard(author);
+			this.topic = valueOrWildcard(topic);
+			this.year = valueOrWildcard(year);
+		}
 
 
 		/**

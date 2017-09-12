@@ -506,19 +506,19 @@ public class CollectionConfigReader extends AbstractConfigReader {
 	}
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @return    NOT YET DOCUMENTED
-//	 */
-//	private String showDoc() {
-//		try {
-//			return (Dom4jUtils.prettyPrint(this.getDocument()));
-//		} catch (Throwable t) {
-//			prtln("document could not be pretty-printed: " + t.getMessage());
-//		}
-//		return "";
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @return    NOT YET DOCUMENTED
+	 */
+	private String showDoc() {
+		try {
+			return (Dom4jUtils.prettyPrint(this.getDocument()));
+		} catch (Throwable t) {
+			prtln("document could not be pretty-printed: " + t.getMessage());
+		}
+		return "";
+	}
 
 
 	/**

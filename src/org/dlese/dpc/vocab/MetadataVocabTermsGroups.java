@@ -837,32 +837,32 @@ public class MetadataVocabTermsGroups implements MetadataVocab, org.xml.sax.Cont
 	}
 
 
-//	/**
-//	 *  Reads the given file and returns its contents as a string
-//	 *
-//	 * @param  filename
-//	 * @param  page
-//	 * @return           The fileText value
-//	 */
-//	private synchronized String getFileText( String filename, PageContext page ) {
-//		StringBuffer ret = new StringBuffer();
-//		try {
-//			BufferedReader in = new BufferedReader( new FileReader( page.getServletContext().getRealPath( filename ) ) );
-//			String s = null;
-//			while ( ( s = in.readLine() ) != null ) {
-//				ret.append( s );
-//			}
-//		}
-//		catch ( FileNotFoundException fnfe ) {
-//			System.err.println( "File not found - " );
-//			System.err.println( fnfe.getClass() + " " + fnfe.getMessage() );
-//		}
-//		catch ( IOException ioe ) {
-//			System.err.println( "Exception occurred reading " + filename );
-//			System.err.println( ioe.getClass() + " " + ioe.getMessage() );
-//		}
-//		return ret.toString();
-//	}
+	/**
+	 *  Reads the given file and returns its contents as a string
+	 *
+	 * @param  filename
+	 * @param  page
+	 * @return           The fileText value
+	 */
+	private synchronized String getFileText( String filename, PageContext page ) {
+		StringBuffer ret = new StringBuffer();
+		try {
+			BufferedReader in = new BufferedReader( new FileReader( page.getServletContext().getRealPath( filename ) ) );
+			String s = null;
+			while ( ( s = in.readLine() ) != null ) {
+				ret.append( s );
+			}
+		}
+		catch ( FileNotFoundException fnfe ) {
+			System.err.println( "File not found - " );
+			System.err.println( fnfe.getClass() + " " + fnfe.getMessage() );
+		}
+		catch ( IOException ioe ) {
+			System.err.println( "Exception occurred reading " + filename );
+			System.err.println( ioe.getClass() + " " + ioe.getMessage() );
+		}
+		return ret.toString();
+	}
 
 	/**
 	 *  Replaces "||" in label values with &lt;br&gt;&amp;nbsp;
@@ -956,23 +956,23 @@ public class MetadataVocabTermsGroups implements MetadataVocab, org.xml.sax.Cont
 	private synchronized String setTopName( String system, String group ) {
 		// System.out.println( "setTopName = " + system + "/" + group );
 		group += ":";
-//		int ind = 0;
+		int ind = 0;
 		int ind2 = group.indexOf( ":" );
 		return ( (VocabNode)vocab.map.get( system + "." + group.substring( 0, ind2 ) ) ).getId();
 	}
 
-//	/**
-//	 *  Sets the topMetaName attribute of the MetadataVocab object
-//	 *
-//	 * @param  group  The new topMetaName value
-//	 * @return
-//	 */
-//	private synchronized String setTopMetaName( String group ) {
-//		group += ":";
-//		int ind = 0;
-//		int ind2 = group.indexOf( ":" );
-//		return group.substring( 0, ind2 );
-//	}
+	/**
+	 *  Sets the topMetaName attribute of the MetadataVocab object
+	 *
+	 * @param  group  The new topMetaName value
+	 * @return
+	 */
+	private synchronized String setTopMetaName( String group ) {
+		group += ":";
+		int ind = 0;
+		int ind2 = group.indexOf( ":" );
+		return group.substring( 0, ind2 );
+	}
 
 	/**
 	 *  Sets the current VocabList pointer to the specified spot in the vocab
@@ -1000,17 +1000,17 @@ public class MetadataVocabTermsGroups implements MetadataVocab, org.xml.sax.Cont
 	}
 
 
-//	/**
-//	 *  Used by NOSCRIPT vocab pages to carry through selections in other
-//	 *  categories
-//	 *
-//	 * @param  groupTop  top-level vocab group
-//	 * @param  page      JSP PageContext
-//	 * @return           the HTML code
-//	 */
-//	private synchronized String hiddenState( String groupTop, PageContext page ) {
-//		return "";
-//	}
+	/**
+	 *  Used by NOSCRIPT vocab pages to carry through selections in other
+	 *  categories
+	 *
+	 * @param  groupTop  top-level vocab group
+	 * @param  page      JSP PageContext
+	 * @return           the HTML code
+	 */
+	private synchronized String hiddenState( String groupTop, PageContext page ) {
+		return "";
+	}
 
 	/**
 	 *  When all vocabs are loaded, generate the Lucene queries, register all

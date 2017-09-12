@@ -141,7 +141,7 @@ public class IntegrationUtils {
 		
 		String path = "C:/tmp/serviceDescription.xml";
 		Document doc = Dom4jUtils.getXmlDocument(new File (path));
-		ServiceDescription mySD = new ServiceDescription (doc.getRootElement().createCopy());
+		ServiceDescription mySD = mySD = new ServiceDescription (doc.getRootElement().createCopy());
 		mySD.setImage("http://foo.brand.com/image.jpg", "my bogus title", "100", "25", "my bogus alttext");
 		
 		String aggHandle = collection.nsdlColl.aggregator.getHandle();
