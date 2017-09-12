@@ -18,6 +18,7 @@
 package org.dlese.dpc.schemedit;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.lucene.search.Query;
