@@ -17,15 +17,12 @@
 */
 package org.dlese.dpc.schemedit.standards.adn.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.dlese.dpc.standards.asn.AsnStandard;
 import org.dlese.dpc.standards.asn.AsnStatement;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.regex.*;
-
-import org.dom4j.Element;
-import java.util.*;
 
 /**
  *  Extends AsnStandard with methods to aid the task of mapping asn standards to ADN standards.

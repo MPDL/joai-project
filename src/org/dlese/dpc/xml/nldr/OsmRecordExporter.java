@@ -17,30 +17,20 @@
 */
 package org.dlese.dpc.xml.nldr;
 
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLUtils;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.MetadataUtils;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dom4j.Document;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
-import org.dom4j.io.SAXReader;
 import org.dom4j.Element;
-import org.dom4j.Branch;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
 import org.dom4j.QName;
-import org.dom4j.Namespace;
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.Hashtable;
 
 /**
  *  Specializes NldrMetadataRecordExporter to handle export for the osm framework.

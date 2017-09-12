@@ -18,10 +18,6 @@
 package org.dlese.dpc.services.mmd;
 
 import java.sql.Timestamp;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
 
 import org.dlese.dpc.util.DpcErrors;
 

@@ -17,35 +17,37 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.repository.RepositoryIndexingObserver;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.threadedservices.AutoExportTask;
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.vocab.MetadataVocabServlet;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.index.*;
-
-import java.util.*;
-import java.text.*;
 import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.struts.action.Action;
+
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.action.form.DCSAdminForm;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.repository.RepositoryIndexingObserver;
+import org.dlese.dpc.schemedit.threadedservices.AutoExportTask;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.MetadataVocabServlet;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLValidator;
 
 /**
  *  Implementation of <strong>Action</strong> that handles administration of a

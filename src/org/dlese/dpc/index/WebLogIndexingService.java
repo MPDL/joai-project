@@ -17,19 +17,20 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.util.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.datamgr.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import java.text.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.repository.*;
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.index.writer.WebLogEntryWriter;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.Utils;
 
 /**
  *  Indexes Web and query log files using Lucene.

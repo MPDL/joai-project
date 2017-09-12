@@ -17,26 +17,15 @@
 */
 package org.dlese.dpc.suggest;
 
-import org.dlese.dpc.suggest.resource.urlcheck.UrlValidator;
-import org.dlese.dpc.suggest.resource.urlcheck.ValidatorResults;
-
-import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-
+import java.io.File;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dlese.dpc.util.Files;
+import org.dlese.dpc.schemedit.url.UrlHelper;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.suggest.resource.ResourceRecord;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 /**
  *  Provides functionality to help Suggestor clients collection suggestions and

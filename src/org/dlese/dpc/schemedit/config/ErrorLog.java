@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ErrorLog {
 	private static boolean debug = true;

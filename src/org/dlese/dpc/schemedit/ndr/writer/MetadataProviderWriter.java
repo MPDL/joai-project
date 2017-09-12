@@ -17,30 +17,29 @@
 */
 package org.dlese.dpc.schemedit.ndr.writer;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.schemedit.ndr.SyncReport;
-import org.dlese.dpc.schemedit.ndr.ReportEntry;
-import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.reader.DleseCollectionDocReader;
-
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import java.util.Date;
 
 import javax.servlet.ServletContext;
 
-import java.util.*;
-import org.dom4j.*;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.request.AddAggregatorRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
+import org.dlese.dpc.ndr.request.SignedNdrRequest;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.ReportEntry;
+import org.dlese.dpc.schemedit.ndr.SyncReport;
+import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 /**
  *  The MetadataProviderWriter syncs collection-level information between the
  *  NCS and the NDR. It updates (and creates, if necessary) both an aggregator

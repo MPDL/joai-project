@@ -17,8 +17,12 @@
 */
 package org.dlese.dpc.ndr.apiproxy;
 
-import java.util.*;
 import java.io.File;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.dom4j.DocumentHelper;
 import org.dom4j.Namespace;
 

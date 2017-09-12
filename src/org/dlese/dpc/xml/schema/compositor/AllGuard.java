@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.xml.schema.compositor;
 
-import org.dlese.dpc.xml.schema.SchemaUtils;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.dlese.dpc.xml.Dom4jUtils;
-
+import org.dlese.dpc.xml.schema.SchemaUtils;
 import org.dom4j.Element;
 import org.dom4j.Node;
 

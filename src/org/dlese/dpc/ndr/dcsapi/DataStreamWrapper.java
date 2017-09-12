@@ -19,14 +19,11 @@ package org.dlese.dpc.ndr.dcsapi;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
-import java.util.Map;
 
+import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.dom4j.XPath;
-import org.dom4j.Document;
 
 /**
  * @author Jonathan Ostwald

@@ -16,12 +16,12 @@
 	limitations under the License.
 */
 package org.dlese.dpc.vocab;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
+import java.util.HashMap;
+
 import org.dlese.dpc.dds.action.DDSQueryAction;
 import org.dlese.dpc.dds.action.form.HistogramForm;
-import java.util.*;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.RepositoryManager;
 
 /**
  *  Wrapper for a plain VocabNode that ties to a Lucene index for generating

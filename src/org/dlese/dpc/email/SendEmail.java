@@ -17,10 +17,16 @@
 */
 package org.dlese.dpc.email;
 
-import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.activation.*;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
  *  Handles sending emails. See <a href="http://java.sun.com/products/javamail/javadocs/overview-summary.html">

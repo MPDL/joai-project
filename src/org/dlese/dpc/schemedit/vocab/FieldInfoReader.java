@@ -17,18 +17,22 @@
 */
 package org.dlese.dpc.schemedit.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-
-import org.dom4j.*;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.serviceclients.webclient.*;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Provides access to infomormation (beyond that expressed in the metadata

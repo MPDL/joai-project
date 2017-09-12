@@ -17,29 +17,24 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
-
-import org.dlese.dpc.schemedit.standards.StandardsDocument;
-import org.dlese.dpc.schemedit.standards.StandardsNode;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.schemedit.*;
-
-import org.dlese.dpc.schemedit.display.CollapseBean;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.display.CollapseBean;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
+import org.dlese.dpc.schemedit.standards.StandardsDocument;
+import org.dlese.dpc.schemedit.standards.StandardsNode;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dom4j.Element;
 
 /**
  *  SuggestionsServiceHelper for the CAT REST standards suggestion service,

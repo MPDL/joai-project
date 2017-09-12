@@ -17,10 +17,8 @@
 */
 package org.dlese.dpc.schemedit.ndr.util.integration;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-
-import org.dom4j.*;
-import java.util.*;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 class Result {
 	public String resourceHandle;

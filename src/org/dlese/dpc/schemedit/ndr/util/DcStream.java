@@ -17,12 +17,19 @@
 */
 package org.dlese.dpc.schemedit.ndr.util;
 
-import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dom4j.*;
-import java.util.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.QName;
 
 /**
  *  Class to construct serviceDescription elements to be used in NDR Objects (i.e., MetadataProvider and Aggregator),

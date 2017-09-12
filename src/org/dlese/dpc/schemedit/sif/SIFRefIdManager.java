@@ -17,13 +17,15 @@
 */
 package org.dlese.dpc.schemedit.sif;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLFileFilter;
-
-import java.util.*;
 import java.io.File;
-import org.dom4j.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Manages configurations of SIF fields that take references to other SIF

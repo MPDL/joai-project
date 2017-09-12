@@ -17,18 +17,8 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.schemedit.autoform.mde.*;
-
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.SchemaNode;
-
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
 import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
 
 
 /**

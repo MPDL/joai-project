@@ -17,17 +17,9 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.URL;
-
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
 *  Bean for displaying an index of metadata records in the StandAlone metadata editor 

@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.util;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Properties;
 
 /**
  *  Read environment variables from an application.

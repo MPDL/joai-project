@@ -19,17 +19,11 @@ package org.dlese.dpc.schemedit.autoform;
 
 import org.dlese.dpc.schemedit.sif.SIFRefIdManager;
 import org.dlese.dpc.schemedit.sif.SIFRefIdMap;
-import org.dlese.dpc.schemedit.autoform.mde.*;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
 import org.dlese.dpc.xml.schema.SchemaNode;
-
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
+import org.dom4j.Element;
 
 /**
  *  Renders JSP for SIF (Schools Interoperability Framework) metadata

@@ -17,24 +17,17 @@
 */
 package org.dlese.dpc.schemedit.standards.adn;
 
-import org.dlese.dpc.schemedit.standards.*;
-
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import org.dlese.dpc.serviceclients.cat.CATStandard;
-import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
+import org.dlese.dpc.schemedit.standards.CATServiceHelper;
+import org.dlese.dpc.schemedit.standards.StandardsDocument;
+import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import org.dlese.dpc.serviceclients.cat.CATStandard;
 
 /**
  *  CATServiceHelper that converts ASN standards to ADN

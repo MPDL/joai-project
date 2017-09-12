@@ -17,16 +17,10 @@
 */
 package org.dlese.dpc.schemedit.standards.td;
 
+import java.io.File;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.StandardsManager;
-import org.dlese.dpc.schemedit.standards.adn.util.MappingUtils;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
 
 /**
  *  StandardsManager for the TeachersDomain Framework.

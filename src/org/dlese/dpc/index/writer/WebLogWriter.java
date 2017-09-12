@@ -17,15 +17,13 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 import org.dlese.dpc.index.document.DateFieldTools;
 
 /**

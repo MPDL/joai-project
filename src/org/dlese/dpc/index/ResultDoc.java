@@ -17,14 +17,15 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.*;
-import java.util.*;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.dlese.dpc.index.reader.*;
-
-import java.io.*;
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.index.reader.DocReader;
+import org.dlese.dpc.index.reader.DocumentMap;
+import org.dlese.dpc.index.reader.LazyDocumentMap;
+import org.dlese.dpc.index.reader.SimpleDocReader;
 
 /**
  *  A factory container for a hit that is returned from a {@link org.dlese.dpc.index.SimpleLuceneIndex}

@@ -17,14 +17,16 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 
 /**

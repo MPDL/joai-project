@@ -17,31 +17,36 @@
 */
 package org.dlese.dpc.schemedit.ndr.mets;
 
-import org.dlese.dpc.services.dds.toolkit.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import java.util.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
 import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.toolkit.ContentUtils;
 import org.dlese.dpc.ndr.toolkit.NDRToolkit;
-import org.dlese.dpc.ndr.toolkit.MimeTypes;
-import org.nsdl.repository.model.types.*;
-import org.nsdl.repository.model.types.Type;
-import org.nsdl.repository.model.Datastream;
-import org.nsdl.repository.model.Datastream.Name;
-import org.nsdl.repository.model.NDRObject;
-import org.nsdl.repository.model.NDRObjectInfo;
-import org.nsdl.repository.access.Results;
-import org.nsdl.repository.util.NDRObjectTemplate;
-
 import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
-
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.ndr.toolkit.ContentUtils;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dom4j.*;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.nsdl.repository.access.Results;
+import org.nsdl.repository.model.Datastream;
+import org.nsdl.repository.model.NDRObject;
+import org.nsdl.repository.model.NDRObjectInfo;
+import org.nsdl.repository.model.types.Aggregator;
+import org.nsdl.repository.model.types.Metadata;
+import org.nsdl.repository.model.types.MetadataProvider;
+import org.nsdl.repository.model.types.Resource;
+import org.nsdl.repository.model.types.Type;
+import org.nsdl.repository.util.NDRObjectTemplate;
 
 /**
  *  Unpack a METS envelop and place the contents (metadata + content) into the

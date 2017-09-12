@@ -17,17 +17,17 @@
 */
 package org.dlese.dpc.schemedit.input;
 
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-
-import java.util.*;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
 
 /**
  *  Prunes empty, non-schema-required elements and attributes from a Document.

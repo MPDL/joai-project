@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.vocab;
 
-import org.dlese.dpc.vocab.*;
-
 /**
  *  NOT YET DOCUMENTED
  *

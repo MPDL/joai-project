@@ -17,21 +17,19 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.*;
+import java.io.File;
+import java.net.URI;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 // import org.dlese.dpc.xml.schema.compositor.Compositor;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
-import org.dom4j.Node;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Attribute;
-import org.dom4j.Element;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.Namespace;
-
-import com.sun.msv.datatype.xsd.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Stores XML schema properties defined in the root schema File<p>

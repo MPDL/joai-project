@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.index;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.document.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.search.Collector;
+import org.apache.lucene.search.Filter;
 
 
 public interface LuceneIndex {

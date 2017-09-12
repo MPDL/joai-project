@@ -17,20 +17,16 @@
 */
 package org.dlese.dpc.schemedit.ndr;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
-
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.io.File;
-
-
-import org.dom4j.*;
 
 public class SyncReport {
 	private static boolean debug = false;

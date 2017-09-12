@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.util.*;
 import java.io.Serializable;
+
 import org.dom4j.Element;
 
 /**

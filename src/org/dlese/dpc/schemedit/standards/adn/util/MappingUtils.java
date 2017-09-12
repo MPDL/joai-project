@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.schemedit.standards.adn.util;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.adn.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.dlese.dpc.schemedit.standards.adn.DleseStandardsDocument;
 import org.dlese.dpc.xml.schema.SchemaHelper;
-import java.util.*;
-import java.net.*;
 
 public class MappingUtils {
 	private static boolean debug = true;

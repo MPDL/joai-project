@@ -19,8 +19,10 @@ package org.dlese.dpc.schemedit.ndr.util;
 
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XPathUtils;
-import org.dom4j.*;
-import java.util.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  See http://ndr.comm.nsdl.org/cgi-bin/wiki.pl?addMetadata for documentation

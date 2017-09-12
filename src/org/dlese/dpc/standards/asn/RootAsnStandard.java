@@ -17,14 +17,10 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dom4j.Element;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.regex.*;
-
-import java.util.*;
 
 /**
  *  Root standard of the Sandards Document representing the top-most standard in

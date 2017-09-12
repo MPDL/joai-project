@@ -17,33 +17,23 @@
 */
 package org.dlese.dpc.vocab.action;
 
-import org.dlese.dpc.vocab.action.form.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.dds.DDSServlet;
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
-import java.util.Hashtable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.MetadataVocabServlet;
+import org.dlese.dpc.vocab.action.form.VocabAdminForm;
 
 /**
  *  Implementation of <strong>Action</strong> that handles administration of a

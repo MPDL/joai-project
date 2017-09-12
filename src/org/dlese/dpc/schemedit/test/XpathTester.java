@@ -17,17 +17,21 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import org.dom4j.tree.*;
-import org.dom4j.io.*;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.tree.NamespaceCache;
+import org.dom4j.tree.NamespaceStack;
 
 
 /**

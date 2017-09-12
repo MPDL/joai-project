@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
-import java.util.*;
 import java.io.File;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Helper to translate between controlled vocabs for cataloging grade levels in

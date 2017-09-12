@@ -17,26 +17,40 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.util.*;
-import java.text.*;
 import java.io.Serializable;
-import javax.servlet.http.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.ServletContext;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.XMLDocReader;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.schemedit.security.access.AccessManager;
-import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.ndr.SyncService;
-import org.dlese.dpc.util.Utils;
-
-import org.dlese.dpc.schemedit.security.user.User;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
 
 import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.action.form.DCSQueryForm;
+import org.dlese.dpc.schemedit.action.form.DCSViewForm;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.SyncService;
+import org.dlese.dpc.schemedit.security.access.AccessManager;
+import org.dlese.dpc.schemedit.security.access.Roles;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.util.Utils;
 
 /**
  *  A Session-scoped Bean for information that needs to be available to

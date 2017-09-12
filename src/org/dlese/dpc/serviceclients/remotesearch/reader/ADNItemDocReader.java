@@ -17,24 +17,18 @@
 */
 package org.dlese.dpc.serviceclients.remotesearch.reader;
 
-import org.dlese.dpc.serviceclients.remotesearch.*;
-import org.dlese.dpc.serviceclients.webclient.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-import java.io.*;
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.serviceclients.webclient.GetRecordResponse;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.VocabUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Description of the Class

@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.dds.tags;
 
+import java.io.IOException;
+
 import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-import javax.servlet.jsp.PageContext;
+
 import org.dlese.dpc.dds.KeywordsHighlight;
-import javax.servlet.jsp.tagext.*;
-import javax.servlet.jsp.*;
-import java.io.*;
 
 /**
  *  Provide keyword highlighting of the body content of this tag.

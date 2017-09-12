@@ -17,15 +17,20 @@
 */
 package org.dlese.dpc.schemedit.vocab.layout;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-
-import org.dom4j.*;
+import java.io.File;
+import java.net.URI;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Populates the a groupInfoMap by reading from a file specified in Framework config file (with name ending

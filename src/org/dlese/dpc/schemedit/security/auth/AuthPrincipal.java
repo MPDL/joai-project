@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.schemedit.security.auth;
 
-import java.io.*;
+import java.io.Serializable;
 import java.security.Principal;
 
 /**

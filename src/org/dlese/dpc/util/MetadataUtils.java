@@ -19,23 +19,8 @@ package org.dlese.dpc.util;
 
 
 
+import java.text.ParseException;
 import java.util.Date;
-
-import java.util.Random;
-
-import java.util.Enumeration;
-
-import java.util.*;
-
-import java.text.*;
-
-
-
-import org.dom4j.*;
-
-
-
-import org.dlese.dpc.util.Utils;
 
 import org.dlese.dpc.oai.OAIUtils;
 

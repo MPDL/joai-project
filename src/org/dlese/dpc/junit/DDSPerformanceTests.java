@@ -17,14 +17,9 @@
 */
 package org.dlese.dpc.junit;
 
-import org.dlese.dpc.junit.TestTools;
-
-import junit.framework.*;
-import java.util.Date;
-import java.util.Random;
-import java.util.Enumeration;
-import java.util.*;
-//import com.meterware.httpunit.*;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 //import org.dlese.dpc.oai.datamgr.*;
 

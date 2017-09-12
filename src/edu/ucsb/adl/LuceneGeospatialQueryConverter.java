@@ -48,12 +48,11 @@ package edu.ucsb.adl;
 import java.text.DecimalFormat;
 
 import org.apache.lucene.index.Term;
-
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermRangeQuery;
 import org.apache.lucene.search.TermQuery;
+import org.apache.lucene.search.TermRangeQuery;
 
 /**
  *  Converts a geospatial query to a <a target="_top" href="http://jakarta.apache.org/lucene/">Lucene</a>

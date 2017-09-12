@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import java.io.*;
-import java.util.*;
-import java.text.ParseException;
-import org.dlese.dpc.util.MetadataUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.dom4j.Element;
+import org.relaxng.datatype.DatatypeException;
 
-import com.sun.msv.datatype.xsd.*;
-import org.relaxng.datatype.*;
+import com.sun.msv.datatype.xsd.DatatypeFactory;
+import com.sun.msv.datatype.xsd.TypeIncubator;
+import com.sun.msv.datatype.xsd.XSDatatype;
 
 /**
  *  Provides Map-like interface to XSdatatypes - including built-ins and those

@@ -17,31 +17,28 @@
 */
 package org.dlese.dpc.ndr.toolkit;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+
 import org.dlese.dpc.ndr.NdrUtils;
-
-import org.nsdl.repository.client.Client;
-import org.nsdl.repository.util.Configuration;
-import org.nsdl.repository.admin.util.MimeTypedStream;
-import org.nsdl.repository.model.types.*;
-import org.nsdl.repository.model.Property;
-import org.nsdl.repository.access.*;
-import org.nsdl.repository.access.filters.*;
-import org.nsdl.repository.model.NDRObjectInfo;
-
-import org.nsdl.repository.model.NDRObject;
-import org.nsdl.repository.access.Results;
-import org.nsdl.repository.util.NDRObjectTemplate;
-
-import org.nsdl.repository.util.StaticObjectInfo;
-import org.nsdl.repository.client.access.InterpretedNDRAccess;
-
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dom4j.Namespace;
-
-import org.dlese.dpc.util.Files;
-
-import java.io.*;
-import java.util.*;
+import org.nsdl.repository.access.Finder;
+import org.nsdl.repository.access.NDRAccess;
+import org.nsdl.repository.access.Results;
+import org.nsdl.repository.client.Client;
+import org.nsdl.repository.model.NDRObject;
+import org.nsdl.repository.model.NDRObjectInfo;
+import org.nsdl.repository.model.Property;
+import org.nsdl.repository.model.types.Agent;
+import org.nsdl.repository.model.types.Aggregator;
+import org.nsdl.repository.model.types.Metadata;
+import org.nsdl.repository.model.types.MetadataProvider;
+import org.nsdl.repository.model.types.Resource;
+import org.nsdl.repository.model.types.Type;
+import org.nsdl.repository.util.Configuration;
+import org.nsdl.repository.util.NDRObjectTemplate;
+import org.nsdl.repository.util.StaticObjectInfo;
 
 /**
  *  Class for interacting with the NDRToolkit (sorry about the name confusion!).

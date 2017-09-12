@@ -17,28 +17,12 @@
 */
 package org.dlese.dpc.services.dds;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.repository.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.SimpleTimeZone;
 
 /**
  *  A bean that performs functions helpful in the UI. Meant to be an applicateion scoped

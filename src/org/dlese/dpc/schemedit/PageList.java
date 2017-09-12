@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.util.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *  Manages information about the editor pages in support of SchemaEdit.

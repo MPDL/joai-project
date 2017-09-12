@@ -18,16 +18,10 @@
 package org.dlese.dpc.schemedit.action;
 
 import java.io.IOException;
-import java.util.*;
-
-import org.dom4j.Document;
-import org.json.XML;
-import org.json.JSONObject;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
@@ -36,10 +30,9 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
-
-import org.dlese.dpc.schemedit.action.form.UcasProxyForm;
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.UcasProxyForm;
+import org.dom4j.Document;
 
 
 /**

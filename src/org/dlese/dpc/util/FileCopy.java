@@ -17,9 +17,11 @@
 */
 package org.dlese.dpc.util;
 
-import java.io.*;
 //import java.util.*;
 //import java.text.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 
 public class FileCopy {

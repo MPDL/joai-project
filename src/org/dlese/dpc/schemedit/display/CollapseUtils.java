@@ -20,8 +20,6 @@ package org.dlese.dpc.schemedit.display;
 import org.dlese.dpc.schemedit.input.InputManager;
 import org.dlese.dpc.util.strings.FindAndReplace;
 
-import java.util.*;
-
 
 /**
  *  Maintains the state of collapsible nodes in the metadata Editor. States are

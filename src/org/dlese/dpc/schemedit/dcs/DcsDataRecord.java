@@ -17,21 +17,23 @@
 */
 package org.dlese.dpc.schemedit.dcs;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.Constants;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.StatusFlags;
 import org.dlese.dpc.schemedit.repository.RepositoryService;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.*;
-
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

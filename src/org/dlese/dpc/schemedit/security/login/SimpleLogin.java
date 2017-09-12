@@ -17,17 +17,18 @@
 */
 package org.dlese.dpc.schemedit.security.login;
 
-import org.dlese.dpc.schemedit.security.auth.AuthUtils;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import java.util.Map;
-import java.io.*;
-import java.util.*;
 import java.security.Principal;
-import javax.security.auth.*;
-import javax.security.auth.callback.*;
-import javax.security.auth.login.*;
-import javax.security.auth.spi.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Vector;
+
+import javax.security.auth.callback.Callback;
+import javax.security.auth.callback.NameCallback;
+import javax.security.auth.callback.PasswordCallback;
+import javax.security.auth.callback.UnsupportedCallbackException;
+import javax.security.auth.login.LoginException;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Base class for a variety of simple login modules that simply authenticate a

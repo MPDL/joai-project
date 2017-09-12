@@ -17,13 +17,16 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.standards.StandardsManager;
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import java.io.*;
-import java.util.*;
+import org.dlese.dpc.schemedit.standards.StandardsRegistry;
 
 /**
  *  Helper class to provide information about the currently selected standards

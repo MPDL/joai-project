@@ -16,19 +16,19 @@
 	limitations under the License.
 */
 package org.dlese.dpc.schemedit.dcs;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-
-import org.dlese.dpc.index.*;
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.WorkFlowServices;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
 import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
 
 /**
  *  Provides access to, and caching of {@link org.dlese.dpc.schemedit.dcs.DcsDataRecord}

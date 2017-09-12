@@ -17,17 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import org.dom4j.io.*;
+import org.dom4j.DocumentFactory;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 
 
 /**

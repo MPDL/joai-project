@@ -19,13 +19,6 @@ package org.dlese.dpc.standards.asn;
 
 import org.dom4j.Element;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.regex.*;
-
-import java.util.*;
-
 /**
  *  Extends AsnStatement to capture document-level information from the
  *  "asn:StandardDocument" statement of a ASN resolver response or a ASN

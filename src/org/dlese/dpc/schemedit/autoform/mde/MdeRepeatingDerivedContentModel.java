@@ -17,17 +17,14 @@
 */
 package org.dlese.dpc.schemedit.autoform.mde;
 
-import org.dlese.dpc.schemedit.autoform.*;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
+import org.dlese.dpc.schemedit.autoform.Label;
+import org.dlese.dpc.schemedit.autoform.Renderer;
+import org.dlese.dpc.schemedit.autoform.RendererHelper;
+import org.dlese.dpc.schemedit.autoform.RendererImpl;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
 import org.dom4j.Element;
 
 /**

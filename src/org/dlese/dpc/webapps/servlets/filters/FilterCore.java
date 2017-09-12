@@ -17,16 +17,16 @@
 */
 package org.dlese.dpc.webapps.servlets.filters;
 
-import org.dlese.dpc.webapps.tools.*;
-
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
-import java.util.zip.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.zip.GZIPOutputStream;
 
-import org.dlese.dpc.xml.*;
+import javax.servlet.Filter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *  Abstract class that contains core methods common to Servlet Filters. Implementation note: Servlet Filters

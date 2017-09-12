@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.util.*;
+import java.util.EventObject;
+import java.util.List;
 
 /**
  *  Indicates that an event occurred affecting data managed by a DataManager

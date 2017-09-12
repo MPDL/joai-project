@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.schemedit.vocab.layout;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-
-import org.dom4j.*;
+import java.io.File;
+import java.net.URI;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Class to read a "groups file" for a single schemaNode and create the

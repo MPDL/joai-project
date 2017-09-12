@@ -17,10 +17,19 @@
 */
 package org.dlese.dpc.index.reader;
 
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import java.util.*;
+import java.util.AbstractList;
+import java.util.AbstractSet;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 
 /**
  *  A {@link java.util.Map} for accessing the data stored in a Lucene {@link

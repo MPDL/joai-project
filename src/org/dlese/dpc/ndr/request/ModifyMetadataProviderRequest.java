@@ -18,7 +18,6 @@
 package org.dlese.dpc.ndr.request;
 
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dom4j.Element;
 
 public class ModifyMetadataProviderRequest extends SignedNdrRequest {
 	

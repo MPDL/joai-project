@@ -17,21 +17,23 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.util.*;
-import javax.servlet.ServletContext;
-import org.dlese.dpc.webapps.tools.*;
-import javax.xml.transform.Transformer;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.StringWriter;
+import java.util.List;
 
+import javax.servlet.ServletContext;
+import javax.xml.transform.Transformer;
+
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.ItemDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dom4j.Document;
-import org.dom4j.Node;
-import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
-import org.dom4j.io.SAXReader;
+import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
 

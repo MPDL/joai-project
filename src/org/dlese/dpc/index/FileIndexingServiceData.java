@@ -17,10 +17,10 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.document.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-import java.util.*;
-import java.io.*;
+import org.apache.lucene.document.Document;
 
 
 public class FileIndexingServiceData {

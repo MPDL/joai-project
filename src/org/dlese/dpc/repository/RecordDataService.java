@@ -17,28 +17,30 @@
 */
 package org.dlese.dpc.repository;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.services.mmd.MmdException;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.analysis.KeywordAnalyzer;
+import org.dlese.dpc.index.reader.DleseAnnoDocReader;
+import org.dlese.dpc.index.reader.ItemDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.services.mmd.MmdRec;
 import org.dlese.dpc.services.mmd.MmdWarning;
 import org.dlese.dpc.services.mmd.Query;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.index.analysis.*;
-
-import java.net.URL;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.vocab.MetadataVocab;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
+import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
-import org.dom4j.*;
 
 /**
  *  Provides data related to a given collection-level record such as its associated IDs and annotations. This

@@ -17,13 +17,19 @@
 */
 package org.dlese.dpc.schemedit.threadedservices;
 
-import java.util.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.StatusFlags;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
 import org.dlese.dpc.util.Utils;
 import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
 
 public class Report implements java.io.Serializable {
 	

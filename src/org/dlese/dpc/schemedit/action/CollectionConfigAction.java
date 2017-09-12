@@ -17,35 +17,27 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import java.io.*;
-import java.util.List;
-import org.dlese.dpc.schemedit.Constants;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.MissingLockException;
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.input.CollectionConfigValidator;
-import org.dlese.dpc.schemedit.input.SchemEditValidator;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.ndr.NDRSync;
-import org.dlese.dpc.xml.schema.*;
+import java.io.File;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.MissingLockException;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.input.CollectionConfigValidator;
+import org.dlese.dpc.schemedit.input.SchemEditValidator;
+import org.dlese.dpc.schemedit.ndr.NDRSync;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 /**
  *  Controller for the Collection Settings editor. Automatically reloads saved

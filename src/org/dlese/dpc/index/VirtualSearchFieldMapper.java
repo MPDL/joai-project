@@ -19,51 +19,23 @@ package org.dlese.dpc.index;
 
 
 
-import org.apache.lucene.document.*;
-
-import org.apache.lucene.index.*;
-
-import org.apache.lucene.index.Term;
-
-import org.apache.lucene.search.*;
+import java.io.File;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.lucene.queryParser.ParseException;
-
 import org.apache.lucene.queryParser.QueryParser;
-
-import java.util.*;
-
-import java.text.SimpleDateFormat;
-
-
-
-import java.net.URL;
-
-
-
-import org.dom4j.Document;
-
-import org.dom4j.Node;
-
-import org.dom4j.Element;
-
-import org.dom4j.Attribute;
-
-import org.dom4j.DocumentException;
-
-import org.dom4j.io.SAXReader;
-
-
-
-import org.dlese.dpc.index.reader.*;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-
+import org.apache.lucene.search.Query;
 import org.dlese.dpc.index.queryParser.XMLQueryParser;
-
-
-
-import java.io.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 
 

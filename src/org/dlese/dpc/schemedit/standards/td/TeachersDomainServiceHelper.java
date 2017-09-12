@@ -17,26 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.td;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
 import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
-import org.dlese.dpc.schemedit.standards.StandardsDocument;
+import org.dlese.dpc.schemedit.standards.CATServiceHelper;
 import org.dlese.dpc.schemedit.standards.StandardsNode;
-
 import org.dlese.dpc.serviceclients.cat.CATStandard;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
 
 /**
  *  Run-time support for CAT suggestion service, which acts as intermediary

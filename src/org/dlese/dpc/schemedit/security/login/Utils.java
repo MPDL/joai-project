@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.schemedit.security.login;
 
-import java.security.*;
+import java.security.MessageDigest;
 
 /**
  * Utility methods for com.myjaas.auth.*. All the methods in here are static

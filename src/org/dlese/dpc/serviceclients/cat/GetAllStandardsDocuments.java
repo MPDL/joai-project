@@ -17,13 +17,15 @@
 */
 package org.dlese.dpc.serviceclients.cat;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.TimedURLConnection;
-import org.dlese.dpc.util.URLConnectionTimedOutException;
-import org.dom4j.*;
-import java.util.*;
-import java.net.*;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  See

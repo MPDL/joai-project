@@ -17,12 +17,9 @@
 */
 package org.dlese.dpc.vocab.tags.opml;
 
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.vocab.MetadataVocabInputState;
-import java.util.*;
 import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.http.*;
+
+import org.dlese.dpc.vocab.MetadataVocabInputState;
 
 /**
  *  Tag handler for rendering vocabulary select list inputs

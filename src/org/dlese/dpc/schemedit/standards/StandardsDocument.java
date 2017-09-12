@@ -17,13 +17,7 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
+import java.util.List;
 
 /**
  *  Interface for classes representing an educational standard (e.g., an ASN

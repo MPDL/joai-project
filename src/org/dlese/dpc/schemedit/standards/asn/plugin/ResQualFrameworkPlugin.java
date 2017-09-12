@@ -17,13 +17,10 @@
 */
 package org.dlese.dpc.schemedit.standards.asn.plugin;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.SchemEditUtils;
+import java.util.Arrays;
+import java.util.List;
 
-import org.dom4j.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-import java.net.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the res_qual

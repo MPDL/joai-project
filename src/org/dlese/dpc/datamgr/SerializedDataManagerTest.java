@@ -17,14 +17,17 @@
 */
 package org.dlese.dpc.datamgr;
 
-import org.dlese.dpc.junit.TestTools;
-
-import junit.framework.*;
+//import org.dlese.dpc.oai.datamgr.*;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
-import java.util.Enumeration;
-import java.util.*;
-//import org.dlese.dpc.oai.datamgr.*;
+
+import org.dlese.dpc.junit.TestTools;
+
+import junit.framework.Assert;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 
 

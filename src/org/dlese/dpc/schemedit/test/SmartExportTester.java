@@ -17,15 +17,12 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.dom4j.*;
-
-import java.util.*;
-import java.io.*;
+import org.dlese.dpc.xml.XMLFileFilter;
+import org.dlese.dpc.xml.XSLTransformer;
 
 /**
  *  <pre>

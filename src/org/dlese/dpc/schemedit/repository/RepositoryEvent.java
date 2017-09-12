@@ -17,7 +17,9 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import java.util.*;
+import java.util.EventObject;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  *  Event indicating that a repository event occurred, exposes an event name (e.g.,

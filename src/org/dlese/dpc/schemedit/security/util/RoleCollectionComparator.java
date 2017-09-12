@@ -17,9 +17,8 @@
 */
 package org.dlese.dpc.schemedit.security.util;
 
-import java.util.Comparator;
 import java.io.Serializable;
-import org.dlese.dpc.schemedit.security.access.Roles;
+import java.util.Comparator;
 
 /**
  *  Sort the names of role-associated collections. Used to sort the UserRole map in 

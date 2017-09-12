@@ -17,13 +17,7 @@
 */
 package org.dlese.dpc.vocab.tags.opml;
 
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.vocab.MetadataVocabInputState;
-import java.util.*;
-import java.io.*;
-import javax.servlet.jsp.*;
-import javax.servlet.jsp.tagext.*;
-import javax.servlet.http.*;
+import javax.servlet.jsp.JspException;
 
 /**
  *  Tag handler for rendering vocabulary as a collapsable tree menu

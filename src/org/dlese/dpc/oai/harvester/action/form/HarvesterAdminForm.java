@@ -19,43 +19,22 @@ package org.dlese.dpc.oai.harvester.action.form;
 
 
 
-import org.dlese.dpc.propertiesmgr.*;
-
-import org.dlese.dpc.webapps.tools.*;
-
-import org.dlese.dpc.oai.harvester.structs.*;
-
-import org.dlese.dpc.oai.harvester.*;
-
-
-
-import org.apache.struts.action.Action;
-
-import org.apache.struts.action.ActionError;
-
-import org.apache.struts.action.ActionErrors;
-
-import org.apache.struts.action.ActionForm;
-
-import org.apache.struts.action.ActionForward;
-
-import org.apache.struts.action.ActionMapping;
-
-import org.apache.struts.action.ActionServlet;
-
-import org.apache.struts.util.MessageResources;
-
-import org.apache.struts.validator.ValidatorForm;
-
-
+import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Hashtable;
 
 import javax.servlet.http.HttpServletRequest;
 
-import java.util.*;
-
-import java.text.*;
-
-import java.io.*;
+import org.apache.struts.action.ActionError;
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.oai.harvester.ScheduledHarvestManager;
+import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
+import org.dlese.dpc.webapps.tools.FormValidationTools;
 
 
 

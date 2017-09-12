@@ -17,11 +17,11 @@
 */
 package org.dlese.dpc.index.document;
 
-import java.util.Date;
 import java.text.ParseException;
+import java.util.Date;
 
-import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.DateField;
+import org.apache.lucene.document.DateTools;
 
 /**
  *  Provides support for converting dates to strings and vice-versa using seconds as the default time

@@ -17,34 +17,49 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.autoform.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.input.EnsureMinimalDocument;
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.net.URI;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.autoform.AutoForm;
+import org.dlese.dpc.schemedit.autoform.DcsViewRecord;
+import org.dlese.dpc.schemedit.autoform.EditorViewRecord;
+import org.dlese.dpc.schemedit.autoform.RendererHelper;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.FrameworkConfigReader;
+import org.dlese.dpc.schemedit.config.SchemaPath;
+import org.dlese.dpc.schemedit.config.SchemaPathMap;
+import org.dlese.dpc.schemedit.config.UserInfo;
 import org.dlese.dpc.schemedit.input.ElementsOrderer;
-import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
-import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
-import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
-import org.dlese.dpc.schemedit.vocab.layout.VocabLayout;
+import org.dlese.dpc.schemedit.input.EnsureMinimalDocument;
 import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.standards.StandardsManager;
+import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.schemedit.vocab.layout.VocabLayout;
+import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.strings.FindAndReplace;
+import org.dlese.dpc.vocab.MetadataVocab;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
-
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.text.SimpleDateFormat;
-import java.util.Comparator;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaHelperException;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SchemaUtils;
+import org.dlese.dpc.xml.schema.XMLValidator;
 import org.dom4j.Document;
-import org.dom4j.Attribute;
-import org.dom4j.Element;
 import org.dom4j.DocumentException;
-import org.dom4j.Namespace;
+import org.dom4j.Element;
 
 /**
  *  Encapsulates information about a metadata framework in support of creating,

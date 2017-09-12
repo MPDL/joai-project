@@ -17,15 +17,11 @@
 */
 package org.dlese.dpc.schemedit.standards.td;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.standards.CATServiceHelper;
 import org.dlese.dpc.schemedit.standards.asn.plugin.NcsItemFrameworkPlugin;
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import org.dom4j.Element;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the "comm_core"

@@ -17,14 +17,14 @@
 */
 package org.dlese.dpc.commands;
 
+import java.io.FileWriter;
+import java.text.ParseException;
+import java.util.Date;
+
+import org.dlese.dpc.oai.OAIUtils;
 import org.dlese.dpc.propertiesmgr.PropertiesManager;
 import org.dlese.dpc.xml.XMLValidator;
 import org.dlese.dpc.xml.XSLTransformer;
-import org.dlese.dpc.oai.OAIUtils;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
 
 /**
  *  Command-line routine that performs XSL transforms of XML files or directories of

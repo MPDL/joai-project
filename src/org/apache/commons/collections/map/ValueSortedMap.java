@@ -1,7 +1,5 @@
 package org.apache.commons.collections.map;
 
-import java.util.*;
-
 /**
  *  Map implementation based on Apache Commons LinkedMap that maintains a sorted list of values for iteration.
  *  <p>

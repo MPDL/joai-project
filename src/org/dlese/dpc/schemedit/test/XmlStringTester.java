@@ -17,16 +17,19 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
+import java.io.File;
+import java.io.StringWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import org.dom4j.io.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Node;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
 
 
 /**

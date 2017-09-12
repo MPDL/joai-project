@@ -16,18 +16,20 @@
 	limitations under the License.
 */
 package org.dlese.dpc.xml.schema;
-import org.dlese.dpc.xml.schema.compositor.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Stack;
+
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import org.dlese.dpc.util.*;
-
+import org.dlese.dpc.xml.schema.compositor.All;
+import org.dlese.dpc.xml.schema.compositor.Choice;
+import org.dlese.dpc.xml.schema.compositor.Compositor;
+import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
+import org.dlese.dpc.xml.schema.compositor.Sequence;
 import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.QName;
 import org.dom4j.Namespace;
-
-import java.util.*;
-import java.io.*;
+import org.dom4j.Node;
 
 /**
  *  Wrapper for ComplexType definitions in XML Schemas.

@@ -17,14 +17,12 @@
 */
 package org.dlese.dpc.schemedit.input;
 
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.SchemaHelper;
-
 import org.dlese.dpc.xml.schema.SchemaNode;
-import org.dom4j.Node;
-import java.util.*;
 
 /**
  *  Helper for translating between http request parameters and metadata

@@ -17,23 +17,17 @@
 */
 package org.dlese.dpc.standards.commcore;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-
-import java.io.*;
-import java.util.*;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
+import javax.servlet.ServletConfig;
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 /**
  *  Servlet responsible for initializing the StandardsSuggestionService.<p>

@@ -17,16 +17,27 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.regex.Pattern;
+
 import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.schema.NamespaceRegistry;
-import org.dom4j.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.XPath;
 import org.jaxen.SimpleNamespaceContext;
-import java.io.File;
-import java.util.regex.*;
-import java.net.URL;
-import java.util.*;
 
 /**
  *  Base Class for reading NDR responses to GET Requests, used primarily to

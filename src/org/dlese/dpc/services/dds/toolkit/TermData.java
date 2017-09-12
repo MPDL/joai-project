@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
-import java.util.*;
-
 /**
  *  Class that holds data about term in one or more fields in the index.
  *

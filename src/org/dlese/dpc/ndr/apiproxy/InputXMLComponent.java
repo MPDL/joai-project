@@ -17,10 +17,10 @@
 */
 package org.dlese.dpc.ndr.apiproxy;
 
-import java.util.*;
-import org.dlese.dpc.schemedit.*;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Wrapper for the three main components of the {@link InputXML} Object (Data,

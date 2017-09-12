@@ -16,10 +16,10 @@
 	limitations under the License.
 */
 package org.dlese.dpc.ndr.apiproxy;
-import java.util.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.XPath;
 /**
  * @author     ostwald<p>
  *

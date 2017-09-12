@@ -17,9 +17,8 @@
 */
 package org.dlese.dpc.ndr.request;
 
-import org.dlese.dpc.schemedit.ndr.util.DcStream;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dom4j.Element;
+import org.dlese.dpc.schemedit.ndr.util.DcStream;
 
 public class ModifyAgentRequest extends SignedNdrRequest {
 	

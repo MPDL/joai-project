@@ -17,33 +17,14 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
-import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.regex.*;
+
+import org.apache.struts.action.ActionForm;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 
 /**
  *  ActionForm bean for handling requests to create ADN Records

@@ -17,24 +17,12 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.dds.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.vocab.MetadataVocab;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
 
 /**
  *@author    John Weatherley

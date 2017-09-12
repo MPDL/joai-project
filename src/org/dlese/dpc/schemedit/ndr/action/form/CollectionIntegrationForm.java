@@ -17,31 +17,11 @@
 */
 package org.dlese.dpc.schemedit.ndr.action.form;
 
-import org.dlese.dpc.schemedit.ndr.util.integration.MappingsManager;
-import org.dlese.dpc.schemedit.ndr.util.integration.MappingInfo;
-
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.reader.AgentReader;
-import org.dlese.dpc.xml.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.regex.*;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.ndr.util.integration.MappingInfo;
+import org.dlese.dpc.schemedit.ndr.util.integration.MappingsManager;
 
 /**
  *  ActionForm bean for handling interactions with the NDR.

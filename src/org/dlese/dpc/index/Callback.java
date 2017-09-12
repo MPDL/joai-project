@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.document.*;
+import org.apache.lucene.document.Document;
 
 /**
  *  Interface for callbacks to handle processing Documents.

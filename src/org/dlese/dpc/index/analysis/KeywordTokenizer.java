@@ -18,7 +18,8 @@
 package org.dlese.dpc.index.analysis;
 
 import java.io.Reader;
-import org.apache.lucene.analysis.*;
+
+import org.apache.lucene.analysis.CharTokenizer;
 
 /**
  *  Includes all characters as part of the token.

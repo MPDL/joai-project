@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.*;
+import java.util.EnumSet;
+import java.util.Iterator;
 
 /* import org.dlese.dpc.schemedit.security.access.Roles;
 import org.dlese.dpc.schemedit.security.user.UserManager;

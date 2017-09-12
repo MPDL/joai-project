@@ -17,16 +17,18 @@
 */
 package org.dlese.dpc.ndr.toolkit;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.test.TesterUtils;
-
 import org.dlese.dpc.util.Files;
-
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
-
-import java.util.*;
-import java.io.*;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Singleton utility class to determine the mime-type of a file based on its

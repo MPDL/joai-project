@@ -17,30 +17,25 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.autoform.mde.*;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.autoform.mde.MdeAny;
+import org.dlese.dpc.schemedit.autoform.mde.MdeAttribute;
+import org.dlese.dpc.schemedit.autoform.mde.MdeChoice;
+import org.dlese.dpc.schemedit.autoform.mde.MdeComplexType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeMultiChoice;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingAnyType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingComplexType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingSimpleType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeSequence;
+import org.dlese.dpc.schemedit.autoform.mde.MdeSimpleType;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaNode;
 import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import java.net.URL;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
 import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.tree.FlyweightText;
 
 /**
  *  Renders JSP for viewing metadata records within the DCS (as opposed to

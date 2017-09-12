@@ -17,20 +17,14 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.test.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.*;
-import org.dlese.dpc.oai.OAIUtils;
+import java.io.File;
 
-import org.dom4j.*;
-
-import java.util.*;
-import java.io.*;
-import java.util.regex.*;
-import java.net.*;
-import java.text.*;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.test.FrameworkTester;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Utilities for manipulating XPaths, represented as String

@@ -17,18 +17,18 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.index.SimpleLuceneIndex;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.schemedit.display.SortWidget;
-
-import org.apache.lucene.index.*;
-import org.apache.lucene.search.*;
-import org.apache.lucene.queryParser.QueryParser;
-
-import java.util.*;
 
 /**
  *  Class to perform searches and cache the results as well as the query and

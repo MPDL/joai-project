@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.xml.schema.compositor;
 
-import org.dlese.dpc.xml.schema.*;
-import java.util.*;
+import java.util.Iterator;
+
+import org.dlese.dpc.xml.schema.ComplexType;
 import org.dom4j.Element;
 
 /**

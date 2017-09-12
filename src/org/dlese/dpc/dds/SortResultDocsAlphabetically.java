@@ -18,8 +18,8 @@
 package org.dlese.dpc.dds;
 
 import java.util.Comparator;
-import org.dlese.dpc.index.*;
-import org.apache.lucene.document.*;
+
+import org.dlese.dpc.index.ResultDoc;
 
 /**
  *  Description of the Class

@@ -17,26 +17,24 @@
 */
 package org.dlese.dpc.schemedit.ndr.writer;
 
-import org.dlese.dpc.schemedit.ndr.*;
-import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
-import org.dlese.dpc.schemedit.ndr.util.NsdlDcWriter;
-import org.dlese.dpc.schemedit.ndr.util.NCSCollectReader;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.*;
-
-import org.dom4j.*;
-
-import java.util.*;
-import java.net.*;
+import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContext;
+
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.reader.NdrObjectReader;
+import org.dlese.dpc.ndr.request.NdrRequest;
+import org.dlese.dpc.ndr.request.SignedNdrRequest;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.SyncReportEntry;
+import org.dlese.dpc.schemedit.ndr.util.NCSCollectReader;
+import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
+import org.dom4j.Element;
 
 /**
  *  Creates or updates the NDR Objects necessary to create a NSDL collection in

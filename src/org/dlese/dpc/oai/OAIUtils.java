@@ -17,8 +17,11 @@
 */
 package org.dlese.dpc.oai;
 
-import java.util.*;
-import java.text.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.SimpleTimeZone;
 
 /**
  *  Contains utility methods used in OAI.

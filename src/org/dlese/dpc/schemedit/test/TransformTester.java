@@ -17,17 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
+import java.io.File;
+import java.io.StringWriter;
 
 import javax.xml.transform.Transformer;
 
-import org.dom4j.*;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.XSLTransformer;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import org.dom4j.io.*;
-
-import java.io.*;
-import java.lang.*;
 
 public class TransformTester {
 

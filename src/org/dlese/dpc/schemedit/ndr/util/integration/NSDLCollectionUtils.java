@@ -17,21 +17,18 @@
 */
 package org.dlese.dpc.schemedit.ndr.util.integration;
 
+import java.io.File;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.reader.NSDLCollectionReader;
+import org.dlese.dpc.ndr.request.NdrRequest;
 import org.dlese.dpc.schemedit.ndr.util.NCSCollectReader;
 import org.dlese.dpc.schemedit.ndr.util.NCSWebServiceClient;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.ndr.apiproxy.*;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
-import java.net.*;
+import org.dom4j.Node;
 
 /**
  *  Utilities for working with NSDL Collection records housed in the NCS instance.

@@ -17,13 +17,18 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.Files;
-
-import javax.xml.transform.Transformer;
-import javax.servlet.ServletContext;
 import java.io.File;
-import org.dom4j.*;
+
+import javax.servlet.ServletContext;
+import javax.xml.transform.Transformer;
+
+import org.dlese.dpc.util.Files;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.QName;
 
 /**
  *  EXPERIMENTAL (and low fidelity) converter for library_dc to nsdl_dc.<p>

@@ -17,29 +17,23 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.webapps.servlets.filters.FilterCore;
-import org.dlese.dpc.webapps.servlets.filters.CharArrayWrapper;
-import org.dlese.dpc.webapps.tools.*;
+import java.io.IOException;
 
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+
 import org.dlese.dpc.index.reader.XMLDocReader;
-
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
-import org.json.XML;
-import org.json.JSONStringer;
-
-import org.dlese.dpc.xml.*;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
 import org.dlese.dpc.webapps.servlets.filters.XMLPostProcessingFilter;
-
-import org.dom4j.*;
+import org.dlese.dpc.webapps.tools.OutputTools;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLValidator;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
 
 /**
  *  Filter that validates XML and updates dcsDataRecord with the results of

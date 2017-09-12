@@ -17,39 +17,46 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.access.ActionPath;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.serviceclients.webclient.*;
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.GregorianCalendar;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.repository.*;
-
-import java.util.*;
-import java.util.regex.*;
-import java.io.*;
-import java.net.*;
-import java.text.*;
-
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-
-import org.dom4j.*;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.io.OutputFormat;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.security.access.ActionPath;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.util.strings.FindAndReplace;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
 
 /**
  *  Utility methods for SchemEdit

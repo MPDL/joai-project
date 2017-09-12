@@ -17,14 +17,21 @@
 */
 package org.dlese.dpc.util.uri;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import javax.servlet.http.*;
-import javax.servlet.*;
-import java.util.regex.*;
-import org.xml.sax.*;
-import org.xml.sax.helpers.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.InputSource;
+import org.xml.sax.Locator;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  *  Utility class for mapping "static" URIs (i.e. "catalog_(\S+).htm") to

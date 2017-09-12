@@ -17,22 +17,16 @@
 */
 package org.dlese.dpc.schemedit.display;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.vocab.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.util.regex.*;
+import java.io.Serializable;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.servlet.http.HttpServletRequest;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.XPathUtils;
 
 /**
  *  Maintains the state of collapsible nodes in the metadata Editor. States are

@@ -17,10 +17,6 @@
 */
 package org.dlese.dpc.schemedit.security.auth.ucas;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import edu.ucar.cisl.authenticator.client.*;
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -45,6 +41,10 @@ import javax.net.ssl.X509TrustManager;
 
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+
+import edu.ucar.cisl.authenticator.client.AuthClient;
+import edu.ucar.cisl.authenticator.client.AuthClientException;
 import edu.ucar.cisl.authenticator.domain.Authentication;
 
 /**

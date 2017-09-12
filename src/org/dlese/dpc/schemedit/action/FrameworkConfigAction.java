@@ -17,24 +17,22 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.input.SchemEditValidator;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.schemedit.autoform.AutoForm;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.util.Files;
+import java.io.File;
+import java.io.IOException;
 
-import org.dom4j.Document;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Document;
 
 /**
  *  Controller for the DcsDataFramework editor. As a stand-alone schemedit action, this supports framework-config files

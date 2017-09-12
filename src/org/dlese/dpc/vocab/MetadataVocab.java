@@ -17,16 +17,11 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import javax.servlet.http.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+
 import javax.servlet.jsp.PageContext;
-import org.dlese.dpc.util.strings.StringUtil;
-import org.xml.sax.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.dds.action.*;
 
 /**
  *  Interface for classes that manage audience-based metadata controlled

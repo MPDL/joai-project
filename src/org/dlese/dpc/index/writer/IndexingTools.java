@@ -17,17 +17,19 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.Token;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dom4j.Node;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.document.*;
 
 /**
  *  Tools to aid in indexing.

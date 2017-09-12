@@ -17,16 +17,11 @@
 */
 package org.dlese.dpc.suggest.comment;
 
+import org.dlese.dpc.email.SendEmail;
 import org.dlese.dpc.suggest.Emailer;
 import org.dlese.dpc.suggest.SuggestHelper;
-import org.dlese.dpc.suggest.action.form.SuggestForm;
 import org.dlese.dpc.suggest.action.form.SuggestCommentForm;
-
-import org.dlese.dpc.email.*;
-
-import java.util.*;
-import java.text.*;
-import java.lang.StringBuffer;
+import org.dlese.dpc.suggest.action.form.SuggestForm;
 
 /**
  *  Formats and sends email notifying of a newly suggested resource

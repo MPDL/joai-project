@@ -17,20 +17,20 @@
 */
 package org.dlese.dpc.schemedit.standards.commcore;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.StandardsDocument;
 import org.dlese.dpc.schemedit.standards.StandardsNode;
 import org.dlese.dpc.schemedit.standards.asn.AsnDocKey;
-
-import org.dlese.dpc.standards.commcore.StdDocument;
 import org.dlese.dpc.standards.commcore.Standard;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
+import org.dlese.dpc.standards.commcore.StdDocument;
 
 /**
  *  Provides acess to a single CommCore Standards Document (and individual standards

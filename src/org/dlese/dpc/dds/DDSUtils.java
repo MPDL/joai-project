@@ -17,10 +17,13 @@
 */
 package org.dlese.dpc.dds;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.reader.ItemDocReader;
 import org.dlese.dpc.vocab.MetadataVocab;
-import java.util.*;
 
 /**
  *  Utility class for working with DDS resources and collections

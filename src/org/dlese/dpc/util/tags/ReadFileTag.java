@@ -17,9 +17,11 @@
 */
 package org.dlese.dpc.util.tags;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
-import java.io.*;
 
 /**
  *  Tag for displaying the contents of a system file

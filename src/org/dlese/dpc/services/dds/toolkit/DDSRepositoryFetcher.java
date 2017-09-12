@@ -17,15 +17,17 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.util.Utils;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Downloads entire DDS repositories and writes to local disk using the

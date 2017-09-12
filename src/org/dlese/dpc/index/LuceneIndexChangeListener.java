@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.index;
 
-import java.util.*;
+import java.util.EventListener;
 
 /**
  * Provides the interface for Objects listening to a DataManager source.

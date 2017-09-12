@@ -18,9 +18,6 @@
 package org.dlese.dpc.ndr.apiproxy;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import org.dlese.dpc.ndr.connection.NDRConnection;
 
 /**

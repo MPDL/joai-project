@@ -17,10 +17,11 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.xml.XMLConversionService;
-import java.io.*;
-import org.json.XML;
+import java.io.BufferedReader;
+import java.io.IOException;
+
 import org.apache.commons.lang.StringEscapeUtils;
+import org.json.XML;
 
 /**
  *  This class holds static methods for use in XML processing.

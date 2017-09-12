@@ -17,29 +17,17 @@
 */
 package org.dlese.dpc.services.asn.action.form;
 
-import org.dlese.dpc.standards.asn.AsnStandard;
-import org.dlese.dpc.services.asn.AsnServiceHelper;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+import org.dlese.dpc.services.asn.AsnServiceHelper;
+import org.dlese.dpc.standards.asn.AsnStandard;
 
 /**
  *  ActionForm bean that holds data for AsnService.

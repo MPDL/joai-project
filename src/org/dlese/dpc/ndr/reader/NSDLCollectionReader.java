@@ -17,23 +17,16 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
+import java.io.File;
 
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
+import org.dlese.dpc.ndr.request.FindRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dom4j.*;
-
-import java.io.File;
-import java.util.*;
-import java.net.URL;
-
-import java.lang.reflect.Method;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Provides accesess to NSDL Collections in the NDR - exposing collection management information

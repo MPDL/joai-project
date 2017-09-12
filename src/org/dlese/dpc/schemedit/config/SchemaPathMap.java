@@ -17,19 +17,11 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.schemedit.*;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  *  Map holding {@link org.dlese.dpc.schemedit.config.SchemaPath} instances that are defined in the framework

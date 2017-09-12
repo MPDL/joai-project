@@ -17,9 +17,6 @@
 */
 package org.dlese.dpc.ndr.request;
 
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-
 /**
 *  Convenience class for creating NdrRequests to delete an NDR Object.
  *

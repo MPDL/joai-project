@@ -17,8 +17,7 @@
 */
 package org.dlese.dpc.dds;
 
-import org.dlese.dpc.index.*;
-import org.apache.lucene.queryParser.ParseException;
+import org.dlese.dpc.index.ResultDocList;
 
 /**
  *  Structure that holds the results of a standard DDS text/field search. This Object is returned by {@link

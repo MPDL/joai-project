@@ -17,19 +17,16 @@
 */
 package org.dlese.dpc.index.queryParser;
 
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import java.io.*;
-import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import org.apache.lucene.analysis.*;
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.search.*;
-
-import java.text.SimpleDateFormat;
-
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.analysis.*;
+import org.apache.lucene.search.Query;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 
 /**
  *  A QueryParser for extracting terms and phrases from a given query. Note: this QueryParser does not return

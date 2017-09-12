@@ -17,11 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.adn;
 
-import org.dlese.dpc.schemedit.standards.AbstractCATHelperPlugin;
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
 import org.apache.struts.util.LabelValueBean;
-import java.util.*;
+import org.dlese.dpc.schemedit.standards.AbstractCATHelperPlugin;
+import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
 
 /**
  *  CATHelperPlugin for the ADN framework

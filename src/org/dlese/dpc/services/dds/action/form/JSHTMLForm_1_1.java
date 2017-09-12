@@ -17,30 +17,24 @@
 */
 package org.dlese.dpc.services.dds.action.form;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.dds.action.form.VocabForm;
-import org.dlese.dpc.vocab.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.SimpleTimeZone;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.reader.DocReader;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  A ActionForm bean that holds data for the JavaScript HTML search service.

@@ -17,12 +17,9 @@
 */
 package org.dlese.dpc.schemedit.autoform.mde;
 
-import org.dlese.dpc.schemedit.autoform.*;
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.autoform.RendererImpl;
 import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
 import org.dom4j.Element;
 
 /**

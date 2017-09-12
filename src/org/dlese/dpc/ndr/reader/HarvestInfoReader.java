@@ -17,16 +17,19 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.ndr.NdrUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Node;
 import org.dom4j.XPath;
-import java.net.URL;
-import java.util.*;
 
 /**
  *  Reads HarvestInfoReaders as a dom4j.Document and provides access to

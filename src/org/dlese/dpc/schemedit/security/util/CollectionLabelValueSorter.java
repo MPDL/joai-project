@@ -17,10 +17,10 @@
 */
 package org.dlese.dpc.schemedit.security.util;
 
-import java.util.Comparator;
 import java.io.Serializable;
+import java.util.Comparator;
+
 import org.apache.struts.util.LabelValueBean;
-import org.dlese.dpc.schemedit.security.access.Roles;
 
 /**
  *  Sort LabelValueBeans representing [collectionName, collectionKey] by the label (collectionName).

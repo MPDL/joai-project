@@ -15,30 +15,18 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-package org.dlese.dpc.services.commcore.action.form;
+package org.dlese.dpc.standards.commcore.action.form;
 
-import org.dlese.dpc.standards.commcore.*;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Date;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+import org.dlese.dpc.standards.commcore.CommCoreServiceHelper;
+import org.dlese.dpc.standards.commcore.Standard;
 
 /**
  *  ActionForm bean that holds data for AsnService.

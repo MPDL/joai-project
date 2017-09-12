@@ -17,12 +17,14 @@
 */
 package org.dlese.dpc.suggest.resource.urlcheck;
 
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.schemedit.url.DupSim;
+import org.dlese.dpc.schemedit.url.UrlHelper;
 import org.dlese.dpc.serviceclients.remotesearch.SearchServiceClient;
 import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.schemedit.url.DupSim;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import java.util.*;
 
 /**
  *  Uses the Search Web Service (DDSWS v1.0) to search a repository (or a

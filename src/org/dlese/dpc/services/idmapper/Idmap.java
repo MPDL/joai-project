@@ -20,56 +20,39 @@ package org.dlese.dpc.services.idmapper;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import java.sql.Timestamp;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
 import java.util.StringTokenizer;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
 import java.util.zip.CRC32;
 
-import javax.mail.Message;
 import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
 import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Transport;
-
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.dlese.dpc.util.DpcErrors;
+import org.dlese.dpc.services.mmd.CatchDup;
 import org.dlese.dpc.services.mmd.DbConn;
 import org.dlese.dpc.services.mmd.MmdException;
 import org.dlese.dpc.services.mmd.MmdRec;
+import org.dlese.dpc.util.DpcErrors;
 import org.dlese.dpc.xml.XMLDoc;
 import org.dlese.dpc.xml.XMLException;
-import org.dlese.dpc.services.mmd.CatchDup;
 
 /**
  *  Id mapper main interface. See {@link #badparms badparms} for usage doc.

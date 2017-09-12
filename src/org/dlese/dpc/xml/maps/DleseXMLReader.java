@@ -17,10 +17,15 @@
 */
 package org.dlese.dpc.xml.maps;
 
-import java.io.*;
-import java.text.*;
-import java.util.*;
-import org.dlese.dpc.xml.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.xml.XMLMap;
+import org.dlese.dpc.xml.XMLNode;
+import org.dlese.dpc.xml.XMLRecord;
 
 /**
  *  This class provides mapping between DLESE metadata values and the

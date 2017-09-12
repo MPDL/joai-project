@@ -17,24 +17,22 @@
 */
 package org.dlese.dpc.suggest.comment;
 
-import org.dlese.dpc.suggest.SuggestUtils;
-import org.dlese.dpc.suggest.SuggestHelper;
-import org.dlese.dpc.suggest.SuggestionRecord;
-
-import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
-import org.dlese.dpc.serviceclients.webclient.GetRecordResponse;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
-
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.xml.Dom4jUtils;
-
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.dom4j.Node;
-import org.dom4j.Element;
+import org.dlese.dpc.serviceclients.webclient.GetRecordResponse;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.suggest.SuggestHelper;
+import org.dlese.dpc.suggest.SuggestUtils;
+import org.dlese.dpc.suggest.SuggestionRecord;
+import org.dlese.dpc.suggest.resource.ResourceRecord;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Provides services for SuggestComment Client.

@@ -17,15 +17,16 @@
 */
 package org.dlese.dpc.schemedit.security.action.form;
 
-import java.util.*;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
-import org.dlese.dpc.schemedit.security.user.UserManager;
 import org.dlese.dpc.schemedit.security.auth.AuthUtils;
+import org.dlese.dpc.schemedit.security.user.UserManager;
 
 /**
 

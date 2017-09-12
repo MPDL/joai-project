@@ -17,33 +17,38 @@
 */
 package org.dlese.dpc.schemedit.ndr.writer;
 
-import org.dlese.dpc.schemedit.ndr.*;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
+import javax.servlet.ServletContext;
+
+import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dlese.dpc.ndr.NdrUtils;
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.reader.MetadataReader;
-import org.dlese.dpc.ndr.request.*;
-
-import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.ndr.request.AddResourceRequest;
+import org.dlese.dpc.ndr.request.ModifyResourceRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
+import org.dlese.dpc.ndr.request.SignedNdrRequest;
 import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.SyncReportEntry;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
 import org.dlese.dpc.xml.XMLConversionService;
-
-import org.dom4j.*;
-import java.util.*;
-import java.net.*;
-
-import javax.servlet.ServletContext;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.QName;
 
 /**
  *  Class responsible for writing Metadata records to the NDR as Metadata

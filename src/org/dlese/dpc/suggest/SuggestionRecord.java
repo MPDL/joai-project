@@ -17,16 +17,9 @@
 */
 package org.dlese.dpc.suggest;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-
-import java.io.*;
-import java.util.*;
-import java.net.URL;
-
-import org.dom4j.Element;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 
 /**
  *  Wrapper providing accessors for a suggestion record, which is represented as

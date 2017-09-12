@@ -17,13 +17,16 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.schema.compositor.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.dlese.dpc.xml.Dom4jUtils;
-
+import org.dlese.dpc.xml.schema.compositor.Choice;
 import org.dom4j.Node;
-import com.sun.msv.datatype.xsd.*;
-import java.util.*;
+
+import com.sun.msv.datatype.xsd.XSDatatype;
 
 /**
  *  NOT YET DOCUMENTED

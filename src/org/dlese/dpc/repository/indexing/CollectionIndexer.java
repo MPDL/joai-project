@@ -17,14 +17,13 @@
 */
 package org.dlese.dpc.repository.indexing;
 
-import org.dlese.dpc.repository.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
-import java.io.*;
-import java.util.*;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
 
 /**
  *  Manage collections of records in a DDS repository.

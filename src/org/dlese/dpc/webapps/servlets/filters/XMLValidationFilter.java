@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.webapps.servlets.filters;
 
-import org.dlese.dpc.webapps.tools.*;
+import java.io.IOException;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dlese.dpc.xml.*;
+import org.dlese.dpc.webapps.tools.OutputTools;
+import org.dlese.dpc.xml.XMLValidator;
 
 /**
  *  Performs XML validation and gzipping of the pre-compiled HTTP response content. A caller wishing to invoke

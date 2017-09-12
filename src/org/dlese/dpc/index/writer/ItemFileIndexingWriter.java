@@ -17,20 +17,22 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.FileIndexingServiceException;
+import org.dlese.dpc.index.ResultDocList;
 import org.dlese.dpc.index.document.DateFieldTools;
-
+import org.dlese.dpc.index.reader.DleseAnnoDocReader;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.services.mmd.MmdRec;
 import org.dlese.dpc.util.HTMLParser;
 
 /**

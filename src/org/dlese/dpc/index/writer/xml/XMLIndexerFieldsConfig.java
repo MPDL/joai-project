@@ -17,15 +17,15 @@
 */
 package org.dlese.dpc.index.writer.xml;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
 import java.net.URL;
-import org.dom4j.*;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
 import org.dlese.dpc.index.analysis.PerFieldAnalyzer;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Holds a configuration for XML fields indexed by XMLIndexer and used in PerFieldAnalyzer.

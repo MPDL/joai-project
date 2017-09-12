@@ -17,13 +17,21 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.text.*;
-import org.dlese.dpc.repository.RepositoryManager;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.dlese.dpc.dds.DDSServlet;
+import org.dlese.dpc.repository.RepositoryManager;
 
 /**
  *  Provided as an intialization (and administrative) servlet for the DLESE

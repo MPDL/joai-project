@@ -17,18 +17,16 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import java.io.File;
+import java.util.Iterator;
 
-import org.dom4j.tree.*;
-import org.dom4j.io.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.QName;
 
 
 /**

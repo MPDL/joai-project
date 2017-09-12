@@ -17,35 +17,11 @@
 */
 package org.dlese.dpc.xml;
 
-// Imported JAXP classes
-import javax.xml.parsers.SAXParserFactory;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.ParserConfigurationException;
-import org.xml.sax.Attributes;
-
-// SAX import
-import org.xml.sax.helpers.DefaultHandler;
-import org.xml.sax.ext.LexicalHandler;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
-import org.xml.sax.SAXNotRecognizedException;
-import org.xml.sax.SAXNotSupportedException;
-import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.XMLReaderFactory;
-//import org.xml.sax.Parser;
-//import org.xml.sax.helpers.ParserFactory;
-import org.xml.sax.helpers.ParserAdapter;
-
-// Imported java.io classes
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FilenameFilter;
-import java.io.FileWriter;
-import java.io.StringReader;
-import java.util.*;
+import org.xml.sax.ext.LexicalHandler;
+// SAX import
+import org.xml.sax.helpers.DefaultHandler;
 
 /**
  *  A simple XML error handler that catches XML errors and warnings and saves them to

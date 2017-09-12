@@ -17,21 +17,22 @@
 */
 package org.dlese.dpc.schemedit.standards.config;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.AbstractConfigReader;
 import org.dlese.dpc.schemedit.standards.StandardsManager;
 import org.dlese.dpc.schemedit.standards.adn.DleseStandardsManager;
-import org.dlese.dpc.schemedit.standards.asn.*;
+import org.dlese.dpc.schemedit.standards.asn.AsnStandardsManager;
+import org.dlese.dpc.schemedit.standards.asn.DynaStandardsManager;
+import org.dlese.dpc.schemedit.standards.asn.ResQualStandardsManager;
 import org.dlese.dpc.schemedit.standards.commcore.CommCoreStandardsManager;
-import org.dlese.dpc.schemedit.config.AbstractConfigReader;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.standards.asn.AsnHelper;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
-
-import org.dom4j.*;
+import org.dom4j.Element;
 
 /**
  *  Reads a SuggestionService configuration file and provides access to the

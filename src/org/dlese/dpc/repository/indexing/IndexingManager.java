@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.repository.indexing;
 
-import org.dlese.dpc.repository.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.util.Utils;
-
-import java.io.*;
-import java.util.*;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
 
 /**
  *  Manages indexing processes from external sources to RepositoryManager that implement the {@link

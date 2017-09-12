@@ -17,30 +17,22 @@
 */
 package org.dlese.dpc.schemedit.vocab.integrity.frameworks;
 
+import java.io.File;
+import java.io.FileFilter;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.vocab.integrity.Utils;
-
-import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.schema.DefinitionMiner;
-import org.dlese.dpc.xml.schema.StructureWalker;
-import org.dlese.dpc.xml.schema.SchemaReader;
-import org.dlese.dpc.xml.schema.SchemaHelperException;
 import org.dlese.dpc.xml.schema.GlobalDefMap;
-import org.dlese.dpc.xml.schema.SchemaNodeMap;
-import org.dlese.dpc.xml.schema.SchemaNode;
-import org.dlese.dpc.xml.schema.GlobalDef;
-import org.dlese.dpc.xml.schema.GenericType;
-
-import org.dlese.dpc.xml.XPathUtils;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-import java.lang.*;
-
-import org.dom4j.*;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaReader;
+import org.dlese.dpc.xml.schema.StructureWalker;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Same purpose as {@link org.dlese.dpc.schemedit.vocab.integrity.IntegrityChecker},

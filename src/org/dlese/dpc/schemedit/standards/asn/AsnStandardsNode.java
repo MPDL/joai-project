@@ -16,11 +16,14 @@
 	limitations under the License.
 */
 package org.dlese.dpc.schemedit.standards.asn;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.standards.StandardsNode;
 import org.dlese.dpc.standards.asn.AsnStandard;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
 
 /**
  *  Wraps an AsnStandard object and implements the StandardsNode interface.

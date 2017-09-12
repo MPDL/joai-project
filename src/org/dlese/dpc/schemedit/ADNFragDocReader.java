@@ -17,22 +17,11 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.serviceclients.remotesearch.reader.*;
-import org.dlese.dpc.serviceclients.webclient.*;
-import org.dlese.dpc.xml.*;
+import java.util.ArrayList;
 
-import java.io.*;
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
+import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-
-import org.dlese.dpc.index.ResultDoc;
 
 public class ADNFragDocReader extends ADNItemDocReader {
 

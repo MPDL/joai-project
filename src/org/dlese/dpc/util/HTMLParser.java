@@ -18,9 +18,11 @@
 package org.dlese.dpc.util;
 
 import org.htmlparser.Node;
-import org.htmlparser.tags.*;
 import org.htmlparser.Parser;
-import org.htmlparser.util.*;
+import org.htmlparser.tags.ImageTag;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.MetaTag;
+import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.TagFindingVisitor;
 import org.htmlparser.visitors.TextExtractingVisitor;
 

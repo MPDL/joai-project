@@ -17,10 +17,7 @@
 */
 package org.dlese.dpc.index;
 
-import org.dlese.dpc.index.ResultDoc;
-
 import java.util.Comparator;
-import org.apache.lucene.document.*;
 
 /**
  *  Compares two {@link org.dlese.dpc.index.ResultDoc}s for sorting by a given Lucene field. Fields that are

@@ -17,15 +17,14 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import java.util.Iterator;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMapping;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import java.util.*;
-
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionMapping;
-import javax.servlet.http.HttpServletRequest;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
 
 /**
  *  Extension of SchemEditValidator that implements special (non-schema)

@@ -17,16 +17,18 @@
 */
 package org.dlese.dpc.schemedit.standards.adn;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.StandardsDocument;
 import org.dlese.dpc.schemedit.standards.adn.util.MappingUtils;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SimpleType;
 
 /**
  *  StandardsDocument for the ADN Framework. Manages standards represented as

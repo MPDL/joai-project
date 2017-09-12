@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
+import java.util.HashMap;
 
 /**
  *  Interface for creation of controlled vocabulary system Ids, tracking changes

@@ -17,34 +17,33 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.display.SortWidget;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.action.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.vocab.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.document.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.index.reader.DocumentMap;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.schemedit.Constants;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SearchHelper;
+import org.dlese.dpc.schemedit.action.DCSQueryAction;
+import org.dlese.dpc.schemedit.display.SortWidget;
+import org.dlese.dpc.util.DpcErrors;
 
 /**
  *  A Struts Form bean for handling query requests that access a {@link

@@ -17,19 +17,17 @@
 */
 package org.dlese.dpc.schemedit.config;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.dcs.*;
-
-import java.io.*;
-import java.util.*;
-
-import org.dom4j.Document;
-import org.dom4j.Element;
-import java.text.*;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
 
 /**
  *  Holds information about a collection that is accessed via a {@link

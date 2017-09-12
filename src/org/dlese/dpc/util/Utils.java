@@ -17,19 +17,27 @@
 */
 package org.dlese.dpc.util;
 
-import java.util.Date;
-import java.util.Random;
-import java.util.Enumeration;
-import java.util.*;
-import java.text.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Map;
+import java.util.Properties;
+import java.util.PropertyResourceBundle;
+import java.util.Random;
+import java.util.ResourceBundle;
+import java.util.TreeMap;
 
-// The ValueSortedMap is implemented in DLESETools, using the Apache Commons Collections packages
 import org.apache.commons.collections.map.ValueSortedMap;
-
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.document.DateFieldTools;
-import org.dlese.dpc.index.*;
 
 /**
  *  This class holds a number of handy static methods for generating unique ids, random numbers within a given

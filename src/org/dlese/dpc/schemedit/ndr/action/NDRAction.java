@@ -17,62 +17,52 @@
 */
 package org.dlese.dpc.schemedit.ndr.action;
 
-import org.dlese.dpc.schemedit.ndr.action.form.NDRForm;
-import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.repository.SetInfo;
-import org.dlese.dpc.index.SimpleFileIndexingObserver;
-import org.dlese.dpc.index.reader.XMLDocReader;
-
-import org.dlese.dpc.schemedit.repository.CollectionReaper;
-import org.dlese.dpc.schemedit.repository.CollectionIndexingObserver;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.SessionBean;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.Constants;
-import org.dlese.dpc.schemedit.RecordList;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.AgentReader;
-import org.dlese.dpc.ndr.reader.MetadataProviderReader;
-
-import org.dlese.dpc.schemedit.ndr.SyncService;
-import org.dlese.dpc.schemedit.ndr.SyncReport;
-import org.dlese.dpc.schemedit.ndr.CollectionImporter;
-import org.dlese.dpc.schemedit.ndr.MetaDataWrapperException;
-import org.dlese.dpc.schemedit.ndr.writer.MetadataProviderWriter;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLValidator;
-import org.dlese.dpc.util.TimedURLConnection;
-
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.request.NdrRequest;
-
-import java.util.*;
-import java.io.*;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-
-import org.dom4j.Element;
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.AgentReader;
+import org.dlese.dpc.ndr.request.CountMembersRequest;
+import org.dlese.dpc.ndr.request.FindRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.RecordList;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.DCSAction;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.CollectionImporter;
+import org.dlese.dpc.schemedit.ndr.SyncService;
+import org.dlese.dpc.schemedit.ndr.action.form.NDRForm;
+import org.dlese.dpc.schemedit.ndr.writer.MetadataProviderWriter;
+import org.dlese.dpc.schemedit.repository.CollectionIndexingObserver;
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLValidator;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
-
-import org.json.XML;
+import org.dom4j.Element;
 import org.json.JSONObject;
+import org.json.XML;
 
 /**
  *  A Struts Action controlling interaction between the NDR and DCS.<p>

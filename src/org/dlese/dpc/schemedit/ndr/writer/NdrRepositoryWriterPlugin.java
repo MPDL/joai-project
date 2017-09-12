@@ -17,28 +17,17 @@
 */
 package org.dlese.dpc.schemedit.ndr.writer;
 
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.repository.ServletContextRepositoryWriterPlugin;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
 import org.dlese.dpc.schemedit.config.CollectionRegistry;
 import org.dlese.dpc.schemedit.config.StatusFlags;
-
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 import org.dlese.dpc.schemedit.ndr.SyncReportEntry;
-import org.dlese.dpc.schemedit.ndr.writer.MetadataWriter;
-import org.dlese.dpc.schemedit.ndr.writer.NSDLCollectionWriter;
-import org.dlese.dpc.schemedit.ndr.writer.MetadataProviderWriter;
-
-import org.dlese.dpc.index.reader.XMLDocReader;
-
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.NdrUtils;
-
-import javax.servlet.ServletContext;
-
-import java.util.*;
-import java.net.*;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.schemedit.repository.ServletContextRepositoryWriterPlugin;
 
 /**
  *  Methods to create, copy, and put Records to the Repository<p>

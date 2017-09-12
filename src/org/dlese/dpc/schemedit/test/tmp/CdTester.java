@@ -17,18 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test.tmp;
 
+import java.io.File;
+import java.net.URL;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.test.SchemaRegistry;
 // import org.dlese.dpc.schemedit.test.SchemaRegistry.Schema;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.util.strings.*;
-
-import java.io.File;
-import java.util.*;
-import java.net.URL;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.StructureWalker;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 public class CdTester {
 	private static boolean debug = true;

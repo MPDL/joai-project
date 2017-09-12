@@ -17,28 +17,25 @@
 */
 package org.dlese.dpc.schemedit.ndr.util;
 
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.xml.transform.Transformer;
+
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.request.ModifyMetadataRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.test.TesterUtils;
-import org.dlese.dpc.schemedit.config.CollectionConfigReader;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XSLTransformer;
-import org.dlese.dpc.util.Files;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
-import org.dom4j.XPath;
-import java.io.File;
-import java.net.URL;
-import java.util.*;
-import java.text.*;
-import javax.xml.transform.Transformer;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Use Case: there is a collection in the ndr that is not represented by a NSDL

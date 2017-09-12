@@ -17,15 +17,22 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.dlese.dpc.schemedit.BadCharChecker;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 
 /**

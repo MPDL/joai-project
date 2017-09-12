@@ -17,19 +17,15 @@
 */
 package org.dlese.dpc.suggest.resource;
 
+import java.util.Iterator;
+
+import org.dlese.dpc.email.SendEmail;
+import org.dlese.dpc.schemedit.url.DupSim;
 import org.dlese.dpc.suggest.Emailer;
 import org.dlese.dpc.suggest.SuggestHelper;
 import org.dlese.dpc.suggest.action.form.SuggestForm;
 import org.dlese.dpc.suggest.action.form.SuggestResourceForm;
-
-import org.dlese.dpc.suggest.resource.urlcheck.*;
-import org.dlese.dpc.schemedit.url.DupSim;
-
-import org.dlese.dpc.email.*;
-
-import java.util.*;
-import java.text.*;
-import java.lang.StringBuffer;
+import org.dlese.dpc.suggest.resource.urlcheck.ValidatorResults;
 
 /**
  *  Formats and sends email notifying of a newly suggested resource

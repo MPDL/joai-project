@@ -16,11 +16,14 @@
 	limitations under the License.
 */
 package org.dlese.dpc.schemedit.standards.td;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.standards.StandardsNode;
 import org.dlese.dpc.standards.commcore.Standard;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
 
 /**
  *  Implements the StandardsNode interface using information from a Commcore

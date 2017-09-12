@@ -17,17 +17,19 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.autoform.*;
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
+import java.io.File;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SchemaUtils;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
 
 
 /**

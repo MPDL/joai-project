@@ -17,20 +17,7 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
+import java.util.List;
 
 /**
  *  Run-time support for handling interaction with user in the context of

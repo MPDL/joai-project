@@ -18,9 +18,7 @@
 package org.dlese.dpc.ndr.request;
 
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
+import org.dom4j.Element;
 
 /**
  *  Convenience class for creating NdrRequests to add metadata

@@ -17,17 +17,23 @@
 */
 package org.dlese.dpc.xml;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FilenameFilter;
+import java.io.OutputStreamWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 // Imported TraX classes
 import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.stream.StreamSource;
 
 /**
  *  Transforms files or Strings using XSL stylesheets. In general, Transformer objects are not thread safe, so

@@ -17,22 +17,17 @@
 */
 package org.dlese.dpc.schemedit.dcs;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.util.Date;
+import java.util.Iterator;
 
+import org.apache.lucene.document.DateField;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.writer.ServletContextFileIndexingPlugin;
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
 import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.security.user.UserManager;
-
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.repository.*;
 
 
 /**

@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.vocab.tags.opml;
 
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.PageContext;
+import javax.servlet.jsp.tagext.TagSupport;
+
+import org.dlese.dpc.util.strings.StringUtil;
 import org.dlese.dpc.vocab.MetadataVocab;
 import org.dlese.dpc.vocab.MetadataVocabOPML;
-import org.dlese.dpc.util.strings.StringUtil;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.jsp.PageContext;
 
 /**
  *  Default tag handler for rendering controlled vocabularies. All other vocab

@@ -17,16 +17,27 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.xml.*;
-import java.util.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.servlet.http.HttpServletRequest;
 
-import org.dom4j.*;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  *  Aids metadata editor in processing of requests, and more specifically in

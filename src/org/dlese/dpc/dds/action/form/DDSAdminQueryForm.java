@@ -17,32 +17,33 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.services.mmd.MmdException;
-import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.services.mmd.MmdWarning;
-import org.dlese.dpc.services.mmd.Query;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.dds.action.DDSAdminQueryAction;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.reader.DocReader;
+import org.dlese.dpc.index.reader.DocumentMap;
+import org.dlese.dpc.index.reader.LazyDocumentMap;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.services.mmd.MmdRec;
+import org.dlese.dpc.services.mmd.Query;
+import org.dlese.dpc.util.DpcErrors;
+import org.dlese.dpc.vocab.MetadataVocabInputState;
 
 /**
  *  A Struts Form bean for handling query requests that access a {@link

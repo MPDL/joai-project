@@ -17,45 +17,45 @@
 */
 package org.dlese.dpc.services.dcs.action;
 
-import org.dlese.dpc.services.dcs.PutRecordData;
-import org.dlese.dpc.services.dcs.action.form.DCSServicesForm;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.repository.RecordUpdateException;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dlese.dpc.index.ResultDoc;
-import org.dlese.dpc.index.ResultDocList;
-import org.dlese.dpc.vocab.MetadataVocab;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.config.IDGenerator;
-import org.dlese.dpc.schemedit.threadedservices.ExportingService;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-
-import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import org.dom4j.*;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RecordUpdateException;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.Constants;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.dcs.StatusEntry;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.schemedit.threadedservices.ExportingService;
+import org.dlese.dpc.services.dcs.PutRecordData;
+import org.dlese.dpc.services.dcs.action.form.DCSServicesForm;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLValidator;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
 
 /**
  *  An <strong>Action</strong> that handles DCS related web service requests.

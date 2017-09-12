@@ -17,16 +17,9 @@
 */
 package org.dlese.dpc.repository.action.form;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.validator.ValidatorForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
 import java.io.Serializable;
+
+import org.apache.struts.validator.ValidatorForm;
 
 /**
  *  Bean for values used to add/edit a metadata directory for the OAI repository.

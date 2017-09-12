@@ -17,11 +17,7 @@
 */
 package org.dlese.dpc.serviceclients.webclient;
 
-import org.dlese.dpc.xml.*;
-
-import java.util.*;
-import java.io.*;
-
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentFactory;
 import org.dom4j.Element;

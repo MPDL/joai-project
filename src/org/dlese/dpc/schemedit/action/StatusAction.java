@@ -17,40 +17,34 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.action.form.StatusForm;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Date;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.security.user.User;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dom4j.Document;
-
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.text.*;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.MissingLockException;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SearchHelper;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.StatusForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.StatusFlag;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.StatusEntry;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 /**
  *  A Struts Action controlling interaction during editing of workflow status information asociated with

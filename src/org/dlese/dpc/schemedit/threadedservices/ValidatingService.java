@@ -17,24 +17,18 @@
 */
 package org.dlese.dpc.schemedit.threadedservices;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.datamgr.*;
-import org.dlese.dpc.repository.*;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
+import java.io.File;
+import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
-import org.dom4j.Document;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.util.Files;
 
 /**
  *  Threaded Service for validating records.

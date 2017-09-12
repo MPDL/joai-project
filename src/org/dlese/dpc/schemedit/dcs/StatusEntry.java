@@ -16,13 +16,13 @@
 	limitations under the License.
 */
 package org.dlese.dpc.schemedit.dcs;
-import org.dlese.dpc.util.MetadataUtils;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.Date;
 
-import org.dom4j.*;
-import java.util.*;
-import java.text.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  *  Wrapper for a StatusEntry element of a {@link org.dlese.dpc.schemedit.dcs.DcsDataRecord}.

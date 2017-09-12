@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.suggest.resource.urlcheck;
 
-import org.dlese.dpc.schemedit.url.DupSim;
 import java.util.Comparator;
+
+import org.dlese.dpc.schemedit.url.DupSim;
 
 
 /**

@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.schemedit.security.user;
 
-import java.util.Comparator;
 import java.io.Serializable;
+import java.util.Comparator;
 
 /**
  *  Sort Users by userName.

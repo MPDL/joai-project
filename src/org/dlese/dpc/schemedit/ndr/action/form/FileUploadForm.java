@@ -17,11 +17,10 @@
 */
 package org.dlese.dpc.schemedit.ndr.action.form;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import org.apache.struts.upload.FormFile;
-import org.apache.struts.upload.CommonsMultipartRequestHandler;
 import org.apache.struts.action.ActionForm;
+import org.apache.struts.upload.CommonsMultipartRequestHandler;
+import org.apache.struts.upload.FormFile;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 public class FileUploadForm extends ActionForm {
 

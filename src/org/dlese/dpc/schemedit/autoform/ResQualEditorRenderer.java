@@ -17,16 +17,9 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.schemedit.autoform.mde.*;
-import org.dlese.dpc.schemedit.standards.StandardsManager;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-
-import java.util.*;
-import java.util.regex.*;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaNode;
 import org.dom4j.Element;
 
 /**

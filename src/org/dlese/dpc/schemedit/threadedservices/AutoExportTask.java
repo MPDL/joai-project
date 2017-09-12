@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.schemedit.threadedservices;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+import java.util.TimerTask;
 
 import javax.servlet.ServletContext;
 
-import java.io.File;
-import java.util.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
 
 /**
  *  Export collections at regular intervals.

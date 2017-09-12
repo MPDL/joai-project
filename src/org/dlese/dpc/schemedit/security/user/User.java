@@ -17,22 +17,23 @@
 */
 package org.dlese.dpc.schemedit.security.user;
 
-import java.io.Serializable;
-import java.util.*;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.config.AbstractConfigReader;
-import org.dlese.dpc.schemedit.security.auth.AuthUtils;
 import org.dlese.dpc.schemedit.security.access.Roles;
 import org.dlese.dpc.schemedit.security.access.Roles.Role;
-import org.dlese.dpc.schemedit.RoleManager;
-import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.schemedit.security.auth.AuthUtils;
 import org.dlese.dpc.util.Files;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.Node;
-import org.dom4j.DocumentHelper;
 
 /**
  *  Class that represents a registered DCS User, including attributes, roles and

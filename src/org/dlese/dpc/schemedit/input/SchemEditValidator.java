@@ -17,27 +17,26 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Choice;
-import org.dlese.dpc.xml.*;
-
-import java.util.*;
-import java.io.*;
-import java.text.ParseException;
 import java.net.MalformedURLException;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
 
-import org.dom4j.Document;
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.url.UrlHelper;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.compositor.Choice;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

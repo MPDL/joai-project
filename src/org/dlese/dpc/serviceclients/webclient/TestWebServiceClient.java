@@ -17,16 +17,15 @@
 */
 package org.dlese.dpc.serviceclients.webclient;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
-
-import java.io.File;
-import java.util.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 public class TestWebServiceClient {
 	

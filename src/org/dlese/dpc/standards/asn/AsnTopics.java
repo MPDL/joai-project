@@ -17,12 +17,16 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import java.io.File;
 import java.net.URL;
-import java.util.*;
-import java.io.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Element;
 
 /**
  *  Class to read the ASN topics document from ASN web service and provide topic

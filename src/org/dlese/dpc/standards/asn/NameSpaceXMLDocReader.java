@@ -17,20 +17,23 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import java.io.File;
+import java.net.URL;
+import java.util.List;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.NamespaceRegistry;
 import org.dlese.dpc.util.TimedURLConnection;
 import org.dlese.dpc.util.URLConnectionTimedOutException;
-
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.QName;
+import org.dom4j.XPath;
 import org.jaxen.SimpleNamespaceContext;
-
-import java.util.*;
-import java.net.URL;
-import java.io.File;
 
 /**
  *  Class to read the ASN topics docuement and provide lookups by topic purl.

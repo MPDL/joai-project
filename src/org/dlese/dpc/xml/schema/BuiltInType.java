@@ -18,11 +18,7 @@
 package org.dlese.dpc.xml.schema;
 
 import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Namespace;
-
-import java.util.*;
-import java.io.*;
 
 /**
  * wrapper for BuiltInType definitions ({@link org.dom4j.Element}).

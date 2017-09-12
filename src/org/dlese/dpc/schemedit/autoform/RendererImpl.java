@@ -17,23 +17,34 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.autoform.mde.*;
-import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.schemedit.autoform.mde.MdeAny;
+import org.dlese.dpc.schemedit.autoform.mde.MdeAttribute;
+import org.dlese.dpc.schemedit.autoform.mde.MdeChoice;
+import org.dlese.dpc.schemedit.autoform.mde.MdeComplexType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeDerivedContentModel;
+import org.dlese.dpc.schemedit.autoform.mde.MdeDerivedTextOnlyModel;
+import org.dlese.dpc.schemedit.autoform.mde.MdeModelGroup;
+import org.dlese.dpc.schemedit.autoform.mde.MdeMultiChoice;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingAnyType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingComplexType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingDerivedContentModel;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingDerivedTextOnlyModel;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingSimpleType;
+import org.dlese.dpc.schemedit.autoform.mde.MdeRepeatingSubstitutionGroup;
+import org.dlese.dpc.schemedit.autoform.mde.MdeSequence;
+import org.dlese.dpc.schemedit.autoform.mde.MdeSimpleType;
 import org.dlese.dpc.schemedit.display.CollapseUtils;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.*;
-
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
+import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
 import org.dom4j.Element;
-import org.dom4j.Document;
 
 /**
  *  Concrete class for rendering a JSP-based representation of a SchemaNode (an

@@ -17,17 +17,17 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnStandardsDocument;
-import org.dlese.dpc.schemedit.standards.asn.AsnStandardsNode;
-
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.standards.asn.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
-import java.io.File;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.standards.asn.AsnStandardsDocument;
+import org.dlese.dpc.schemedit.standards.asn.AsnStandardsNode;
 
 /**
 *  Cashe of AsnStandardsDocuments. Works with a {@link StandardsRegistry} instance to support

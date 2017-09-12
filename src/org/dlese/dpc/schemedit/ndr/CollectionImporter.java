@@ -17,40 +17,40 @@
 */
 package org.dlese.dpc.schemedit.ndr;
 
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.schemedit.ndr.util.*;
-
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.EnvReader;
-import org.dom4j.*;
-import org.dom4j.tree.*;
-import org.dom4j.io.*;
-
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.reader.ServiceDescriptionReader;
+import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.schemedit.Constants;
-import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.MetaDataHelper;
-import org.dlese.dpc.schemedit.SessionRegistry;
-import org.dlese.dpc.schemedit.SessionBean;
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
 import org.dlese.dpc.schemedit.config.StatusFlags;
 import org.dlese.dpc.schemedit.dcs.DcsDataManager;
 import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 import org.dlese.dpc.schemedit.dcs.StatusEntry;
-import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.repository.RepositoryManager;
-
-import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.schemedit.test.TesterUtils;
+import org.dlese.dpc.util.Files;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XMLConversionService;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+import org.dom4j.QName;
 
 /**
  *  Extracts data from a Collection Metadata object and loads it into the NCS

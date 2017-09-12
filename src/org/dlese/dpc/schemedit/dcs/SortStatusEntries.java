@@ -19,8 +19,6 @@ package org.dlese.dpc.schemedit.dcs;
 
 import java.util.Comparator;
 import java.util.Date;
-import org.dlese.dpc.util.MetadataUtils;
-import java.text.*;
 
 /**
  *  

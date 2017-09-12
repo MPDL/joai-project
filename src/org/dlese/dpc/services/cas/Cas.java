@@ -17,45 +17,41 @@
 */
 package org.dlese.dpc.services.cas;
 
-import org.dlese.dpc.util.*;
-import java.net.URL;
-import java.net.HttpURLConnection;
-
-import java.io.InputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.*;
-
-import java.util.List;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.Calendar;
-
-import org.dom4j.Node;
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-
+import java.io.InputStream;
+import java.net.URL;
 import java.sql.Timestamp;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Properties;
 
-import org.dlese.dpc.services.mmd.DbConn;
-import org.dlese.dpc.services.mmd.MmdException;
-
-import org.dlese.dpc.xml.XMLDoc;
-import org.dlese.dpc.xml.XMLException;
-
-import javax.mail.Message;
 import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
 import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Transport;
-
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import org.dlese.dpc.services.mmd.DbConn;
+import org.dlese.dpc.services.mmd.MmdException;
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.util.URLConnectionTimedOutException;
+import org.dlese.dpc.xml.XMLDoc;
+import org.dlese.dpc.xml.XMLException;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 /**
  *  Creator Acknowledgement System main interface

@@ -18,6 +18,7 @@
 package org.dlese.dpc.schemedit.input;
 
 import java.util.Comparator;
+
 import org.dlese.dpc.xml.XPathUtils;
 
 /**

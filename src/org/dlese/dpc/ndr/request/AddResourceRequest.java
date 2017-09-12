@@ -18,9 +18,8 @@
 package org.dlese.dpc.ndr.request;
 
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
-
-import org.dom4j.Element;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  *  *  Convenience class for creating NdrRequest to add a Resource

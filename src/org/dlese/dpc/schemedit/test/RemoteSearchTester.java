@@ -17,17 +17,8 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.serviceclients.remotesearch.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.*;
-import org.dlese.dpc.oai.OAIUtils;
-
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.text.*;
+import org.dlese.dpc.serviceclients.remotesearch.RemoteResultDoc;
+import org.dlese.dpc.serviceclients.remotesearch.RemoteSearcher;
 
 /**
  *  Utilities for manipulating XPaths, represented as String

@@ -17,16 +17,26 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import javax.servlet.http.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Serializable;
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
+
 import org.dlese.dpc.util.strings.StringUtil;
-import org.xml.sax.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.dds.action.*;
+import org.xml.sax.Attributes;
+import org.xml.sax.Locator;
+import org.xml.sax.SAXException;
 
 /*
  *  TO DO:

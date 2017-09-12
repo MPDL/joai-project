@@ -17,12 +17,9 @@
 */
 package org.dlese.dpc.vocab.tags.opml;
 
-import org.dlese.dpc.vocab.*;
-import java.util.*;
-import java.io.*;
-import javax.servlet.jsp.*;
-import javax.servlet.jsp.tagext.*;
-import javax.servlet.http.*;
+import javax.servlet.jsp.JspException;
+
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  Tag handler for retreiving vocabulary responses re-ordered/grouped as OPML

@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.dds.tags;
 
-import org.dlese.dpc.util.strings.Rot13;
+import java.io.IOException;
+
 import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.*;
-import javax.servlet.jsp.*;
-import java.io.*;
+
+import org.dlese.dpc.util.strings.Rot13;
 
 /**
  *  Apply DLESE JavaScript rot13 email address encryption (for detering

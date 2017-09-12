@@ -17,9 +17,12 @@
 */
 package org.dlese.dpc.ndr.apiproxy;
 
-import java.util.*;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
 
 /**
  *  Class representing the payload for most {@link

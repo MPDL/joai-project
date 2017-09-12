@@ -17,26 +17,7 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import java.net.URL;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
 import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.tree.FlyweightText;
 
 /**
  *  Renders JSP for viewing (rather than editing) XML documents in the MetaData

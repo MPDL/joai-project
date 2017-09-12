@@ -17,26 +17,16 @@
 */
 package org.dlese.dpc.xml.nldr;
 
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.util.Files;
+import java.io.BufferedReader;
+import java.io.StringReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLUtils;
-import org.dlese.dpc.xml.*;
-
-import org.dom4j.Document;
+import org.dlese.dpc.xml.XMLConversionService;
 import org.dom4j.DocumentException;
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.Hashtable;
-import java.util.regex.*;
 
 /**
  *  Reads XML records and converts to an exported form (i.e., "containing

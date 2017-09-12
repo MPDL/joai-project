@@ -17,20 +17,16 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.schemedit.*;
-
 import org.dom4j.Document;
 import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

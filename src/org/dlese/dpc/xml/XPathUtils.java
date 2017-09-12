@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.xml;
 
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *  Utilities for testing and manipulating XPaths, represented as String.

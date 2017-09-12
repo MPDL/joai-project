@@ -17,20 +17,19 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.standards.asn.AsnHelper;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.StandardsDocument;
-import org.dlese.dpc.schemedit.standards.adn.util.MappingUtils;
-
 import org.dlese.dpc.standards.asn.AsnDocument;
+import org.dlese.dpc.standards.asn.AsnHelper;
 import org.dlese.dpc.standards.asn.AsnStandard;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
 
 /**
  *  Provides acess to a single ASN Standards Document (and individual standards

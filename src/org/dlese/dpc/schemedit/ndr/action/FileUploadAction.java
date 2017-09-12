@@ -17,17 +17,13 @@
 */
 package org.dlese.dpc.schemedit.ndr.action;
 
-import org.dlese.dpc.schemedit.ndr.action.form.FileUploadForm;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.ndr.toolkit.NDRToolkit;
+import java.io.BufferedReader;
+import java.nio.CharBuffer;
+import java.util.Enumeration;
 
-import org.nsdl.repository.model.types.Resource;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.upload.FormFile;
-import org.apache.struts.upload.CommonsMultipartRequestHandler;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
@@ -35,11 +31,11 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-
-import java.util.*;
-import java.io.BufferedReader;
-import java.nio.CharBuffer;
+import org.apache.struts.upload.FormFile;
+import org.dlese.dpc.ndr.toolkit.NDRToolkit;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.ndr.action.form.FileUploadForm;
+import org.nsdl.repository.model.types.Resource;
 
 /**
  *  Struts Action to control the uploading of primary content into an NDR

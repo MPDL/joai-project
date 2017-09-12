@@ -17,28 +17,9 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *  A Struts Form bean for managing the items in the DDS collections. This class works in

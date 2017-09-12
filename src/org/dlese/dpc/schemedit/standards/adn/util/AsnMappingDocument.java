@@ -17,14 +17,14 @@
 */
 package org.dlese.dpc.schemedit.standards.adn.util;
 
-import org.dlese.dpc.standards.asn.AsnDocument;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.adn.*;
-import org.dom4j.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import java.util.*;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.standards.adn.DleseStandardsDocument;
+import org.dlese.dpc.schemedit.standards.adn.DleseStandardsNode;
+import org.dlese.dpc.standards.asn.AsnDocument;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 public class AsnMappingDocument extends AsnDocument {
 	private static boolean debug = true;

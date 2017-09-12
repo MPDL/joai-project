@@ -17,16 +17,14 @@
 */
 package org.dlese.dpc.schemedit.standards.asn.plugin;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnCATPlugin;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.asn.GradeRangeHelper;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import org.dom4j.*;
-import java.util.*;
 import org.apache.struts.util.LabelValueBean;
-import java.net.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.standards.asn.AsnCATPlugin;
+import org.dlese.dpc.schemedit.standards.asn.GradeRangeHelper;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the res_qual

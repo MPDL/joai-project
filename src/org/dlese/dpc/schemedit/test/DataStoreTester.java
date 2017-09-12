@@ -17,10 +17,14 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import org.dlese.dpc.datamgr.*;
-import org.dlese.dpc.schemedit.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.datamgr.SimpleDataStore;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Utilities for manipulating XPaths, represented as String

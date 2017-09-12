@@ -17,22 +17,22 @@
 */
 package org.dlese.dpc.index.queryParser;
 
-import java.io.*;
-import java.util.*;
+import java.io.StringReader;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.lucene.analysis.*;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.queryParser.FastCharStream;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.apache.lucene.queryParser.FastCharStream;
 import org.apache.lucene.queryParser.TokenMgrError;
-
-import java.text.SimpleDateFormat;
-
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.index.analysis.*;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Query;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.VirtualSearchFieldMapper;
 
 /**

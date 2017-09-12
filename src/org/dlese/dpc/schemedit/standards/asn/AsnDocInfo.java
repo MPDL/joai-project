@@ -17,11 +17,10 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
-import org.dlese.dpc.standards.asn.AsnDocument;
+import java.io.File;
 
-import java.io.File; 
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.standards.asn.AsnDocument; 
 
 /**
  * Bean to hold summary information about {@link AsnDocument} for use by the suggestion service.

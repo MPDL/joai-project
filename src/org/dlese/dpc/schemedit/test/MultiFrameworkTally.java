@@ -17,10 +17,17 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import org.dlese.dpc.schemedit.test.SchemaHelperTester;
-import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaUtils;
+import org.dlese.dpc.xml.schema.StructureWalker;
 
 /**
  *  Class for comaparing schemaHelpers accross mulitple frameworks. For example,

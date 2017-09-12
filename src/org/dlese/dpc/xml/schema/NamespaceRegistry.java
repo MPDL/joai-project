@@ -17,22 +17,19 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import org.jaxen.SimpleNamespaceContext;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-import org.dom4j.Element;
 import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import org.dom4j.Namespace;
 import org.dom4j.QName;
-import org.dom4j.DocumentException;
-import org.dom4j.DocumentHelper;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.XMLWriter;
+import org.jaxen.SimpleNamespaceContext;
 
 /**
  *  NamespaceRegistry holds namespace information and provides namespace

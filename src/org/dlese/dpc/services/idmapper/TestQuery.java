@@ -21,15 +21,13 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.LinkedList;
 
 import org.dlese.dpc.services.mmd.MmdException;
 import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.services.mmd.Query;
 import org.dlese.dpc.services.mmd.MmdWarning;
+import org.dlese.dpc.services.mmd.Query;
 import org.dlese.dpc.util.DpcErrors;
 
 

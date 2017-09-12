@@ -17,13 +17,10 @@
 */
 package org.dlese.dpc.schemedit.standards.asn.plugin;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
+import java.util.Arrays;
+import java.util.List;
+
 import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import org.dom4j.Element;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the "msp2"

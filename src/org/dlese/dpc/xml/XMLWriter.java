@@ -17,11 +17,20 @@
 */
 package org.dlese.dpc.xml;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.Iterator;
+import java.util.List;
 
-import org.jdom.*;
-import org.jdom.output.*;
+import org.jdom.CDATA;
+import org.jdom.Comment;
+import org.jdom.Element;
+import org.jdom.EntityRef;
+import org.jdom.ProcessingInstruction;
+import org.jdom.output.XMLOutputter;
 
 /**
  * Subclassed from JDOM's <code>XMLOutputter</code>, in order to tweak

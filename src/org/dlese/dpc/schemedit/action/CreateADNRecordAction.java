@@ -17,36 +17,25 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.strings.*;
+import java.net.MalformedURLException;
+import java.util.Date;
+import java.util.List;
 
-import org.dom4j.Document;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import java.util.*;
-import java.net.*;
-import java.io.*;
-import java.text.*;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.CreateADNRecordForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.url.UrlHelper;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dom4j.Document;
 
 /**
  *  A Struts Action controlling interaction during creation of ADN records in

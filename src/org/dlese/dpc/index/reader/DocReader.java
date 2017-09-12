@@ -19,13 +19,11 @@ package org.dlese.dpc.index.reader;
 
 
 
-import org.apache.lucene.document.*;
-
-import org.dlese.dpc.index.*;
-
-import org.dlese.dpc.repository.*;
-
-import java.util.*;
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocConfig;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.RepositoryManager;
 
 
 

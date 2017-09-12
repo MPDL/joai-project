@@ -17,10 +17,10 @@
 */
 package org.dlese.dpc.ndr.request;
 
+import java.util.List;
+
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
-
-import java.util.List;
 
 /**
  *  Convenience method for constructing "find" NdrRequest.<p>

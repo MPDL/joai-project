@@ -20,11 +20,6 @@ package org.dlese.dpc.ldap;
 
 import java.util.Date;
 
-import org.dlese.dpc.ldap.LdapClient;
-import org.dlese.dpc.ldap.LdapEntry;
-import org.dlese.dpc.ldap.LdapException;
-import org.dlese.dpc.ldap.LdapNotFoundException;
-
 
 /**
  * Test driver for LdapClient.

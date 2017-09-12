@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.xml.schema.action;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalDefMap;
 
 
 /**

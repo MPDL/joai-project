@@ -17,10 +17,11 @@
 */
 package org.dlese.dpc.schemedit.security.login;
 
-import javax.security.auth.spi.LoginModule;
+import java.util.Map;
+
 import javax.security.auth.Subject;
 import javax.security.auth.callback.CallbackHandler;
-import java.util.Map;
+import javax.security.auth.spi.LoginModule;
 
 /**
  * Superclass for all the com.myjaas.auth.* authorisation modules. Provides

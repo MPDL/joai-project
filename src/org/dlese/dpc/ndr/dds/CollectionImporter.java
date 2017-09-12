@@ -34,11 +34,11 @@ import java.util.Map.Entry;
 import org.dlese.dpc.ndr.apiproxy.NDRAPIProxy;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.Text;
-import org.dom4j.io.SAXReader;
-import org.dom4j.Element;
 import org.dom4j.XPath;
+import org.dom4j.io.SAXReader;
 
 /**
  * @author kmaull

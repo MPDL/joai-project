@@ -17,13 +17,16 @@
 */
 package org.dlese.dpc.schemedit.standards.adn;
 
-import org.dom4j.*;
+import java.io.File;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import java.io.File;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Provides services for mapping between different standards formats, namely ASN and ADN (dlese), as well as 

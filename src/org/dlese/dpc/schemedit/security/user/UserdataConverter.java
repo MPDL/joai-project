@@ -18,13 +18,15 @@
 package org.dlese.dpc.schemedit.security.user;
 
 import java.io.File;
-import java.util.*;
-
-import org.dom4j.*;
-
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.Iterator;
+import java.util.List;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Converts user.xml files to a directory of username.xml records<p>

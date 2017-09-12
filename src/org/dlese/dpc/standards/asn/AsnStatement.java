@@ -17,14 +17,12 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dom4j.Element;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.regex.*;
-
-import java.util.*;
+import org.dom4j.Element;
 
 /**
  *  Encapsulates a single statement of an ASN Standards Document or ASN Resolver

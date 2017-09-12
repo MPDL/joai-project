@@ -19,10 +19,8 @@ package org.dlese.dpc.serviceclients.cat;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import java.util.*;
-import java.net.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Wraps standard element returned by SuggestCATStandards call.

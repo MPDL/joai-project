@@ -17,15 +17,10 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.*;
-import org.apache.lucene.search.Query;
+import java.util.HashMap;
+
 import org.apache.lucene.search.Filter;
-import java.util.*;
-
-import org.dlese.dpc.index.reader.*;
-
-import java.io.*;
+import org.apache.lucene.search.Query;
 
 /**
  *  Contains the arbitraty attributes, the index and the users query, making them available in DocReaders.

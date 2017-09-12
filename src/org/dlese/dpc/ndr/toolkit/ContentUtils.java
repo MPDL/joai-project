@@ -17,28 +17,18 @@
 */
 package org.dlese.dpc.ndr.toolkit;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Base64;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.test.TesterUtils;
-import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
-
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.DleseAsUseCaseHelper;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
 //import org.apache.axis.encoding.Base64;
-
-import java.util.*;
-import java.io.*;
-
-import org.apache.struts.upload.FormFile;
-
-import java.lang.reflect.Method;
+import org.dom4j.Node;
 
 public class ContentUtils {
 

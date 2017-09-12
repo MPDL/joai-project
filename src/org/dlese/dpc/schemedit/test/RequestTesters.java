@@ -17,23 +17,39 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.test.TesterUtils;
-import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
+import java.lang.reflect.Method;
+import java.util.Iterator;
+import java.util.List;
 
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.DleseAsUseCaseHelper;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.*;
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
+import org.dlese.dpc.ndr.reader.AgentReader;
+import org.dlese.dpc.ndr.reader.AggregatorReader;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.reader.NdrObjectReader;
+import org.dlese.dpc.ndr.request.AddAgentRequest;
+import org.dlese.dpc.ndr.request.AddAggregatorRequest;
+import org.dlese.dpc.ndr.request.AddMetadataRequest;
+import org.dlese.dpc.ndr.request.AddResourceRequest;
+import org.dlese.dpc.ndr.request.CountMembersRequest;
+import org.dlese.dpc.ndr.request.DeleteRequest;
+import org.dlese.dpc.ndr.request.FindRequest;
+import org.dlese.dpc.ndr.request.FindResourceRequest;
+import org.dlese.dpc.ndr.request.ListMembersRequest;
+import org.dlese.dpc.ndr.request.ModifyAgentRequest;
+import org.dlese.dpc.ndr.request.ModifyAggregatorRequest;
+import org.dlese.dpc.ndr.request.ModifyMetadataProviderRequest;
+import org.dlese.dpc.ndr.request.ModifyMetadataRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.ndr.util.ServiceDescription;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
-
-import java.util.*;
-
-import java.lang.reflect.Method;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 public class RequestTesters {
 

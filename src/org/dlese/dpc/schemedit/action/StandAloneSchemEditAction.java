@@ -19,43 +19,32 @@ package org.dlese.dpc.schemedit.action;
 
 
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.input.SchemEditValidator;
-import org.dlese.dpc.schemedit.display.CollapseBeanInitializer;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-
-
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Node;
-
-import java.util.*;
-import java.text.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.schemedit.DocContentMap;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.MissingLockException;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.display.CollapseBeanInitializer;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.schemedit.input.SchemEditValidator;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Document;
 
 /**
  *  Metadata Editor controller for xml records to be created and edited in a

@@ -17,32 +17,38 @@
 */
 package org.dlese.dpc.oai.odlsearchclient.action;
 
-import org.dlese.dpc.oai.odlsearchclient.action.form.*;
-
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.action.form.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.xml.*;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.index.search.DateRangeFilter;
-
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.StringReader;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import java.net.URLEncoder;
+import org.dlese.dpc.action.form.SimpleQueryForm;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.FileIndexingServiceDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.index.search.DateRangeFilter;
+import org.dlese.dpc.oai.OAIUtils;
+import org.dlese.dpc.oai.odlsearchclient.action.form.OdlSearchForm;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.xml.XMLConversionService;
 
 /**
  *  A Struts Action for performing DLESE ODL searches of remote data providers that support DLESE ODL Search.

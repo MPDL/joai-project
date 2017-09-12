@@ -17,44 +17,9 @@
 */
 package org.dlese.dpc.services.dds.action;
 
-import org.dlese.dpc.services.dds.action.form.*;
-import org.dlese.dpc.dds.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.analysis.*;
-import org.apache.lucene.queryParser.QueryParser;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.webapps.servlets.filters.GzipFilter;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.schemedit.SchemEditServlet;
-
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.services.dds.action.form.DDSServicesForm;
 
 /**
  *  An <strong>Action</strong> that handles DDS Web service requests. This class handles DDSWS service version

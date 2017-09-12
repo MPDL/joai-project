@@ -17,10 +17,13 @@
 */
 package org.dlese.dpc.suggest.resource.urlcheck;
 
-import org.dlese.dpc.serviceclients.remotesearch.SearchServiceClient;
-import org.dlese.dpc.schemedit.url.DupSim;
 // import org.dlese.dpc.schemedit.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.url.DupSim;
 
 /**
  *  Holds results of a search over a repository or a collection within a repository for similar and/or duplicate records. 

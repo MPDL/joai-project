@@ -18,41 +18,38 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.LabelValueBean;
-
-import org.dlese.dpc.repository.RepositoryManager;
+import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.repository.SetInfo;
-
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.SessionRegistry;
 import org.dlese.dpc.schemedit.SessionBean;
 import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.schemedit.security.access.AccessManager;
 import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.security.util.*;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.user.UserManager;
 import org.dlese.dpc.schemedit.security.action.form.CollectionAccessForm;
-
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.util.AccessUtils;
+import org.dlese.dpc.schemedit.security.util.CollectionLabelValueSorter;
 
 /**
  *  Controller for viewing and editing user access (roles) for each collection

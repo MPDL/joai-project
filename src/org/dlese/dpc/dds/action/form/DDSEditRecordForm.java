@@ -17,27 +17,11 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.repository.*;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
 
 /**
  *  A bean that holds data for editing records.

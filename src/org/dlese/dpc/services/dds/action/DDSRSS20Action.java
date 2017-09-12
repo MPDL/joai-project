@@ -17,40 +17,22 @@
 */
 package org.dlese.dpc.services.dds.action;
 
-import org.dlese.dpc.services.dds.action.form.*;
-import org.dlese.dpc.dds.action.form.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.dds.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.webapps.servlets.filters.GzipFilter;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.apache.lucene.search.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.dds.DDSStandardSearchResult;
+import org.dlese.dpc.dds.action.DDSQueryAction;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.services.dds.action.form.DDSRSS20Form;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  An <strong>Action</strong> that handles RSS 2.0 requests.

@@ -17,9 +17,8 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
+import java.io.Serializable;
+import java.util.ArrayList;
 
 class LuceneIndexChanger implements Serializable {
 

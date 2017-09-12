@@ -17,9 +17,8 @@
 */
 package org.dlese.dpc.surveys;
 
-import org.dlese.dpc.util.*;
-import java.util.*;
-import java.io.*;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.GetURL;
 
 /**
  *  Parse the HTML form found (hopefully) at the given URL, and turn it into a

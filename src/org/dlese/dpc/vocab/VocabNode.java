@@ -17,13 +17,9 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import javax.servlet.http.*;
+import java.util.ArrayList;
+
 import javax.servlet.jsp.PageContext;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.util.GetURL;
 
 /**
  *  Interface for a controlled vocabulary tree node

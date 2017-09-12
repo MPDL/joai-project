@@ -17,15 +17,16 @@
 */
 package org.dlese.dpc.ndr.reader;
 
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.dlese.dpc.ndr.NdrUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Node;
 import org.dom4j.XPath;
-import java.net.URL;
-import java.util.*;
 
 /**
  *  Reads ServiceDescription data stream as a dom4j.Document and provides access

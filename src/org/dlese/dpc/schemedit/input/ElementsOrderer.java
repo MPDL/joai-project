@@ -17,21 +17,18 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
 import org.dlese.dpc.util.Files;
-
-import java.util.*;
-import java.io.*;
-import java.text.ParseException;
-import java.net.MalformedURLException;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

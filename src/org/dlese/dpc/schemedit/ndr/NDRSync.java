@@ -17,29 +17,33 @@
 */
 package org.dlese.dpc.schemedit.ndr;
 
-import java.util.*;
-import org.dom4j.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.schemedit.ndr.writer.MetadataWriter;
-import org.dlese.dpc.schemedit.ndr.writer.NSDLCollectionWriter;
-import org.dlese.dpc.schemedit.ndr.writer.MetadataProviderWriter;
-import org.dlese.dpc.ndr.reader.MetadataProviderReader;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.repository.RepositoryManager;
+import javax.servlet.ServletContext;
+
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
 import org.dlese.dpc.index.reader.XMLDocReader;
-
-import javax.servlet.ServletContext;
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.ndr.writer.MetadataProviderWriter;
+import org.dlese.dpc.schemedit.ndr.writer.MetadataWriter;
+import org.dlese.dpc.schemedit.ndr.writer.NSDLCollectionWriter;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Node;
 
 /**
  *  NOW Obsolete??

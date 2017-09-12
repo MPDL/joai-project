@@ -17,12 +17,11 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.xml.XPathUtils;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
+import org.dlese.dpc.schemedit.url.UrlHelper;
 
 /**
  *  Utilities for manipulating XPaths, represented as String

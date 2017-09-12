@@ -17,16 +17,18 @@
 */
 package org.dlese.dpc.ndr;
 
-import org.dlese.dpc.ndr.apiproxy.*;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.NDRCollectionReader;
+import org.dlese.dpc.ndr.request.FindRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
 import org.dlese.dpc.util.Files;
 import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
 
 /**
  *  NOT YET DOCUMENTED

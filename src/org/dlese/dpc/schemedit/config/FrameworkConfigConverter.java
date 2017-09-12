@@ -17,13 +17,20 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-// import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.schemedit.*;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileFilter;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dom4j.*;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+// import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Converts old style DcsData records (that only mantained a

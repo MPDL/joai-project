@@ -17,27 +17,24 @@
 */
 package org.dlese.dpc.webapps.struts;
 
-import javax.servlet.http.*;
+import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.repository.SetInfo;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
-// Struts/Commons imports
-import org.apache.struts.action.ActionError;
+import org.apache.commons.validator.Field;
+import org.apache.commons.validator.Validator;
+import org.apache.commons.validator.ValidatorAction;
+import org.apache.commons.validator.util.ValidatorUtils;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 import org.apache.struts.validator.Resources;
-import org.apache.commons.validator.Arg;
-import org.apache.commons.validator.ValidatorAction;
-import org.apache.commons.validator.util.ValidatorUtils;
-import org.apache.commons.validator.Validator;
-import org.apache.commons.validator.Field;
-import javax.servlet.ServletContext;
-
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.util.Utils;
 
 /**
  *  Static methods used in the Struts validation framework that implement custom validation actions. The

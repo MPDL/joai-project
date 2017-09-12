@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.index.writer;
 
-import javax.servlet.*;
+import javax.servlet.ServletContext;
 
 /**
  *  This abstract class implements FileIndexingPlugin to provide access to the {@link

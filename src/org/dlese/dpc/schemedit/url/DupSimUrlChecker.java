@@ -17,23 +17,25 @@
 */
 package org.dlese.dpc.schemedit.url;
 
-import org.dlese.dpc.schemedit.url.DupSim;
-import org.dlese.dpc.schemedit.Constants;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.ItemDocReader;
+import org.dlese.dpc.index.reader.NewsOppsDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.schemedit.FrameworkRegistry;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dlese.dpc.index.ResultDoc;
-import org.dlese.dpc.index.ResultDocList;
-import org.dlese.dpc.index.reader.XMLDocReader;
-import org.dlese.dpc.index.reader.NewsOppsDocReader;
-import org.dlese.dpc.index.reader.ItemDocReader;
-
-import java.util.*;
-import javax.servlet.ServletContext;
-import org.dom4j.Document;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
 
 /**
  *  Checks for duplicate and similar urls within a specific collection.

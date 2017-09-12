@@ -17,16 +17,22 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.reader.DocReader;
 import org.dlese.dpc.index.reader.XMLDocReader;
-import org.dlese.dpc.schemedit.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Holds {@link org.dlese.dpc.schemedit.config.CollectionConfig} instances in a

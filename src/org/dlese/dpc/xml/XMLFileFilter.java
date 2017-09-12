@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.xml;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileFilter;
 
 /**
  *  A FileFilter for xml files. Filters for files that end in '.xml' or '.XML'. Instances

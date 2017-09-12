@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.lang.*;
-
 /**
  * Indicates that a DataManager was asked to get a lock for 
  * a particular object that is already locked

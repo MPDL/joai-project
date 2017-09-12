@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.FileIndexingService;
+import org.dlese.dpc.index.FileIndexingServiceData;
 import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.util.Files;
 
 /**
  *  Abstract class for creating customized Lucene {@link org.apache.lucene.document.Document}s for different

@@ -17,18 +17,18 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.FrameworkRegistry;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.SimpleLuceneIndex;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletContext;
+
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.reader.XMLDocReader;
-
-import java.util.*;
-import javax.servlet.ServletContext;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Checks for duplicate values in the same record as a "reference" record at a

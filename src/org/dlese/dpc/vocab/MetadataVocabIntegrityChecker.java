@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
 import org.dlese.dpc.gui.OPMLTree;
-import org.dlese.dpc.gui.Files;
 
 /**
  *  <p>

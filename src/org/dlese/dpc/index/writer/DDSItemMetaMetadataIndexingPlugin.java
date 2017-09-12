@@ -17,17 +17,10 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 
 /**
  *  A FileIndexingPlugin that indexes meta-metadata about items (educational resources) in

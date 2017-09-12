@@ -17,15 +17,17 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.schema.compositor.*;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
 import org.dlese.dpc.xml.XPathUtils;
-
-import java.lang.*;
-import java.util.*;
-
+import org.dlese.dpc.xml.schema.compositor.Choice;
+import org.dlese.dpc.xml.schema.compositor.Compositor;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

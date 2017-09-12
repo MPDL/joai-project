@@ -17,9 +17,10 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
-import org.dom4j.*;
-import java.util.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.dom4j.Document;
 
 /**
  *  Encapsulates a response from a DDSWS or DDSUpdateWS service request.

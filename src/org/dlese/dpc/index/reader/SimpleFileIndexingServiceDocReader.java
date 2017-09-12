@@ -19,27 +19,9 @@ package org.dlese.dpc.index.reader;
 
 
 
-import org.apache.lucene.document.*;
+import java.io.Serializable;
 
-import org.dlese.dpc.index.writer.*;
-
-import org.dlese.dpc.index.*;
-
-import org.dlese.dpc.xml.*;
-
-import org.dlese.dpc.webapps.tools.*;
-
-import org.dlese.dpc.util.*;
-
-
-
-import javax.servlet.*;
-
-import java.io.*;
-
-import java.text.*;
-
-import java.util.*;
+import org.apache.lucene.document.Document;
 
 
 

@@ -17,19 +17,22 @@
 */
 package org.dlese.dpc.index.writer.xml;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
 import java.net.URL;
-import org.dom4j.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.writer.IndexingTools;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Attribute;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
+
 import edu.ucsb.adl.LuceneGeospatialQueryConverter;
-
-import org.apache.lucene.document.*;
 
 /**
  *  Adds index fields to a Lucene {@link org.apache.lucene.document.Document} from any well-formed XML. Individual

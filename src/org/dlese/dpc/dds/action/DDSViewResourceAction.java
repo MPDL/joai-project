@@ -17,29 +17,19 @@
 */
 package org.dlese.dpc.dds.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.dds.action.form.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import java.util.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.text.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.dds.action.form.DDSViewResourceForm;
 
 /**
  *  A Struts Action for handling display of resource record descriptions, and

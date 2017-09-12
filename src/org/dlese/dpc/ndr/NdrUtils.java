@@ -17,25 +17,38 @@
 */
 package org.dlese.dpc.ndr;
 
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
+import org.dlese.dpc.ndr.reader.AggregatorReader;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.reader.NdrObjectReader;
+import org.dlese.dpc.ndr.reader.NdrResponseReader;
+import org.dlese.dpc.ndr.request.DeleteRequest;
+import org.dlese.dpc.ndr.request.FindRequest;
+import org.dlese.dpc.ndr.request.FindResourceRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
+import org.dlese.dpc.ndr.request.SignedNdrRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
+import org.dlese.dpc.propertiesmgr.PropertiesManager;
 import org.dlese.dpc.util.TimedURLConnection;
 import org.dlese.dpc.util.URLConnectionTimedOutException;
-import java.io.IOException;
-import org.dlese.dpc.propertiesmgr.PropertiesManager;
-
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
-import java.io.File;
-import java.net.URL;
-import java.util.*;
-import java.text.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Collection of static methods for setting up NDR proxy and performing

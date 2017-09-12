@@ -17,36 +17,33 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.display.CollapseBean;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-
-import org.dlese.dpc.schemedit.standards.config.SuggestionServiceConfig;
-import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
-import org.dlese.dpc.schemedit.standards.adn.DleseSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.ResQualSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnDocKey;
-import org.dlese.dpc.schemedit.standards.commcore.CommCoreServiceHelper;
-import org.dlese.dpc.schemedit.standards.td.TeachersDomainServiceHelper;
-
-import org.dlese.dpc.serviceclients.cat.CATServiceToolkit;
-import org.dlese.dpc.serviceclients.cat.CATStandard;
-import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.display.CollapseBean;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.schemedit.standards.adn.DleseSuggestionServiceHelper;
+import org.dlese.dpc.schemedit.standards.asn.AsnDocKey;
+import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
+import org.dlese.dpc.schemedit.standards.asn.ResQualSuggestionServiceHelper;
+import org.dlese.dpc.schemedit.standards.commcore.CommCoreServiceHelper;
+import org.dlese.dpc.schemedit.standards.config.SuggestionServiceConfig;
+import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
+import org.dlese.dpc.schemedit.standards.td.TeachersDomainServiceHelper;
+import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import org.dlese.dpc.serviceclients.cat.CATServiceToolkit;
+import org.dlese.dpc.serviceclients.cat.CATStandard;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Run-time support for CAT suggestion service, which acts as intermediary

@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * Provides an abstract implementation of a common interface for applications

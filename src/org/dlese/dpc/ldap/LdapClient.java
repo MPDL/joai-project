@@ -18,20 +18,12 @@
 package org.dlese.dpc.ldap;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import java.security.MessageDigest;
-
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Properties;
@@ -41,7 +33,6 @@ import javax.naming.Context;
 import javax.naming.NameNotFoundException;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
-
 import javax.naming.directory.Attribute;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.BasicAttribute;
@@ -49,11 +40,6 @@ import javax.naming.directory.BasicAttributes;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.directory.NoSuchAttributeException;
-import javax.naming.directory.SearchControls;
-import javax.naming.directory.SearchResult;
-
-import javax.naming.directory.DirContext;
-import javax.naming.directory.InitialDirContext;
 import javax.naming.directory.SearchControls;
 import javax.naming.directory.SearchResult;
 

@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.util.*;
 import javax.servlet.ServletContext;
+
+import org.dlese.dpc.util.HTMLTools;
 
 /**
  *  Converts from ADN format to the BriefMeta format. See the briefMeta <a

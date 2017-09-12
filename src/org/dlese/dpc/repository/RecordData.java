@@ -17,15 +17,12 @@
 */
 package org.dlese.dpc.repository;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.reader.*;
+import org.dlese.dpc.index.reader.DleseAnnoDocReader;
+import org.dlese.dpc.index.reader.ItemDocReader;
 
 /**
  *  Holds data related to a single item-level record such as it's annotations and records

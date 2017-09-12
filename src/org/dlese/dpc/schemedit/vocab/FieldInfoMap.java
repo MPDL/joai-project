@@ -17,15 +17,11 @@
 */
 package org.dlese.dpc.schemedit.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-
-import org.dom4j.*;
-
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 /**
  *  Data structure mapping xpaths to {@link

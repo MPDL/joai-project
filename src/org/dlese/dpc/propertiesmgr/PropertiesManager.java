@@ -17,8 +17,21 @@
 */
 package org.dlese.dpc.propertiesmgr;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.LinkedList;
+import java.util.Properties;
+import java.util.StringTokenizer;
 
 /**
  *  Reads and writes Java properties files. Properties files can be on disc or contained within a Jar file.

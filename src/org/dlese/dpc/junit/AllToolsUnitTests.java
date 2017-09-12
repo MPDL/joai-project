@@ -17,10 +17,11 @@
 */
 package org.dlese.dpc.junit;
 
-import junit.framework.*;
-import org.dlese.dpc.datamgr.*;
-import java.util.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
 
 /**
  *  This class packages and runs unit tests for all DLESE Tools classes that

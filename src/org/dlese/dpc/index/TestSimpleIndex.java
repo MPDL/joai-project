@@ -17,24 +17,6 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-import java.lang.reflect.*;
-//import org.dlese.dpc.catalog.*;
-//import org.dlese.dpc.catalog.DleseBean;
-//import org.dlese.dpc.catalog.DleseCatalog;
-//import org.dlese.dpc.catalog.DleseCatalogRecord;
-
-//import com.lucene.index.*;
-//import com.lucene.document.*;
-//import com.lucene.analysis.*;
-//import com.lucene.queryParser.*;
-//import com.lucene.search.*;
-
-import org.dlese.dpc.index.SimpleLuceneIndex;
-
 public class TestSimpleIndex {
 
 	public TestSimpleIndex() {

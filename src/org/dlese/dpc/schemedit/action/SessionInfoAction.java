@@ -17,28 +17,19 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.action.form.SessionsForm;
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
+
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.form.SessionsForm;
 
 /**
  *  Action supporting asynchronous exchange of information between UI and

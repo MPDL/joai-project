@@ -17,13 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.adn.util;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.adn.*;
-import org.dom4j.*;
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.standards.adn.AdnStandard;
+import org.dlese.dpc.schemedit.standards.adn.DleseStandardsDocument;
 import org.dlese.dpc.xml.schema.SchemaHelper;
-import java.util.*;
-import java.io.File;
 
 /**
  *  Tool to help match asf and adn standards, and to identify standards that cannot be matched. The output of

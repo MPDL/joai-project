@@ -17,25 +17,21 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.util.*;
+import java.io.File;
+import java.io.StringReader;
+import java.net.URI;
+import java.net.URLEncoder;
 
 import javax.xml.XMLConstants;
-import javax.xml.validation.Validator;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 
-import org.xml.sax.SAXException;
-import org.xml.sax.InputSource;
+import org.dlese.dpc.util.Files;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
-
-import org.w3c.dom.*;
-
-import java.io.*;
-import java.net.*;
 
 /**
  *  Validate XML against a schema using a cached validator.

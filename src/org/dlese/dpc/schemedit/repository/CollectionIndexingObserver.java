@@ -17,16 +17,13 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.dlese.dpc.index.FileIndexingObserver;
+import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
-
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
 
 /**
  *  RepositoryIndexingObsever initializes IDGenerators for each collection after

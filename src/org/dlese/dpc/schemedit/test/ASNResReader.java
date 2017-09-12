@@ -17,17 +17,16 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.standards.asn.*;
-import org.dlese.dpc.schemedit.standards.asn.*;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.*;
-import org.dom4j.*;
+import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import java.util.*;
-import java.io.File;
-import java.net.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 public class ASNResReader extends NameSpaceXMLDocReader {
 	

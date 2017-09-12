@@ -17,16 +17,18 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.SchemaNode;
-import java.util.regex.*;
-import org.dom4j.*;
-import java.util.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Helper for translating between http request parameters and metadata elements.<p>

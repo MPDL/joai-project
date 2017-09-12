@@ -17,9 +17,9 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
 import javax.servlet.ServletContext;
+
+import org.dlese.dpc.index.reader.XMLDocReader;
 
 /**
  *  Implementations of this interface are used by the {@link XMLConversionService} to

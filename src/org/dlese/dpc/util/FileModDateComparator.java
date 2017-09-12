@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.util;
 
-import java.util.Comparator;
 import java.io.File;
+import java.util.Comparator;
 
 /**
  *  Compares two Files based on their modification date.

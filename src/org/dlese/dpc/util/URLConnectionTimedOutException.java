@@ -17,9 +17,6 @@
 */
 package org.dlese.dpc.util;
 
-import java.lang.*;
-import java.net.URL;
-
 /**
  *  Indicates a TimedURLConnection has timed out.
  *

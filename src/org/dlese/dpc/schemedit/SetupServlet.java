@@ -17,34 +17,28 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.sif.SIFRefIdManager;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
-import org.dlese.dpc.schemedit.standards.adn.AsnToAdnMapper;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+// Enterprise imports
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 
 import org.dlese.dpc.schemedit.security.auth.AuthUtils;
-
+import org.dlese.dpc.schemedit.sif.SIFRefIdManager;
+import org.dlese.dpc.schemedit.standards.adn.AsnToAdnMapper;
+import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.strings.FindAndReplace;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
-
-import org.dlese.dpc.webapps.tools.*;
-
-import java.io.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
-
-// Enterprise imports
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 
 /**
  *  Servlet responsible for initializing the schemedit environment, such as the

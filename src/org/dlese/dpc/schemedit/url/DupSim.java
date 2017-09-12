@@ -17,11 +17,9 @@
 */
 package org.dlese.dpc.schemedit.url;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
 import java.util.Comparator;
+
+import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
 
 /**
  *  Class to hold results of searches for duplicate or similar URLs. Associates

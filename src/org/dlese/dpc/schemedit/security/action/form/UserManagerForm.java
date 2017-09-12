@@ -17,19 +17,16 @@
 */
 package org.dlese.dpc.schemedit.security.action.form;
 
-import java.util.*;
-import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.LabelValueBean;
-
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
 import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.security.user.UserManager;
 

@@ -19,7 +19,6 @@ package org.dlese.dpc.xml.schema;
 
 import org.dom4j.Element;
 import org.dom4j.Namespace;
-import java.io.*;
 
 /**
  *  Interface for classes encapsulating XML Schema Elements, such as Elements, Attributes, and Type Definitions. There are two

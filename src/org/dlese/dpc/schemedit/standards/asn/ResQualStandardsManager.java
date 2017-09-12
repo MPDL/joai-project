@@ -17,19 +17,9 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.standards.StandardsManager;
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
-import org.dlese.dpc.schemedit.standards.adn.util.MappingUtils;
+import java.io.File;
 
-import org.dlese.dpc.standards.asn.AsnDocument;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Extends AsnStandardsManager by exposing a setXmlFormat call, which is necessary to the res_qual scheme.

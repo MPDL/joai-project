@@ -18,7 +18,6 @@
 package org.dlese.dpc.util.tags;
 
 import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
 /**

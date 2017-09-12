@@ -17,9 +17,18 @@
 */
 package org.dlese.dpc.xml.schema.compositor;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalElement;
+import org.dlese.dpc.xml.schema.ModelGroup;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaReader;
+import org.dlese.dpc.xml.schema.SchemaUtils;
 import org.dom4j.Element;
 
 /**

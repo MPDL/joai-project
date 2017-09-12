@@ -17,18 +17,18 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.maps.*;
-import org.dlese.dpc.index.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.*;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.xml.XMLValidator;
+import org.dlese.dpc.xml.maps.DleseBean;
+import org.dlese.dpc.xml.maps.DleseXMLReader;
 
 /**
  *  Creates a Lucene {@link org.apache.lucene.document.Document} from a DLESE-IMS XML source file.<p>

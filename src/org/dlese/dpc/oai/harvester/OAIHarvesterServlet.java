@@ -17,47 +17,12 @@
 */
 package org.dlese.dpc.oai.harvester;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.oai.harvester.action.*;
-import org.dlese.dpc.oai.harvester.action.form.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.action.*;
-import org.dlese.dpc.datamgr.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.oai.harvester.structs.*;
-
-// JDK imports
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FilenameFilter;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.OutputStreamWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Array;
-import java.lang.reflect.Constructor;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Properties;
 
 // Enterprise imports
 import javax.servlet.ServletConfig;
@@ -66,7 +31,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
+import org.dlese.dpc.datamgr.SimpleDataStore;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.oai.harvester.action.HarvestReportAction;
+import org.dlese.dpc.oai.harvester.action.HarvesterAdminAction;
+import org.dlese.dpc.oai.harvester.action.form.HarvesterAdminForm;
+import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XMLConversionService;
 
 
 /**

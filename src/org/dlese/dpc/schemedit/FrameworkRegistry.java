@@ -17,19 +17,21 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
+import org.dlese.dpc.schemedit.config.ErrorLog;
 import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
-
-import org.dlese.dpc.xml.*;
 import org.dlese.dpc.vocab.MetadataVocab;
 import org.dlese.dpc.vocab.MetadataVocabReloadEvent;
 import org.dlese.dpc.vocab.MetadataVocabReloadListener;
-
-import org.dlese.dpc.schemedit.config.ErrorLog;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  A map holding {@link org.dlese.dpc.schemedit.MetaDataFramework} instances,

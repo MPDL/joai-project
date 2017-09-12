@@ -17,8 +17,14 @@
 */
 package org.dlese.dpc.xml;
 
-import org.jdom.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.jdom.Attribute;
+import org.jdom.Comment;
+import org.jdom.Element;
+import org.jdom.Namespace;
 
 /**
  * Creates an object wrapper for JDOM XML elements and for accessing

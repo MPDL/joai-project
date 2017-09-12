@@ -17,8 +17,13 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import java.util.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  *  Map structure holding {@link org.dlese.dpc.xml.schema.SchemaNode} instances,

@@ -17,16 +17,16 @@
 */
 package org.dlese.dpc.schemedit.ndr.mets;
 
-import org.dlese.dpc.ndr.toolkit.ContentUtils;
-import org.dlese.dpc.util.TimedURLConnection;
-import org.dlese.dpc.util.Files;
-
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+
+import org.dlese.dpc.ndr.toolkit.ContentUtils;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.TimedURLConnection;
 
 /**
  *  Utility to download a URL and provide information about it, such as it's

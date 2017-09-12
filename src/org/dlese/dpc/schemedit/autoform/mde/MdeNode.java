@@ -17,19 +17,21 @@
 */
 package org.dlese.dpc.schemedit.autoform.mde;
 
-import org.dlese.dpc.schemedit.autoform.*;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.autoform.Label;
+import org.dlese.dpc.schemedit.autoform.Renderer;
+import org.dlese.dpc.schemedit.autoform.RendererHelper;
+import org.dlese.dpc.schemedit.autoform.RendererImpl;
 import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 import org.dom4j.Namespace;
-import org.dom4j.DocumentFactory;
 
 /**
  *  Base class for rendering the document structure ("nodes") in the Metadata

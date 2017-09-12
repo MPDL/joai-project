@@ -17,41 +17,38 @@
 */
 package org.dlese.dpc.oai.harvester;
 
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.util.*;
-
 import java.io.BufferedWriter;
-import java.io.Serializable;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
-import java.io.InputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.Writer;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.io.StringWriter;
-import java.net.URL;
-import java.net.HttpURLConnection;
+import java.io.Writer;
+import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-import java.text.*;
-
-import java.util.zip.GZIPInputStream;
-import lattelib.util.zip.*;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.SimpleTimeZone;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.xml.serialize.XMLSerializer;
 import org.apache.xml.serialize.OutputFormat;
+import org.apache.xml.serialize.XMLSerializer;
+import org.dlese.dpc.oai.OAIUtils;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.util.URLConnectionTimedOutException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
-import java.net.URLEncoder;
+
+import lattelib.util.zip.ZipFile;
 
 /**
  *  Harvests metadata from an <a href="http://www.openarchives.org/">OAI</a> data provider, saving the results

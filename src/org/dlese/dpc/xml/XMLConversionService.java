@@ -17,26 +17,23 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.reader.*;
-
-// Imported java.io classes
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FilenameFilter;
-import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.text.*;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.ServletException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
+import javax.servlet.ServletContext;
 import javax.xml.transform.Transformer;
+
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.util.Files;
 
 /**
  *  Manages the conversion of XML files from one format to another using XSL or

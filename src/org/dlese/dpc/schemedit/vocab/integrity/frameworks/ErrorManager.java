@@ -17,11 +17,13 @@
 */
 package org.dlese.dpc.schemedit.vocab.integrity.frameworks;
 
-import org.dlese.dpc.schemedit.vocab.integrity.Utils;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
+import org.dlese.dpc.schemedit.vocab.integrity.Utils;
 
 
 

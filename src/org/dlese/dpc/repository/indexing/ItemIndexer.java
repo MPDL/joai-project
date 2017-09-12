@@ -17,14 +17,8 @@
 */
 package org.dlese.dpc.repository.indexing;
 
-import org.dlese.dpc.repository.*;
-
-import java.io.*;
-import java.util.*;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
+import java.io.File;
+import java.util.EventListener;
 
 /**
  *  Interface for notifying watchers of indexing requests and prompts to configure and initialize.

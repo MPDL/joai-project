@@ -17,8 +17,7 @@
 */
 package org.dlese.dpc.repository;
 
-import java.io.*;
-import java.util.*;
+import java.io.Serializable;
 
 /**
  *  Data structure that holds information about a metadata format.

@@ -17,19 +17,17 @@
 */
 package org.dlese.dpc.junit;
 
+//import com.meterware.httpunit.*;
+import java.util.Date;
+
 import org.dlese.dpc.oai.harvester.Harvester;
 import org.dlese.dpc.oai.harvester.OAIChangeListener;
 import org.dlese.dpc.oai.harvester.OAIChangeListenerImpl;
 import org.dlese.dpc.oai.harvester.SimpleHarvestMessageHandler;
 
-import org.dlese.dpc.junit.TestTools;
-
-import junit.framework.*;
-import java.util.Date;
-import java.util.Random;
-import java.util.Enumeration;
-import java.util.*;
-//import com.meterware.httpunit.*;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 //import org.dlese.dpc.oai.datamgr.*;
 

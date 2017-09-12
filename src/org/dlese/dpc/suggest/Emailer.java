@@ -17,10 +17,8 @@
 */
 package org.dlese.dpc.suggest;
 
+import org.dlese.dpc.email.SendEmail;
 import org.dlese.dpc.suggest.action.form.SuggestForm;
-import org.dlese.dpc.suggest.SuggestHelper;
-
-import org.dlese.dpc.email.*;
 
 /**
  *  Formats and sends an email message notifying of a suggestion.

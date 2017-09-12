@@ -17,18 +17,28 @@
 */
 package org.dlese.dpc.oai.harvester;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.oai.harvester.structs.*;
-import org.dlese.dpc.datamgr.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.util.*;
-import java.util.zip.*;
+import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.datamgr.SimpleDataStore;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.HarvestLogReader;
+import org.dlese.dpc.index.writer.HarvestLogWriter;
+import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
+import org.dlese.dpc.util.FileModDateComparator;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.util.ZipFileFilter;
 
 /**
  *  Runs, logs and manages ScheduledHarvests.

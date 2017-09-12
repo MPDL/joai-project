@@ -17,14 +17,19 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import org.xml.sax.*;
-import org.xml.sax.helpers.*;
-import javax.servlet.*;
-import java.text.*;
-import org.dlese.dpc.vocab.MetadataVocab;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.xml.sax.Attributes;
+import org.xml.sax.Locator;
+import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
+import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  *  Loads metadata groups from files specified by a given XML configuration

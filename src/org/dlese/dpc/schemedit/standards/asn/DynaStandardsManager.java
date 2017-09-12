@@ -17,18 +17,10 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
+import java.io.File;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.StandardsRegistry;
-import org.dlese.dpc.schemedit.standards.adn.util.MappingUtils;
-
-import org.dlese.dpc.standards.asn.AsnDocument;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
 
 /**
  *  Manages a set of Standards Documents (e.g. all standards files within a

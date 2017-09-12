@@ -17,17 +17,13 @@
 */
 package org.dlese.dpc.schemedit.standards.util;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
+import java.io.File;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.util.Files;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.XMLFileFilter;
-
-
-import org.dom4j.*;
-
-import java.io.File;
+import org.dom4j.Document;
 
 public class AsnUtils {
 	private static boolean debug = true;

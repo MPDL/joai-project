@@ -17,21 +17,39 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.util.*;
-
-import org.apache.lucene.index.*;
-import org.apache.lucene.store.*;
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.util.Version;
-import org.apache.lucene.store.instantiated.InstantiatedIndexReader;
-import org.apache.lucene.document.*;
-import org.apache.lucene.queryParser.*;
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import org.dlese.dpc.util.*;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.KeywordAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.index.TermDocs;
+import org.apache.lucene.index.TermEnum;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Collector;
+import org.apache.lucene.search.Filter;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.store.SimpleFSDirectory;
+import org.apache.lucene.store.instantiated.InstantiatedIndexReader;
+import org.apache.lucene.util.Version;
+import org.dlese.dpc.util.Files;
 
 /**
  *  A simple API for searching, reading and writing <a href="http://lucene.apache.org/"> Lucene</a> indexes.

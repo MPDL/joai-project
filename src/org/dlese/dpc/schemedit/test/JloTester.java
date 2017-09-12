@@ -17,23 +17,17 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.input.InputManager;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import org.dom4j.tree.*;
-import org.dom4j.io.*;
-import org.jaxen.SimpleNamespaceContext;
-import java.util.regex.*;
+import java.io.File;
+import java.net.URL;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.util.strings.FindAndReplace;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Node;
 
 
 /**

@@ -17,32 +17,24 @@
 */
 package org.dlese.dpc.suggest.action;
 
-import org.dlese.dpc.suggest.SuggestUtils;
-import org.dlese.dpc.suggest.comment.*;
-import org.dlese.dpc.suggest.resource.urlcheck.*;
-import org.dlese.dpc.suggest.action.form.SuggestCommentForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.vocab.MetadataVocab;
+import java.util.Map;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.suggest.SuggestUtils;
+import org.dlese.dpc.suggest.action.form.SuggestCommentForm;
+import org.dlese.dpc.suggest.comment.CommentEmailer;
+import org.dlese.dpc.suggest.comment.CommentRecord;
+import org.dlese.dpc.suggest.comment.SuggestCommentHelper;
 
 
 /**

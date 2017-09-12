@@ -17,11 +17,9 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.regex.*;
-import java.util.*;
-import java.net.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dom4j.*;
 import org.dlese.dpc.util.strings.FindAndReplace;
 import org.dlese.dpc.xml.XPathUtils;
 

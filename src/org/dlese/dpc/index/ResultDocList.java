@@ -17,20 +17,12 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.index.*;
-import org.apache.lucene.store.*;
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.index.CorruptIndexException;
-
-import java.util.*;
 import java.text.SimpleDateFormat;
+import java.util.AbstractList;
+import java.util.Date;
 
-import org.dlese.dpc.index.reader.*;
-
-import java.io.*;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
 
 /**
  *  A List of ResultDocs returned by a SimpleLucenIndex search.

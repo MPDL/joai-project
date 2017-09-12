@@ -17,16 +17,16 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
 import java.net.URI;
-import org.dom4j.Node;
-import org.dlese.dpc.schemedit.vocab.*;
-import org.dlese.dpc.schemedit.*;
+import java.util.Iterator;
 
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.schemedit.vocab.NewFieldInfoMap;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Node;
 
 
 

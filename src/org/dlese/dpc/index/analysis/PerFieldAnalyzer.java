@@ -17,12 +17,16 @@
 */
 package org.dlese.dpc.index.analysis;
 
-import org.dlese.dpc.index.SimpleLuceneIndex;
 import java.io.Reader;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
-import org.apache.lucene.analysis.*;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 
 /**
  *  This Analyzer is used to facilitate scenarios where different fields require different analysis

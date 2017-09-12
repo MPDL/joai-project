@@ -18,15 +18,13 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
-import java.util.Hashtable;
 import java.util.Locale;
-import java.util.Set;
-import java.util.Iterator;
-import javax.servlet.RequestDispatcher;
+
+import javax.security.auth.Subject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
@@ -34,21 +32,13 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
 import org.apache.struts.util.MessageResources;
-
-import javax.security.auth.Subject;
-
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
 import org.dlese.dpc.schemedit.Constants;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.security.auth.SchemEditAuth;
-import org.dlese.dpc.schemedit.security.auth.AuthUtils;
-import org.dlese.dpc.schemedit.security.user.UserManager;
-
 import org.dlese.dpc.schemedit.security.action.form.LogonForm;
+import org.dlese.dpc.schemedit.security.auth.AuthUtils;
+import org.dlese.dpc.schemedit.security.auth.SchemEditAuth;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.user.UserManager;
 
 /**
  *  Implementation of <strong>Action</strong> that validates a user logon.

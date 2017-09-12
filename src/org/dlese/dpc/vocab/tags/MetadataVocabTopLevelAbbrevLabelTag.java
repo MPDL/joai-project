@@ -17,11 +17,7 @@
 */
 package org.dlese.dpc.vocab.tags;
 
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.util.strings.StringUtil;
 import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.http.*;
 
 /**
  *  Tag handler for retreiving a UI label from the given field and value

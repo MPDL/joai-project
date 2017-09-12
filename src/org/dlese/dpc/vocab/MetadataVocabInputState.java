@@ -17,10 +17,11 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *  Stores user state for selected controlled vocabularies.

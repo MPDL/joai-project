@@ -17,9 +17,11 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.*;
 import org.dom4j.Element;
 
 /**

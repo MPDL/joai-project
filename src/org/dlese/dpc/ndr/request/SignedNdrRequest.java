@@ -17,11 +17,9 @@
 */
 package org.dlese.dpc.ndr.request;
 
-import org.dlese.dpc.ndr.apiproxy.*;
+import org.dlese.dpc.ndr.apiproxy.InputXML;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.connection.NDRConnection;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.*;
-import java.util.*;
 
 /**
  *  Class to communiate directly with NDR via {@link org.dlese.dpc.ndr.connection.NDRConnection}.

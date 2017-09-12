@@ -17,28 +17,18 @@
 */
 package org.dlese.dpc.schemedit.ndr.util;
 
+import java.io.File;
+
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
+import org.dlese.dpc.ndr.request.AddResourceRequest;
+import org.dlese.dpc.ndr.request.ModifyMetadataRequest;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.test.TesterUtils;
-import org.dlese.dpc.schemedit.config.CollectionConfigReader;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XSLTransformer;
-import org.dlese.dpc.util.Files;
-import org.dom4j.Element;
 import org.dom4j.Node;
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import org.dom4j.XPath;
-import java.io.File;
-import java.net.URL;
-import java.util.*;
-import java.text.*;
-import javax.xml.transform.Transformer;
 
 /**
  *  Utilities for testing an NDR repository

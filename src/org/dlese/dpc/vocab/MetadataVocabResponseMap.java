@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.vocab;
 
-import org.dlese.dpc.vocab.MetadataVocab;
-import javax.servlet.jsp.PageContext;
 import java.io.Serializable;
 import java.util.HashMap;
 

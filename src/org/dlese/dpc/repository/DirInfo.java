@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.repository;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.HashMap;
 
 /**
  *  Data structure that holds information about a directory of metadata files. Includes

@@ -17,46 +17,63 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.display.SortWidget;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.user.UserManager;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.queryParser.FieldExpansionQueryParser;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.dds.action.DDSQueryAction;
-import org.apache.lucene.search.*;
-import org.apache.lucene.queryParser.QueryParser;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.util.regex.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.StringReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.apache.lucene.index.*;
-import org.apache.struts.action.Action;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.lucene.index.Term;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TermQuery;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.LabelValueBean;
-import java.net.URLEncoder;
-import java.net.URLDecoder;
-import java.net.URI;
-import org.dom4j.Document;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.queryParser.FieldExpansionQueryParser;
+import org.dlese.dpc.index.reader.FileIndexingServiceDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.oai.OAIUtils;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SearchHelper;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.DCSQueryForm;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataFileIndexingPlugin;
+import org.dlese.dpc.schemedit.display.SortWidget;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.user.UserManager;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XMLConversionService;
 
 /**
  *  A Struts Action for handling query requests that access a {@link

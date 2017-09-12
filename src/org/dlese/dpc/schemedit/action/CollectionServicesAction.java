@@ -17,45 +17,55 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.dds.DDSServlet;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.index.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.repository.CollectionReaper;
-import org.dlese.dpc.schemedit.repository.RepositoryIndexingObserver;
-import org.dlese.dpc.schemedit.repository.CollectionIndexingObserver;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.threadedservices.*;
-import org.dlese.dpc.schemedit.action.form.CollectionServicesForm;
-import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.vocab.MetadataVocabServlet;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.ndr.NdrUtils;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dom4j.Document;
-
-import java.util.*;
-import java.util.regex.*;
-import java.io.*;
-import java.text.*;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.dds.DDSServlet;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.MetaDataHelper;
+import org.dlese.dpc.schemedit.RecordList;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.CollectionServicesForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.repository.CollectionIndexingObserver;
+import org.dlese.dpc.schemedit.repository.RepositoryIndexingObserver;
+import org.dlese.dpc.schemedit.security.access.Roles;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.threadedservices.ExportReport;
+import org.dlese.dpc.schemedit.threadedservices.ExportingService;
+import org.dlese.dpc.schemedit.threadedservices.TaskProgress;
+import org.dlese.dpc.schemedit.threadedservices.ValidatingService;
+import org.dlese.dpc.schemedit.threadedservices.ValidationReport;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.MetadataVocabServlet;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
 
 /**
  *  A Struts Action controlling several collection-level operations, including

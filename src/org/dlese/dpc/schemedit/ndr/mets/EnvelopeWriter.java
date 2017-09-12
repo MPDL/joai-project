@@ -17,23 +17,18 @@
 */
 package org.dlese.dpc.schemedit.ndr.mets;
 
-import org.dlese.dpc.services.dds.toolkit.*;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.Map;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-
+import org.dlese.dpc.services.dds.toolkit.RepositoryUtils;
 import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
-import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.ndr.toolkit.ContentUtils;
-import org.dom4j.*;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  * @author    ostwald

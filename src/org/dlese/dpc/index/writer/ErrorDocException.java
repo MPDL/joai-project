@@ -17,7 +17,6 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.lang.*;
 import java.util.HashMap;
 
 /**

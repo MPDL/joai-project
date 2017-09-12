@@ -17,16 +17,10 @@
 */
 package org.dlese.dpc.repository.indexing;
 
-import org.dlese.dpc.repository.*;
-
-import java.io.*;
-import java.util.*;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
+import java.io.File;
 
 import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.writer.FileIndexingPlugin;
 
 public class SessionIndexingPlugin implements FileIndexingPlugin {
 	

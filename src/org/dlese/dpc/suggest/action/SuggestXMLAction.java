@@ -17,30 +17,34 @@
 */
 package org.dlese.dpc.suggest.action;
 
-import org.dlese.dpc.suggest.action.form.*;
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
+import org.dlese.dpc.email.SendEmail;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.suggest.action.form.SuggestXMLForm;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.XMLWriter;
-import java.io.*;
-import org.dlese.dpc.serviceclients.webclient.*;
-import org.dlese.dpc.email.*;
 
 /**
  *  Form submission processor that generates an XML doc based on the form input

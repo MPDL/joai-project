@@ -17,16 +17,17 @@
 */
 package org.dlese.dpc.schemedit.test.tmp;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.util.strings.*;
-
 import java.io.File;
-import java.util.*;
 import java.net.URL;
-import org.dom4j.*;
+import java.util.Iterator;
+
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 public class ExtensionTester {
 	private static boolean debug = true;

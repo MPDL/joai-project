@@ -17,28 +17,23 @@
 */
 package org.dlese.dpc.services.mmd;
 
-import org.dlese.dpc.util.*;
-import java.net.URL;
-import java.net.HttpURLConnection;
-import java.net.*;
-
-import java.io.InputStream;
+import java.io.File;
 import java.io.IOException;
-import java.io.*;
-import java.util.regex.Pattern;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-import java.util.List;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Properties;
+import java.util.List;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.xml.XMLDoc;
-import org.dlese.dpc.xml.XMLException;
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.util.URLConnectionTimedOutException;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 /**
  *  Catches duplicate resources

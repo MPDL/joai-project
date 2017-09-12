@@ -17,23 +17,17 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.*;
-
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.FrameworkConfigReader;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataConverter;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
 
 /**
  *  Tester for {@link org.dlese.dpc.schemedit.dcs.DcsDataRecord} and related classes.

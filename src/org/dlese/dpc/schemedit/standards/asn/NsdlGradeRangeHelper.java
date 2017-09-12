@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
 
 /**
  *  GradeRangeHelper that accomodates the "nsdlEdLevel" vocabs, which are

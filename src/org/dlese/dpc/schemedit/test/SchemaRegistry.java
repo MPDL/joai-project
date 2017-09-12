@@ -16,7 +16,8 @@
 	limitations under the License.
 */
 package org.dlese.dpc.schemedit.test;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 
 

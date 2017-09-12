@@ -18,38 +18,28 @@
 package org.dlese.dpc.services.idmapper;
 
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.io.StringWriter;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.Writer;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
 import java.net.ConnectException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
 import java.net.URL;
-
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.CRC32;
 
-import org.dlese.dpc.util.DpcErrors;
-import javax.net.ssl.*;
-import java.io.*;
-import java.net.*;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
+import org.dlese.dpc.util.DpcErrors;
 import org.pdfbox.pdfparser.PDFParser;
 import org.pdfbox.pdmodel.PDDocument;
-import org.pdfbox.util.PDFTextStripper;
 
 
 /**

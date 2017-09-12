@@ -20,8 +20,6 @@ package org.dlese.dpc.junit;
 //import junit.framework.*;
 import java.util.Date;
 import java.util.Random;
-import java.util.Enumeration;
-import java.util.*;
 
 /**
 This class holds a number of handy static methods to aid in testing.

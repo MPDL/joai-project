@@ -17,28 +17,16 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.standards.adn.AsnToAdnMapper;
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
-import org.dlese.dpc.schemedit.standards.StandardsManager;
-import org.dlese.dpc.standards.asn.AsnDocument;
-import org.dlese.dpc.schemedit.standards.asn.AsnStandardsDocument;
-import org.dlese.dpc.schemedit.MetaDataFramework;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
+import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
+import org.dlese.dpc.schemedit.standards.CATServiceHelper;
+import org.dlese.dpc.schemedit.standards.StandardsManager;
+import org.dlese.dpc.schemedit.standards.StandardsRegistry;
 import org.dlese.dpc.serviceclients.cat.CATStandard;
-
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
 
 /**
  *  SuggestionsServiceHelper for the CAT REST standards suggestion service,

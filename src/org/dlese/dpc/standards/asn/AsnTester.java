@@ -17,13 +17,9 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.standards.*;
-import org.dom4j.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import java.util.*;
 import java.io.File;
+import java.util.Iterator;
+import java.util.List;
 
 public class AsnTester {
 	private static boolean debug = true;

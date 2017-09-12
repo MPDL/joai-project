@@ -17,28 +17,22 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.*;
+import java.io.File;
+import java.io.StringReader;
+import java.net.URL;
 
 import javax.xml.XMLConstants;
-import javax.xml.validation.Validator;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import javax.xml.transform.dom.DOMSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 
-import org.xml.sax.SAXException;
-import org.xml.sax.InputSource;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
 import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
-
-import org.w3c.dom.*;
-
-import java.io.*;
-import java.lang.*;
-import java.net.URL;
 
 public class ValidatorTester {
 

@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.index;
 
-import java.lang.*;
-
 /**
  *  Indicates an error occured in the FileInexingService occured.
  *

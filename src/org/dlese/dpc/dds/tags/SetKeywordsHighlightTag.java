@@ -19,7 +19,7 @@ package org.dlese.dpc.dds.tags;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
-import javax.servlet.jsp.PageContext;
+
 import org.dlese.dpc.dds.KeywordsHighlight;
 
 /**

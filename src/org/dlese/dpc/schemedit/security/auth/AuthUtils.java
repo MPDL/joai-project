@@ -17,22 +17,24 @@
 */
 package org.dlese.dpc.schemedit.security.auth;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.util.Files;
+import java.security.AccessControlException;
+import java.security.Permission;
+import java.security.PrivilegedActionException;
+import java.security.PrivilegedExceptionAction;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-import java.security.*;
-import javax.security.auth.*;
-import javax.security.auth.login.Configuration;
+import javax.security.auth.Subject;
 import javax.security.auth.login.AppConfigurationEntry;
-import java.util.*;
+import javax.security.auth.login.Configuration;
 
-import org.dlese.dpc.schemedit.security.auth.nsdl.NSDLLdapClient;
-import org.dlese.dpc.ldap.LdapException;
 import org.dlese.dpc.ldap.LdapEntry;
-
-import org.dom4j.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.security.auth.nsdl.NSDLLdapClient;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  * @author    Jonathan Ostwald

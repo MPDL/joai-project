@@ -17,21 +17,17 @@
 */
 package org.dlese.dpc.suggest.action.form;
 
-import org.dlese.dpc.suggest.resource.urlcheck.ValidatorResults;
-import org.dlese.dpc.schemedit.url.DupSim;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.schemedit.url.DupSim;
+import org.dlese.dpc.suggest.resource.urlcheck.ValidatorResults;
 
 
 

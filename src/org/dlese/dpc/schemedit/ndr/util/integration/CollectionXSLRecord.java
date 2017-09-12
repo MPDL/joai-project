@@ -17,18 +17,14 @@
 */
 package org.dlese.dpc.schemedit.ndr.util.integration;
 
-import org.dlese.dpc.ndr.apiproxy.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
-import java.net.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Wraps a row from CollectionXSLReader, reprsenting information about a particular collection

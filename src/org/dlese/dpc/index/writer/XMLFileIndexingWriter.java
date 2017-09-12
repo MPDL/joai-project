@@ -17,23 +17,39 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.search.*;
-import org.apache.lucene.index.*;
-import org.apache.lucene.analysis.KeywordAnalyzer;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.TermQuery;
+import org.dlese.dpc.index.FileIndexingServiceData;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocConfig;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.document.DateFieldTools;
-import org.dlese.dpc.index.writer.xml.*;
+import org.dlese.dpc.index.reader.DleseAnnoDocReader;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.index.reader.DocReader;
+import org.dlese.dpc.index.reader.ErrorDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.index.writer.xml.BoundingBox;
+import org.dlese.dpc.index.writer.xml.XMLIndexer;
+import org.dlese.dpc.index.writer.xml.XMLIndexerFieldsConfig;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  Creates a Lucene {@link org.apache.lucene.document.Document} from any XML file by stripping the XML tags

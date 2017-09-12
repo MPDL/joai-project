@@ -17,12 +17,22 @@
 */
 package org.dlese.dpc.util;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.*;
-import java.text.*;
-import java.nio.charset.*;
-import org.dlese.dpc.oai.*;
+
+import org.dlese.dpc.oai.OAIUtils;
 
 /**
  *  Contains methods for performing common operations on files and directories such as reading, moving,

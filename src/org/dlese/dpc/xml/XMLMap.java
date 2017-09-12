@@ -17,9 +17,7 @@
 */
 package org.dlese.dpc.xml;
 
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import java.util.List;
 
 /**
  * Provides a hashmap-like interface into an XML-based metadata file,

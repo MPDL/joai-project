@@ -18,7 +18,6 @@
 package org.dlese.dpc.xml.schema.compositor;
 
 import org.dlese.dpc.xml.schema.ComplexType;
-import java.util.*;
 import org.dom4j.Element;
 
 /**

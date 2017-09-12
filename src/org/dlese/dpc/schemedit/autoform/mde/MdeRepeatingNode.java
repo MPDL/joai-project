@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.schemedit.autoform.mde;
 
-import org.dlese.dpc.schemedit.autoform.*;
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.autoform.Label;
+import org.dlese.dpc.schemedit.autoform.RendererHelper;
+import org.dlese.dpc.schemedit.autoform.RendererImpl;
+import org.dlese.dpc.schemedit.autoform.SimpleTypeLabel;
 import org.dlese.dpc.xml.XPathUtils;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  *  Abstract base class for renderning MetadataEditor fields for a repeating

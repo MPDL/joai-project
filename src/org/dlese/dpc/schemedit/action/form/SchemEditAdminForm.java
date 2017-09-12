@@ -17,35 +17,21 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.serviceclients.remotesearch.RemoteResultDoc;
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.List;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
+import javax.servlet.http.HttpServletRequest;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.regex.*;
-
-import org.apache.struts.upload.FormFile;
 import org.apache.struts.upload.MultipartRequestHandler;
+import org.dlese.dpc.schemedit.PageList;
+import org.dlese.dpc.xml.schema.DocMap;
 
 /**
  *  ActionForm bean for handling requests to support Schemaedit. Most methods

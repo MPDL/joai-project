@@ -17,15 +17,11 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.Constants;
-import org.dlese.dpc.standards.asn.*;
-import org.dlese.dpc.xml.XMLFileFilter;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
+import org.dlese.dpc.schemedit.Constants;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.standards.asn.AsnDocument;
 
 /**
  *  A key representing an ASN StandardDoc that encodes the "author/subject",

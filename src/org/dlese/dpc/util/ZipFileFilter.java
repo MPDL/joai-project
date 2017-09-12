@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.util;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileFilter;
 
 /**
  *  A FileFilter for zip files. Filters for files that end in '.zip' or '.ZIP' and are files, not directories.

@@ -17,14 +17,15 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.jsp.PageContext;
-import org.dlese.dpc.util.strings.StringUtil;
-import java.text.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.URL;
+
+import javax.servlet.ServletContext;
+
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 /**

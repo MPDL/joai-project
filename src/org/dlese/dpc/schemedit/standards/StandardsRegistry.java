@@ -17,20 +17,28 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.schemedit.standards.asn.*;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.standards.asn.*;
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.util.Files;
-
-import org.dlese.dpc.serviceclients.cat.CATServiceToolkit;
+import java.io.File;
+import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
-import java.io.File;
-import java.io.FileFilter;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.standards.asn.AsnDocInfo;
+import org.dlese.dpc.schemedit.standards.asn.AsnDocKey;
+import org.dlese.dpc.schemedit.standards.asn.AsnStandardsDocument;
+import org.dlese.dpc.schemedit.standards.asn.AsnStandardsNode;
+import org.dlese.dpc.serviceclients.cat.CATServiceToolkit;
+import org.dlese.dpc.standards.asn.AsnDocument;
+import org.dlese.dpc.standards.asn.AsnHelper;
+import org.dlese.dpc.standards.asn.AsnStandard;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Class to manage potentially many ASN standards documents, refered to using

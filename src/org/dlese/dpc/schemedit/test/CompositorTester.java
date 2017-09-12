@@ -17,22 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.util.strings.*;
+import java.io.File;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.util.regex.*;
-
-import java.net.*;
-import org.dom4j.Node;
-import org.dom4j.Element;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.compositor.Compositor;
+import org.dlese.dpc.xml.schema.compositor.CompositorGuard;
+import org.dlese.dpc.xml.schema.compositor.CompositorMember;
 import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /*
  *  Eventually we will have to account for the parent element (after all this is necessary in determining

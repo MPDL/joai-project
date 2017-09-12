@@ -17,35 +17,43 @@
 */
 package org.dlese.dpc.xml;
 
-import java.util.*;
-import java.util.regex.*;
-import java.lang.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
+import java.beans.XMLDecoder;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringBufferInputStream;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-import org.dom4j.DocumentException;
-import org.dom4j.DocumentHelper;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.io.HTMLWriter;
-import org.dom4j.tree.AbstractElement;
-
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerConfigurationException;
-import org.xml.sax.InputSource;
-import java.beans.*;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamSource;
 
+import org.dlese.dpc.util.Files;
 import org.dlese.dpc.util.TimedURLConnection;
 import org.dlese.dpc.util.URLConnectionTimedOutException;
-import org.dlese.dpc.util.Files;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.HTMLWriter;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
+import org.dom4j.io.XMLWriter;
 
 /**
  *  Utility methods for working with dom4j Documents.

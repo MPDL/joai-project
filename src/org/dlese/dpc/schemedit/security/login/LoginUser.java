@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.schemedit.security.login;
 
-import java.io.*;
-import java.util.*;
+import java.util.Vector;
+
 import org.dlese.dpc.schemedit.security.auth.TypedPrincipal;
 
 /**

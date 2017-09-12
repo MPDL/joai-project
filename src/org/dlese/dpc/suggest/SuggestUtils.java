@@ -17,17 +17,15 @@
 */
 package org.dlese.dpc.suggest;
 
-import org.dlese.dpc.util.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.xml.schema.SchemaHelper;
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
-
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
 
 /**
  *  Utilities supporting the Suggestor clients.

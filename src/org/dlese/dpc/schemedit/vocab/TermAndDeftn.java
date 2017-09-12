@@ -17,16 +17,10 @@
 */
 package org.dlese.dpc.schemedit.vocab;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.Utils;
 
 /**
  *  Encapsulates the semantics of the TermAndDeftn element of FieldInfo files,

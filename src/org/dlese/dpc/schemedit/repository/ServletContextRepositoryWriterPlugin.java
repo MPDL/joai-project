@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import javax.servlet.*;
+import javax.servlet.ServletContext;
 
 /**
  *  This abstract class implements RepositoryWriterPlugin to provide access to the {@link

@@ -17,13 +17,9 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dlese.dpc.xml.XPathUtils;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
-import java.io.File;
+import org.dlese.dpc.xml.XPathUtils;
 
 /**
  *  Utility class to provide acess to resolution services for ASN topics and

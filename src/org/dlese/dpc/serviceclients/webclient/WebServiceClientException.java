@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.serviceclients.webclient;
 
-import java.lang.*;
-
 /**
  * Indicates that a WebClient received an error from a DDS Web Service 
  *

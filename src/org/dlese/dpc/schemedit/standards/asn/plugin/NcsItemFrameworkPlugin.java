@@ -17,19 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.asn.plugin;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.asn.AsnCATPlugin;
 import org.dlese.dpc.schemedit.standards.asn.GradeRangeHelper;
 import org.dlese.dpc.schemedit.standards.asn.NsdlGradeRangeHelper;
-
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import org.dom4j.*;
-
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the ncs_item

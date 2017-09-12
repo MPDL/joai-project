@@ -17,10 +17,9 @@
 */
 package org.dlese.dpc.schemedit.security.auth;
 
-import javax.security.auth.login.*;
-import javax.security.auth.*;
-import javax.security.auth.callback.*;
-import java.io.*;
+import javax.security.auth.Subject;
+import javax.security.auth.login.LoginContext;
+import javax.security.auth.login.LoginException;
 
 /**
  *  Auth module for SchemEdit authentication

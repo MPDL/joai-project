@@ -17,37 +17,28 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.schemedit.action.form.RecordOperationsForm;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.xml.*;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import java.io.IOException;
 
-import java.util.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dom4j.Document;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.RecordOperationsForm;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dom4j.Document;
 
 /**
  *  A Struts Action for handling operations on single records, such as Copy, Delete,

@@ -17,34 +17,38 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.schemedit.repository.*;
-import org.dlese.dpc.serviceclients.remotesearch.RemoteSearcher;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.XMLConversionService;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.threadedservices.*;
-
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.repository.SetInfo;
-import org.dlese.dpc.repository.action.form.SetDefinitionsForm;
-
 import java.io.File;
-import java.util.*;
 import java.text.SimpleDateFormat;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.List;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.repository.action.form.SetDefinitionsForm;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.config.StatusFlag;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.schemedit.repository.RepositoryEventListener;
+import org.dlese.dpc.schemedit.repository.RepositoryService;
+import org.dlese.dpc.schemedit.repository.RepositoryWriter;
+import org.dlese.dpc.schemedit.repository.RepositoryWriterPlugin;
+import org.dlese.dpc.schemedit.repository.ServletContextRepositoryWriterPlugin;
+import org.dlese.dpc.schemedit.threadedservices.ExportingService;
+import org.dlese.dpc.schemedit.threadedservices.ValidatingService;
+import org.dlese.dpc.serviceclients.remotesearch.RemoteSearcher;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.MetadataVocabServlet;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XMLConversionService;
 
 /**
  *  Servlet responsible for initializing widely-used classes and placing them

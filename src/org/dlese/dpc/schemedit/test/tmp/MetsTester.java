@@ -17,18 +17,16 @@
 */
 package org.dlese.dpc.schemedit.test.tmp;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.xml.schema.SchemaReader;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.xml.schema.StructureWalker;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
 import java.io.File;
 import java.net.URL;
-import org.dom4j.Node;
+
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaReader;
+import org.dlese.dpc.xml.schema.StructureWalker;
 import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Class to insert values into METS instance documents.

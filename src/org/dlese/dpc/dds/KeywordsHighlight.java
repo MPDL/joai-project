@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.dds;
 
+import org.dlese.dpc.index.LuceneStopWords;
 import org.dlese.dpc.util.strings.StringUtil;
-import org.dlese.dpc.index.*;
 
 /**
  *  Provide highlighting of keywords in any given string of text.

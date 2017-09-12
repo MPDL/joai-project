@@ -17,24 +17,28 @@
 */
 package org.dlese.dpc.index.reader;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.queryParser.*;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.vocab.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.lucene.document.Document;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.document.DateFieldTools;
-
+import org.dlese.dpc.index.writer.IndexingTools;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.util.DpcErrors;
 import org.dom4j.Element;
-
-import javax.servlet.*;
-import java.io.*;
-import java.text.*;
-import java.util.*;
 
 /**
  *  A bean for accessing the data stored in a Lucene {@link org.apache.lucene.document.Document} that was

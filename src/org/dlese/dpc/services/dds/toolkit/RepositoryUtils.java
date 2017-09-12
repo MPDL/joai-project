@@ -17,16 +17,20 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
-import org.dom4j.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Provides functions that use the DDSServicesToolkit to get information about collections, itemRecords,

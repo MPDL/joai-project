@@ -19,9 +19,7 @@ package org.dlese.dpc.schemedit.sif;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
-import org.dlese.dpc.util.Files;
 import org.dom4j.Element;
-import org.dom4j.DocumentHelper;
 
 public abstract class SIFDocReader extends NameSpaceXMLDocReader {
 	private static boolean debug = true;

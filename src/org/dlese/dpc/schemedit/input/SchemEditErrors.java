@@ -17,15 +17,9 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-
-import java.util.*;
-import java.io.*;
-
 import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionErrors;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.xml.XPathUtils;
 
 /**
  *  Methods to create ActionErrors for the Metadata Editor. Most create two

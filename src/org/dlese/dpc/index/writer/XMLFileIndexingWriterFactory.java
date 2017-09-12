@@ -17,10 +17,13 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.util.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.xml.*;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.writer.xml.XMLIndexerFieldsConfig;
+import org.dlese.dpc.repository.RecordDataService;
 
 /**
  *  Factory used to create the XmlFileIndexingWriter appropriate for handling a given XML format.

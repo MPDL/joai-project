@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.oai.harvester.structs;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.oai.harvester.*;
+import java.io.File;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.dlese.dpc.oai.harvester.ScheduledHarvestManager;
 
 /**
  *  Data structure that holds the info needed to configure a regular-occuring harvest of a particular

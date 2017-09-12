@@ -17,15 +17,12 @@
 */
 package org.dlese.dpc.index.reader;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.document.DateFieldTools;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import java.util.*;
-import java.text.*;
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.document.DateFieldTools;
 
 /**
  *  A bean for accessing the data stored in a Lucene {@link org.apache.lucene.document.Document} that was

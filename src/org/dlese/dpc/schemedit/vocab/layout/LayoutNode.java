@@ -17,16 +17,14 @@
 */
 package org.dlese.dpc.schemedit.vocab.layout;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dom4j.*;
-
-import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  A node in a VocabLayout tree as defined by a vocabLayout (historically

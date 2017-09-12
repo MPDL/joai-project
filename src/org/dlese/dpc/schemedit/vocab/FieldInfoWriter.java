@@ -17,25 +17,24 @@
 */
 package org.dlese.dpc.schemedit.vocab;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
+import java.io.File;
+import java.util.Iterator;
+import java.util.Map;
 
-import org.dom4j.*;
-
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.Utils;
-import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.test.FrameworkTester;
 import org.dlese.dpc.schemedit.test.TesterUtils;
-import org.dlese.dpc.serviceclients.webclient.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-
-import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
-
-import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SchemaNodeMap;
+import org.dlese.dpc.xml.schema.SchemaReader;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Class to generate fields files for given framework. <p>

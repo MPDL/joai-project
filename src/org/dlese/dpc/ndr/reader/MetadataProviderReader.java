@@ -17,16 +17,13 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import java.net.URL;
+import java.util.List;
+
 import org.dlese.dpc.ndr.apiproxy.NDRConstants.NDRObjectType;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import java.net.URL;
-import java.util.*;
+import org.dom4j.Element;
 
 /**
 /**

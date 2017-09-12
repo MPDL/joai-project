@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.oai;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *  This class contains OAI argument constants that are used throughout the OAI application.

@@ -17,51 +17,32 @@
 */
 package org.dlese.dpc.services.dcs.action;
 
-import org.dlese.dpc.services.dcs.PutRecordData;
-import org.dlese.dpc.services.dcs.action.form.RecommenderForm;
-import org.dlese.dpc.dds.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.webapps.servlets.filters.GzipFilter;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.apache.lucene.search.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.config.IDGenerator;
-import org.dlese.dpc.schemedit.threadedservices.ExportingService;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.net.URL;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
-import org.apache.struts.action.Action;
+
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import org.dom4j.*;
+import org.dlese.dpc.repository.RecordUpdateException;
+import org.dlese.dpc.schemedit.Constants;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.action.DCSAction;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.services.dcs.action.form.RecommenderForm;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
 
 /**
  *  An <strong>Action</strong> that handles DCS related web service requests.

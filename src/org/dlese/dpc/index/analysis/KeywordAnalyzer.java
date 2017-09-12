@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.index.analysis;
 
-import org.apache.lucene.analysis.*;
-import java.io.*;
+import java.io.Reader;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.TokenStream;
 
 /**
  *  An Analyzer that includes all characters in its tokens. Used for searching fields that are indexed using

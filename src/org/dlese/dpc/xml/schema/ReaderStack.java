@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import java.util.*;
-import org.dom4j.Element;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dom4j.Namespace;
 
 /**

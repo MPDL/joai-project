@@ -17,40 +17,42 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
+import java.io.File;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Timer;
+
+import javax.servlet.ServletContext;
+
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RecordUpdateException;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.schemedit.FrameworkRegistry;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.RecordList;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.url.DupSimUrlChecker;
-import org.dlese.dpc.schemedit.repository.CollectionReaper;
-import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.dcs.StatusEntry;
 import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.repository.RepositoryWriter;
+import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.threadedservices.AutoExportTask;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.repository.*;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.net.*;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-
+import org.dlese.dpc.schemedit.url.DupSimUrlChecker;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.xml.schema.DocMap;
 import org.dom4j.Document;
 
 /**

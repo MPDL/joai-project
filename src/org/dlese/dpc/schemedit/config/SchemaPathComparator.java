@@ -19,6 +19,8 @@ package org.dlese.dpc.schemedit.config;
 
 import java.util.Comparator;
 
+import net.sf.saxon.expr.parser.PathMap;
+
 /**
 *  Class to sort lists of {@link PathMap} instances by their xpath property. 
  *

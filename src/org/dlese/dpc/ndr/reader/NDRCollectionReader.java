@@ -17,16 +17,7 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.ndr.apiproxy.*;
 import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
 
 /**
  *  A Wrapper object for a NdrCollection as stored in the NDR independent of the NCS (no readers for

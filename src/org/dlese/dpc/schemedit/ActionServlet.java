@@ -17,27 +17,26 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 
-import org.apache.struts.config.ModuleConfig;
-import org.apache.struts.config.ActionConfig;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.Globals;
-
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.config.ActionConfig;
+import org.apache.struts.config.ModuleConfig;
 import org.dlese.dpc.schemedit.security.access.AccessManager;
-import org.dlese.dpc.schemedit.security.user.UserManager;
 import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.user.UserManager;
 import org.dlese.dpc.schemedit.security.user.UserdataConverter;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
 

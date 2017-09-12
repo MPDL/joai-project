@@ -17,17 +17,16 @@
 */
 package org.dlese.dpc.schemedit.url;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.serviceclients.remotesearch.*;
-
-import java.util.*;
-import java.util.regex.*;
-import java.net.URI;
-import java.net.URL;
-import java.net.URISyntaxException;
 import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.xml.XPathUtils;
 
 /**
  *  Utilities for manipulating and comparing URLs

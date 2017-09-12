@@ -17,17 +17,15 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.autoform.*;
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
+import java.io.File;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.autoform.AutoForm;
+import org.dlese.dpc.schemedit.autoform.DcsViewRecord;
 import org.dlese.dpc.util.Files;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 
 /**

@@ -17,16 +17,20 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
 import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dom4j.*;
-import org.dom4j.util.NodeComparator;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.SchemaNodeMap;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Utilities for comparing metadata records for content-based equality (rather

@@ -18,40 +18,29 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Enumeration;
 import java.util.Locale;
 
-import org.dom4j.Document;
-import org.json.XML;
-import org.json.JSONObject;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.xml.Dom4jUtils;
-
-import org.dlese.dpc.schemedit.security.action.form.UserInfoForm;
-import org.dlese.dpc.schemedit.security.access.AccessManager;
 import org.dlese.dpc.schemedit.security.access.Roles;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.user.UserManager;
-import org.dlese.dpc.schemedit.security.login.PasswordHelper;
+import org.dlese.dpc.schemedit.security.action.form.UserInfoForm;
 import org.dlese.dpc.schemedit.security.auth.AuthUtils;
+import org.dlese.dpc.schemedit.security.login.PasswordHelper;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dom4j.Document;
+import org.json.JSONObject;
+import org.json.XML;
 
 /**
  *  Controller for creating and editing user information.

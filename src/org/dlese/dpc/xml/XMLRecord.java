@@ -17,12 +17,15 @@
 */
 package org.dlese.dpc.xml;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.List;
 
-import org.jdom.*;
-import org.jdom.input.*;
-import org.jdom.output.*;
+import org.jdom.Comment;
+import org.jdom.Document;
+import org.jdom.Element;
+import org.jdom.input.SAXBuilder;
 
 /**
  * Creates a wrapper implementation for accessing a JDOM XML document

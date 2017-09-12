@@ -17,16 +17,6 @@
 */
 package org.dlese.dpc.index.writer;
 
-
-
-import java.io.*;
-
-import org.dlese.dpc.xml.*;
-
-import org.apache.lucene.document.*;
-
-
-
 /**
 
  *  Abstract class for creating a typed Lucene {@link org.apache.lucene.document.Document}. A {@link

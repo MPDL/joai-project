@@ -16,21 +16,36 @@
 	limitations under the License.
 */
 package org.dlese.dpc.index;
-import java.io.*;
-import java.util.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.datamgr.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import java.text.*;
-import javax.servlet.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.services.mmd.*;
+import java.io.File;
+import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.datamgr.SimpleDataStore;
 import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.index.reader.SimpleFileIndexingServiceDocReader;
+import org.dlese.dpc.index.writer.ADNFileIndexingWriter;
+import org.dlese.dpc.index.writer.DleseAnnoFileIndexingServiceWriter;
+import org.dlese.dpc.index.writer.DleseCollectionFileIndexingWriter;
+import org.dlese.dpc.index.writer.ErrorFileIndexingWriter;
+import org.dlese.dpc.index.writer.FileIndexingPlugin;
+import org.dlese.dpc.index.writer.FileIndexingServiceWriter;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.services.mmd.MmdException;
+import org.dlese.dpc.services.mmd.Query;
+import org.dlese.dpc.util.MemoryCheck;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XMLFileFilter;
 /*
  *  To Do: Add functionality to update disable the discovery of a collection in the
  *  query parser. Create a class that returns the discoverable (or NOT discoverable) collections

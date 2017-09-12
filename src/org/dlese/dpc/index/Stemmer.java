@@ -37,9 +37,11 @@ package org.dlese.dpc.index;
    from Brian Goetz of Quiotix Corporation (brian@quiotix.com).
    Release 4
 */
-import java.io.*;
-import java.util.regex.Pattern;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *  Stemmer implements the Porter stemming algorithm. The Stemmer class transforms a word

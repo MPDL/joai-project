@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import java.util.*;
+import java.util.EventListener;
 
 /**
  *  Provides an interface for Objects listening to a Repository events source.

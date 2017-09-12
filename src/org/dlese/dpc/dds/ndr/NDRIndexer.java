@@ -17,29 +17,29 @@
 */
 package org.dlese.dpc.dds.ndr;
 
-import org.dlese.dpc.repository.indexing.*;
-
-import java.io.*;
-import java.util.*;
-import java.net.URL;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
-
-import org.dlese.dpc.ndr.*;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.apiproxy.*;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.propertiesmgr.PropertiesManager;
-import org.dlese.dpc.util.TimedURLConnection;
-import org.dlese.dpc.repository.PutCollectionException;
-
-import org.dom4j.*;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.apache.lucene.document.Field;
+import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.propertiesmgr.PropertiesManager;
+import org.dlese.dpc.repository.PutCollectionException;
+import org.dlese.dpc.repository.indexing.CollectionIndexer;
+import org.dlese.dpc.repository.indexing.CollectionIndexingSession;
+import org.dlese.dpc.repository.indexing.IndexingEvent;
+import org.dlese.dpc.repository.indexing.ItemIndexer;
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Node;
 
 /**
  *  Indexes and configures collections from the NSDL Data Repository (NDR).

@@ -17,30 +17,36 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.util.strings.*;
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.util.regex.*;
-
-import java.net.*;
-import org.dom4j.Node;
-import org.dom4j.Element;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.DefinitionMiner;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.GenericType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalDefMap;
+import org.dlese.dpc.xml.schema.GlobalElement;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SchemaNodeMap;
+import org.dlese.dpc.xml.schema.SchemaUtils;
+import org.dlese.dpc.xml.schema.SimpleType;
+import org.dlese.dpc.xml.schema.XSDatatypeManager;
+import org.dlese.dpc.xml.schema.compositor.Choice;
+import org.dlese.dpc.xml.schema.compositor.Compositor;
+import org.dlese.dpc.xml.schema.compositor.CompositorMember;
 import org.dom4j.Document;
-import org.dom4j.Namespace;
 import org.dom4j.DocumentFactory;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
 import org.dom4j.io.XMLWriter;
-
-import com.sun.msv.datatype.xsd.*;
-import org.relaxng.datatype.*;
 
 /**
  *  Description of the Class

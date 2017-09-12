@@ -17,17 +17,14 @@
 */
 package org.dlese.dpc.suggest.comment;
 
+import java.io.File;
+
 import org.dlese.dpc.suggest.SuggestionRecord;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.*;
-
-import java.io.*;
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  SuggestionRecord for Suggestors using the "dlese_anno" metadata framework.

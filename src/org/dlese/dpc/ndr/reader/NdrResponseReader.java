@@ -17,15 +17,17 @@
 */
 package org.dlese.dpc.ndr.reader;
 
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
-import java.util.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Base Class for reading NDR responses to requests that return handle lists,

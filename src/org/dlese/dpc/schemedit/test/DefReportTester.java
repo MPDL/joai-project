@@ -17,26 +17,16 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.URI;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.repository.*;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalDefMap;
 import org.dom4j.Node;
-import org.dom4j.QName;
 
 /**
  *  Tester for {@link org.dlese.dpc.schemedit.config.FrameworkConfigReader} and

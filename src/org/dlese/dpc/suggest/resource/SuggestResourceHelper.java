@@ -17,25 +17,17 @@
 */
 package org.dlese.dpc.suggest.resource;
 
-import org.dlese.dpc.suggest.SuggestUtils;
-import org.dlese.dpc.suggest.SuggestHelper;
-import org.dlese.dpc.suggest.SuggestionRecord;
+import java.io.File;
 
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.suggest.SuggestHelper;
+import org.dlese.dpc.suggest.SuggestUtils;
+import org.dlese.dpc.suggest.SuggestionRecord;
 import org.dlese.dpc.suggest.resource.urlcheck.UrlValidator;
 import org.dlese.dpc.suggest.resource.urlcheck.ValidatorResults;
-
-import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
-
-import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import java.io.File;
-import java.util.*;
-
-import org.dom4j.Element;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 
 /**
  *  SuggestUrlManger - provides services for suggestor Client.

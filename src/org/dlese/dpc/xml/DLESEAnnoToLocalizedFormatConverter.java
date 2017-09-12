@@ -17,7 +17,6 @@
 */
 package org.dlese.dpc.xml;
 
-import org.dlese.dpc.util.*;
 import javax.servlet.ServletContext;
 
 /**

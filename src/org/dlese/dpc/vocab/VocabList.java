@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *  List/map combination for accessing VocabNodes

@@ -17,17 +17,11 @@
 */
 package org.dlese.dpc.schemedit.security.access;
 
-import java.io.File;
-import java.util.*;
-
-import org.dom4j.Element;
-import org.dom4j.DocumentFactory;
-
 import org.apache.struts.action.ActionMapping;
-import org.dlese.dpc.schemedit.struts.HotActionMapping;
-
-import org.dlese.dpc.schemedit.security.access.Roles;
 import org.dlese.dpc.schemedit.security.access.Roles.Role;
+import org.dlese.dpc.schemedit.struts.HotActionMapping;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 
 /**
  *  Wrapper for HotActionMapping

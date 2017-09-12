@@ -17,14 +17,20 @@
 */
 package org.dlese.dpc.schemedit.security.access;
 
-import java.util.*;
 import java.io.IOException;
-import java.net.URLEncoder;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.apache.struts.Globals;
-import org.apache.struts.action.*;
-import org.apache.struts.util.RequestUtils;
+import java.util.Enumeration;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts.action.ActionErrors;
 
 
 /**

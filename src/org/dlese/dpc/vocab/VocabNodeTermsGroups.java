@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import javax.servlet.http.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.PageContext;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+
 import org.dlese.dpc.util.GetURL;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 /**
  *  VocabNode is a node within the vocab hierarchy of a MetadataVocab instance

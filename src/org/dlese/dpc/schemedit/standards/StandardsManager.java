@@ -17,14 +17,6 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
-
 /**
  *  Manages information about a standards document in the context of a {@link
  *  SuggestionServiceHelper}. The standards within a document are represented as

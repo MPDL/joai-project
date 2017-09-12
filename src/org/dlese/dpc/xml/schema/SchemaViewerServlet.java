@@ -17,27 +17,17 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.suggest.*;
-import org.dlese.dpc.serviceclients.remotesearch.RemoteSearcher;
-
-import org.dom4j.Document;
-
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.vocab.*;
-
-import java.io.*;
-import java.util.*;
 import java.text.SimpleDateFormat;
-import java.net.URL;
+import java.util.Date;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 /**
  * Servlet to visualize XML Schemas

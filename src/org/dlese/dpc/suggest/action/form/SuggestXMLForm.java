@@ -17,20 +17,11 @@
 */
 package org.dlese.dpc.suggest.action.form;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
 
 /**
  *  A Struts Form bean for handling submission of XML records based on

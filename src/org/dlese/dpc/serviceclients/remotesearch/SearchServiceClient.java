@@ -17,15 +17,18 @@
 */
 package org.dlese.dpc.serviceclients.remotesearch;
 
-import org.dlese.dpc.serviceclients.webclient.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
-
-import java.util.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import java.net.*;
-
-import org.dom4j.*;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 
 /**
  *  SearchServiceClient performs searches for records using a DDS Web Service

@@ -18,7 +18,6 @@
 package org.dlese.dpc.schemedit.display;
 
 import org.dlese.dpc.schemedit.Constants;
-import java.util.*;
 
 /**
  *  SortWidgets are used to display lists of search results, and to render the

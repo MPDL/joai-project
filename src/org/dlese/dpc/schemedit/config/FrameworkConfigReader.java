@@ -17,20 +17,16 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.vocab.*;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
+import org.dlese.dpc.schemedit.PageList;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.NewFieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.OldFieldInfoMap;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 
 /**

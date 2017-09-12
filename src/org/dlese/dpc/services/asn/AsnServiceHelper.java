@@ -17,14 +17,19 @@
 */
 package org.dlese.dpc.services.asn;
 
-import org.dlese.dpc.standards.asn.*;
-import org.dlese.dpc.xml.XMLFileFilter;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
-import java.io.File;
+import org.dlese.dpc.standards.asn.AsnDocument;
+import org.dlese.dpc.standards.asn.AsnHelper;
+import org.dlese.dpc.standards.asn.AsnStandard;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Class to read all ASN standards documents in specified directory, and provide access to 

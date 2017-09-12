@@ -17,9 +17,10 @@
 */
 package org.dlese.dpc.util;
 
-import java.util.*;
-import java.io.*;
-import java.net.*;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 
 /**
  *  URL is a utility class for retreiving the contents of a given URL as a

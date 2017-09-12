@@ -17,16 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
 import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.schema.SchemaNodeMap;
-import org.dlese.dpc.xml.schema.SchemaNode;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.autoform.RendererHelper;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-import java.util.*;
-import java.util.regex.*;
-import java.io.File;
 
 /**
  *  Utilities for manipulating XPaths, represented as String

@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.util.*;
-import java.io.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  A Hashtable-like interface for reading and writing persistent Java objects from and to

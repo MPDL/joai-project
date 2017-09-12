@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.index;
 
-import java.lang.*;
-
 /**
  * Indicates that a DataManager was asked to handle an object of data 
  * that it does not understand. 

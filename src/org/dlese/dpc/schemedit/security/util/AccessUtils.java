@@ -17,15 +17,17 @@
 */
 package org.dlese.dpc.schemedit.security.util;
 
-import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.repository.SetInfo;
-
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.security.user.*;
 import org.dlese.dpc.schemedit.security.access.Roles;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.user.UserManager;
 
 
 /**

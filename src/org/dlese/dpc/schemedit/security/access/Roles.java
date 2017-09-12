@@ -17,9 +17,8 @@
 */
 package org.dlese.dpc.schemedit.security.access;
 
-import java.security.*;
-import javax.security.auth.*;
-import java.util.*;
+import java.util.EnumSet;
+import java.util.Iterator;
 
 /** 
  * Assigns an integer "value" to a role to support "inheritance" of role-based permissions

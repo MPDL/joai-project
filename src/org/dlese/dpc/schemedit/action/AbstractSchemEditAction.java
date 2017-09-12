@@ -17,48 +17,48 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-
-import org.dlese.dpc.schemedit.url.UrlHelper;
-import org.dlese.dpc.schemedit.url.DupSim;
-import org.dlese.dpc.schemedit.input.SchemEditValidator;
-import org.dlese.dpc.schemedit.input.Msp2EditValidator;
-import org.dlese.dpc.schemedit.input.SmileEditValidator;
-import org.dlese.dpc.schemedit.input.OsmEditValidator;
-import org.dlese.dpc.schemedit.input.NsdlAnnoValidator;
-import org.dlese.dpc.schemedit.input.SchemEditErrors;
-import org.dlese.dpc.schemedit.input.SchemEditActionErrors;
-import org.dlese.dpc.schemedit.input.UniqueValueChecker;
-import org.dlese.dpc.schemedit.input.InputField;
-import org.dlese.dpc.schemedit.config.SchemaPath;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.index.reader.XMLDocReader;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Node;
-
-import java.util.*;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.schemedit.DocContentMap;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.MissingLockException;
+import org.dlese.dpc.schemedit.PageList;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.config.SchemaPath;
+import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.schemedit.input.InputField;
+import org.dlese.dpc.schemedit.input.Msp2EditValidator;
+import org.dlese.dpc.schemedit.input.NsdlAnnoValidator;
+import org.dlese.dpc.schemedit.input.OsmEditValidator;
+import org.dlese.dpc.schemedit.input.SchemEditActionErrors;
+import org.dlese.dpc.schemedit.input.SchemEditErrors;
+import org.dlese.dpc.schemedit.input.SchemEditValidator;
+import org.dlese.dpc.schemedit.input.SmileEditValidator;
+import org.dlese.dpc.schemedit.input.UniqueValueChecker;
+import org.dlese.dpc.schemedit.url.DupSim;
+import org.dlese.dpc.schemedit.url.UrlHelper;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Abstract controller for Metadata Editors.

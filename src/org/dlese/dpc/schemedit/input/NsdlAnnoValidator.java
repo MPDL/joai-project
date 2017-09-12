@@ -17,20 +17,22 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMapping;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import java.util.*;
-
-import org.dom4j.Node;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dom4j.Element;
-
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionMapping;
-import javax.servlet.http.HttpServletRequest;
+import org.dom4j.Node;
 
 
 /**

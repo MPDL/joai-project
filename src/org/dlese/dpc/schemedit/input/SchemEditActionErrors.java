@@ -17,21 +17,19 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import java.util.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMessage;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.autoform.RendererHelper;
 import org.dlese.dpc.schemedit.display.CollapseUtils;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.schema.SchemaNodeMap;
-import org.dlese.dpc.xml.XPathUtils;
-
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionMessage;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  *  Subclasses ActionErrors to maintain certain error-types in document order to

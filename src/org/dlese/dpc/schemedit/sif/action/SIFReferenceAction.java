@@ -17,36 +17,37 @@
 */
 package org.dlese.dpc.schemedit.sif.action;
 
-import org.dlese.dpc.repository.SetInfo;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dlese.dpc.index.ResultDoc;
-import org.dlese.dpc.index.ResultDocList;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.action.DCSAction;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import org.dlese.dpc.schemedit.sif.SIFDocReader;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.sif.action.form.SIFReferenceForm;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dom4j.Document;
-
-import java.util.*;
-import java.io.*;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.apache.struts.util.LabelValueBean;
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.DCSAction;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.sif.SIFDocReader;
+import org.dlese.dpc.schemedit.sif.action.form.SIFReferenceForm;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dom4j.Document;
 
 /**
  *  A Struts Action controlling interaction between MetadataEditor and SIF

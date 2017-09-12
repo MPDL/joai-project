@@ -17,14 +17,17 @@
 */
 package org.dlese.dpc.webapps.servlets.filters;
 
-import org.dlese.dpc.util.*;
+import java.io.IOException;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
-import java.nio.CharBuffer;
-import java.text.SimpleDateFormat;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.dlese.dpc.util.HTMLTools;
 
 /**
  *  Converts JSP, servlet, HTML or other output into a JavaScript writeln statement or places it into a

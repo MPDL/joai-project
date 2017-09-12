@@ -17,39 +17,39 @@
 */
 package org.dlese.dpc.xml.schema.action.form;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.action.GlobalDefReporter;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.serviceclients.remotesearch.RemoteResultDoc;
+import java.io.ByteArrayOutputStream;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.vocab.MetadataVocab;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.LabelValueBean;
 import org.dlese.dpc.schemedit.MetaDataFramework;
-
-import org.dom4j.Document;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.BreadCrumbs;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalElement;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SchemaReader;
+import org.dlese.dpc.xml.schema.SimpleType;
+import org.dlese.dpc.xml.schema.action.GlobalDefReporter;
 import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Namespace;
-import org.dom4j.io.XMLWriter;
+import org.dom4j.Node;
 import org.dom4j.io.HTMLWriter;
 import org.dom4j.io.OutputFormat;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import org.apache.struts.util.LabelValueBean;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
-import java.util.regex.*;
+import org.dom4j.io.XMLWriter;
 
 /**
  *  Controller for the SchemaViewer app.

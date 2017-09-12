@@ -18,15 +18,14 @@
 package org.dlese.dpc.logging;
 
 import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.logging.Level;
+
 import javax.servlet.http.HttpServletRequest;
 
 

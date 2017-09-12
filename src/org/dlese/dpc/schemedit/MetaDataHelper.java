@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dom4j.*;
-import java.util.*;
-import org.dlese.dpc.xml.schema.SchemaHelper;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dom4j.Document;
 
 
 /**

@@ -17,17 +17,6 @@
 */
 package org.dlese.dpc.repository.indexing;
 
-import org.dlese.dpc.repository.*;
-
-import java.io.*;
-import java.util.*;
-
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.writer.*;
-import java.text.*;
-
-
-	
 public class CollectionIndexingSession {
 	private String sessionId = null;
 	protected CollectionIndexingSession(String collectionKey){

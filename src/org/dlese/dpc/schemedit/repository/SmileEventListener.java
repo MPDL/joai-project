@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.Map;
+
 import javax.servlet.ServletContext;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.util.TimedURLConnection;
-
-import java.util.*;
-import java.net.URL;
 
 /**
  *  RepositoryEventListener that provides Smile specific handlers for some

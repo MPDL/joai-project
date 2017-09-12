@@ -17,9 +17,7 @@
 */
 package org.dlese.dpc.ndr.request;
 
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-
-import java.util.*; 
+import org.dlese.dpc.ndr.apiproxy.InfoXML; 
 
 /**
  *  NOT YET DOCUMENTED

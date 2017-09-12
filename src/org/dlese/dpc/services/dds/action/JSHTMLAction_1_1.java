@@ -17,45 +17,36 @@
 */
 package org.dlese.dpc.services.dds.action;
 
-import org.dlese.dpc.services.dds.action.form.*;
-import org.dlese.dpc.dds.*;
-import org.dlese.dpc.dds.action.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.analysis.*;
-import org.apache.lucene.queryParser.QueryParser;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.webapps.servlets.filters.GzipFilter;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.schemedit.SchemEditServlet;
-import org.dlese.dpc.index.search.DateRangeFilter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.ServletContext;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.dds.DDSStandardSearchResult;
+import org.dlese.dpc.dds.action.DDSQueryAction;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.search.DateRangeFilter;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SchemEditServlet;
+import org.dlese.dpc.services.dds.action.form.JSHTMLForm_1_1;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  An <strong>Action</strong> controller that handles requests for the JavaScript HTML search service. This

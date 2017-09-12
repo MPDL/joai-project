@@ -18,19 +18,16 @@
 package org.dlese.dpc.schemedit.security.user;
 
 import java.io.File;
-import java.util.*;
-
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.schema.DocMap;
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.schemedit.config.AbstractConfigReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.security.access.Roles;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Manages {@link User} instances and provides information about users

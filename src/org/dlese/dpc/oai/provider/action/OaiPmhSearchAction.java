@@ -17,29 +17,20 @@
 */
 package org.dlese.dpc.oai.provider.action;
 
-import org.dlese.dpc.oai.provider.action.form.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.xml.XMLValidator;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.util.Hashtable;
+import java.util.List;
 import java.util.Locale;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
 import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.oai.provider.action.form.OaiPmhSearchForm;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 /**
  *  Implementation of <strong>Action</strong> that handles the OAI-PMH search page.

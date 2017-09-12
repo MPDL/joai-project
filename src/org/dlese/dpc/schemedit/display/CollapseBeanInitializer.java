@@ -17,19 +17,19 @@
 */
 package org.dlese.dpc.schemedit.display;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.GlobalDef;
 import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dlese.dpc.xml.schema.SchemaNode;
 import org.dlese.dpc.xml.schema.compositor.Compositor;
-import org.dlese.dpc.xml.schema.GlobalDef;
-import org.dlese.dpc.xml.XPathUtils;
-
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.dom4j.Node;
-import java.util.*;
 
 /**
  *  Class to initialize a {@link CollapseBean} which controls the visibility of

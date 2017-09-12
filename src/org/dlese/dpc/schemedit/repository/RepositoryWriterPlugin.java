@@ -17,10 +17,8 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
-
-import javax.servlet.ServletContext;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
 
 
 /**

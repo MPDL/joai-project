@@ -17,20 +17,20 @@
 */
 package org.dlese.dpc.serviceclients.webclient;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.dlese.dpc.util.TimedURLConnection;
+import org.dlese.dpc.util.URLConnectionTimedOutException;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.schema.DocMap;
-
-import java.lang.*;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import org.dom4j.Node;
-import org.dom4j.Element;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  WebServiceClient provides helpers to communicate with webservices via timed connections (time out is adjustable).<p>

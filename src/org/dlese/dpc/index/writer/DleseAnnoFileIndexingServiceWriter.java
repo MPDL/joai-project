@@ -17,17 +17,17 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.text.ParseException;
+import java.util.Date;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.reader.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.xml.XMLConversionService;
+import org.dlese.dpc.xml.XMLDoc;
 
 /**
  *  Creates a Lucene {@link org.apache.lucene.document.Document}s for a DLESE annotation record. <p>

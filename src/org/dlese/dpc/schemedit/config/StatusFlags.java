@@ -17,10 +17,12 @@
 */
 package org.dlese.dpc.schemedit.config;
 
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import java.util.*;
 import java.io.Serializable;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.dlese.dpc.util.strings.FindAndReplace;
 
 /**

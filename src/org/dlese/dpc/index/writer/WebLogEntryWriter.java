@@ -17,21 +17,19 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import javax.servlet.http.*;
-import java.util.regex.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.document.DateFieldTools;
-
-import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
+import org.dlese.dpc.util.Utils;
+import org.dlese.dpc.xml.Dom4jUtils;
 
 /**
  *  Writes a Lucene {@link org.apache.lucene.document.Document} for data in a single web

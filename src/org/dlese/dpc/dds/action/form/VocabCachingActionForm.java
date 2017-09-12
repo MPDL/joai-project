@@ -17,27 +17,13 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.dlese.dpc.dds.action.form.DDSViewResourceForm;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
-import org.dlese.dpc.dds.action.DDSQueryAction;
+import org.apache.struts.action.ActionForm;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  A Struts Form bean for handling DDS requests that use controlled vocab

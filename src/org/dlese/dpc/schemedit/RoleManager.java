@@ -17,14 +17,15 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.schemedit.security.user.User;
 import org.dlese.dpc.schemedit.security.access.Roles;
+import org.dlese.dpc.schemedit.security.user.User;
 
 /**
 

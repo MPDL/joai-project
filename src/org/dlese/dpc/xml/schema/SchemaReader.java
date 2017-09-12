@@ -17,15 +17,15 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.Dom4jUtils;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import org.dom4j.Node;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Attribute;
-import org.dom4j.Element;
 import org.dom4j.Document;
+import org.dom4j.Element;
 import org.dom4j.Namespace;
 
 /**

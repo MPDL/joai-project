@@ -17,16 +17,14 @@
 */
 package org.dlese.dpc.ndr.reader;
 
+import java.util.List;
+
 import org.dlese.dpc.ndr.NdrUtils;
 import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.Files;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import java.util.*;
+import org.dom4j.Node;
 
 /**
  *  Extension of NdrObjectReader for accessing properties, dataStreams, and

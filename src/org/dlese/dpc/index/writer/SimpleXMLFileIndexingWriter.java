@@ -17,18 +17,10 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import org.dom4j.*;
+import java.io.File;
+import java.util.Date;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.index.writer.xml.XMLIndexer;
+import org.dlese.dpc.xml.XMLValidator;
 
 /**
  *  This is the default writer for generic XML formats. Creates a Lucene {@link

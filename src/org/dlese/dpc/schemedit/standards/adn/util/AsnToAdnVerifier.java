@@ -17,16 +17,14 @@
 */
 package org.dlese.dpc.schemedit.standards.adn.util;
 
-import org.dom4j.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
+import org.dlese.dpc.schemedit.standards.adn.AdnStandard;
 import org.dlese.dpc.schemedit.standards.adn.DleseStandardsDocument;
 import org.dlese.dpc.schemedit.standards.adn.DleseStandardsNode;
-import org.dlese.dpc.schemedit.standards.adn.AdnStandard;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import java.io.File;
 
 /**
  *  verifies that the asn and adn standards represented in the mappings file correspond to the asn and adn

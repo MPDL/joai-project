@@ -17,29 +17,29 @@
 */
 package org.dlese.dpc.repository.action.form;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.dds.action.form.VocabForm;
-import org.dlese.dpc.util.HTMLTools;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import java.io.IOException;
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+
+import org.dlese.dpc.dds.action.form.VocabForm;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.oai.OAIArgs;
+import org.dlese.dpc.oai.OAICodes;
+import org.dlese.dpc.oai.OAIError;
+import org.dlese.dpc.propertiesmgr.PropertiesManager;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.util.HTMLTools;
+import org.dlese.dpc.webapps.tools.OutputTools;
 
 /**
  *  A base class bean for creating output used in OAI requests. This class extends ActionFrom, however for

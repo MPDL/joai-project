@@ -17,19 +17,16 @@
 */
 package org.dlese.dpc.schemedit.standards.util;
 
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
-import org.dlese.dpc.schemedit.standards.asn.*;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.standards.asn.*;
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.util.Files;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import java.util.*;
 import java.io.File;
-import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.standards.StandardsRegistry;
+import org.dlese.dpc.schemedit.standards.asn.AsnDocInfo;
+import org.dlese.dpc.util.Files;
 
 /**
  *  Dumps the contents of a {@link StandardsRegistry} contents to file in

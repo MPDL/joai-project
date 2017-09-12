@@ -17,27 +17,23 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.test.TesterUtils;
 import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import java.net.URL;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-import org.dom4j.Element;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaHelperException;
 import org.dom4j.Document;
 import org.dom4j.DocumentFactory;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
+import org.dom4j.Element;
 import org.dom4j.io.XMLWriter;
 
 /**

@@ -17,19 +17,23 @@
 */
 package org.dlese.dpc.schemedit.ndr.util;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.ndr.reader.NSDLCollectionReader;
 import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
-import java.net.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Class to extract information from the NCS via webServices.

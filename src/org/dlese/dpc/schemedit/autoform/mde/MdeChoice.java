@@ -17,17 +17,14 @@
 */
 package org.dlese.dpc.schemedit.autoform.mde;
 
-import org.dlese.dpc.schemedit.autoform.*;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
+import org.dlese.dpc.schemedit.autoform.RendererImpl;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
 import org.dlese.dpc.xml.schema.compositor.Choice;
-
-import java.util.*;
-
-import org.dom4j.Node;
-import org.dom4j.Attribute;
+import org.dlese.dpc.xml.schema.compositor.InlineCompositor;
 import org.dom4j.Element;
 
 /**

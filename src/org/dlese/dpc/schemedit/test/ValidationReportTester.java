@@ -17,24 +17,18 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.threadedservices.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.repository.*;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.Node;
+import org.dlese.dpc.schemedit.BadCharChecker;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.config.FrameworkConfigReader;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.threadedservices.ValidationReport;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.Dom4jUtils;
 
 /**
  *  Tester for {@link org.dlese.dpc.schemedit.dcs.DcsDataRecord} and related classes.

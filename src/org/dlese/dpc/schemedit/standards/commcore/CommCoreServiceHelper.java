@@ -17,35 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.commcore;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.form.SchemEditForm;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.display.CollapseBean;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
 import org.dlese.dpc.schemedit.standards.CATHelperPlugin;
-import org.dlese.dpc.schemedit.standards.StandardsDocument;
+import org.dlese.dpc.schemedit.standards.CATServiceHelper;
 import org.dlese.dpc.schemedit.standards.StandardsNode;
-import org.dlese.dpc.schemedit.standards.config.SuggestionServiceConfig;
-import org.dlese.dpc.schemedit.standards.config.SuggestionServiceManager;
-import org.dlese.dpc.schemedit.standards.adn.DleseSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.ResQualSuggestionServiceHelper;
-
 import org.dlese.dpc.serviceclients.cat.CATStandard;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.dom4j.*;
-
-import java.io.*;
-import java.util.*;
-import org.apache.struts.util.LabelValueBean;
-
-import java.net.*;
 
 /**
  *  Run-time support for CAT suggestion service, which acts as intermediary

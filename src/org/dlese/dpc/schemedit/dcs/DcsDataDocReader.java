@@ -17,14 +17,13 @@
 */
 package org.dlese.dpc.schemedit.dcs;
 
-import org.apache.lucene.document.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.document.DateFieldTools;
+import java.util.Date;
 
-import javax.servlet.*;
-import java.util.*;
+import org.apache.lucene.document.Document;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RecordDataService;
 
 /**
  *  Reader to extract DcsData (aka "workflow status") information from a LuceneDoc

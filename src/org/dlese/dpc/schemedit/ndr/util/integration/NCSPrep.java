@@ -17,24 +17,28 @@
 */
 package org.dlese.dpc.schemedit.ndr.util.integration;
 
-import org.dlese.dpc.schemedit.ndr.util.NCSCollectReader;
-import org.dlese.dpc.schemedit.ndr.util.NCSWebServiceClient;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.reader.NSDLCollectionReader;
+import org.dlese.dpc.ndr.reader.NdrObjectReader;
+import org.dlese.dpc.ndr.request.ModifyMetadataRequest;
+import org.dlese.dpc.ndr.request.NdrRequest;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.config.CollectionConfigReader;
-import org.dlese.dpc.ndr.apiproxy.*;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.ndr.util.NCSCollectReader;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dom4j.*;
-import java.util.*;
-import java.io.File;
-import java.net.*;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Utilities for working with NSDL Collection records housed in the NCS

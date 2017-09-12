@@ -17,13 +17,15 @@
 */
 package org.dlese.dpc.schemedit;
 
-import org.dlese.dpc.index.SimpleLuceneIndex;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.index.reader.XMLDocReader;
-import org.dlese.dpc.schemedit.display.SortWidget;
-
-import java.util.*;
 
 /**
  *  Class to manage a list of records (e.g. search results) as a list of RECORD

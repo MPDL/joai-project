@@ -17,11 +17,8 @@
 */
 package org.dlese.dpc.vocab.action.form;
 
-import org.apache.struts.action.*;
-import org.dlese.dpc.vocab.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.util.*;
+import org.apache.struts.action.ActionForm;
+import org.dlese.dpc.vocab.MetadataVocab;
 
 /**
  *  A Struts Form bean for presenting vocab configuration information

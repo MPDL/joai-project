@@ -17,24 +17,17 @@
 */
 package org.dlese.dpc.oai.provider.action.form;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.webapps.tools.*;
-
 import java.text.SimpleDateFormat;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.SimpleTimeZone;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
-import java.io.*;
+
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
 
 /**
  *  Form used to support OAI-PMH search page.

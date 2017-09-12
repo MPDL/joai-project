@@ -17,18 +17,15 @@
 */
 package org.dlese.dpc.schemedit.standards.config;
 
-import org.dlese.dpc.schemedit.standards.StandardsRegistry;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.asn.AsnDocKey;
-import org.dlese.dpc.xml.schema.*;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.schemedit.*;
-
-import java.io.*;
-import java.util.*;
-
-import java.net.*;
-
-import org.dom4j.*;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Encapsulates configuration for a suggestion service, incuding the framework that the service operates for

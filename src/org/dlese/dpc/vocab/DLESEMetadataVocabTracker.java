@@ -17,10 +17,17 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.sql.*;
-import java.util.*;
+import java.io.FileWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeMap;
+
 import org.dlese.dpc.util.strings.StringUtil;
-import java.io.*;
 
 /**
  *  DLESE metadata vocabulary tracker (Id assignment, tracking of changes). This

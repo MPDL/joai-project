@@ -17,12 +17,16 @@
 */
 package org.dlese.dpc.schemedit.security.login;
 
-import java.io.*;
-import java.util.*;
-import java.security.Principal;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.schemedit.security.auth.TypedPrincipal;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.StringTokenizer;
+import java.util.Vector;
+
 import org.dlese.dpc.schemedit.security.auth.UserPrincipal;
+import org.dlese.dpc.util.Files;
 
 
 /**

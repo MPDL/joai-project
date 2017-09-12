@@ -17,28 +17,22 @@
 */
 package org.dlese.dpc.repository;
 
-import org.dlese.dpc.util.Files;
+import java.io.File;
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.dlese.dpc.repository.action.form.SetDefinitionsForm;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.Dom4jNodeListComparator;
-
-
 import org.dom4j.Document;
-import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
-import org.dom4j.io.SAXReader;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-
-import org.apache.lucene.queryParser.*;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
-import java.io.*;
-import java.text.*;
-import java.util.*;
 
 /**
  *  Reads and writes the XML configuration file used to define OAI sets in the {@link RepositoryManager}. See

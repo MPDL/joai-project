@@ -17,8 +17,11 @@
 */
 package org.dlese.dpc.schemedit.security.auth;
 
-import javax.security.auth.callback.*;
-import javax.servlet.http.*;
+import javax.security.auth.callback.Callback;
+import javax.security.auth.callback.CallbackHandler;
+import javax.security.auth.callback.NameCallback;
+import javax.security.auth.callback.PasswordCallback;
+import javax.servlet.http.HttpSession;
 
 /** 
 * Callback handler used by {@link org.dlese.dpc.schemedit.security.auth.SchemEditAuth}

@@ -17,19 +17,24 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.*;
-import java.util.regex.*;
-import java.net.*;
-import java.io.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.xml.XSLTransformer;
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.struts.util.LabelValueBean;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dom4j.*;
-import org.dom4j.io.*;
-import org.apache.struts.util.LabelValueBean;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.GlobalElement;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 
 /**
  *  Class for testing dom manipulation with help from {@link org.dlese.dpc.xml.schema.SchemaHelper}

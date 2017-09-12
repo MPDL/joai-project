@@ -17,39 +17,37 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.vocab.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dom4j.Document;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import java.util.*;
-import java.util.regex.*;
-import java.io.*;
-import java.text.*;
-import java.util.Hashtable;
-import java.util.Locale;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.schemedit.RecordList;
+import org.dlese.dpc.schemedit.RoleManager;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.BatchOperationsForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.StatusFlag;
+import org.dlese.dpc.schemedit.config.StatusFlags;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.dcs.StatusEntry;
+import org.dlese.dpc.schemedit.security.user.User;
 
 /**
  *  A Struts Action controlling batch record operations, such as batchDelete,

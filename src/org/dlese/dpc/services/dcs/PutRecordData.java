@@ -17,19 +17,10 @@
 */
 package org.dlese.dpc.services.dcs;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-
-
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-
-import java.util.*;
-import java.text.*;
-import java.io.*;
-
-import org.dom4j.*;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
 
 public class PutRecordData  {
 	Document doc = null;

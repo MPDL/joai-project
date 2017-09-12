@@ -17,20 +17,27 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.util.*;
-import org.apache.lucene.document.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.services.mmd.MmdException;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.dlese.dpc.index.FileIndexingService;
+import org.dlese.dpc.index.FileIndexingServiceData;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.writer.xml.BoundingBox;
+import org.dlese.dpc.repository.RecordDataService;
 import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.index.writer.xml.*;
-import edu.ucsb.adl.LuceneGeospatialQueryConverter;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.xml.XMLDoc;
+import org.dlese.dpc.xml.XMLException;
 
 /**
  *  Creates a Lucene {@link org.apache.lucene.document.Document} from an ADN-item metadata source file.<p>

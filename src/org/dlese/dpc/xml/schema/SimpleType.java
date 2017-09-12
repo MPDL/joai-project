@@ -17,12 +17,13 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.Namespace;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
-import java.util.*;
-import java.io.*;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
 
 /**
  *  Wrapper for SimpleType definitions in XML Schemas. Filters out annotation

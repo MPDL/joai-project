@@ -17,18 +17,20 @@
 */
 package org.dlese.dpc.repository;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.Serializable;
 import java.net.URLEncoder;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.xml.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 
+import org.apache.lucene.index.Term;
+import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.BooleanClause;
-import org.apache.lucene.index.Term;
-
+import org.dlese.dpc.util.Utils;
 import org.dlese.dpc.webapps.tools.OutputTools;
+import org.dlese.dpc.xml.XMLFileFilter;
 
 /**
  *  Data structure used in the {@link RepositoryManager} to hold information about a set of metadata files.

@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.xml.*;
-import org.dom4j.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 
 /**

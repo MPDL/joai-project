@@ -17,18 +17,8 @@
 */
 package org.dlese.dpc.schemedit.ndr;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.io.File;
-
-import org.dom4j.*;
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Class to capture the results of a NDRSync operation in which a metadata record is written to the NDR.

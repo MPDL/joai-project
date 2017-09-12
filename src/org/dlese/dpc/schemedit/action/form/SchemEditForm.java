@@ -17,58 +17,67 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.input.*;
-import org.dlese.dpc.schemedit.autoform.RendererHelper;
-import org.dlese.dpc.schemedit.display.CollapseBean;
-import org.dlese.dpc.schemedit.display.CollapseUtils;
-import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.schemedit.threadedservices.ExportingService;
-import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
-import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
-import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
-import org.dlese.dpc.schemedit.vocab.layout.VocabLayout;
-
-import org.dlese.dpc.schemedit.standards.StandardsNode;
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.ResQualSuggestionServiceHelper;
-
-import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.schemedit.standards.StandardsManager;
-
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.*;
-import org.dlese.dpc.xml.XPathUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLFileFilter;
-import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.vocab.VocabNode;
-import org.dlese.dpc.index.ResultDoc;
-import org.dlese.dpc.index.ResultDocList;
-import org.dlese.dpc.util.Files;
-
-import org.dom4j.DocumentHelper;
-import org.dom4j.DocumentException;
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-import org.dom4j.Namespace;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 
-import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionForm;
 import org.apache.struts.util.LabelValueBean;
-
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.*;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.PageList;
+import org.dlese.dpc.schemedit.Record;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SortRecsByLastMod;
+import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
+import org.dlese.dpc.schemedit.display.CollapseBean;
+import org.dlese.dpc.schemedit.input.AnyTypeInputField;
+import org.dlese.dpc.schemedit.input.InputField;
+import org.dlese.dpc.schemedit.input.InputManager;
+import org.dlese.dpc.schemedit.input.ReferenceException;
+import org.dlese.dpc.schemedit.input.SchemEditActionErrors;
+import org.dlese.dpc.schemedit.input.SchemEditErrors;
+import org.dlese.dpc.schemedit.input.SortInputFieldDescending;
+import org.dlese.dpc.schemedit.standards.CATServiceHelper;
+import org.dlese.dpc.schemedit.standards.asn.ResQualSuggestionServiceHelper;
+import org.dlese.dpc.schemedit.threadedservices.ExportingService;
+import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.schemedit.vocab.layout.VocabLayout;
+import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
+import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.vocab.VocabNode;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLFileFilter;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.ComplexType;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalElement;
+import org.dlese.dpc.xml.schema.NamespaceRegistry;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.SimpleType;
+import org.dlese.dpc.xml.schema.compositor.Choice;
+import org.dlese.dpc.xml.schema.compositor.Compositor;
+import org.dlese.dpc.xml.schema.compositor.CompositorMember;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Namespace;
+import org.dom4j.Node;
 
 /**
  *  ActionForm bean for handling requests to support MetaDataEditor. Most

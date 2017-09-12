@@ -17,8 +17,6 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.lang.*;
-
 /**
  * Indicates that a DataManager was asked to handle an object of data 
  * associated an OID that does not exist. 

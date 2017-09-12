@@ -17,28 +17,27 @@
 */
 package org.dlese.dpc.index.queryParser;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.index.*;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.search.*;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.Token;
-import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.queryParser.ParseException;
-import java.util.*;
-import java.text.SimpleDateFormat;
-import java.io.*;
+import java.io.File;
+import java.io.StringReader;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dom4j.Document;
-import org.dom4j.Node;
-import org.dom4j.Element;
-import org.dom4j.Attribute;
-import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
-
-import org.dlese.dpc.index.reader.*;
+import org.apache.lucene.analysis.Token;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.PhraseQuery;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.TermQuery;
 import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Creates a Lucene Query from an XML representation of a query. See <a

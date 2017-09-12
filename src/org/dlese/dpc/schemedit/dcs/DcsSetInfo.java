@@ -17,9 +17,11 @@
 */
 package org.dlese.dpc.schemedit.dcs;
 
+import java.util.Comparator;
+
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.config.StatusFlag;
-import org.dlese.dpc.repository.*;
-import java.util.*;
 
 /**
  *  Extends SetInfo to provide DCS-specific information about sets (aka collections), such as the number of valid records. 

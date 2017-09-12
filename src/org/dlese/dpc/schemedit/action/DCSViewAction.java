@@ -17,33 +17,32 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.schemedit.action.form.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.xml.*;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
-import java.util.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.apache.struts.action.Action;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-import java.net.URLEncoder;
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.reader.XMLDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.SearchHelper;
+import org.dlese.dpc.schemedit.SessionBean;
+import org.dlese.dpc.schemedit.action.form.DCSViewForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.FrameworkConfigReader;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 

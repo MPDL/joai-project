@@ -17,12 +17,9 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.*;
+import java.io.File;
 
-import java.io.*;
-import java.lang.*;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 public class XSDValidatorTester {
 

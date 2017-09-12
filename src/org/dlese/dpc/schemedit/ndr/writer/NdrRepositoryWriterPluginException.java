@@ -17,6 +17,7 @@
 */
 package org.dlese.dpc.schemedit.ndr.writer;
 
+import org.dlese.dpc.schemedit.repository.RepositoryWriter;
 import org.dlese.dpc.schemedit.repository.RepositoryWriterPluginException;
 
 

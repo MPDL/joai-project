@@ -17,25 +17,14 @@
 */
 package org.dlese.dpc.xml.schema.action;
 
-import org.dlese.dpc.schemedit.*;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.action.form.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.serviceclients.remotesearch.*;
-
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
-
-import java.util.*;
-import java.io.*;
-import java.util.Hashtable;
-import java.util.Locale;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
@@ -43,13 +32,16 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
-import org.apache.struts.util.MessageResources;
-
-import java.net.URLEncoder;
-import java.net.URLDecoder;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.GlobalDefMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dlese.dpc.xml.schema.action.form.SchemaViewerForm;
 
 /**
  *  Just a minimal action that will set up a form bean and then forward to a jsp

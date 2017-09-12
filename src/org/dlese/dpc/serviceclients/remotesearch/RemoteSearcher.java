@@ -17,14 +17,16 @@
 */
 package org.dlese.dpc.serviceclients.remotesearch;
 
-import org.dlese.dpc.serviceclients.webclient.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import java.util.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.xml.*;
-
-import org.dom4j.Element;
+import org.dlese.dpc.serviceclients.webclient.GetRecordResponse;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClientException;
+import org.dlese.dpc.vocab.MetadataVocab;
 import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  RemoteSearcher plays a role anaogous to {@link

@@ -17,53 +17,23 @@
 */
 package org.dlese.dpc.schemedit.ndr.action;
 
-import org.dlese.dpc.schemedit.ndr.util.integration.CIGlobals;
-import org.dlese.dpc.schemedit.ndr.util.integration.MappingsManager;
-import org.dlese.dpc.schemedit.ndr.util.integration.MappingInfo;
+import java.io.IOException;
 
-import org.dlese.dpc.schemedit.ndr.action.form.CollectionIntegrationForm;
-import org.dlese.dpc.schemedit.action.DCSAction;
-import org.dlese.dpc.repository.RepositoryManager;
-import org.dlese.dpc.index.reader.XMLDocReader;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import org.dlese.dpc.schemedit.repository.CollectionReaper;
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
-import org.dlese.dpc.ndr.NdrUtils;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.reader.AgentReader;
-import org.dlese.dpc.ndr.reader.MetadataProviderReader;
-
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLValidator;
-
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-import org.dlese.dpc.ndr.request.NdrRequest;
-
-import java.util.*;
-import java.io.*;
-import java.net.URL;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-
-import org.dom4j.Element;
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-
-import org.json.XML;
-import org.json.JSONObject;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.action.DCSAction;
+import org.dlese.dpc.schemedit.ndr.action.form.CollectionIntegrationForm;
+import org.dlese.dpc.schemedit.ndr.util.integration.MappingInfo;
+import org.dlese.dpc.schemedit.ndr.util.integration.MappingsManager;
 
 /**
  *  Action supporing integration of NCS Collect Records and NDR Collections in the NDR

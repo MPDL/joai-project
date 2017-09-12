@@ -16,9 +16,9 @@
 	limitations under the License.
 */
 package org.dlese.dpc.oai.harvester;
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *  Outputs harvest status messages to standard output.

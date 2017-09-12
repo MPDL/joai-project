@@ -17,23 +17,8 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.util.Files;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
-
-import java.net.URL;
-import org.dom4j.*;
-import org.dom4j.tree.DefaultElement;
-import org.dom4j.tree.AbstractElement;
-import org.dom4j.io.SAXReader;
-import org.dom4j.io.OutputFormat;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.tree.FlyweightText;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Element;
 
 /**
  *  Class to render an element label for metadata editors and viewers. Label

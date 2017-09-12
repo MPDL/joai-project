@@ -17,10 +17,13 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.util.strings.*;
-import java.util.*;
-import java.text.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.util.strings.FindAndReplace;
 
 /**
  *  Functions for validating date-related schema data types.

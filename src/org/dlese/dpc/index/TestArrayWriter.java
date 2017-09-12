@@ -17,15 +17,11 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.net.*;
-import java.lang.reflect.*;
-//import org.dlese.dpc.catalog.*;
-//import org.dlese.dpc.catalog.DleseBean;
-//import org.dlese.dpc.catalog.DleseCatalog;
-//import org.dlese.dpc.catalog.DleseCatalogRecord;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 //import com.lucene.index.*;
 //import com.lucene.document.*;

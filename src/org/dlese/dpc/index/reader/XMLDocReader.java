@@ -17,25 +17,39 @@
 */
 package org.dlese.dpc.index.reader;
 
-import org.apache.lucene.document.*;
-import org.apache.lucene.search.*;
-import org.apache.lucene.index.Term;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.vocab.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.document.DateFieldTools;
+import java.io.BufferedReader;
+import java.io.StringReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.AbstractCollection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.SimpleTimeZone;
+import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import javax.servlet.*;
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.TermQuery;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.document.DateFieldTools;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLConversionService;
 
 /**
  *  A bean meant for subclassing that contains methods to read search results from indexed XML records.

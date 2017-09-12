@@ -17,29 +17,30 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.config.*;
+import org.dlese.dpc.schemedit.FrameworkRegistry;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.FrameworkConfigReader;
+import org.dlese.dpc.schemedit.config.SchemaPathMap;
+import org.dlese.dpc.schemedit.config.UserInfo;
 import org.dlese.dpc.schemedit.input.EnsureMinimalDocument;
 import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.xml.schema.*;
-import org.dlese.dpc.xml.schema.compositor.Compositor;
-import org.dlese.dpc.util.*;
+import org.dlese.dpc.util.Files;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.repository.*;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
+import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
-import org.dom4j.Attribute;
 import org.dom4j.Node;
-import org.dom4j.QName;
 
 /**
  *  Tester for {@link org.dlese.dpc.schemedit.config.FrameworkConfigReader} and

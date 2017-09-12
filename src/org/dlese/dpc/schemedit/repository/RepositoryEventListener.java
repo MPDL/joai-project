@@ -17,9 +17,9 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
 import javax.servlet.ServletContext;
-import java.util.*;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  A Simple, servletContext-aware, listener for RepositoryEvents that prints event info to the log

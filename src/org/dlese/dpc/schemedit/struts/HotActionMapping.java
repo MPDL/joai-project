@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.schemedit.struts;
 
+import java.util.ArrayList;
+
 import org.apache.struts.action.ActionMapping;
-import java.util.*;
 
 
 /**

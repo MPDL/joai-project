@@ -17,12 +17,17 @@
 */
 package org.dlese.dpc.schemedit.sif;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import java.util.*;
-import java.io.File;
-import org.dom4j.*;
+import org.dom4j.Document;
+import org.dom4j.Element;
 
 /**
  *  Class holding information about the paths for a SIF framework that can

@@ -17,11 +17,6 @@
 */
 package org.dlese.dpc.services.idmapper;
 
-import java.io.FileReader;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.IOException;
 import java.util.Iterator;
 
 

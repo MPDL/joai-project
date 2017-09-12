@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.index;
 
-import java.util.*;
-import org.apache.lucene.document.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.BitSet;
+import java.util.List;
 
 public class ResultDocs {
 

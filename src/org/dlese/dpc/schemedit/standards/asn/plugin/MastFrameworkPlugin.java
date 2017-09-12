@@ -17,16 +17,14 @@
 */
 package org.dlese.dpc.schemedit.standards.asn.plugin;
 
-import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
-import org.dlese.dpc.schemedit.standards.asn.AsnCATPlugin;
-import org.dlese.dpc.schemedit.standards.asn.GradeRangeHelper;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import java.util.*;
 import org.apache.struts.util.LabelValueBean;
-
-import org.dom4j.Element;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.standards.asn.AsnCATPlugin;
+import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
+import org.dlese.dpc.schemedit.standards.asn.GradeRangeHelper;
 
 /**
  *  CATService FrameworkPlugin providing information specific to the mast

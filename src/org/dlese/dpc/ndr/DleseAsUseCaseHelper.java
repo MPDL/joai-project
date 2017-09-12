@@ -17,13 +17,14 @@
 */
 package org.dlese.dpc.ndr;
 
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.reader.*;
-import org.dlese.dpc.ndr.request.*;
-import org.dlese.dpc.ndr.apiproxy.InfoXML;
-
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.dlese.dpc.ndr.reader.MetadataProviderReader;
+import org.dlese.dpc.ndr.reader.MetadataReader;
+import org.dlese.dpc.ndr.request.NdrRequest;
 import org.dom4j.Document;
 
 /**

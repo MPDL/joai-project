@@ -17,11 +17,10 @@
 */
 package org.dlese.dpc.schemedit.threadedservices;
 
-import java.util.*;
-import org.dlese.dpc.schemedit.*;
-import org.dlese.dpc.schemedit.dcs.*;
+import java.util.Iterator;
+
+import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
 import org.dlese.dpc.util.Utils;
-import org.dom4j.*;
 
 public class ExportReport extends Report {
 	

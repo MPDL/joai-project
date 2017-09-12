@@ -17,27 +17,35 @@
 */
 package org.dlese.dpc.schemedit.security.access;
 
-import java.util.*;
-import java.text.SimpleDateFormat;
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.net.URL;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
-import javax.security.auth.Subject;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.Globals;
-import org.apache.struts.action.*;
-import org.apache.struts.util.RequestUtils;
-
+import org.apache.struts.action.ActionError;
+import org.apache.struts.action.ActionErrors;
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.security.login.PasswordHelper;
-import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.schemedit.security.user.UserManager;
-import org.dlese.dpc.schemedit.security.auth.Auth;
 import org.dlese.dpc.schemedit.SessionBean;
 import org.dlese.dpc.schemedit.SessionRegistry;
+import org.dlese.dpc.schemedit.security.user.User;
+import org.dlese.dpc.schemedit.security.user.UserManager;
 
 // import javax.servlet.ServletContext;
 

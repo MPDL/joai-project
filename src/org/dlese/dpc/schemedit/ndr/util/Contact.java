@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.schemedit.ndr.util;
 
-import org.dom4j.*;
-import java.util.*;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 
 

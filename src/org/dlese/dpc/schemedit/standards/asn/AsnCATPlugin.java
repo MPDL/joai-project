@@ -17,13 +17,12 @@
 */
 package org.dlese.dpc.schemedit.standards.asn;
 
-import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
+import java.util.List;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.standards.AbstractCATHelperPlugin;
 import org.dlese.dpc.schemedit.standards.CATServiceHelper;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.*;
-import org.dom4j.Element;
+import org.dlese.dpc.serviceclients.cat.CATRequestConstraints;
 
 /**
  *  Abstract class for CATHelperPlugins whose frameworks store ASN identifiers.

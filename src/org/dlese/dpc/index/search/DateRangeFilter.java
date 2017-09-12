@@ -17,15 +17,14 @@
 */
 package org.dlese.dpc.index.search;
 
-import java.util.BitSet;
-import java.util.Date;
 import java.io.IOException;
+import java.util.Date;
 
+import org.apache.lucene.document.DateTools;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.TermRangeFilter;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.document.DateTools;
-import org.apache.lucene.search.DocIdSet;
 
 /**
  *  Filters Lucene search results based on a range of Dates or times. This implements similar functionality as

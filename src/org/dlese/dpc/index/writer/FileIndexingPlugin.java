@@ -17,9 +17,9 @@
 */
 package org.dlese.dpc.index.writer;
 
-import java.io.*;
+import java.io.File;
 
-import org.apache.lucene.document.*;
+import org.apache.lucene.document.Document;
 
 /**
  *  This Interface provides a mechanism for adding custom fields to Lucene index Documents that are being

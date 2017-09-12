@@ -17,12 +17,9 @@
 */
 package org.dlese.dpc.serviceclients.remotesearch;
 
-import org.dlese.dpc.serviceclients.remotesearch.reader.*;
-import org.dlese.dpc.serviceclients.webclient.*;
-
-import java.util.*;
+import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
+import org.dlese.dpc.serviceclients.webclient.GetRecordResponse;
 import org.dom4j.Element;
-import org.dom4j.Document;
 
 /**
  *  This class wraps the individual items that are returned by {@link

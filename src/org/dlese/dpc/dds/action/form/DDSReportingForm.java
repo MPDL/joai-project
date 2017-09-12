@@ -17,31 +17,22 @@
 */
 package org.dlese.dpc.dds.action.form;
 
-import org.dlese.dpc.propertiesmgr.*;
-import org.dlese.dpc.webapps.tools.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.oai.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.services.mmd.MmdException;
-import org.dlese.dpc.services.mmd.MmdRec;
-import org.dlese.dpc.services.mmd.MmdWarning;
-import org.dlese.dpc.services.mmd.Query;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.ServletContext;
-import java.util.*;
-import java.io.*;
-import java.text.*;
-import java.net.URLEncoder;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.Stemmer;
+import org.dlese.dpc.index.TermDocCount;
+import org.dlese.dpc.repository.RecordDataService;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.services.mmd.MmdRec;
+import org.dlese.dpc.services.mmd.Query;
 
 /**
  *  A bean that holds data for DDS reporting.

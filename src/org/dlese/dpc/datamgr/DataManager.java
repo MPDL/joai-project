@@ -17,8 +17,8 @@
 */
 package org.dlese.dpc.datamgr;
 
-import java.util.*;
-import java.io.*;
+import java.io.Serializable;
+import java.util.List;
 
 
 /**

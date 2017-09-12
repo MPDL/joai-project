@@ -17,18 +17,18 @@
 */
 package org.dlese.dpc.schemedit.input;
 
-import org.dlese.dpc.schemedit.MetaDataFramework;
-import org.dlese.dpc.schemedit.config.*;
-import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import org.dlese.dpc.xml.schema.*;
-
-import java.util.*;
-
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
 import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMapping;
+import org.dlese.dpc.schemedit.MetaDataFramework;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
+import org.dlese.dpc.schemedit.config.CollectionConfig;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.config.StatusFlags;
 
 
 /**

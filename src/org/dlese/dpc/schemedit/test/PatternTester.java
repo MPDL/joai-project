@@ -17,12 +17,16 @@
 */
 package org.dlese.dpc.schemedit.test;
 
-import java.util.regex.*;
-import java.util.*;
-import java.net.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dom4j.*;
 import org.dlese.dpc.util.strings.FindAndReplace;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 
 /**
  *  Class for testing pattern matching and regular expressinos

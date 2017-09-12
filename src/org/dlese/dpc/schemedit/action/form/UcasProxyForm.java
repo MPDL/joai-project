@@ -17,20 +17,9 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
-import org.dlese.dpc.schemedit.*;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionError;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-
-import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
-import java.net.*;
+
+import org.apache.struts.action.ActionForm;
 
 /**
  *  ActionForm  for stashing info from UcasProxyAction

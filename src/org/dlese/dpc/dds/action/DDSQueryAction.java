@@ -17,49 +17,54 @@
 */
 package org.dlese.dpc.dds.action;
 
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.dds.action.form.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.index.writer.*;
-import org.dlese.dpc.index.queryParser.*;
-import org.dlese.dpc.xml.*;
-import org.dlese.dpc.util.*;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.propertiesmgr.PropertiesManager;
-import org.apache.lucene.search.*;
-import org.dlese.dpc.vocab.MetadataVocab;
-import org.dlese.dpc.logging.*;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.TimeZone;
 import java.util.logging.Level;
-import java.util.regex.*;
-import org.dlese.dpc.dds.*;
-import org.dlese.dpc.schemedit.SchemEditServlet;
-import org.dlese.dpc.index.search.DateRangeFilter;
-import edu.ucsb.adl.LuceneGeospatialQueryConverter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import java.util.*;
-import java.text.*;
-import java.io.*;
-import java.net.*;
-import java.util.Hashtable;
-import java.util.Locale;
-import javax.servlet.ServletException;
 import javax.servlet.ServletContext;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.BooleanClause;
+import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Filter;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.Sort;
+import org.apache.lucene.search.SortField;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionError;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionServlet;
-import org.apache.struts.util.MessageResources;
+import org.dlese.dpc.dds.DDSStandardSearchResult;
+import org.dlese.dpc.dds.action.form.DDSQueryForm;
+import org.dlese.dpc.index.ResultDocList;
+import org.dlese.dpc.index.SimpleLuceneIndex;
+import org.dlese.dpc.index.Stemmer;
+import org.dlese.dpc.index.search.DateRangeFilter;
+import org.dlese.dpc.logging.ClfLogger;
+import org.dlese.dpc.logging.DleseLogManager;
+import org.dlese.dpc.logging.LogException;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.schemedit.SchemEditServlet;
+import org.dlese.dpc.util.MetadataUtils;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
-import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.queryParser.QueryParser;
-import org.apache.lucene.queryParser.MultiFieldQueryParser;
+import edu.ucsb.adl.LuceneGeospatialQueryConverter;
 
 /**
  *  A Struts Action for handling display of resource record descriptions, and their various collection info.

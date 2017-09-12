@@ -17,10 +17,12 @@
 */
 package org.dlese.dpc.index.analysis;
 
-import org.apache.lucene.analysis.*;
-import org.apache.lucene.analysis.standard.*;
 import java.io.Reader;
-import java.util.Set;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.LowerCaseFilter;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.WhitespaceTokenizer;
 
 /**
  *  An Analyzer that uses a WhitespaceTokenizer and a LowerCaseFilter to normalize the

@@ -17,13 +17,15 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
+import java.net.URL;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.dlese.dpc.xml.Dom4jUtils;
-
-import org.dom4j.*;
-
-import java.net.*;
-import java.util.*;
-import java.text.*;
+import org.dom4j.Document;
 
 /**
  *  Toolkit for working with DDS repository Search and Update Web Services (DDSWS and DDSUpdateWS) for read

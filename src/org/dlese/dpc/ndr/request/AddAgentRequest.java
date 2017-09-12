@@ -17,10 +17,9 @@
 */
 package org.dlese.dpc.ndr.request;
 
-import org.dlese.dpc.schemedit.ndr.util.DcStream;
-
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
 import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.schemedit.ndr.util.DcStream;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 

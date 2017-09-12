@@ -17,22 +17,21 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import org.dom4j.dom.DOMElement;
-import org.dom4j.io.XMLWriter;
-import org.dom4j.DocumentFactory;
-import org.dom4j.Node;
-import org.dom4j.Document;
-import org.dom4j.Element;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XPathUtils;
 import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 import org.dom4j.Namespace;
+import org.dom4j.Node;
 import org.dom4j.QName;
-import org.dom4j.XPath;
 import org.dom4j.tree.NamespaceStack;
-
-import java.util.*;
-import java.net.URI;
 
 /**
  *  Creates an empty "XPath-equivant" instance document Document based on a

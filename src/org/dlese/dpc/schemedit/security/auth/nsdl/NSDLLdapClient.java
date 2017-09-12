@@ -17,12 +17,12 @@
 */
 package org.dlese.dpc.schemedit.security.auth.nsdl;
 
-import org.dlese.dpc.ldap.*;
-import org.dlese.dpc.util.strings.FindAndReplace;
-
-import java.util.*;
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.dlese.dpc.ldap.LdapClient;
+import org.dlese.dpc.ldap.LdapException;
+import org.dlese.dpc.util.strings.FindAndReplace;
 
 /**
  *  LdapClient for the NSDL Ldap Server

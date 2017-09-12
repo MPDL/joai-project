@@ -17,9 +17,12 @@
 */
 package org.dlese.dpc.index;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 
 /**
  *  This class simulates saving, moving and deleting records from the records

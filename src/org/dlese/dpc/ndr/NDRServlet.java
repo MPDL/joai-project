@@ -17,26 +17,19 @@
 */
 package org.dlese.dpc.ndr;
 
-import org.dlese.dpc.ndr.request.NdrRequest;
-import org.dlese.dpc.ndr.request.SimpleNdrRequest;
-
-import org.dlese.dpc.ndr.apiproxy.NDRAPIProxy;
-import org.dlese.dpc.ndr.apiproxy.NDRConstants;
-import org.dlese.dpc.ndr.toolkit.MimeTypes;
-import org.dom4j.Document;
-
-import java.io.*;
-import java.util.*;
+import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Enumeration;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+
+import org.dlese.dpc.ndr.apiproxy.NDRConstants;
+import org.dlese.dpc.ndr.request.SimpleNdrRequest;
 
 /**
  *  Servlet responsible for initializing the NDR proxy and placing it in the servlet Context. 

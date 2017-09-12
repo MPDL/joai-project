@@ -17,22 +17,25 @@
 */
 package org.dlese.dpc.schemedit.autoform;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.vocab.*;
-import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
 import org.dlese.dpc.schemedit.config.SchemaPath;
-import java.util.*;
-import java.util.regex.*;
-import org.dlese.dpc.xml.schema.*;
+import org.dlese.dpc.schemedit.vocab.FieldInfoMap;
+import org.dlese.dpc.schemedit.vocab.FieldInfoReader;
+import org.dlese.dpc.schemedit.vocab.layout.VocabLayoutConfig;
 import org.dlese.dpc.util.strings.FindAndReplace;
-
 import org.dlese.dpc.xml.XPathUtils;
-import org.dom4j.Node;
-import org.dom4j.Attribute;
-import org.dom4j.Element;
-import org.dom4j.Document;
+import org.dlese.dpc.xml.schema.GlobalDef;
+import org.dlese.dpc.xml.schema.SchemaHelper;
+import org.dlese.dpc.xml.schema.SchemaNode;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 /**
  *  Manages global rhelper information for a Renderer Instance as well as

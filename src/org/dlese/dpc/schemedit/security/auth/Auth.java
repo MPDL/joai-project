@@ -17,9 +17,7 @@
 */
 package org.dlese.dpc.schemedit.security.auth;
 
-import javax.security.auth.login.*;
-import javax.security.auth.*;
-import javax.security.auth.callback.*;
+import javax.security.auth.Subject;
 
 /** 
 * Auth interface to be extended by concrete Auth classes, such as {@link SchemEditAuth}

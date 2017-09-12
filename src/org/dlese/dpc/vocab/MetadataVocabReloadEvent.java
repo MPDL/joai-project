@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.vocab;
 
-import java.util.*;
+import java.util.EventObject;
 
 /**
  *  Indicates that an event occurred affecting data managed by a DataManager

@@ -17,14 +17,14 @@
 */
 package org.dlese.dpc.standards.asn;
 
-import org.dom4j.Element;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.util.strings.FindAndReplace;
-import java.util.regex.*;
-
-import java.util.*;
 
 /**
  *  Wraps {@link AsnStatement} to expose object based hierarchy information,

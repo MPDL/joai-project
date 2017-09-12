@@ -17,19 +17,22 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import org.dlese.dpc.xml.schema.compositor.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import java.util.*;
-import java.io.StringWriter;
-
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dlese.dpc.xml.XMLWriter;
+import org.dlese.dpc.xml.XPathUtils;
+import org.dlese.dpc.xml.schema.compositor.Sequence;
 import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 import org.dom4j.Namespace;
+import org.dom4j.Node;
 import org.dom4j.QName;
-
-import org.dlese.dpc.xml.*;
 
 /**
  *  DocMap wraps a dom4j Document providing get and put methods for use with a

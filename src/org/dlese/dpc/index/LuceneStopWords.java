@@ -17,8 +17,9 @@
 */
 package org.dlese.dpc.index;
 
-import org.apache.lucene.analysis.StopAnalyzer;
 import java.util.HashMap;
+
+import org.apache.lucene.analysis.StopAnalyzer;
 
 /**
  *  This class simply loads a hashmap of Lucene stop words from the array given by

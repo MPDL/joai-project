@@ -17,14 +17,12 @@
 */
 package org.dlese.dpc.schemedit.security.access;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.dom4j.Element;
-import org.dom4j.DocumentFactory;
-
-import org.dlese.dpc.schemedit.security.access.UrlPatternMatcher;
-import org.dlese.dpc.schemedit.security.access.Roles;
 import org.dlese.dpc.schemedit.security.access.Roles.Role;
+import org.dom4j.DocumentFactory;
+import org.dom4j.Element;
 
 /**
  *  Wrapper for ActionMapping

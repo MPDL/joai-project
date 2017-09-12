@@ -17,13 +17,18 @@
 */
 package org.dlese.dpc.serviceclients.cat;
 
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.util.TimedURLConnection;
 import org.dlese.dpc.util.URLConnectionTimedOutException;
-import org.dom4j.*;
-import java.util.*;
-import java.net.*;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  * @author    Jonathan Ostwald

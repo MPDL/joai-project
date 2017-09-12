@@ -17,21 +17,20 @@
 */
 package org.dlese.dpc.schemedit.repository;
 
-import org.dlese.dpc.schemedit.config.CollectionConfig;
-import org.dlese.dpc.schemedit.config.CollectionRegistry;
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.schemedit.RecordList;
-import org.dlese.dpc.schemedit.repository.RepositoryService;
-import org.dlese.dpc.schemedit.dcs.DcsDataManager;
-
-import java.io.*;
-import java.util.*;
-import org.dlese.dpc.repository.*;
-import org.dlese.dpc.index.*;
-import org.dlese.dpc.index.reader.*;
-import org.dlese.dpc.util.Files;
+import java.io.File;
+import java.util.Iterator;
 
 import javax.servlet.ServletContext;
+
+import org.dlese.dpc.index.ResultDoc;
+import org.dlese.dpc.index.reader.DleseCollectionDocReader;
+import org.dlese.dpc.repository.RepositoryManager;
+import org.dlese.dpc.repository.SetInfo;
+import org.dlese.dpc.schemedit.RecordList;
+import org.dlese.dpc.schemedit.SchemEditUtils;
+import org.dlese.dpc.schemedit.config.CollectionRegistry;
+import org.dlese.dpc.schemedit.dcs.DcsDataManager;
+import org.dlese.dpc.util.Files;
 
 /**
  *  Deletes a collections by moving metadata records to a "baseTrashDir"

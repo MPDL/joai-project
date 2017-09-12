@@ -17,27 +17,22 @@
 */
 package org.dlese.dpc.suggest;
 
-import org.dlese.dpc.suggest.comment.*;
+import java.io.File;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import org.dlese.dpc.xml.schema.SchemaHelper;
-import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
-import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.vocab.MetadataVocab;
-
-
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 // Enterprise imports
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 
-import java.util.*;
-import java.text.SimpleDateFormat;
-import java.io.File;
-import java.net.URL;
+import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
+import org.dlese.dpc.suggest.comment.SuggestCommentHelper;
+import org.dlese.dpc.vocab.MetadataVocab;
+import org.dlese.dpc.webapps.tools.GeneralServletTools;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 
 /**
  *  Initializes the SuggestCommentHelper and sets up the Suggest a Resource

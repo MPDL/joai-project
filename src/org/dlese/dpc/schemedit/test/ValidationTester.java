@@ -19,15 +19,11 @@ package org.dlese.dpc.schemedit.test;
 
 
 
-import org.dlese.dpc.xml.*;
+import java.io.File;
+import java.io.IOException;
 
-import org.dlese.dpc.util.*;
-
-
-
-import java.io.*;
-
-import java.lang.*;
+import org.dlese.dpc.util.Files;
+import org.dlese.dpc.xml.XMLValidator;
 
 
 

@@ -17,7 +17,8 @@
 */
 package org.dlese.dpc.xml.schema;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Log {
 	private static boolean debug = true;

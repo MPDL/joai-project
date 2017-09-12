@@ -17,7 +17,9 @@
 */
 package org.dlese.dpc.services.dds.toolkit;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 /**
  *  Class that holds data about the terms in one or more fields in the index. Wraps the data returned from the

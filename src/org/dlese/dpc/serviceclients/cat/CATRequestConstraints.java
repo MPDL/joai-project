@@ -17,10 +17,14 @@
 */
 package org.dlese.dpc.serviceclients.cat;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-
-import java.util.*;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.dlese.dpc.schemedit.SchemEditUtils;
 
 /**
  *  Data Structure to manage information passed to the CATRest Service to

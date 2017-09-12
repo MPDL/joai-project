@@ -17,15 +17,22 @@
 */
 package org.dlese.dpc.schemedit;
 
-import java.io.*;
-import java.util.*;
-import java.lang.IllegalStateException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
-import org.dlese.dpc.xml.*;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
+
 import org.dlese.dpc.schemedit.security.user.User;
-import org.dlese.dpc.util.strings.FindAndReplace;
-import javax.servlet.http.*;
-import javax.servlet.*;
 
 /**
  *  Maintains a registry of sessions and also manages record locking.<p>

@@ -17,7 +17,7 @@
 */
 package org.dlese.dpc.schemedit.standards;
 
-import java.util.*;
+import java.util.List;
 
 /**
  *  Node in a hierarchical structure of content standards, used to display
