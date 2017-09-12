@@ -17,7 +17,6 @@
 */
 package org.dlese.dpc.schemedit.action;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -66,7 +65,7 @@ public final class FrameworkAdminAction extends DCSAction {
 			HttpServletResponse response)
 		throws IOException, ServletException {
 
-		String errorMsg = null;
+//		String errorMsg = null;
 		/*
 		    Design note:
 		    Only one instance of this class gets created for the app and shared by
