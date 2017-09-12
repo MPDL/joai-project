@@ -43,7 +43,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
 public class UriMappings implements org.xml.sax.ContentHandler {
 
 	private HashMap attributes = null;                             // stores uri/mapto pairs
-//	private String xmlFile;                                        // xml file specifying uri/mapto pairs
+	private String xmlFile;                                        // xml file specifying uri/mapto pairs
 	private String xmlParserClass;                                 // name of the SAX implementing class
 	private Locator saxLocator;                                    // stores things like line number of the parser
 	private static boolean debug = false;                          // debug output?
@@ -102,7 +102,7 @@ public class UriMappings implements org.xml.sax.ContentHandler {
 		String requestURI = request.getRequestURI();
 		requestURI = requestURI.substring( request.getContextPath().length(), requestURI.length() );
 		String forwardPage = null;
-//		Set s = attributes.keySet();
+		Set s = attributes.keySet();
 		Iterator i = attributes.keySet().iterator();
 		// prtln( "getForwardPage() requestURI: " + requestURI );
 		while ( ( forwardPage == null ) && i.hasNext() ) {
@@ -143,7 +143,7 @@ public class UriMappings implements org.xml.sax.ContentHandler {
 	 */
 	public void setDocumentLocator( Locator locator ) {
 		saxLocator = locator;
-		String xmlFile = saxLocator.getSystemId();
+		xmlFile = saxLocator.getSystemId();
 	}
 
 	/**

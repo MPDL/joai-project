@@ -17,6 +17,8 @@
 */
 package org.dlese.dpc.util;
 
+import org.dlese.dpc.xml.XMLUtils;
+
 /**
  *  This class holds a number of handy static methods for use in HTML and XML processing.
  *
@@ -25,15 +27,15 @@ package org.dlese.dpc.util;
  */
 public class HTMLTools {
 
-//	/**
-//	 *  Removes all HTML comments from a String.
-//	 *
-//	 * @param  input  HTML String
-//	 * @return        HTML with all comments removed
-//	 */
-//	public static String removeHTMLComments(String input) {
-//		return XMLUtils.removeXMLComments(input);
-//	}
+	/**
+	 *  Removes all HTML comments from a String.
+	 *
+	 * @param  input  HTML String
+	 * @return        HTML with all comments removed
+	 */
+	public static String removeHTMLComments(String input) {
+		return XMLUtils.removeXMLComments(input);
+	}
 
 
 	/**
@@ -137,59 +139,59 @@ public class HTMLTools {
 	}
 
 
-//	/**
-//	 *  Encodes a String so that it will be valid inside JavaScript quotes.
-//	 *
-//	 * @param  string  A String
-//	 * @return         The resulting, encoded StringBuffer
-//	 */
-//	public final static StringBuffer javaScriptEncode(String string) {
-//		if (string == null)
-//			return null;
-//		else
-//			return javaScriptEncode(string.toCharArray());
-//	}
+	/**
+	 *  Encodes a String so that it will be valid inside JavaScript quotes.
+	 *
+	 * @param  string  A String
+	 * @return         The resulting, encoded StringBuffer
+	 */
+	public final static StringBuffer javaScriptEncode(String string) {
+		if (string == null)
+			return null;
+		else
+			return javaScriptEncode(string.toCharArray());
+	}
 
 
-//	/**
-//	 *  Same behavior as {@link #javaScriptEncode}.
-//	 *
-//	 * @param  string  A String
-//	 * @return         The resulting, encoded String
-//	 */
-//	public final static String javaScriptEncodeToStr(String string) {
-//		if (string == null)
-//			return null;
-//		StringBuffer buf = new StringBuffer();
-//		char[] chars = string.toCharArray();
-//		for (int i = 0; i < chars.length; i++) {
-//			// Replace a double quote with \"
-//			if (chars[i] == '\"')
-//				buf.append("\\\"");
-//			// Replace a single quote with \'
-//			else if (chars[i] == '\'')
-//				buf.append("\\\'");
-//			// Replace CR with \r;
-//			else if (chars[i] == '\r')
-//				buf.append("\\r");
-//			// Replace LF with \n;
-//			else if (chars[i] == '\n')
-//				buf.append("\\n");
-//			// Replace backslash with \\
-//			else if (chars[i] == '\\')
-//				buf.append("\\\\");
-//			// All else, output unchanged
-//			else
-//				buf.append(chars[i]);
-//		}
-//		return buf.toString();
-//	}
+	/**
+	 *  Same behavior as {@link #javaScriptEncode}.
+	 *
+	 * @param  string  A String
+	 * @return         The resulting, encoded String
+	 */
+	public final static String javaScriptEncodeToStr(String string) {
+		if (string == null)
+			return null;
+		StringBuffer buf = new StringBuffer();
+		char[] chars = string.toCharArray();
+		for (int i = 0; i < chars.length; i++) {
+			// Replace a double quote with \"
+			if (chars[i] == '\"')
+				buf.append("\\\"");
+			// Replace a single quote with \'
+			else if (chars[i] == '\'')
+				buf.append("\\\'");
+			// Replace CR with \r;
+			else if (chars[i] == '\r')
+				buf.append("\\r");
+			// Replace LF with \n;
+			else if (chars[i] == '\n')
+				buf.append("\\n");
+			// Replace backslash with \\
+			else if (chars[i] == '\\')
+				buf.append("\\\\");
+			// All else, output unchanged
+			else
+				buf.append(chars[i]);
+		}
+		return buf.toString();
+	}
 
 
 
-//	private static void prtln(String s) {
-//		System.out.println(s);
-//	}
+	private static void prtln(String s) {
+		System.out.println(s);
+	}
 
 }
 

@@ -30,7 +30,7 @@ import java.net.URLConnection;
  */
 public final class GetURL {
 
-//	private String address = "";
+	private String address = "";
 
 	/**
 	 *  Gets the url as a string
@@ -89,22 +89,22 @@ public final class GetURL {
 
 	// The following are for JSP bean access:
 
-//	/**
-//	 *  Gets the url attribute of the GetURL class
-//	 *
-//	 * @return    The url value
-//	 */
-//	public synchronized String getUrl() {
-//		return getURL( address, false );
-//	}
-//
-//	/**
-//	 *  Sets the address attribute of the GetURL object
-//	 *
-//	 * @param  address  The new address value
-//	 */
-//	public synchronized void setAddress( String address ) {
-//		this.address = address;
-//	}
+	/**
+	 *  Gets the url attribute of the GetURL class
+	 *
+	 * @return    The url value
+	 */
+	public synchronized String getUrl() {
+		return getURL( address, false );
+	}
+
+	/**
+	 *  Sets the address attribute of the GetURL object
+	 *
+	 * @param  address  The new address value
+	 */
+	public synchronized void setAddress( String address ) {
+		this.address = address;
+	}
 }
 

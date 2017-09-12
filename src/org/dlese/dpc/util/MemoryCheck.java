@@ -105,15 +105,15 @@ public class MemoryCheck {
 	}
 
 
-//	/**
-//	 *  Gets the current amount of memory being used by this app, in megabytes. For best accuracy you should call
-//	 *  <code>runGC()</code> prior to calling this method.
-//	 *
-//	 * @return    The current amount of memory being used by the JVM.
-//	 */
-//	public static String getUsedMemoryInMegs() {
-//		return (getUsedMemory() / 1048576) + "M";
-//	}
+	/**
+	 *  Gets the current amount of memory being used by this app, in megabytes. For best accuracy you should call
+	 *  <code>runGC()</code> prior to calling this method.
+	 *
+	 * @return    The current amount of memory being used by the JVM.
+	 */
+	public static String getUsedMemoryInMegs() {
+		return (getUsedMemory() / 1048576) + "M";
+	}
 
 
 	/**
@@ -170,14 +170,14 @@ public class MemoryCheck {
 	}
 
 
-//	/**
-//	 *  Output a line of text to error out, with datestamp.
-//	 *
-//	 * @param  s  The text that will be output to error out.
-//	 */
-//	private final static void prtlnErr(String s) {
-//		System.err.println(getDateStamp() + " MemoryCheck: " + s);
-//	}
+	/**
+	 *  Output a line of text to error out, with datestamp.
+	 *
+	 * @param  s  The text that will be output to error out.
+	 */
+	private final static void prtlnErr(String s) {
+		System.err.println(getDateStamp() + " MemoryCheck: " + s);
+	}
 
 
 	/**
