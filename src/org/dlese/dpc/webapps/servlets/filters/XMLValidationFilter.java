@@ -72,7 +72,7 @@ public final class XMLValidationFilter extends FilterCore {
 
 		// If asked to do validation, do it...
 		if (rt != null && rt.equals("validate")) {
-			String verb = req.getParameter("verb");
+//			String verb = req.getParameter("verb");
 			if (isGzipSupported)
 				res.setHeader("Content-Encoding", "gzip");
 

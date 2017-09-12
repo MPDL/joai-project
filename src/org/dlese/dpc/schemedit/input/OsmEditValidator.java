@@ -75,7 +75,7 @@ public class OsmEditValidator extends SchemEditValidator {
 	public SchemEditActionErrors validateForm() {
 		prtln("validateForm()  currentPage: " + this.sef.getCurrentPage());
 		SchemEditActionErrors errors = new SchemEditActionErrors(schemaHelper);
-		boolean doValidate = false;
+//		boolean doValidate = false;
 
 		if (this.sef.getCurrentPage().equals("general")) {
 			prtln("beginning custom validation");
@@ -88,7 +88,7 @@ public class OsmEditValidator extends SchemEditValidator {
 					prtln("processing: " + field.getXPath());
 
 					String value = field.getValue().trim();
-					String xpath = field.getXPath();
+//					String xpath = field.getXPath();
 
 					if ((value == null) || (value.length() == 0)) {
 						SchemEditErrors.addError(errors, field, "field.required");

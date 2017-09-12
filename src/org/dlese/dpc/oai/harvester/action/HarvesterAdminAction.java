@@ -23,7 +23,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Locale;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +42,6 @@ import org.dlese.dpc.oai.harvester.action.form.HarvesterAdminForm;
 import org.dlese.dpc.oai.harvester.structs.ScheduledHarvest;
 import org.dlese.dpc.util.Utils;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
-import org.dlese.dpc.xml.XMLValidator;
 
 /**
  *  Action controller that handles administration of the Harvester.
@@ -86,7 +84,7 @@ public final class HarvesterAdminAction extends Action {
 		mySessions.put(mySes, mySes);
 
 		// Extract attributes we will need
-		Locale locale = getLocale(req);
+//		Locale locale = getLocale(req);
 		HarvesterAdminForm haf = (HarvesterAdminForm) form;
 		ActionErrors errors = new ActionErrors();
 

@@ -423,7 +423,7 @@ public final class DDSRepositoryUpdateServiceAction extends Action {
 		String errorMsg = "";
 
 		// validate presence of required arguments
-		String xmlFormatParam = request.getParameter("xmlFormat");
+//		String xmlFormatParam = request.getParameter("xmlFormat");
 		String idParam = request.getParameter("id");
 		if (idParam == null || idParam.length() == 0) {
 			errorMsg += "The \'id\' argument is required but is missing or empty. ";

@@ -76,7 +76,6 @@ import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.dom4j.Namespace;
 import org.dom4j.Node;
 
 /**
@@ -111,8 +110,8 @@ public class SchemEditForm extends ActionForm {
 
 	private Map multiValuesCache = null;
 	private ArrayList repeatingFieldsToPrune = null;
-	private ArrayList closedElements = null;
-	private String repeatingField = null;
+//	private ArrayList closedElements = null;
+//	private String repeatingField = null;
 	private String currentPage = null;
 	private String previousPage = null;
 	private String pathArg = null;
@@ -122,12 +121,12 @@ public class SchemEditForm extends ActionForm {
 	private boolean forceValidation = false;
 
 	private String collection = null;
-	private String collectionName = null;
+//	private String collectionName = null;
 	private DcsDataRecord dcsDataRecord = null;
 
 	private String metadata = null;
 	private String pageTitle = null;
-	private String editorConfig = null;
+//	private String editorConfig = null;
 	private String discussionURL = null;
 
 	private File recordsDir = null;
@@ -254,7 +253,7 @@ public class SchemEditForm extends ActionForm {
 	 */
 	public void setVocabField(String paramName) {
 		String normalizedXpath = InputManager.paramNameToNormalizedXPath(paramName);
-		String fieldName = XPathUtils.getNodeName(normalizedXpath);
+//		String fieldName = XPathUtils.getNodeName(normalizedXpath);
 		// prtln ("setVocabField: " + normalizedXpath);
 		this.vocabField = normalizedXpath;
 	}
@@ -297,7 +296,7 @@ public class SchemEditForm extends ActionForm {
 	 * @return              The muiFormattable value
 	 */
 	public boolean getMuiFormattable(String encodedPath) {
-		String xpath = XPathUtils.decodeXPath(encodedPath);
+//		String xpath = XPathUtils.decodeXPath(encodedPath);
 		VocabNode vNode = vocab.getVocabNode(getXmlFormat(), vocabAudience, "en-us", encodedPath, null);
 		if (vNode != null)
 			prtln("vNode found");
@@ -1391,7 +1390,7 @@ public class SchemEditForm extends ActionForm {
 
 					if (complexTypeDef.isDerivedType()) {
 						GlobalDef validatingType = schemaNode.getValidatingType();
-						Namespace schemaNamespace = this.schemaHelper.getSchemaNamespace();
+//						Namespace schemaNamespace = this.schemaHelper.getSchemaNamespace();
 						String stringType = NamespaceRegistry.makeQualifiedName(this.schemaHelper.getSchemaNamespace(), "string");
 						if (validatingType.getName().equals(stringType)) {
 							return FALSE;
@@ -1606,7 +1605,7 @@ public class SchemEditForm extends ActionForm {
 		List nodes = docMap.selectNodes(xpath);
 		List paths = new ArrayList();
 		for (int i = 0; i < nodes.size(); i++) {
-			Node node = (Node) nodes.get(i);
+//			Node node = (Node) nodes.get(i);
 			int index = i + 1;
 			String path = xpath + "[" + index + "]";
 			paths.add(path);

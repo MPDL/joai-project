@@ -19,7 +19,6 @@ package org.dlese.dpc.schemedit.action;
 
 import java.io.IOException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -97,7 +96,7 @@ public final class RecordOperationsAction extends DCSAction {
 		RecordOperationsForm rof = (RecordOperationsForm) form;
 		rm = repositoryManager;
 		
-		ServletContext servletContext = servlet.getServletContext();
+//		ServletContext servletContext = servlet.getServletContext();
 
 		SchemEditUtils.showRequestParameters(request);
 
@@ -186,7 +185,7 @@ public final class RecordOperationsAction extends DCSAction {
 					saveErrors (request, errors);
 					return mapping.findForward ("move.record"); 
 				}
-				String xmlFormat =  docReader.getNativeFormat();
+//				String xmlFormat =  docReader.getNativeFormat();
 				String collection = docReader.getCollection();
 				String forwardPath = "/editor/edit.do?";
 				forwardPath += 	"src=dcs&command=edit&collection=" + collection + "&recId=" + recId;
@@ -286,7 +285,7 @@ public final class RecordOperationsAction extends DCSAction {
 					saveErrors (request, errors);
 					return mapping.findForward ("copy.move.record"); 
 				}
-				String xmlFormat =  docReader.getNativeFormat();
+//				String xmlFormat =  docReader.getNativeFormat();
 				String collection = docReader.getCollection();
 				String forwardPath = "/editor/edit.do?";
 				forwardPath += 	"src=dcs&command=edit&collection=" + collection + "&recId=" + recId;
@@ -358,7 +357,7 @@ public final class RecordOperationsAction extends DCSAction {
 		throws ServletException {
 		
 		ActionErrors errors = new ActionErrors();
-		String errorMsg;
+//		String errorMsg;
 
 		String originalId = request.getParameter("id");
 		User sessionUser = this.getSessionUser(request);
@@ -366,10 +365,10 @@ public final class RecordOperationsAction extends DCSAction {
 			XMLDocReader docReader = repositoryService.copyRecord(originalId, sessionUser);
 
 			// obtain info necessary for creating forwardPath from docReader for copied record
-			String collection = docReader.getCollection();
+//			String collection = docReader.getCollection();
 			String id = docReader.getId();
-			String xmlFormat = docReader.getNativeFormat();
-			MetaDataFramework framework = this.getMetaDataFramework(xmlFormat);
+//			String xmlFormat = docReader.getNativeFormat();
+//			MetaDataFramework framework = this.getMetaDataFramework(xmlFormat);
 
 			String forwardPath = "/editor/edit.do?command=edit&recId=" + id;
 			return new ActionForward(forwardPath);
@@ -402,7 +401,7 @@ public final class RecordOperationsAction extends DCSAction {
 		throws ServletException {
 		
 		ActionErrors errors = new ActionErrors();
-		String errorMsg;
+//		String errorMsg;
 
 		String collection = request.getParameter("collection");
 		String xmlFormat = request.getParameter ("xmlFormat");
@@ -472,7 +471,7 @@ public final class RecordOperationsAction extends DCSAction {
 		prtln("handleDeleteRecord");
 		ActionErrors errors = new ActionErrors();
 		SessionBean sessionBean = sessionRegistry.getSessionBean(request);
-		ServletContext servletContext = servlet.getServletContext();
+//		ServletContext servletContext = servlet.getServletContext();
 
 		// recId is the ID of the record to delete
 		String recId = request.getParameter("recId");

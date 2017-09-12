@@ -51,7 +51,7 @@ import org.dlese.dpc.oai.harvester.action.form.HarvestReportForm;
 public final class HarvestReportAction extends Action {
 
 	private static boolean debug = false;
-	private String SELECT_ALL = " -- All --";
+//	private String SELECT_ALL = " -- All --";
 
 	// --------------------------------------------------------- Public Methods
 

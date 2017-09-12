@@ -471,7 +471,7 @@ public class DcsDataRecord implements Serializable {
 	 * @return    The validationReportElement value
 	 */
 	public Element getValidationReportElement() {
-		Element validationReport = null;
+//		Element validationReport = null;
 		Node rptNode = getNode("/dcsDataRecord/validationReport");
 		if (rptNode == null) {
 			return doc.getRootElement().addElement("validationReport");
@@ -641,7 +641,7 @@ public class DcsDataRecord implements Serializable {
 	 * @param  value      The new ndrInfoValue value
 	 */
 	private void setNdrInfoValue(String childName, String value) {
-		Element ndrInfo = DocumentHelper.makeElement(this.doc, ndrInfoPath);
+		DocumentHelper.makeElement(this.doc, ndrInfoPath);
 		Element child = DocumentHelper.makeElement(this.doc, ndrInfoPath + "/" + childName);
 		child.setText(value);
 	}
@@ -1086,7 +1086,7 @@ public class DcsDataRecord implements Serializable {
 	 */
 	private String getNodeText(String xpath) {
 		Node node = getNode(xpath);
-		String val = "";
+//		String val = "";
 		try {
 			return node.getText();
 		} catch (Throwable t) {

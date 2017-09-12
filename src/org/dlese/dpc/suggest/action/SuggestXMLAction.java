@@ -33,7 +33,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -79,10 +78,10 @@ public final class SuggestXMLAction extends Action {
 	                              HttpServletRequest req,
 	                              HttpServletResponse response ) throws Exception {
 		SuggestXMLForm suggestForm = (SuggestXMLForm)form;
-		ActionErrors errors = new ActionErrors();
+//		ActionErrors errors = new ActionErrors();
 		String newRecordId = "";
 		try {
-			StringBuffer xmlRecord = new StringBuffer();
+//			StringBuffer xmlRecord = new StringBuffer();
 			Document xmlDoc = DocumentHelper.createDocument();
 			Element rootElement = xmlDoc.addElement( req.getParameter( "rootElement" ) );
 			String[] atts = req.getParameterValues( "rootElementAttribute" );
@@ -290,14 +289,14 @@ public final class SuggestXMLAction extends Action {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr( String s ) {
-		System.err.println( getDateStamp() + " " + s );
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr( String s ) {
+//		System.err.println( getDateStamp() + " " + s );
+//	}
 
 
 	/**

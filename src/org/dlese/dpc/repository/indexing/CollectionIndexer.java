@@ -230,26 +230,26 @@ public class CollectionIndexer {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final static void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " CollectionIndexer Error: " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final static void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " CollectionIndexer Error: " + s);
+//	}
 
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-	 *
-	 * @param  s  The String that will be output.
-	 */
-	private final static void prtln(String s) {
-		if (debug) {
-			System.out.println(getDateStamp() + " CollectionIndexer: " + s);
-		}
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+//	 *
+//	 * @param  s  The String that will be output.
+//	 */
+//	private final static void prtln(String s) {
+//		if (debug) {
+//			System.out.println(getDateStamp() + " CollectionIndexer: " + s);
+//		}
+//	}
 
 
 	/**

@@ -261,7 +261,7 @@ public class ViewerRenderer extends RendererImpl {
 		prtln("\t getStaticSimpleValue()");
 		Element valueDiv = df.createElement("div")
 			.addAttribute("class", "static-value");
-		Element valueElement = valueDiv.addElement("bean__write")
+		valueDiv.addElement("bean__write")
 			.addAttribute("name", formBeanName)
 			.addAttribute("property", "valueOf(" + xpath + ")")
 			.addAttribute("filter", "false");

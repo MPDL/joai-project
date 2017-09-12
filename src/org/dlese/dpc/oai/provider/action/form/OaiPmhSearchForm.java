@@ -39,7 +39,7 @@ public final class OaiPmhSearchForm extends ActionForm
 	
 	private boolean debug = true;
 	private String message = null;
-	private String baseURL = null;
+//	private String baseURL = null;
 	private String oaiIdPfx = null;
 	private String exampleId = null;
 	private List availableFormats = null;

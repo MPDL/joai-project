@@ -33,14 +33,14 @@ public class AsnMappingDocument extends AsnDocument {
 		super (new File(path));
 	}
 
-	public static void main (String[] args) throws Exception {
-		// String path = "/home/ostwald/python-lib/asn/standards-documents/1995-NSES-v1.2.5-localized.xml";
-		String dir = "H:/Documents//ASN/standards-documents/source/";
-		String filename = "2007-Colorado-Science-Model Content Standards Science.xml";
-		AsnMappingDocument asfMgr = new AsnMappingDocument(dir + filename);
-		
-		// asfMgr.compareOne ();
-	}
+//	public static void main (String[] args) throws Exception {
+//		// String path = "/home/ostwald/python-lib/asn/standards-documents/1995-NSES-v1.2.5-localized.xml";
+////		String dir = "H:/Documents//ASN/standards-documents/source/";
+////		String filename = "2007-Colorado-Science-Model Content Standards Science.xml";
+////		AsnMappingDocument asfMgr = new AsnMappingDocument(dir + filename);
+//		
+//		// asfMgr.compareOne ();
+//	}
 	
 	public void compareOne () {
 		DleseStandardsDocument sm = getDleseStandardsDocument();
@@ -68,12 +68,12 @@ public class AsnMappingDocument extends AsnDocument {
 	
 	public static DleseStandardsDocument getDleseStandardsDocument () {
 		String schemaURLStr = "http://dev.dlese.org:7080/Metadata/adn-item/0.7.00/record.xsd";
-		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
+//		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
 		SchemaHelper sh = MappingUtils.getSchemaHelper (schemaURLStr, "itemRecord");
 		List dataTypeNames = new ArrayList();
 		dataTypeNames.add ("NCGEgeographyContentStandardsType");
 		dataTypeNames.add ("NSESscienceContentStandardsAllType");
-		List adnStandards = new ArrayList();
+//		List adnStandards = new ArrayList();
 		
 		DleseStandardsDocument sm = null;
 		try {

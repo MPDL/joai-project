@@ -30,7 +30,6 @@ import javax.servlet.http.HttpServlet;
 
 import org.dlese.dpc.serviceclients.webclient.WebServiceClient;
 import org.dlese.dpc.suggest.comment.SuggestCommentHelper;
-import org.dlese.dpc.vocab.MetadataVocab;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
 import org.dlese.dpc.xml.schema.SchemaHelper;
 
@@ -61,7 +60,7 @@ public final class SuggestCommentServlet extends HttpServlet {
 		ServletContext context = getServletContext();
 
 		// The MetadataVocabServlet puts the MetadataVocab object in the context under "MetadataVocab"
-		MetadataVocab vocab = (MetadataVocab) context.getAttribute("MetadataVocab");
+//		MetadataVocab vocab = (MetadataVocab) context.getAttribute("MetadataVocab");
 		
 		// Use schema definition from web to load schemaHelper
 		String schemaLoc = (String) context.getInitParameter("schemaUrl-comment");

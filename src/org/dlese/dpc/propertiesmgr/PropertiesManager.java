@@ -41,7 +41,7 @@ import java.util.StringTokenizer;
  */
 public class PropertiesManager extends Properties {
 
-	private String emptyValMsg = "[none] ";
+//	private String emptyValMsg = "[none] ";
 	private String propsFileName = "";
 	private boolean isInJar = false;
 
@@ -358,8 +358,8 @@ public class PropertiesManager extends Properties {
 
 	//================================================================
 
-	private void prtln(String s) {
-		System.out.println(s);
-	}
+//	private void prtln(String s) {
+//		System.out.println(s);
+//	}
 }
 

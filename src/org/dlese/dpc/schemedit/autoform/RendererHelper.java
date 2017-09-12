@@ -731,7 +731,7 @@ public class RendererHelper {
 		prtln("destroying " + this.framework.getXmlFormat() + " renderers ...");
 		for (Iterator i = renderers.iterator(); i.hasNext(); ) {
 			RendererImpl renderer = (RendererImpl) i.next();
-			String xpath = renderer.getXpath();
+//			String xpath = renderer.getXpath();
 			renderer = null;
 			// prtln ("\t" + xpath);
 		}

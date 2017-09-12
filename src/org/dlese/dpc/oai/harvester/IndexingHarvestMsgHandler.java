@@ -57,7 +57,7 @@ public class IndexingHarvestMsgHandler implements HarvestMessageHandler {
 
 	private Harvester harvester = null;
 
-	private File harvestDir = null;
+//	private File harvestDir = null;
 
 
 
@@ -109,7 +109,7 @@ public class IndexingHarvestMsgHandler implements HarvestMessageHandler {
 
 //		this.harvester = harvester;
 
-		this.harvestDir = hd;
+//		this.harvestDir = hd;
 
 	}
 
@@ -577,21 +577,21 @@ public class IndexingHarvestMsgHandler implements HarvestMessageHandler {
 
 
 
-	/**
-
-	 *  Output a line of text to error out, with datestamp.
-
-	 *
-
-	 * @param  s  The text that will be output to error out.
-
-	 */
-
-	private final void prtlnErr(String s) {
-
-		System.err.println(getDateStamp() + " " + s);
-
-	}
+//	/**
+//
+//	 *  Output a line of text to error out, with datestamp.
+//
+//	 *
+//
+//	 * @param  s  The text that will be output to error out.
+//
+//	 */
+//
+//	private final void prtlnErr(String s) {
+//
+//		System.err.println(getDateStamp() + " " + s);
+//
+//	}
 
 
 

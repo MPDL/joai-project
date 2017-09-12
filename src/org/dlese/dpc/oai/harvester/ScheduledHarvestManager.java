@@ -254,7 +254,7 @@ public final class ScheduledHarvestManager {
 
 			File deleteZip = new File(deleteZipDir);
 			prtln("deleteZip dir is " + deleteZip.toString());
-			boolean success = false;
+//			boolean success = false;
 			try {
 				if (deleteZip.exists()) {
 					Files.deleteDirectory(deleteZip);
@@ -920,7 +920,7 @@ public final class ScheduledHarvestManager {
 	private class HarvestThread extends Thread {
 		Long shUid;
 		boolean harvestAll, override, harvestAllIfNoDeletedRecord;
-		ScheduledHarvest sh = null;
+//		ScheduledHarvest sh = null;
 
 
 

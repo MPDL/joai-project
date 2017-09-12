@@ -62,7 +62,7 @@ public class StandardsMatcherPhase1 {
 			if (level == 3) {
 				schemaURLStr = "http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd";
 				SchemaHelper sh = MappingUtils.getSchemaHelper(schemaURLStr, "itemRecord");
-				String xpath = "/itemRecord/educational/contentStandards/contentStandard";
+//				String xpath = "/itemRecord/educational/contentStandards/contentStandard";
 				adnStandards = new DleseStandardsDocument (sh, "NSESscienceContentStandardsType");
 			}
 			else if (level == 4) {
@@ -226,7 +226,7 @@ public class StandardsMatcherPhase1 {
 			if (std != null)
 				prtln("\n" + count + " -- " + std.getId() + "\n" + std.getMatchKey() + "\n");
 			else
-				prtln("\n" + count + " -- ASN standard NOT found for " + std.getId() + "\n");
+				prtln("\n" + count + " -- ASN standard NOT found " + "\n");
 		}
 	}
 

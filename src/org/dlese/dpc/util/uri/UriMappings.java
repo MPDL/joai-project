@@ -19,7 +19,6 @@ package org.dlese.dpc.util.uri;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,7 +44,7 @@ public class UriMappings implements org.xml.sax.ContentHandler {
 	private HashMap attributes = null;                             // stores uri/mapto pairs
 //	private String xmlFile;                                        // xml file specifying uri/mapto pairs
 	private String xmlParserClass;                                 // name of the SAX implementing class
-	private Locator saxLocator;                                    // stores things like line number of the parser
+//	private Locator saxLocator;                                    // stores things like line number of the parser
 	private static boolean debug = false;                          // debug output?
 
 	/**
@@ -142,8 +141,8 @@ public class UriMappings implements org.xml.sax.ContentHandler {
 	 * @param  locator  The new saxLocator value
 	 */
 	public void setDocumentLocator( Locator locator ) {
-		saxLocator = locator;
-		String xmlFile = saxLocator.getSystemId();
+//		saxLocator = locator;
+//		String xmlFile = saxLocator.getSystemId();
 	}
 
 	/**

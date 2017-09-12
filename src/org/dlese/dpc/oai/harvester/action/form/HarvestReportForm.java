@@ -31,7 +31,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionForm;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
-import org.dlese.dpc.index.reader.XMLDocReader;
 
 /**
  *  A Struts ActionForm for displaying harvest log reports that are stored in a
@@ -48,7 +47,7 @@ public final class HarvestReportForm extends ActionForm implements Serializable 
 
 	private String queryString = null;
 	private String refineQueryString = null;
-	private XMLDocReader docReader = null;
+//	private XMLDocReader docReader = null;
 	private String metadata = null;
 	private String reportTitle = null;
 	private String selectedCollection = null;

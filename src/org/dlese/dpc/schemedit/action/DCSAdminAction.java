@@ -23,7 +23,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -37,7 +36,6 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.dlese.dpc.index.ResultDocList;
 import org.dlese.dpc.index.SimpleLuceneIndex;
-import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.schemedit.MetaDataFramework;
 import org.dlese.dpc.schemedit.action.form.DCSAdminForm;
 import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
@@ -47,7 +45,6 @@ import org.dlese.dpc.schemedit.threadedservices.AutoExportTask;
 import org.dlese.dpc.vocab.MetadataVocab;
 import org.dlese.dpc.vocab.MetadataVocabServlet;
 import org.dlese.dpc.xml.Dom4jUtils;
-import org.dlese.dpc.xml.XMLValidator;
 
 /**
  *  Implementation of <strong>Action</strong> that handles administration of a
@@ -97,14 +94,14 @@ public final class DCSAdminAction extends DCSAction {
 			saveErrors(req, errors);
 			return (mapping.findForward("error.page"));
 		}
-		Locale locale = getLocale(req);
+//		Locale locale = getLocale(req);
 		DCSAdminForm daf = (DCSAdminForm) form;
 		ServletContext servletContext = getServlet().getServletContext();
 
 		MetadataVocab vocab =
 			(MetadataVocab) servletContext.getAttribute("MetadataVocab");
 
-		String enableNewSets = (String) servletContext.getAttribute("enableNewSets");
+//		String enableNewSets = (String) servletContext.getAttribute("enableNewSets");
 
 		// SchemEditUtils.showRequestParameters(req);
 
@@ -303,7 +300,7 @@ public final class DCSAdminAction extends DCSAction {
 								throw new Exception("MetadataVocabServlet not found in servlet context");
 							mvs.loadVocabs();
 						} catch (Exception e) {
-							String errorMsg = "Vocab reload error: " + e.getMessage();
+//							String errorMsg = "Vocab reload error: " + e.getMessage();
 							errors.add("error",
 								new ActionError("generic.error", "Vocabs not found in servlet context"));
 						}
