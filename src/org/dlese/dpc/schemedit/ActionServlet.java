@@ -51,7 +51,7 @@ import org.dlese.dpc.webapps.tools.GeneralServletTools;
 
 public final class ActionServlet extends org.apache.struts.action.ActionServlet {
 
-//	private boolean debug = true;
+	private boolean debug = true;
 
 	public void init() throws ServletException {
 		super.init();
@@ -161,14 +161,14 @@ public final class ActionServlet extends org.apache.struts.action.ActionServlet 
 		return GeneralServletTools.getAbsolutePath(fname, getServletContext());
 	}
 	
-//	/**
-//	 *  Output a line of text to error out, with datestamp.
-//	 *
-//	 *@param  s  The text that will be output to error out.
-//	 */
-//	private final void prtlnErr(String s) {
-//		System.err.println(getDateStamp() + " ActionServlet: " + s);
-//	}
+	/**
+	 *  Output a line of text to error out, with datestamp.
+	 *
+	 *@param  s  The text that will be output to error out.
+	 */
+	private final void prtlnErr(String s) {
+		System.err.println(getDateStamp() + " ActionServlet: " + s);
+	}
 
 
 	/**

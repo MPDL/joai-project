@@ -160,7 +160,7 @@ public class ADNItemDocReader {
 		this.id = id;
 		this.collection = collection;
 		this.doc = itemRecordDoc;
-//		String rootXPath = "/DDSWebService/GetRecord/metadata/itemRecord";
+		String rootXPath = "/DDSWebService/GetRecord/metadata/itemRecord";
 		this.vocab = vocab;
 	}
 

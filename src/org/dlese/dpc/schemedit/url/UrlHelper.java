@@ -341,7 +341,7 @@ public class UrlHelper {
 		try {
 			String protocol = url.getProtocol();
 			String host = url.getHost();
-//			String path = url.getPath();
+			String path = url.getPath();
 			boolean ret = ((protocol != null && protocol.trim().length() > 0) &&
 				(host != null && host.trim().length() > 0));
 			// prtln ("  isValid (" + url.toString() + ") : " + ret);
@@ -366,7 +366,7 @@ public class UrlHelper {
 		URL url = null;
 
 		url = new URL(urlStr);
-//		String protocol = url.getProtocol();
+		String protocol = url.getProtocol();
 		String host = url.getHost();
 
 		/* 		prtln("protocol: " + protocol);

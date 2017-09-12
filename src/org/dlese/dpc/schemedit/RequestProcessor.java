@@ -91,19 +91,19 @@ public final class RequestProcessor extends org.apache.struts.action.RequestProc
 	}
 
 
-//	/**
-//	 *  Gets the requestUrl attribute of the RequestProcessor object
-//	 *
-//	 * @param  request  NOT YET DOCUMENTED
-//	 * @return          The requestUrl value
-//	 */
-//	private String getRequestUrl(HttpServletRequest request) {
-//		StringBuffer requestURL = request.getRequestURL();
-//		if (requestURL != null)
-//			return requestURL.toString();
-//		else
-//			return "";
-//	}
+	/**
+	 *  Gets the requestUrl attribute of the RequestProcessor object
+	 *
+	 * @param  request  NOT YET DOCUMENTED
+	 * @return          The requestUrl value
+	 */
+	private String getRequestUrl(HttpServletRequest request) {
+		StringBuffer requestURL = request.getRequestURL();
+		if (requestURL != null)
+			return requestURL.toString();
+		else
+			return "";
+	}
 
 
 	/**
@@ -125,7 +125,7 @@ public final class RequestProcessor extends org.apache.struts.action.RequestProc
 			(SessionRegistry) servlet.getServletContext().getAttribute("sessionRegistry");
 		SessionBean sessionBean = (sessionRegistry != null) ? sessionRegistry.getSessionBean(request) : null;
 
-//		String requestUrl = getRequestUrl(request);
+		String requestUrl = getRequestUrl(request);
 		String contextPath = request.getContextPath();
 
 		// default destination
@@ -207,7 +207,7 @@ public final class RequestProcessor extends org.apache.struts.action.RequestProc
 		 throws ServletException, IOException {
 		// prtln("PROCESS ROLES");
 
-//		String logMsg = "";
+		String logMsg = "";
 		
 /* 		SessionRegistry sessionRegistry =
 			(SessionRegistry) servlet.getServletContext().getAttribute("sessionRegistry");

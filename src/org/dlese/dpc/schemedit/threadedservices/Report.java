@@ -148,10 +148,10 @@ public class Report implements java.io.Serializable {
 	
 	public String details () {
 		String s =  "\n\nDetailed Report";
-//		for (Iterator i = reportEntries.iterator();i.hasNext();) {
-//			ReportEntry entry = (ReportEntry)i.next();
-//			// s += "\n" + entry.id;
-//		}
+		for (Iterator i = reportEntries.iterator();i.hasNext();) {
+			ReportEntry entry = (ReportEntry)i.next();
+			// s += "\n" + entry.id;
+		}
 		return s;
 	}
 	

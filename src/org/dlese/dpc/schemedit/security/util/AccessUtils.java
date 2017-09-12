@@ -111,7 +111,7 @@ public final class AccessUtils {
 		prtln ("\ngetManagableUsers() for " + sessionUser.getFirstName());
 		while (allUsers.hasNext()) {
 			User user = (User)allUsers.next();
-//			String username = user.getUsername();
+			String username = user.getUsername();
 			if (user == sessionUser)
 				continue;
 			if (sessionUser.hasRole (user.getMaxRole()) && !managedUsers.contains(user)) {

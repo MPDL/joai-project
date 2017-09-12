@@ -17,6 +17,7 @@
 */
 package org.dlese.dpc.serviceclients.metaextract;
 
+import java.net.URL;
 import java.net.URLEncoder;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
@@ -85,7 +86,7 @@ http://ada.syr.edu:8080/mast/service.do&method=collect
 		String url = this.baseUrl + "?" + queryString;	
 		
  		try {
-//			URL tester = new URL(url);
+			URL tester = new URL(url);
 			prtln("\nURL:\n\t" + url.toString());
 			prtln ("\nURL(decoded):\n\t" + java.net.URLDecoder.decode (url.toString()) + "\n");
 		} catch (Throwable t) {

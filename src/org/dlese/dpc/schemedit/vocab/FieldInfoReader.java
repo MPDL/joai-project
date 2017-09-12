@@ -54,7 +54,7 @@ public class FieldInfoReader {
 	 *  Description of the Field
 	 */
 	public URI uri = null;
-//	private String rootElementName = "metadataFieldInfo";
+	private String rootElementName = "metadataFieldInfo";
 	private Document doc = null;
 	private HashMap termMap = null;
 	private List dos = null;
@@ -424,13 +424,13 @@ public class FieldInfoReader {
 	 */
 	public static String applyMarkup(String text, String link, String url, String style) {
 
-//		if (false) {
-//			prtln("applyMarkup:");
-//			prtln("\t text: " + text);
-//			prtln("\t link: " + link);
-//			prtln("\t url: " + url);
-//			prtln("\t style: " + style);
-//		}
+		if (false) {
+			prtln("applyMarkup:");
+			prtln("\t text: " + text);
+			prtln("\t link: " + link);
+			prtln("\t url: " + url);
+			prtln("\t style: " + style);
+		}
 
 		Element linkElement = null;
 

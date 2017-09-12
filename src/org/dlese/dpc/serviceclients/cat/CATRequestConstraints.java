@@ -24,6 +24,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
+
 /**
  *  Data Structure to manage information passed to the CATRest Service to
  *  constrain it's search.
@@ -31,7 +33,7 @@ import java.util.Map;
  * @author    ostwald
  */
 public class CATRequestConstraints {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 
 	public static final Integer ANY_GRADE = -1;
 
@@ -404,14 +406,14 @@ public class CATRequestConstraints {
 
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  s  NOT YET DOCUMENTED
-//	 */
-//	private static void prtln(String s) {
-//		if (debug)
-//			SchemEditUtils.prtln(s, "CATRequestConstraints");
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  s  NOT YET DOCUMENTED
+	 */
+	private static void prtln(String s) {
+		if (debug)
+			SchemEditUtils.prtln(s, "CATRequestConstraints");
+	}
 }
 

@@ -28,6 +28,7 @@ import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Class to read a "groups file" for a single schemaNode and create the
@@ -45,12 +46,12 @@ public class VocabLayout {
 
 	private String title = null;
 	private String xmlFormat = null;
-//	private String version = null;
-//	private String text = null;
-//	private String audience = null;
+	private String version = null;
+	private String text = null;
+	private String audience = null;
 	private String path = null;
-//	private String deftn = null;
-//	private String vocab = null;
+	private String deftn = null;
+	private String vocab = null;
 	private List layoutNodes = null;
 	private String collapseExpand = null;
 	private String smartCheckBox = null;
@@ -108,10 +109,10 @@ public class VocabLayout {
 
 		// grab attributes from concept element
 		Element conceptElement = head.element("concept");
-//		text = conceptElement.attributeValue("text");
+		text = conceptElement.attributeValue("text");
 		xmlFormat = conceptElement.attributeValue("metaFormat");
-//		version = conceptElement.attributeValue("metaVersion");
-//		audience = conceptElement.attributeValue("audience");
+		version = conceptElement.attributeValue("metaVersion");
+		audience = conceptElement.attributeValue("audience");
 		path = conceptElement.attributeValue("path");
 		collapseExpand = conceptElement.attributeValue("collapseExpand");
 		smartCheckBox = conceptElement.attributeValue("smartCheckBox");
@@ -182,7 +183,7 @@ public class VocabLayout {
 	 * @return    The nodeList value
 	 */
 	public List getNodeList() {
-//		List ret = new ArrayList();
+		List ret = new ArrayList();
 		return getNodeList(this.getLayoutNodes());
 	}
 
@@ -228,10 +229,10 @@ public class VocabLayout {
 	public static void main(String[] args) throws Exception {
 		prtln("\n ----------------");
 		prtln("VocabLayout");
-//		File taosMuiDir = new File("/Users/ostwald/devel/projects/metadata-ui-project");
+		File taosMuiDir = new File("/Users/ostwald/devel/projects/metadata-ui-project");
 		File muiDir = new File("D:/Documents and Settings/ostwald/devel/projects/metadata-ui-project");
 		File adnGroups = new File(muiDir, "frameworks/adn-item/0.6.50/groups");
-//		String subject = "subject-adn-groups-cataloger-en-us.xml";
+		String subject = "subject-adn-groups-cataloger-en-us.xml";
 		String resourceType = "resourceType-adn-groups-cataloger-en-us.xml";
 		File file = new File(adnGroups, resourceType);
 		VocabLayout docReader = new VocabLayout(file);
@@ -242,14 +243,14 @@ public class VocabLayout {
 		docReader.report();
 	}
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  node  NOT YET DOCUMENTED
-//	 */
-//	private static void pp(Node node) {
-//		prtln(Dom4jUtils.prettyPrint(node));
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  node  NOT YET DOCUMENTED
+	 */
+	private static void pp(Node node) {
+		prtln(Dom4jUtils.prettyPrint(node));
+	}
 
 
 	/**

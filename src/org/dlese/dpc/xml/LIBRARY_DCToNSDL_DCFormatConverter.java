@@ -27,6 +27,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.Namespace;
+import org.dom4j.Node;
 import org.dom4j.QName;
 
 /**
@@ -162,9 +163,9 @@ public class LIBRARY_DCToNSDL_DCFormatConverter implements XMLFormatConverter {
 	}
 
 
-//	private static void pp(Node n) {
-//		prtln(Dom4jUtils.prettyPrint(n));
-//	}
+	private static void pp(Node n) {
+		prtln(Dom4jUtils.prettyPrint(n));
+	}
 
 
 	private static void prtln(String s) {

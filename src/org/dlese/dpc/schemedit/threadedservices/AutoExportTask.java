@@ -39,7 +39,7 @@ public class AutoExportTask extends TimerTask {
 	// Main processing method for this thread.
 	private static boolean debug = true;
 	private ServletContext servletContext = null;
-//	private RepositoryService repositoryService = null;
+	private RepositoryService repositoryService = null;
 	
 	public AutoExportTask (ServletContext servletContext) {
 		super();

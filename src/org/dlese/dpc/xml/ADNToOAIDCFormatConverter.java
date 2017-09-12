@@ -33,6 +33,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
 
@@ -101,7 +102,7 @@ public class ADNToOAIDCFormatConverter implements XMLDocumentFormatConverter {
 			String transformed_content = XSLTransformer.transformString(xml, adn_to_oai_transformer);
 			transformed_content = XSLTransformer.transformString(transformed_content, namespace_out_transformer);
 						
-//			SAXReader reader = new SAXReader();
+			SAXReader reader = new SAXReader();
 			Document document = DocumentHelper.parseText(transformed_content);
 
 			// Replace IDs in the relation field only

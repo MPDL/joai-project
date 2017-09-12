@@ -17,6 +17,8 @@
 */
 package org.dlese.dpc.schemedit.threadedservices;
 
+import java.util.Iterator;
+
 import org.dlese.dpc.schemedit.dcs.DcsSetInfo;
 import org.dlese.dpc.util.Utils;
 
@@ -60,10 +62,10 @@ public class ExportReport extends Report {
 	
 	public String details () {
 		String s =  "\n\nDetailed Report";
-//		for (Iterator i = reportEntries.iterator();i.hasNext();) {
-//			ReportEntry entry = (ReportEntry)i.next();
-//			// s += "\n" + entry.id;
-//		}
+		for (Iterator i = reportEntries.iterator();i.hasNext();) {
+			ReportEntry entry = (ReportEntry)i.next();
+			// s += "\n" + entry.id;
+		}
 		return s;
 	}
 	

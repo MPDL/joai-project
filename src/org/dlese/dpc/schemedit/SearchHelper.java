@@ -547,7 +547,7 @@ public class SearchHelper {
 	 *@author    ostwald
 	 */
 	private class SortSpec {
-//		private SortWidget widget = null;
+		private SortWidget widget = null;
 		/**
 		 *  either 0 or 1
 		 */
@@ -576,7 +576,7 @@ public class SearchHelper {
 		 *@param  widget  the sortWidget
 		 */
 		public SortSpec(SortWidget widget) {
-//			this.widget = widget;
+			this.widget = widget;
 			this.order = widget.getOrder();
 			this.field = widget.getFieldName();
 		}

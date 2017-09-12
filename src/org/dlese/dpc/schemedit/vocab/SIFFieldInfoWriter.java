@@ -273,9 +273,9 @@ public class SIFFieldInfoWriter {
 		prtln (typeDef.toString());
 		prtln ("----------"); */
 		
-//		Document xsdDoc = null;
+		Document xsdDoc = null;
 		NameSpaceXMLDocReader xsdReader = null;
-//		String loc = typeDef.getLocation();
+		String loc = typeDef.getLocation();
 		// prtln ("LOC: " + loc);
 
 		try {
@@ -412,7 +412,7 @@ public class SIFFieldInfoWriter {
 	static void makeSIFFieldsFiles () throws Exception {
 		String basePath = "C:/tmp/sif_fields_files";
 		
-//		String fieldPath = "/sif:Activity/sif:LearningResources/sif:LearningResourceRefId";
+		String fieldPath = "/sif:Activity/sif:LearningResources/sif:LearningResourceRefId";
 		// makeFieldsFile (fieldPath, xmlFormat, basePath);
 		
 		String frameworksPath = TesterUtils.getFrameworkConfigDir();
@@ -437,10 +437,10 @@ public class SIFFieldInfoWriter {
 	 */
 	MetaDataFramework getFramework(String xmlFormat) throws Exception {
 		FrameworkTester ft = new FrameworkTester(xmlFormat);
-//		if (ft != null) {
+		if (ft != null) {
 			return ft.framework;
-//		}
-//		return null;
+		}
+		return null;
 	}
 
 

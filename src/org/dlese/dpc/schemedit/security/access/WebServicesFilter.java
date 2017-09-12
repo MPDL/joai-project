@@ -18,6 +18,7 @@
 package org.dlese.dpc.schemedit.security.access;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -26,6 +27,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts.action.ActionErrors;
 
 
 /**
@@ -65,10 +70,10 @@ public class WebServicesFilter implements Filter {
 			 
 		// prtln ("\n---------------------\ndoFilter()");
 		HttpServletRequest req = (HttpServletRequest) request;
-//		HttpServletResponse res = (HttpServletResponse) response;
-//		HttpSession session = req.getSession();
-//		
-//		ActionErrors errors = new ActionErrors();
+		HttpServletResponse res = (HttpServletResponse) response;
+		HttpSession session = req.getSession();
+		
+		ActionErrors errors = new ActionErrors();
 
 		
 		showRequestInfo(req);

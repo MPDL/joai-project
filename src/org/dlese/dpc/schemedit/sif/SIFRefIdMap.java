@@ -40,7 +40,7 @@ public class SIFRefIdMap {
 	private static boolean debug = true;
 
 	private Document doc = null;
-//	private File source = null;
+	private File source = null;
 	private String xmlFormat = null;
 	private Map map = null;
 
@@ -54,7 +54,7 @@ public class SIFRefIdMap {
 	public SIFRefIdMap(File source) throws Exception {
 		if (!source.exists())
 			throw new Exception("source does not exist at " + source);
-//		this.source = source;
+		this.source = source;
 		this.doc = Dom4jUtils.getXmlDocument(source);
 		this.xmlFormat = this.doc.getRootElement().attributeValue("xmlFormat");
 		this.init();

@@ -42,7 +42,7 @@ import org.dom4j.Element;
 public class AccessManager extends AbstractConfigReader {
 
 	static boolean debug = false;
-//	private List legalRoles = null;
+	private List legalRoles = null;
 	Map actionPathMap = null;
 	Map guardedPathMap = null;
 

@@ -26,6 +26,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -39,6 +40,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.util.LabelValueBean;
+import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.SessionBean;
@@ -58,7 +60,7 @@ import org.dlese.dpc.schemedit.security.util.CollectionLabelValueSorter;
 
 public final class CollectionAccessAction extends DCSAction {
 
-//	private static boolean debug = false;
+	private static boolean debug = false;
 
 	// --------------------------------------------------------- Public Methods
 
@@ -102,14 +104,14 @@ public final class CollectionAccessAction extends DCSAction {
 
 		CollectionAccessForm caForm = (CollectionAccessForm) form;
 
-//		Locale locale = getLocale(request);
-//		MessageResources messages = getResources(request);
+		Locale locale = getLocale(request);
+		MessageResources messages = getResources(request);
 
 		User sessionUser = getSessionUser(request);
 		List authorizedSets =
 			repositoryService.getAuthorizedSets(sessionUser, this.requiredRole);
 		List managedUsers = AccessUtils.getManagedUsers(sessionUser, authorizedSets, userManager);
-//		List managableUsers = AccessUtils.getManagableUsers(sessionUser, managedUsers, userManager);
+		List managableUsers = AccessUtils.getManagableUsers(sessionUser, managedUsers, userManager);
 		caForm.setSets(authorizedSets);
 
 		caForm.setRoleOptions(getRoleOptions(accessManager.getRoles(Roles.MANAGER_ROLE)));
@@ -170,9 +172,9 @@ public final class CollectionAccessAction extends DCSAction {
 
 		else if ("save".equals(command)) {
 			String collection = caForm.getCollection();
-//			SetInfo setInfo = null;
+			SetInfo setInfo = null;
 			try {
-			  SetInfo setInfo = AccessUtils.getAuthorizedSetInfo(collection, authorizedSets);
+				setInfo = AccessUtils.getAuthorizedSetInfo(collection, authorizedSets);
 			} catch (Exception e) {
 				errors.add("error", new ActionError("generic.error", e.getMessage()));
 			}

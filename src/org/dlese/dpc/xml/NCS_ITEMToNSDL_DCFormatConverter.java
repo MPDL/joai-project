@@ -28,6 +28,7 @@ import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
 
@@ -90,7 +91,7 @@ public class NCS_ITEMToNSDL_DCFormatConverter implements XMLDocumentFormatConver
 			Transformer transformer = XSLTransformer.getTransformer(transform_file.getAbsolutePath());
 			String transformed_content = XSLTransformer.transformString(xml, transformer);
 			
-//			SAXReader reader = new SAXReader();
+			SAXReader reader = new SAXReader();
 			Document document = DocumentHelper.parseText(transformed_content);
 
 			// Dom4j automatically writes using UTF-8, unless otherwise specified.

@@ -338,7 +338,7 @@ public class XMLNode {
 	 * @return <b>true</b> if removed, <b>false</b> otherwise
 	 */ 	
 	public boolean removeComment(String identifier) {
-//		ArrayList result = new ArrayList();
+		ArrayList result = new ArrayList();
 		//List list = element.getMixedContent();
 		List list = element.getContent();
 		for (int i=(list.size()-1); i>=0; i--) {

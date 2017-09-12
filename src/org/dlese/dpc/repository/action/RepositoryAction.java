@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,6 +33,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.dds.action.DDSQueryAction;
 import org.dlese.dpc.index.ResultDoc;
 import org.dlese.dpc.index.ResultDocList;
@@ -87,8 +89,8 @@ public final class RepositoryAction extends Action {
 		 */
 		try {
 
-//			Locale locale = getLocale(request);
-//			MessageResources messages = getResources(request);
+			Locale locale = getLocale(request);
+			MessageResources messages = getResources(request);
 			RepositoryForm rf = (RepositoryForm) form;
 
 			int numListIdentifiersResults = 1000;
@@ -102,12 +104,12 @@ public final class RepositoryAction extends Action {
 			}
 
 			// Basic OAI request validation:
-//			Enumeration params = request.getParameterNames();
+			Enumeration params = request.getParameterNames();
 			int num_args = 0;
 
 			// A count of the number of args that aren't "rt" or "verb" for further validation
-//			String arg = null;
-//			String param = null;
+			String arg = null;
+			String param = null;
 
 			// Echo the request params for debugging
 			/* prtln("Params: ");
@@ -821,7 +823,7 @@ public final class RepositoryAction extends Action {
 	private class ODLSearchHandler {
 		private String offset, length, queryString, set;
 		private int cursor = 0, numResultsToReturn = 0;
-//		private final static String DELIM = "/";
+		private final static String DELIM = "/";
 
 
 		/**

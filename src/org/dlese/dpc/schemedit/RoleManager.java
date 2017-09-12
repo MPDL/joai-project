@@ -17,6 +17,7 @@
 */
 package org.dlese.dpc.schemedit;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -36,7 +37,7 @@ public class RoleManager {
 	private static boolean debug = false;
 	private ServletContext context;
 	private HashMap roleMap = null;
-//	private File configDir = null;
+	private File configDir = null;
 	private String instanceName;
 	
 	public static final String NO_OP = "no_operation";

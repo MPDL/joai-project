@@ -31,12 +31,12 @@ import org.dom4j.Element;
  *@see       org.dlese.dpc.schemedit.vocab.FieldInfoReader
  */
 public class TermAndDeftn {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 	private Element element = null;
-//	private String term = null;
-//	private String attribution = null;
-//	private String definition = null;
-//	private String id = null;
+	private String term = null;
+	private String attribution = null;
+	private String definition = null;
+	private String id = null;
 
 
 	/**
@@ -124,17 +124,17 @@ public class TermAndDeftn {
 	}
 
 
-//	/**
-//	 *  Output a line of text to standard out, with datestamp, if debug is set to
-//	 *  true.
-//	 *
-//	 *@param  s  The String that will be output.
-//	 */
-//	private static void prtln(String s) {
-//		if (debug) {
-//			System.out.println(s);
-//		}
-//	}
+	/**
+	 *  Output a line of text to standard out, with datestamp, if debug is set to
+	 *  true.
+	 *
+	 *@param  s  The String that will be output.
+	 */
+	private static void prtln(String s) {
+		if (debug) {
+			System.out.println(s);
+		}
+	}
 
 }
 

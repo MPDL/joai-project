@@ -101,7 +101,7 @@ public final class SIFReferenceAction extends DCSAction {
 			return (mapping.findForward("error.page"));
 		}
 		SIFReferenceForm sif = (SIFReferenceForm) form;
-//		String errorMsg = "";
+		String errorMsg = "";
 
 		List sets = repositoryService.getAuthorizedSets(getSessionUser(request), this.requiredRole);
 		SessionBean sessionBean = this.getSessionBean(request);
@@ -153,7 +153,7 @@ public final class SIFReferenceAction extends DCSAction {
 
 		SIFReferenceForm sif = (SIFReferenceForm) form;
 		ActionErrors errors = new ActionErrors();
-//		String errorMsg;
+		String errorMsg;
 
 		String collection = sif.getCollection();
 		CollectionConfig collectionConfig = this.collectionRegistry.getCollectionConfig(collection);

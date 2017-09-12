@@ -38,7 +38,7 @@ public class GuardedPath {
 	protected Role role = Roles.NO_ROLE;
 	protected DocumentFactory df = DocumentFactory.getInstance();
 	private String name = null;
-//	private String urlMapping = null;
+	private String urlMapping = null;
 	private boolean isActionMapping = false;
 	
 	String elementName = "guarded-path";

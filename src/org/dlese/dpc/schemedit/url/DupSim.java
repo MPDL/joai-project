@@ -33,7 +33,7 @@ import org.dlese.dpc.serviceclients.remotesearch.reader.ADNItemDocReader;
  */
 public class DupSim {
 	private boolean debug = true;
-//	private ADNItemDocReader reader = null;
+	private ADNItemDocReader reader = null;
 	private String id = "";
 	private String url = null;
 	private String type = "";

@@ -687,9 +687,7 @@ public final class XMLConversionService {
 
 
 	private class JavaXmlConverter implements XmlConverter {
-//		private String toFormat = null;
-//		private String fromFormat = null;
-		private String className = null;
+		private String toFormat = null, fromFormat = null, className = null;
 		private XMLFormatConverter xmlFormatConverter = null;
 		private XMLDocumentFormatConverter xmlDocumentFormatConverter = null;
 		private ServletContext context = null;
@@ -709,8 +707,8 @@ public final class XMLConversionService {
 		                        String toFormat,
 		                        String className,
 		                        ServletContext context) {
-//			this.toFormat = toFormat;
-//			this.fromFormat = fromFormat;
+			this.toFormat = toFormat;
+			this.fromFormat = fromFormat;
 			this.className = className;
 			this.context = context;
 		}
@@ -896,16 +894,16 @@ public final class XMLConversionService {
 
 
 
-//	/**
-//	 *  Output a line of text to standard out, with datestamp, if debug is set to
-//	 *  true.
-//	 *
-//	 * @param  s  The String that will be output.
-//	 */
-//	private final void prtln(String s) {
-//		if (debug)
-//			System.out.println(getDateStamp() + " " + s);
-//	}
+	/**
+	 *  Output a line of text to standard out, with datestamp, if debug is set to
+	 *  true.
+	 *
+	 * @param  s  The String that will be output.
+	 */
+	private final void prtln(String s) {
+		if (debug)
+			System.out.println(getDateStamp() + " " + s);
+	}
 
 
 	/**

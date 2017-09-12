@@ -32,6 +32,7 @@ import org.dlese.dpc.index.reader.XMLDocReader;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.io.OutputFormat;
+import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 import org.dom4j.tree.AbstractElement;
 
@@ -117,7 +118,7 @@ public class ADNToNSDLDCFormatConverter implements XMLDocumentFormatConverter {
 			String transformed_content = XSLTransformer.transformString(xml, adn_to_nsdl_transformer);
 			transformed_content = XSLTransformer.transformString(transformed_content, namespace_out_transformer);
 
-//			SAXReader reader = new SAXReader();
+			SAXReader reader = new SAXReader();
 			Document document = DocumentHelper.parseText(transformed_content);
 
 			// Replace IDs with URL in each field as appropriate

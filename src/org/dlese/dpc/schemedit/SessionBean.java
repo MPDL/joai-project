@@ -39,6 +39,8 @@ import org.dlese.dpc.index.SimpleLuceneIndex;
 import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.action.form.DCSQueryForm;
+import org.dlese.dpc.schemedit.action.form.DCSViewForm;
+import org.dlese.dpc.schemedit.action.form.SchemEditForm;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
 import org.dlese.dpc.schemedit.config.CollectionRegistry;
 import org.dlese.dpc.schemedit.config.StatusFlags;
@@ -98,10 +100,10 @@ public class SessionBean implements HttpSessionBindingListener, Serializable {
 	private LabelValueBean collectionFilter = new LabelValueBean();
 	
 	private DCSQueryForm queryForm = null;
-//	private DCSViewForm viewForm = null;
-//	private SchemEditForm schemEditForm = null;
+	private DCSViewForm viewForm = null;
+	private SchemEditForm schemEditForm = null;
 	private RecordList failedBatchLocks = null;
-//	private String editor = "";
+	private String editor = "";
 	private HttpServletRequest request = null;
 	
 	private SearchHelper searchHelper = null;
@@ -1063,7 +1065,7 @@ public class SessionBean implements HttpSessionBindingListener, Serializable {
 		return collectionLabelValues;
 	}
 
-//	private SyncService syncService = null;
+	private SyncService syncService = null;
 	
 	public SyncService getSyncService () {
 		if (this.session == null) {
@@ -1090,8 +1092,8 @@ public class SessionBean implements HttpSessionBindingListener, Serializable {
 		this.session = null;
 		this.sets = null;
 		this.queryForm = null;
-//		this.viewForm = null;
-//		this.schemEditForm = null;
+		this.viewForm = null;
+		this.schemEditForm = null;
 		this.failedBatchLocks = null;
 	}
 

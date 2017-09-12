@@ -194,7 +194,7 @@ public class SearchServiceClient {
 		String serviceUrl = "http://localhost/schemedit/services/ddsws1-0";
 		SearchServiceClient rs = new SearchServiceClient(serviceUrl);
 
-//		String queryStr;
+		String queryStr;
 
 		String url = "h*fooberry*";
 		if (args.length > 0) {

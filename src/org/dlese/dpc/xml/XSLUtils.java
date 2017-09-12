@@ -49,23 +49,23 @@ public class XSLUtils {
 
 		
 	// This one works but throws an error "The child axis starting at an attribute node will never select anything" from the saxon xslt 2 processor
-//	private static final String removeNamespacesXSLOFF =
-//		"<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0' >\n" +
-//		
-//			"<xsl:template match='@*' >\n" +
-//				"<xsl:attribute name='{local-name()}' >\n" +
-//					"<xsl:value-of select='.' />\n" +
-//				"</xsl:attribute>\n" +
-//				"<xsl:apply-templates/>\n" +
-//			"</xsl:template>\n" +
-//			
-//			"<xsl:template match ='*' >\n" +
-//				"<xsl:element name='{local-name()}' >\n" +
-//					"<xsl:apply-templates select='@* | node()' />\n" +
-//				"</xsl:element>\n" +
-//			"</xsl:template>\n" +
-//			
-//		"</xsl:stylesheet>";		
+	private static final String removeNamespacesXSLOFF =
+		"<xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0' >\n" +
+		
+			"<xsl:template match='@*' >\n" +
+				"<xsl:attribute name='{local-name()}' >\n" +
+					"<xsl:value-of select='.' />\n" +
+				"</xsl:attribute>\n" +
+				"<xsl:apply-templates/>\n" +
+			"</xsl:template>\n" +
+			
+			"<xsl:template match ='*' >\n" +
+				"<xsl:element name='{local-name()}' >\n" +
+					"<xsl:apply-templates select='@* | node()' />\n" +
+				"</xsl:element>\n" +
+			"</xsl:template>\n" +
+			
+		"</xsl:stylesheet>";		
 
 	/**
 	 *  Gets an XSL style sheet that removes all namespaces from an XML document. With namespaces removed, the

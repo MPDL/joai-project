@@ -17,11 +17,12 @@
 */
 package org.dlese.dpc.schemedit.sif;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.standards.asn.NameSpaceXMLDocReader;
 import org.dom4j.Element;
 
 public abstract class SIFDocReader extends NameSpaceXMLDocReader {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 	
 	public SIFDocReader (String xml) throws Exception {
 		super (xml);
@@ -62,9 +63,9 @@ public abstract class SIFDocReader extends NameSpaceXMLDocReader {
 		prtln ("title: " + reader.getTitle());
 	} */
 	
-//	private static void prtln(String s) {
-//		if (debug) {
-//			SchemEditUtils.prtln(s, "SIFDocReader: ");
-//		}
-//	}
+	private static void prtln(String s) {
+		if (debug) {
+			SchemEditUtils.prtln(s, "SIFDocReader: ");
+		}
+	}
 }

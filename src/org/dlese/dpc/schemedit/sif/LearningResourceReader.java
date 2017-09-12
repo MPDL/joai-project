@@ -17,8 +17,10 @@
 */
 package org.dlese.dpc.schemedit.sif;
 
+import org.dlese.dpc.schemedit.SchemEditUtils;
+
 public class LearningResourceReader extends  SIFDocReader {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 	
 	public LearningResourceReader (String xml) throws Exception {
 		super (xml);
@@ -48,9 +50,9 @@ public class LearningResourceReader extends  SIFDocReader {
 		return getNodeText ("/sif:CurriculumStructure/sif:Description");
 	}
 	
-//	private static void prtln(String s) {
-//		if (debug) {
-//			SchemEditUtils.prtln(s, "LearningResourceReader: ");
-//		}
-//	}
+	private static void prtln(String s) {
+		if (debug) {
+			SchemEditUtils.prtln(s, "LearningResourceReader: ");
+		}
+	}
 }

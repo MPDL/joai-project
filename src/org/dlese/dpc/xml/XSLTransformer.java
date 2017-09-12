@@ -209,7 +209,7 @@ public class XSLTransformer {
 		long sec1 = (long) Math.floor((end.getTime() - start.getTime()) / 1000);
 		long min = (long) Math.floor(sec1 / 60);
 		long sec = sec1 - 60 * min;
-//		long tms = end.getTime() - start.getTime();
+		long tms = end.getTime() - start.getTime();
 
 		String timeMsg = min + " min " + sec + " sec and " + ms + " ms.\n";
 
@@ -659,24 +659,24 @@ public class XSLTransformer {
 	public static String encodeStringIntoHex(String stg) {
 		// Since the xslt (xalan) code has trouble outputting file names
 		// with hex encoding, we're using other encoding instead.
-//		if (true)
+		if (true)
 			return encodeCharsInString(stg);
 
-//		int ii;
-//		StringBuffer outbuf = new StringBuffer();
-//		for (int ii = 0; ii < stg.length(); ii++) {
-//			char chr = stg.charAt(ii);
-//			if (Character.isLetterOrDigit(chr) ||
-//			//chr == ':' || // unfortunatly colons don't work in Windows
-//				chr == '-' ||
-//				chr == '_' ||
-//				chr == '%' ||
-//				chr == '.')
-//				outbuf.append(chr);
-//			else
-//				outbuf.append("%" + Integer.toHexString(chr).toUpperCase());
-//		}
-//		return outbuf.toString();
+		int ii;
+		StringBuffer outbuf = new StringBuffer();
+		for (ii = 0; ii < stg.length(); ii++) {
+			char chr = stg.charAt(ii);
+			if (Character.isLetterOrDigit(chr) ||
+			//chr == ':' || // unfortunatly colons don't work in Windows
+				chr == '-' ||
+				chr == '_' ||
+				chr == '%' ||
+				chr == '.')
+				outbuf.append(chr);
+			else
+				outbuf.append("%" + Integer.toHexString(chr).toUpperCase());
+		}
+		return outbuf.toString();
 	}
 
 

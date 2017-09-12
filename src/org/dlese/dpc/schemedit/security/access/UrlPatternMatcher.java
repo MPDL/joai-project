@@ -78,10 +78,10 @@ public class UrlPatternMatcher {
 			String matcher = (String)i.next();
 			if (wch.match (map, path, wch.compilePattern (matcher))) {
 				// prtln ("Got a match!");
-//				for (Iterator j=map.keySet().iterator();j.hasNext();) {
-//					String key = (String)j.next();
-//					// prtln ("\t" + key + ": " + (String)map.get(key));
-//				}
+				for (Iterator j=map.keySet().iterator();j.hasNext();) {
+					String key = (String)j.next();
+					// prtln ("\t" + key + ": " + (String)map.get(key));
+				}
 				return true;
 			}
 		}

@@ -18,6 +18,8 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +30,7 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.DCSAction;
 import org.dlese.dpc.schemedit.security.access.Roles;
@@ -80,8 +83,8 @@ public final class UserInfoAction extends DCSAction {
 		UserInfoForm userForm = (UserInfoForm) form;
 
 		// Extract attributes we will need
-//		Locale locale = getLocale(request);
-//		MessageResources messages = getResources(request);
+		Locale locale = getLocale(request);
+		MessageResources messages = getResources(request);
 
 		userForm.setUsers(userManager.getUsers());
 		User sessionUser = getSessionUser(request);
@@ -320,7 +323,7 @@ public final class UserInfoAction extends DCSAction {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		UserInfoForm userForm = (UserInfoForm) form;
-//		Document responseDoc = null;
+		Document responseDoc = null;
 
 		try {
 			String url = "https://api.ucar.edu/people/internalPersons?";

@@ -487,8 +487,8 @@ public class Dom4jUtils {
 	 * @return                  Description of the Return Value
 	 */
 	public static Document delocalizeXml(Document doc, String rootElementName, String nameSpaceInfo) {
-//		Element root = doc.getRootElement();
-//		String rootName = root.getName();
+		Element root = doc.getRootElement();
+		String rootName = root.getName();
 		String namespaceXml = delocalizeDocStr(doc.asXML(), rootElementName, nameSpaceInfo);
 		try {
 			return getXmlDocument(namespaceXml);
@@ -509,7 +509,7 @@ public class Dom4jUtils {
 	 */
 	public static String getNameSpaceInfo(Document doc, String rootElementName) {
 		String xml = doc.asXML();
-//		String elementName = rootElementName;
+		String elementName = rootElementName;
 		Pattern p = Pattern.compile("<" + rootElementName + "(.+?)>", Pattern.MULTILINE);
 		Matcher m = p.matcher(xml);
 

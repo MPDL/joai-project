@@ -129,9 +129,9 @@ public class WebServiceClient {
 	public Document doSearch (String queryStr)
 		throws WebServiceClientException {
 		String verb = "Search";
-//		String encodedQueryStr = "";
+		String encodedQueryStr = "";
 		try {
-			URLEncoder.encode(queryStr, "UTF-8");
+			encodedQueryStr = URLEncoder.encode(queryStr, "UTF-8");
 		} catch (Exception e) {
 			String errorMsg = "WebServiceClient.urlCheck failed to encode: " + queryStr;
 			throw new WebServiceClientException(errorMsg);

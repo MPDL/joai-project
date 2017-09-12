@@ -32,7 +32,7 @@ import org.apache.struts.action.ActionMapping;
 
 public final class AccessManagerForm extends ActionForm {
 
-//	private static boolean debug = false;
+	private static boolean debug = false;
 	
 	public void reset (ActionMapping mapping, HttpServletRequest request) {
 	}
