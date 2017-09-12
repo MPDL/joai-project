@@ -62,7 +62,7 @@ public final class SuggestResourceServlet extends HttpServlet {
 		ServletContext context = getServletContext();
 
 		// The MetadataVocabServlet puts the MetadataVocab object in the context under "MetadataVocab"
-//		MetadataVocab vocab = (MetadataVocab) context.getAttribute("MetadataVocab");
+		MetadataVocab vocab = (MetadataVocab) context.getAttribute("MetadataVocab");
 		
 		// Use schema definition from web to load schemaHelper
 		String schemaLoc = (String) context.getInitParameter("schemaUrl-resource");
@@ -94,11 +94,11 @@ public final class SuggestResourceServlet extends HttpServlet {
 		// searchCollection designates the collection against which new suggestions are validated
 		String searchCollection = (String) context.getInitParameter("searchCollection-resource");
 		UrlValidator urlValidator = new UrlValidator(searchServiceUrl, searchCollection);
-//		if (urlValidator == null) {
-//			initErrorMsg = "failed to instantiate urlValidator";
-//			prtlnErr(initErrorMsg);
-//			throw new ServletException(initErrorMsg);
-//		}
+		if (urlValidator == null) {
+			initErrorMsg = "failed to instantiate urlValidator";
+			prtlnErr(initErrorMsg);
+			throw new ServletException(initErrorMsg);
+		}
 		serviceHelper.setUrlValidator(urlValidator);
 		
 		// repositoryServiceClient is used to put records to the DCS

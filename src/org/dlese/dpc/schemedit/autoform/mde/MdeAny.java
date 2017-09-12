@@ -63,7 +63,7 @@ public class MdeAny extends MdeSimpleType {
 			Element valueDiv = df.createElement("div")
 				.addAttribute("class", "static-value");
 			// Must filter xml element!
-			valueDiv.addElement("bean__write")
+			Element valueElement = valueDiv.addElement("bean__write")
 				.addAttribute("name", formBeanName)
 				.addAttribute("property", "anyTypeValueOf(" + xpath + ")")
 				.addAttribute("filter", "true");

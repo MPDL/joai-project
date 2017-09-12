@@ -21,7 +21,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.dlese.dpc.ndr.NdrUtils;
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Wraps a row from CollectionXSLReader, reprsenting information about a particular collection
@@ -31,7 +34,7 @@ import org.dom4j.Element;
  * @author    Jonathan Ostwald
  */
 public class CollectionXSLRecord {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 	public Element element = null;
 	private Map map = null;
 
@@ -68,37 +71,37 @@ public class CollectionXSLRecord {
 	}
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  args  NOT YET DOCUMENTED
-//	 */
-//	public static void main(String[] args) {
-//		String xml = "H:/Documents/NDR/NSDLCollections/NDRCollectionsNCSIDs.xml";
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  args  NOT YET DOCUMENTED
+	 */
+	public static void main(String[] args) {
+		String xml = "H:/Documents/NDR/NSDLCollections/NDRCollectionsNCSIDs.xml";
+	}
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  node  NOT YET DOCUMENTED
-//	 */
-//	private static void pp(Node node) {
-//		prtln(Dom4jUtils.prettyPrint(node));
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  node  NOT YET DOCUMENTED
+	 */
+	private static void pp(Node node) {
+		prtln(Dom4jUtils.prettyPrint(node));
+	}
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  s  NOT YET DOCUMENTED
-//	 */
-//	private static void prtln(String s) {
-//		String prefix = null;
-//		if (debug) {
-//			NdrUtils.prtln(s, prefix);
-//		}
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  s  NOT YET DOCUMENTED
+	 */
+	private static void prtln(String s) {
+		String prefix = null;
+		if (debug) {
+			NdrUtils.prtln(s, prefix);
+		}
+	}
 	
 
 	

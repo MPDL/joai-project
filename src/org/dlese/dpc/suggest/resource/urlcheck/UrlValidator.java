@@ -47,8 +47,8 @@ public class UrlValidator {
 
 	private String referenceCollection = null;
 	private SearchServiceClient searchServiceClient = null;
-//	private DupSim duplicate = null;
-//	private List similarPrimaryUrls = null;
+	private DupSim duplicate = null;
+	private List similarPrimaryUrls = null;
 	static int SEARCH_LEVELS = 3;
 	static int MAX_DELTA = 3;
 
@@ -183,7 +183,7 @@ public class UrlValidator {
 			for (Iterator m = reader.getMirrorUrls().iterator(); m.hasNext(); ) {
 				String mirrorUrl = (String) m.next();
 				if (mirrorUrl.equals(referenceUrl)) {
-//					String id = reader.getId();
+					String id = reader.getId();
 					DupSim dup = new DupSim(reader.getId(), mirrorUrl, "dup", "mirror", "adn");
 					vr.setDuplicate(dup);
 					return vr;

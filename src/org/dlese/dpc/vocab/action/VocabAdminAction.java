@@ -20,6 +20,7 @@ package org.dlese.dpc.vocab.action;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -75,7 +76,7 @@ public final class VocabAdminAction extends Action {
 		 *  all variables via method signatures rather than instance vars.
 		 */
 		// Extract attributes we will need
-//		Locale locale = getLocale( req );
+		Locale locale = getLocale( req );
 		VocabAdminForm vForm = (VocabAdminForm)form;
 		ActionErrors errors = new ActionErrors();
 		RepositoryManager rm =
@@ -154,14 +155,14 @@ public final class VocabAdminAction extends Action {
 	}
 
 
-//	/**
-//	 *  Output a line of text to error out, with datestamp.
-//	 *
-//	 * @param  s  The text that will be output to error out.
-//	 */
-//	private final void prtlnErr( String s ) {
-//		System.err.println( getDateStamp() + " " + s );
-//	}
+	/**
+	 *  Output a line of text to error out, with datestamp.
+	 *
+	 * @param  s  The text that will be output to error out.
+	 */
+	private final void prtlnErr( String s ) {
+		System.err.println( getDateStamp() + " " + s );
+	}
 
 
 	/**

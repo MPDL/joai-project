@@ -385,7 +385,7 @@ public class DleseStandardsDocument implements StandardsDocument {
 	public static void main(String[] args) {
 
 		String schemaURLStr = "http://www.dlese.org/Metadata/adn-item/0.7.00/record.xsd";
-//		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
+		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
 		SchemaHelper sh = MappingUtils.getSchemaHelper(schemaURLStr, "itemRecord");
 		List dataTypeNames = new ArrayList();
 		dataTypeNames.add("NCGEgeographyContentStandardsType");
@@ -406,9 +406,9 @@ public class DleseStandardsDocument implements StandardsDocument {
 
 		// String item = "NSES:K-4:Unifying Concepts and Processes Standards:Systems, order, and organization";
 		// String item = "NSES:5-8:Content Standard D Earth and Space Science Standards:Structure of the earth system:Land forms are the result of a combination of constructive and destructive forces. Constructive forces include crustal deformation, volcanic eruption, and deposition of sediment, while destructive forces include weathering and erosion.";
-//		String item = "NSES:5-8:Content Standard D Earth and Space Science Standards:Earth's history:The earth processes we see today, including erosion, movement of lithospheric plates, and changes in atmospheric composition, are similar to those that occurred in the past. Earth history is also influenced by occasional catastrophes, such as the impact of an asteroid or comet.";
+		String item = "NSES:5-8:Content Standard D Earth and Space Science Standards:Earth's history:The earth processes we see today, including erosion, movement of lithospheric plates, and changes in atmospheric composition, are similar to those that occurred in the past. Earth history is also influenced by occasional catastrophes, such as the impact of an asteroid or comet.";
 
-//		DleseStandardsNode n = t.getStandard(item);
+		DleseStandardsNode n = t.getStandard(item);
 
 		// prtln("DleseStandardsNode");
 		// prtln("\tfullText: " + n.getFullText());

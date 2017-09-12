@@ -50,7 +50,7 @@ import org.dlese.dpc.xml.schema.SchemaHelper;
 public final class CollectionConfigAction extends StandAloneSchemEditAction {
 
 	private static boolean debug = false;
-//	private static boolean forceValidation = true;
+	private static boolean forceValidation = true;
 
 
 	/**
@@ -109,7 +109,7 @@ public final class CollectionConfigAction extends StandAloneSchemEditAction {
 		 throws ServletException, MissingLockException {
 
 		SchemEditForm sef = (SchemEditForm) form;
-//		MetaDataFramework metadataFramework = getMetaDataFramework();
+		MetaDataFramework metadataFramework = getMetaDataFramework();
 
 		// BEFORE SAVING RECORD, we compare new and cashed values of the mdp: just in case this collection is
 		// registered with the NDR and the mdp has changed, then we need to adjust item records - see below
@@ -259,12 +259,12 @@ public final class CollectionConfigAction extends StandAloneSchemEditAction {
 		// additional commands we want to handle
 
 		SchemEditForm sef = (SchemEditForm) form;
-//		SchemEditValidator validator = new SchemEditValidator(sef, getMetaDataFramework(), mapping, request);
-//		String command = request.getParameter("command");
-//		String recId = request.getParameter("recId");
-//		String errorMsg = "";
-//
-//		ActionErrors errors = new ActionErrors();
+		SchemEditValidator validator = new SchemEditValidator(sef, getMetaDataFramework(), mapping, request);
+		String command = request.getParameter("command");
+		String recId = request.getParameter("recId");
+		String errorMsg = "";
+
+		ActionErrors errors = new ActionErrors();
 
 		String collection = sef.getCollection();
 		if (collection == null || collection.trim().length() == 0) {
@@ -295,11 +295,11 @@ public final class CollectionConfigAction extends StandAloneSchemEditAction {
 		prtln("getFileToEdit()");
 
 		SchemEditForm sef = (SchemEditForm) form;
-//		ActionErrors errors = new ActionErrors();
-//		String errorMsg;
+		ActionErrors errors = new ActionErrors();
+		String errorMsg;
 
 		String collection = request.getParameter("collection");
-//		String recId = request.getParameter("recId");
+		String recId = request.getParameter("recId");
 
 		prtln("collection is " + collection);
 

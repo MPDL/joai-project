@@ -24,10 +24,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+// import org.dlese.dpc.xml.schema.compositor.Compositor;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
+import org.dom4j.Node;
 
 /**
  *  Stores XML schema properties defined in the root schema File<p>
@@ -43,7 +45,7 @@ public class SchemaProps {
 	private static boolean debug = true;
 	private Map map;
 	private Element rootElement = null;
-//	private boolean namespaceEnabled = false;
+	private boolean namespaceEnabled = false;
 
 /* 	private URI rootURI = null;
 	private String version;
@@ -97,13 +99,13 @@ public class SchemaProps {
 	
 	public static void main (String [] args) throws Exception {
 		// paths to schema files
-//		String play = "http://www.dpc.ucar.edu/people/ostwald/Metadata/NameSpacesPlay/cd.xsd";
-//		String news_opps = "/devel/ostwald/metadata-frameworks/news-opps-project/news-opps.xsd";
-//		String dlese_collect = "/devel/ostwald/metadata-frameworks/collection-v1.0.00/collection.xsd";
-//		String local_play = "/devel/ostwald/SchemEdit/NameSpaces/Play-local/cd.xsd";
-//		String original = "/devel/ostwald/SchemEdit/NameSpaces/Original/cd.xsd";
-//		String framework_config = "/devel/ostwald/tomcat/tomcat/webapps/schemedit/WEB-INF/metadata-frameworks/framework-config/dcsFrameworkConfig-0.0.2.xsd";
-//		String nsdl = "http://ns.nsdl.org/schemas/nsdl_dc/nsdl_dc_v1.02.xsd";
+		String play = "http://www.dpc.ucar.edu/people/ostwald/Metadata/NameSpacesPlay/cd.xsd";
+		String news_opps = "/devel/ostwald/metadata-frameworks/news-opps-project/news-opps.xsd";
+		String dlese_collect = "/devel/ostwald/metadata-frameworks/collection-v1.0.00/collection.xsd";
+		String local_play = "/devel/ostwald/SchemEdit/NameSpaces/Play-local/cd.xsd";
+		String original = "/devel/ostwald/SchemEdit/NameSpaces/Original/cd.xsd";
+		String framework_config = "/devel/ostwald/tomcat/tomcat/webapps/schemedit/WEB-INF/metadata-frameworks/framework-config/dcsFrameworkConfig-0.0.2.xsd";
+		String nsdl = "http://ns.nsdl.org/schemas/nsdl_dc/nsdl_dc_v1.02.xsd";
 		String statusReportSimple = "/devel/ostwald/metadata-frameworks/ProjectReport/statusReportSimple.xsd";
 		
 		String path = statusReportSimple;
@@ -146,14 +148,14 @@ public class SchemaProps {
 	}
 			
 	
-//	/**
-//	 *  Description of the Method
-//	 *
-//	 * @param  o  Description of the Parameter
-//	 */
-//	private void pp (Node n) {
-//		prtln (Dom4jUtils.prettyPrint (n));
-//	}
+	/**
+	 *  Description of the Method
+	 *
+	 * @param  o  Description of the Parameter
+	 */
+	private void pp (Node n) {
+		prtln (Dom4jUtils.prettyPrint (n));
+	}
 
 
 	/**

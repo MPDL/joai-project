@@ -18,6 +18,7 @@
 package org.dlese.dpc.oai.provider.action;
 
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.oai.provider.action.form.OaiPmhSearchForm;
 import org.dlese.dpc.repository.RepositoryManager;
 import org.dlese.dpc.webapps.tools.GeneralServletTools;
@@ -68,8 +70,8 @@ public final class OaiPmhSearchAction extends Action {
 		 */
 		// Extract attributes we will need
 		
-//		Locale locale = getLocale(req);
-//		MessageResources messages = getResources(req);
+		Locale locale = getLocale(req);
+		MessageResources messages = getResources(req);
 		
 		OaiPmhSearchForm opsf = (OaiPmhSearchForm) form;
 

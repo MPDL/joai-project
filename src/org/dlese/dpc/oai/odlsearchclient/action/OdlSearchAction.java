@@ -226,7 +226,7 @@ public final class OdlSearchAction extends Action {
 					prtln("query: " + query + " had zero results");
 
 				queryForm.setResults(resultDocs);
-//				StringBuffer str;
+				StringBuffer str;
 
 				prtln("setResults done");
 
@@ -429,7 +429,7 @@ public final class OdlSearchAction extends Action {
 		// Grab the form bean:
 		SimpleQueryForm queryForm = (SimpleQueryForm) form;
 
-//		String paramVal = "";
+		String paramVal = "";
 		try {
 
 			// Handle queries:

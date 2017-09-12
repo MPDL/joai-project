@@ -150,28 +150,28 @@ public class ValidatorTester {
 		}
 	}
 	
-//	public static void main (String[] args){
-//		prtln ("\n\n==================================================");
-//		String xsdPath = "O:/www.dlese.org/docroot/Metadata/adn-item/0.6.50/record.xsd";
-//		ValidatorTester vt = null;
-//		
-//		try {		
-//			String xmlFormat = "adn";
-//			String schemaURI = SchemaRegistry.getSchemaPath(xmlFormat);
-//			if (schemaURI == null)
-//				throw new Exception ("SchemaURI not found for " + xmlFormat);
-//
-//			vt = new ValidatorTester (xsdPath);
-//		} catch (Exception e) {
-//			prtln (e.getMessage());
-//			return;
-//		}
-//		
-//		// vt.validateDirTester();
-//		// vt.validateFileTester();
-//		// vt.validateStringTester();
-//		// vt.validateDocTester();
-//	}
+	public static void main (String[] args){
+		prtln ("\n\n==================================================");
+		String xsdPath = "O:/www.dlese.org/docroot/Metadata/adn-item/0.6.50/record.xsd";
+		ValidatorTester vt = null;
+		
+		try {		
+			String xmlFormat = "adn";
+			String schemaURI = SchemaRegistry.getSchemaPath(xmlFormat);
+			if (schemaURI == null)
+				throw new Exception ("SchemaURI not found for " + xmlFormat);
+
+			vt = new ValidatorTester (xsdPath);
+		} catch (Exception e) {
+			prtln (e.getMessage());
+			return;
+		}
+		
+		// vt.validateDirTester();
+		// vt.validateFileTester();
+		// vt.validateStringTester();
+		// vt.validateDocTester();
+	}
 		
 //	private void validateFileTester () {
 //		String path = "C:/tmp/validate/adn.xml";

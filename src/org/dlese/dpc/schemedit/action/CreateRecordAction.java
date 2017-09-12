@@ -266,7 +266,7 @@ public abstract class CreateRecordAction extends DCSAction {
 			carForm.setRecId(recId);
 
 			// prepare record Document
-//			String xmlFormat = carForm.getXmlFormat();
+			String xmlFormat = carForm.getXmlFormat();
 			Document recordDoc = makeRecordDoc(carForm, framework, mapping, request, response);
 
 			DocumentPruner.pruneDocument(recordDoc, framework.getSchemaHelper());

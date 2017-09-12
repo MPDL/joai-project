@@ -90,7 +90,7 @@ public class SGTester {
 
 		prtln ("\n===============================================\n");
 		
-//		String xpath = "/cd:cd/cd:abstractElement";
+		String xpath = "/cd:cd/cd:abstractElement";
 		// t.showSGoptions (xpath);
 		
 		// t.getSubStitutionGroupMembersOf(xpath);

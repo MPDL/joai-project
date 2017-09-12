@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Log {
-//	private static boolean debug = true;
+	private static boolean debug = true;
 	
 	private List entries = new ArrayList();
 	

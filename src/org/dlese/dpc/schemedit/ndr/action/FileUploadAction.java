@@ -19,6 +19,7 @@ package org.dlese.dpc.schemedit.ndr.action;
 
 import java.util.Enumeration;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -64,7 +65,7 @@ public class FileUploadAction extends Action {
 	                             HttpServletRequest request,
 	                             HttpServletResponse response) throws Exception {
 
-//		FileUploadForm uploadForm = (FileUploadForm) form;
+		FileUploadForm uploadForm = (FileUploadForm) form;
 		ActionErrors errors = new ActionErrors();
 		prtln("\nFileUploadAction");
 		String command = request.getParameter("command");
@@ -206,7 +207,7 @@ public class FileUploadAction extends Action {
 		String contentType = request.getContentType();
 		prtln("content: " + contentType + " (" + contentLength + ")");
 
-//		ServletInputStream stream = request.getInputStream();
+		ServletInputStream stream = request.getInputStream();
 	}
 
 
@@ -253,14 +254,14 @@ public class FileUploadAction extends Action {
 	}
 
 
-//	/**
-//	 *  NOT YET DOCUMENTED
-//	 *
-//	 * @param  s  NOT YET DOCUMENTED
-//	 */
-//	private void prtlnErr(String s) {
-//		SchemEditUtils.prtln(s, "");
-//	}
+	/**
+	 *  NOT YET DOCUMENTED
+	 *
+	 * @param  s  NOT YET DOCUMENTED
+	 */
+	private void prtlnErr(String s) {
+		SchemEditUtils.prtln(s, "");
+	}
 
 }
 

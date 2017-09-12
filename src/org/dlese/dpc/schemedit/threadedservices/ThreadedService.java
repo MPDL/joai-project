@@ -167,7 +167,7 @@ public abstract class ThreadedService extends MonitoredTask {
 	protected XMLDocReader getDocReader(String id) {
 		String query = "id:" + SimpleLuceneIndex.encodeToTerm(id, false);
 		ResultDocList results = index.searchDocs(query);
-		if (results != null && results.size() >= 1) {
+		if (results != null || results.size() > 1) {
 			return (XMLDocReader) ((ResultDoc)results.get(0)).getDocReader();
 		}
 		else

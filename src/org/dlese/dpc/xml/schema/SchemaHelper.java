@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.compositor.Compositor;
 import org.dom4j.Attribute;
@@ -89,17 +90,17 @@ public class SchemaHelper {
 	private XSDatatypeManager xsdDatatypeManager = null;
 	private SchemaNodeMap schemaNodeMap = null;
 	private DefinitionMiner definitionMiner;
-//	private Element schemaDocRoot;
+	private Element schemaDocRoot;
 
 	private URI rootURI = null;
 	private boolean namespaceEnabled = false;
 
 	private SchemaProps schemaProps = null;
 
-//	private String version;
-//	private String targetNamespace;
-//	private String elementFormDefault = "qualified";
-//	private String attributeFormDefault = "unqualified";
+	private String version;
+	private String targetNamespace;
+	private String elementFormDefault = "qualified";
+	private String attributeFormDefault = "unqualified";
 
 	private Log log = new Log();
 
@@ -451,7 +452,7 @@ public class SchemaHelper {
 	 * @param  args  The command line arguments
 	 */
 	public static void main(String[] args) {
-//		String webServiceBaseUrl = "http://www.dlese.org/dds/services";
+		String webServiceBaseUrl = "http://www.dlese.org/dds/services";
 		String schemaFilePath = "/export/devel/ostwald/metadata-frameworks/ADN-v0.6.50/record.xsd";
 		File schemaFile = new File(schemaFilePath);
 		try {
@@ -1582,14 +1583,14 @@ public class SchemaHelper {
 	}
 
 
-//	/**
-//	 *  Description of the Method
-//	 *
-//	 * @param  n  NOT YET DOCUMENTED
-//	 */
-//	private void pp(Node n) {
-//		prtln(Dom4jUtils.prettyPrint(n));
-//	}
+	/**
+	 *  Description of the Method
+	 *
+	 * @param  n  NOT YET DOCUMENTED
+	 */
+	private void pp(Node n) {
+		prtln(Dom4jUtils.prettyPrint(n));
+	}
 
 
 	/**
@@ -1609,15 +1610,15 @@ public class SchemaHelper {
 		}
 	}
 
-//		private static void prtlnErr(String s) {
-//			SchemaUtils.prtln(s, "SchemaHelper");
-///* 			while (s.length() > 0 && s.charAt(0) == '\n') {
-//				System.out.println("");
-//				s = s.substring(1);
-//			}
-//
-//			System.out.println("sh: " + s); */
-//	}
+		private static void prtlnErr(String s) {
+			SchemaUtils.prtln(s, "SchemaHelper");
+/* 			while (s.length() > 0 && s.charAt(0) == '\n') {
+				System.out.println("");
+				s = s.substring(1);
+			}
+
+			System.out.println("sh: " + s); */
+	}
 	
 
 	/**

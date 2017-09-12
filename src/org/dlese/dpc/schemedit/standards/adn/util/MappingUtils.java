@@ -52,11 +52,11 @@ public class MappingUtils {
 	}
 		
 	public static DleseStandardsDocument getDleseStandardsDocument (SchemaHelper sh) {
-//		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
+		String xpath = "/itemRecord/educational/contentStandards/contentStandard";
 		List dataTypeNames = new ArrayList();
 		dataTypeNames.add ("NCGEgeographyContentStandardsType");
 		dataTypeNames.add ("NSESscienceContentStandardsAllType");
-//		List adnStandards = new ArrayList();
+		List adnStandards = new ArrayList();
 		
 		DleseStandardsDocument sm = null;
 		try {

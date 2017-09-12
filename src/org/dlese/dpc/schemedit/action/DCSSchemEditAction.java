@@ -43,6 +43,7 @@ import org.dlese.dpc.schemedit.action.form.SchemEditForm;
 import org.dlese.dpc.schemedit.config.CollectionConfig;
 import org.dlese.dpc.schemedit.config.SchemaPath;
 import org.dlese.dpc.schemedit.dcs.DcsDataRecord;
+import org.dlese.dpc.schemedit.display.CollapseBean;
 import org.dlese.dpc.schemedit.display.CollapseBeanInitializer;
 import org.dlese.dpc.schemedit.display.CollapseUtils;
 import org.dlese.dpc.schemedit.input.SchemEditValidator;
@@ -52,6 +53,7 @@ import org.dlese.dpc.schemedit.standards.asn.AsnSuggestionServiceHelper;
 import org.dlese.dpc.schemedit.standards.asn.SelectedStandardsBean;
 import org.dlese.dpc.xml.XPathUtils;
 import org.dlese.dpc.xml.schema.DocMap;
+import org.dlese.dpc.xml.schema.SchemaHelper;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
@@ -156,7 +158,7 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 			 throws ServletException, MissingLockException {
 
 		String command = request.getParameter("command");
-//		ActionErrors errors = new ActionErrors();
+		ActionErrors errors = new ActionErrors();
 		SchemEditForm sef = (SchemEditForm) form;
 		SessionBean sessionBean = this.getSessionBean(request);
 
@@ -433,7 +435,7 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 		 throws ServletException {
 		prtln ("handleDeleteElement()");
 		SchemEditForm sef = (SchemEditForm) form;
-//		ActionErrors errors = new ActionErrors();
+		ActionErrors errors = new ActionErrors();
 		ActionForward forward = super.handleDeleteElement(mapping, form, request, validator);
 		if (sef.getSuggestionServiceHelper() != null) {
 			try {
@@ -555,7 +557,7 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 					// prtln ("there are available docs - setting current doc");
 					AsnSuggestionServiceHelper asnHelper = (AsnSuggestionServiceHelper)helper;
 					SelectedStandardsBean ss = asnHelper.getSelectedStandardsBean();
-//					String currentDocKey = sef.getCurrentStdDocKey();
+					String currentDocKey = sef.getCurrentStdDocKey();
 					Set availableKeys = ss.getDocKeys(); // keys of docs for which there are selections
 					if (availableKeys != null && availableKeys.size() > 0
 						&& !availableKeys.contains(asnHelper.getDefaultDoc())) {
@@ -640,7 +642,7 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 
 		// prtln ("DCSSchemEditAction.putRecord()");
 
-//		String errorMsg = "";
+		String errorMsg = "";
 		SchemEditForm sef = (SchemEditForm) form;
 
 		// MetaDataFramework framework = getMetaDataFramework();
@@ -843,10 +845,10 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 		SchemEditForm sef = (SchemEditForm) form;
 
 		ActionErrors errors = new ActionErrors();
-//		MetaDataFramework metadataFramework = getMetaDataFramework();
-//		SchemaHelper schemaHelper = metadataFramework.getSchemaHelper();
-//		CollapseBean collapseBean = sef.getCollapseBean();
-//		String errorMsg;
+		MetaDataFramework metadataFramework = getMetaDataFramework();
+		SchemaHelper schemaHelper = metadataFramework.getSchemaHelper();
+		CollapseBean collapseBean = sef.getCollapseBean();
+		String errorMsg;
 
 		SchemEditValidator validator = getValidator(form, mapping, request);
 		validator.updateMultiValueFields();
@@ -858,8 +860,8 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 			throw new ServletException("unable to instantiate CAT Service helper: " + e.getMessage());
 		}
 
-//		String priorDisplayMode = helper.getDisplayMode();
-//		String priorDisplayContent = helper.getDisplayContent();
+		String priorDisplayMode = helper.getDisplayMode();
+		String priorDisplayContent = helper.getDisplayContent();
 		try {
 			helper.updateDisplayControls(request);
 		} catch (Exception e) {
@@ -867,9 +869,9 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 		}
 
 		String pathArg = request.getParameter("pathArg");
-//		String displayMode = request.getParameter("displayMode");
+		String displayMode = request.getParameter("displayMode");
 		String displayContent = request.getParameter("displayContent");
-//		String currentStdDocKey = request.getParameter("currentStdDocKey");
+		String currentStdDocKey = request.getParameter("currentStdDocKey");
 
 		// only update hierarchical view of tree if
 		// - we are displaying the tree now
@@ -894,7 +896,7 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 				!helper.getDisplayMode().equals(priorDisplayMode) &&
 				!helper.getDisplayContent().equals(priorDisplayContent); */
 		
-//		boolean updateTreeDisplay = true;
+		boolean updateTreeDisplay = true;
 		
 		try {
 			// prtln ("calling updateStandardsDisplay ...");
@@ -939,11 +941,11 @@ public class DCSSchemEditAction extends AbstractSchemEditAction {
 		// prtln ("handleResQualBenchmarksDisplay");
 		SchemEditForm sef = (SchemEditForm) form;
 
-//		ActionErrors errors = new ActionErrors();
-//		MetaDataFramework metadataFramework = getMetaDataFramework();
-//		SchemaHelper schemaHelper = metadataFramework.getSchemaHelper();
-	//	CollapseBean collapseBean = sef.getCollapseBean();
-//		String errorMsg;
+		ActionErrors errors = new ActionErrors();
+		MetaDataFramework metadataFramework = getMetaDataFramework();
+		SchemaHelper schemaHelper = metadataFramework.getSchemaHelper();
+		CollapseBean collapseBean = sef.getCollapseBean();
+		String errorMsg;
 
 		
 		try {

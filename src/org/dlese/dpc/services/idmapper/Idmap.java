@@ -541,9 +541,9 @@ public class Idmap {
 			int forceMaxThreads,
 			boolean checkNetFlag)
 			 throws XMLException, IdmapException, MmdException {
-//		int icoll;
+		int icoll;
 		int ii;
-//		int ix;
+		int ix;
 
 		// Simple logging:
 		logit("*checkLinks()* with collKey: " + collKey);
@@ -640,7 +640,7 @@ public class Idmap {
 
 		// Create rec in idmapCollection if not already there
 		try {
-			dbconn.getDbString(
+			String tmpstg = dbconn.getDbString(
 					"SELECT collKey FROM idmapCollection"
 					 + " WHERE collKey = " + dbconn.dbstring(collKey));
 		} catch (MmdException mex) {
@@ -1007,9 +1007,9 @@ public class Idmap {
 			HashMap dupmap,
 			int cksumtype)
 			 throws IdmapException, XMLException {
-//		int ipage;
-//		int ii;
-//		int kk;
+		int ipage;
+		int ii;
+		int kk;
 
 		rsd.setMetaChecksum(getFileChecksum(rsd.getFullFileName()));
 
@@ -1219,8 +1219,8 @@ public class Idmap {
 		int ii;
 		String[] fields;
 		String xpath;
-//		String xpath1;
-//		String xpath2;
+		String xpath1;
+		String xpath2;
 
 		// Get and validate id
 		xpath = "service/recordID";
@@ -1819,7 +1819,7 @@ public class Idmap {
 		//			/  "." / "[" / "]"
 		//		Specials must be in a quoted string to use within a word.
 
-//		String errmsg = null;
+		String errmsg = null;
 		String okchars = "abcdefghijklmnopqrstuvwxyz0123456789-+_.@'";
 
 		// Legal top level domains
@@ -1926,7 +1926,7 @@ public class Idmap {
 		}
 
 		ThreadGroup thdgrp = new ThreadGroup("some name");
-//		LinkedList thdlist = new LinkedList();
+		LinkedList thdlist = new LinkedList();
 		int threadCounter = 0;
 
 		for (irsd = 0; irsd < rsds.length; irsd++) {
@@ -2133,8 +2133,8 @@ public class Idmap {
 		for (ii = 0; ii < dbmat.length; ii++) {
 			String dbid = (String) dbmat[ii][0];
 			String dbfilename = (String) dbmat[ii][1];
-//			String dbstatus = (String) dbmat[ii][2];
-//			String dbprimaryUrl = (String) dbmat[ii][3];
+			String dbstatus = (String) dbmat[ii][2];
+			String dbprimaryUrl = (String) dbmat[ii][3];
 			boolean dbhasFile = ((Boolean) dbmat[ii][4]).booleanValue();
 
 			int errornum = -1;
@@ -2525,8 +2525,8 @@ public class Idmap {
 		else {
 			String oldFilename = (String) dbmat[0][0];
 			String oldPrimaryUrl = (String) dbmat[0][1];
-//			String oldStatus = (String) dbmat[0][2];
-//			Long firstaccessiondate = (Long) dbmat[0][3];
+			String oldStatus = (String) dbmat[0][2];
+			Long firstaccessiondate = (Long) dbmat[0][3];
 			long oldMetaChecksum = ((Long) dbmat[0][4]).longValue();
 			long oldPrimaryChecksum = ((Long) dbmat[0][5]).longValue();
 
@@ -2760,13 +2760,13 @@ public class Idmap {
 			}
 					 
 			if (page.pagewarning != null && ivitality < ivitalCutoff) {
-//				double downdays;
-//				if (lastDateUp == 0) {
-//					downdays = -1;
-//				} else {
-//					downdays = (curdate - lastDateUp)
-//							 / (double) (1000 * 60 * 60 * 24);
-//				}
+				double downdays;
+				if (lastDateUp == 0) {
+					downdays = -1;
+				} else {
+					downdays = (curdate - lastDateUp)
+							 / (double) (1000 * 60 * 60 * 24);
+				}
 
 				rsd.addWarning(new Warning(
 						DpcErrors.IDMAP_VITALITY,

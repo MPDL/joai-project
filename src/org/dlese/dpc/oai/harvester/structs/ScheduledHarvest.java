@@ -36,7 +36,7 @@ public final class ScheduledHarvest implements Serializable, Comparable {
 	private static boolean debug = true;
 
 	private static long next = 0;
-//	private static int num = 4;
+	private static int num = 4;
 
 	private String repositoryName = "";
 	private String setSpec = "";

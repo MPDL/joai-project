@@ -95,7 +95,7 @@ public class Harvester implements ErrorHandler {
 	private int deleted_record = -1;
 
 	private static long nextIdIter = 0;
-//	private final static int MAX_FILES = 50;
+	private final static int MAX_FILES = 50;
 
 	private int bugs = 0;
 	private String xmlerrors;
@@ -945,7 +945,7 @@ public class Harvester implements ErrorHandler {
 			throw new OAIErrorException(oaiErrCode, getContent(errele));
 		}
 
-//		boolean isV1 = false;
+		boolean isV1 = false;
 		Element verbele = null;
 		try {
 			verbele = mustFindChild(root, "ListRecords");
@@ -1501,7 +1501,7 @@ public class Harvester implements ErrorHandler {
 
 	private void getIdentifyInfo(String baseURL)
 			 throws Hexception, OAIErrorException {
-//		int ii;
+		int ii;
 
 		String request = baseURL + "?verb=Identify";
 		if (msgHandler != null) {
@@ -1526,7 +1526,7 @@ public class Harvester implements ErrorHandler {
 		} catch (Hexception e) {
 			// Check for protocol version v1.x:
 			try {
-				mustFindChild(root, "protocolVersion");
+				Element protocolVersion = mustFindChild(root, "protocolVersion");
 			} catch (Throwable te) {
 				throw new Hexception("The data provider returned an invalid response to the Identify request: " +
 						e.getMessage());

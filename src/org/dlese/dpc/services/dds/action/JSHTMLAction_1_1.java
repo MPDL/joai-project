@@ -219,7 +219,7 @@ public final class JSHTMLAction_1_1 extends Action {
 
 		String id = SimpleLuceneIndex.encodeToTerm(idParam);
 		String so = request.getParameter("so");
-//		String xmlFormat = request.getParameter("xmlFormat");
+		String xmlFormat = request.getParameter("xmlFormat");
 
 		String query;
 		if (so == null || so.equalsIgnoreCase("discoverableRecords") || so.length() == 0) {

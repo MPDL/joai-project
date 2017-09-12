@@ -18,6 +18,7 @@
 package org.dlese.dpc.schemedit.action;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.action.form.UcasProxyForm;
+import org.dom4j.Document;
 
 
 /**
@@ -66,10 +68,10 @@ public final class UcasProxyAction extends Action {
 
 		ActionErrors errors = new ActionErrors();
 
-//		UcasProxyForm ucasForm = (UcasProxyForm) form;
+		UcasProxyForm ucasForm = (UcasProxyForm) form;
 
 		// Query Args
-//		String command = request.getParameter("command");
+		String command = request.getParameter("command");
 
 		SchemEditUtils.showRequestParameters(request);
 
@@ -106,7 +108,7 @@ public final class UcasProxyAction extends Action {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		UcasProxyForm ucasForm = (UcasProxyForm) form;
-//		Document responseDoc = null;
+		Document responseDoc = null;
 
 		try {
 			String url = "https://api.ucar.edu/people/internalPersons?";
