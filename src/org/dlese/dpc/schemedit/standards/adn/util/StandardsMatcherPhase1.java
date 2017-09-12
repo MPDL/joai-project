@@ -226,7 +226,7 @@ public class StandardsMatcherPhase1 {
 			if (std != null)
 				prtln("\n" + count + " -- " + std.getId() + "\n" + std.getMatchKey() + "\n");
 			else
-				prtln("\n" + count + " -- ASN standard NOT found for " + std.getId() + "\n");
+				prtln("\n" + count + " -- ASN standard NOT found " + "\n");
 		}
 	}
 
