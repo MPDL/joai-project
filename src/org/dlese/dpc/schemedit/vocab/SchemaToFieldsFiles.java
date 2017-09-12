@@ -255,7 +255,7 @@ public class SchemaToFieldsFiles {
 	 * @param  doc  NOT YET DOCUMENTED
 	 */
 	void getSchemaDocumentation(Document doc) {
-		String itemXmlFormat = this.itemFramework.getXmlFormat();
+//		String itemXmlFormat = this.itemFramework.getXmlFormat();
 
 		SchemaHelper itemSh = this.itemFramework.getSchemaHelper();
 		SchemaHelper sh = fieldsFramework.getSchemaHelper();
@@ -274,14 +274,14 @@ public class SchemaToFieldsFiles {
 
 		// SchemaNode parent = schemaNode.getParent();
 		SchemaNode parent = schemaNode;
-		if (parent != null) {
+//		if (parent != null) {
 			/* 			prtln ("\n---- parentNode ----");
 			prtln (parent.toString());
 			prtln ("----------"); */
-		}
-		else {
-			return;
-		}
+//		}
+//		else {
+//			return;
+//		}
 
 		GlobalDef typeDef = parent.getTypeDef();
 
@@ -289,9 +289,9 @@ public class SchemaToFieldsFiles {
 		prtln(typeDef.toString());
 		prtln("----------");
 
-		Document xsdDoc = null;
+//		Document xsdDoc = null;
 		NameSpaceXMLDocReader xsdReader = null;
-		String loc = typeDef.getLocation();
+//		String loc = typeDef.getLocation();
 		// prtln ("LOC: " + loc);
 
 		try {
@@ -432,8 +432,8 @@ public class SchemaToFieldsFiles {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		String fieldFilesSchemaPath = "/Library/WebServer/Documents/metadata-frameworks/fields-files/fields.xsd";
-		String fieldFilesSchemaUrl = "http://localhost/metadata-frameworks/fields-files/fields.xsd";
+//		String fieldFilesSchemaPath = "/Library/WebServer/Documents/metadata-frameworks/fields-files/fields.xsd";
+//		String fieldFilesSchemaUrl = "http://localhost/metadata-frameworks/fields-files/fields.xsd";
 
 		TesterUtils.setSystemProps();
 		setDebug(true);
@@ -461,7 +461,7 @@ public class SchemaToFieldsFiles {
 	static void makeSIFFieldsFiles() throws Exception {
 		String basePath = "C:/tmp/sif_fields_files";
 
-		String fieldPath = "/sif:Activity/sif:LearningResources/sif:LearningResourceRefId";
+//		String fieldPath = "/sif:Activity/sif:LearningResources/sif:LearningResourceRefId";
 		// makeFieldsFile (fieldPath, xmlFormat, basePath);
 
 		String frameworksPath = TesterUtils.getFrameworkConfigDir();
@@ -488,10 +488,10 @@ public class SchemaToFieldsFiles {
 	 */
 	MetaDataFramework getFramework(String xmlFormat) throws Exception {
 		FrameworkTester ft = new FrameworkTester(xmlFormat);
-		if (ft != null) {
+//		if (ft != null) {
 			return ft.framework;
-		}
-		return null;
+//		}
+//		return null;
 	}
 
 

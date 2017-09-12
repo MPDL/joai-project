@@ -117,11 +117,11 @@ public class OldFieldInfoMap extends FieldInfoMap {
 		setDebug(true);
 		prtln("OldFieldInfoMap");
 
-		String devel_adn = "file:/devel/ostwald/metadata-frameworks/metadata-ui/adn/filename-list.xml";
-
-		String dlese_adn_0_6_50 = "http://www.dlese.org/Metadata/adn-item/0.6.50/build/filename-list.xml";
-		String dlese_news_opps_1_0_00 = "http://www.dlese.org/Metadata/news-opps/1.0.00/build/filename-list.xml";
-		String dlese_dlese_anno_0_1_01 = "http://www.dlese.org/Metadata/annotation/0.1.01/build/filename-list.xml";
+//		String devel_adn = "file:/devel/ostwald/metadata-frameworks/metadata-ui/adn/filename-list.xml";
+//
+//		String dlese_adn_0_6_50 = "http://www.dlese.org/Metadata/adn-item/0.6.50/build/filename-list.xml";
+//		String dlese_news_opps_1_0_00 = "http://www.dlese.org/Metadata/news-opps/1.0.00/build/filename-list.xml";
+//		String dlese_dlese_anno_0_1_01 = "http://www.dlese.org/Metadata/annotation/0.1.01/build/filename-list.xml";
 		String dlese_dlese_anno_1_0_0 = "http://www.dlese.org/Metadata/annotation/1.0.00/build/filename-list.xml";
 
 		String uri = dlese_dlese_anno_1_0_0;

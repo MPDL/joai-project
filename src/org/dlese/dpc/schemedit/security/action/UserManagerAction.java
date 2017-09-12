@@ -27,7 +27,6 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
@@ -41,7 +40,6 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.util.LabelValueBean;
-import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.repository.SetInfo;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.SessionBean;
@@ -107,8 +105,8 @@ public final class UserManagerAction extends DCSAction {
 
 		UserManagerForm umForm = (UserManagerForm) form;
 
-		Locale locale = getLocale(request);
-		MessageResources messages = getResources(request);
+//		Locale locale = getLocale(request);
+//		MessageResources messages = getResources(request);
 
 		// Query Args
 		String command = request.getParameter("command");
@@ -181,7 +179,7 @@ public final class UserManagerAction extends DCSAction {
 	                                       HttpServletResponse response) {
 		ActionErrors errors = new ActionErrors();
 		UserManagerForm umForm = (UserManagerForm) form;
-		String username = umForm.getUsername();
+//		String username = umForm.getUsername();
 		User user = umForm.getUser();
 
 		Enumeration paramNames = request.getParameterNames();

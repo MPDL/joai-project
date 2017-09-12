@@ -114,7 +114,7 @@ public class RepositoryManager {
 	private HashMap configuredSetInfosHashMap = null;
 	private ArrayList disabledSets = null;
 	private String enabledSetsQuery = null;
-	private String contextURL = null;
+//	private String contextURL = null;
 	private String indexLocation = null;
 	private String idMapperExclusionFile = null;
 	private MetadataVocab metadataVocab = null;
@@ -171,7 +171,7 @@ public class RepositoryManager {
 	// Multiple requests may use this object concurrently.
 
 	private boolean removeInvalidRecords = true;
-	private boolean initialized = false;
+//	private boolean initialized = false;
 	private static boolean debug = false;
 	private boolean reindexAllFiles = false;
 	private int maxFilesToIndex = 500;
@@ -190,11 +190,11 @@ public class RepositoryManager {
 	 */
 	public int init(boolean indexCollectionRecords) {
 
-		initialized = false;
+//		initialized = false;
 
 		//prtln("initializing RepositoryManager...");
 
-		String initErrorMsg = "";
+//		String initErrorMsg = "";
 
 		// Determine whether to configure off of collection records:
 		if (collectionRecordsDir != null && metadataRecordsLocation != null)
@@ -256,9 +256,9 @@ public class RepositoryManager {
 		ArrayList setInfos = getSetInfos();
 		if (setInfos != null) {
 			SetInfo set;
-			ArrayList dirInfos;
-			DirInfo dirInfo;
-			String setSpec;
+//			ArrayList dirInfos;
+//			DirInfo dirInfo;
+//			String setSpec;
 			for (int i = 0; i < setInfos.size(); i++) {
 				set = (SetInfo) setInfos.get(i);
 				putSetInIndex(set);
@@ -341,7 +341,7 @@ public class RepositoryManager {
 				e.printStackTrace();
 		}
 
-		initialized = true;
+//		initialized = true;
 
 		// Return 1 on success.
 		return 1;
@@ -1831,9 +1831,9 @@ public class RepositoryManager {
 		}
 
 		ResultDocList results = index.searchDocs(fullQuery, dateFilter);
-		int num = 0;
-		if (results != null)
-			num = results.size();
+//		int num = 0;
+//		if (results != null)
+//			num = results.size();
 
 		//prtln("getOdlQueryResults(): num results: " + num + " query is '" + fullQuery + "'");
 
@@ -2437,7 +2437,7 @@ public class RepositoryManager {
 				}
 
 				ArrayList es = getEnabledSets();
-				String searchVal;
+//				String searchVal;
 				if (es == null || es.size() == 0)
 					enabledSetsQuery = "";
 				else {
@@ -3124,9 +3124,9 @@ public class RepositoryManager {
 				return null;
 			}
 			ArrayList retVals = (ArrayList) setInfos.clone();
-			String sets = "";
-			for (int i = 0; i < retVals.size(); i++)
-				sets += ((SetInfo) retVals.get(i)).getSetSpec() + " ";
+//			String sets = "";
+//			for (int i = 0; i < retVals.size(); i++)
+//				sets += ((SetInfo) retVals.get(i)).getSetSpec() + " ";
 
 			//prtln("getSetInfos(): {" + sets.trim() + "}");
 			return retVals;
@@ -3703,7 +3703,7 @@ public class RepositoryManager {
 	private void putSetInIndex(SetInfo set) {
 		String setSpec = set.getSetSpec();
 		ArrayList dirInfos = set.getDirInfos();
-		DirInfo dirInfo;
+//		DirInfo dirInfo;
 		for (int j = 0; j < dirInfos.size(); j++) {
 			//prtln("putSetInIndex(): " + (DirInfo) dirInfos.get(j));
 			putDirInIndex((DirInfo) dirInfos.get(j), setSpec);
@@ -3897,7 +3897,7 @@ public class RepositoryManager {
 			File createdFile = null;
 			String newRecordId = null;
 			try {
-				XMLFileIndexingWriterFactory xFactory = new XMLFileIndexingWriterFactory(getIndex(), xmlIndexerFieldsConfig);
+//				XMLFileIndexingWriterFactory xFactory = new XMLFileIndexingWriterFactory(getIndex(), xmlIndexerFieldsConfig);
 				XMLFileIndexingWriter writer = xmlFileIndexingWriterFactory.getIndexingWriter(collection, xmlFormat);
 				writer.setFileIndexingPlugin(indexingPlugin);
 				writer.setFileIndexingService(fileIndexingService);

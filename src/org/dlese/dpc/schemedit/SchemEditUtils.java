@@ -1144,7 +1144,7 @@ public class SchemEditUtils {
 		 throws Exception {
 		// prtln ("stuffId: \n\trecordXml: " + recordXml + "\n\txmlFormat: " + xmlFormat + "\n\tid: " + id);
 		String idPath = framework.getIdPath();
-		String xmlFormat = framework.getXmlFormat();
+//		String xmlFormat = framework.getXmlFormat();
 		SchemaHelper schemaHelper = framework.getSchemaHelper();
 
 		// create a localized Document from the xmlString

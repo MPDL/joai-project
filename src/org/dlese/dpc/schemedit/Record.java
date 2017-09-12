@@ -29,9 +29,9 @@ import java.util.Date;
  $Id $
  */
 public class Record {
-	private static boolean debug = true;
+//	private static boolean debug = true;
 
-	private String id = null;
+//	private String id = null;
 	private File file = null;
 	private long lastModified = 0;
 
@@ -136,25 +136,25 @@ public class Record {
 	}
 
 
-	/**
-	 *  Sets the debug attribute of the Emailer object
-	 *
-	 *@param  db  The new debug value
-	 */
-	public static void setDebug(boolean db) {
-		debug = db;
-	}
+//	/**
+//	 *  Sets the debug attribute of the Emailer object
+//	 *
+//	 *@param  db  The new debug value
+//	 */
+//	public static void setDebug(boolean db) {
+//		debug = db;
+//	}
 
 
-	/**
-	 *  Print a line to standard out.
-	 *
-	 *@param  s  The String to print.
-	 */
-	private void prtln(String s) {
-		if (debug) {
-			System.out.println("Record: " + s);
-		}
-	}
+//	/**
+//	 *  Print a line to standard out.
+//	 *
+//	 *@param  s  The String to print.
+//	 */
+//	private void prtln(String s) {
+//		if (debug) {
+//			System.out.println("Record: " + s);
+//		}
+//	}
 }
 

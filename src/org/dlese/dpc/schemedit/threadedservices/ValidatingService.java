@@ -270,7 +270,7 @@ public class ValidatingService extends ThreadedService {
 	 */
 	private class ValidateThread extends Thread {
 		List idList;
-		DcsSetInfo dcsSetInfo;
+//		DcsSetInfo dcsSetInfo;
 
 
 		/**
@@ -281,7 +281,7 @@ public class ValidatingService extends ThreadedService {
 		 */
 		public ValidateThread(List idList, DcsSetInfo dcsSetInfo) {
 			this.idList = idList;
-			this.dcsSetInfo = dcsSetInfo;
+//			this.dcsSetInfo = dcsSetInfo;
 			setDaemon(true);
 		}
 

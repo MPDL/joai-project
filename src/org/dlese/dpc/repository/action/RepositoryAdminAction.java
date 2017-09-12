@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.Locale;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -98,7 +97,7 @@ public final class RepositoryAdminAction extends Action {
 		 
 
 		// Extract attributes we will need
-		Locale locale = getLocale(req);
+//		Locale locale = getLocale(req);
 		RepositoryAdminForm raf = (RepositoryAdminForm) form;
 		ActionErrors errors = new ActionErrors();
 
@@ -280,7 +279,7 @@ public final class RepositoryAdminAction extends Action {
 						} catch (Throwable t) {
 							errors.add("error", new ActionError("generic.error", "There was an error reported from the IndexingManager: " + t));
 							saveErrors(req, errors);
-							if(true || t instanceof java.lang.NullPointerException)
+//							if(true || t instanceof java.lang.NullPointerException)
 								t.printStackTrace();
 						}
 					}
@@ -291,7 +290,7 @@ public final class RepositoryAdminAction extends Action {
 							errors.add("message", new ActionError("generic.message", "IndexingManager: Indexing requested to stop..."));
 						} catch (Throwable t) {
 							errors.add("error", new ActionError("generic.error", "There was an error reported from the IndexingManager: " + t));
-							if(true || t instanceof java.lang.NullPointerException)
+//							if(true || t instanceof java.lang.NullPointerException)
 								t.printStackTrace();
 						}
 					}					
@@ -407,7 +406,7 @@ public final class RepositoryAdminAction extends Action {
 							Thread.sleep(2000);
 						} catch (Throwable t) {
 							errors.add("error", new ActionError("generic.error", "There was an error reported from the IndexingManager: " + t));
-							if(true || t instanceof java.lang.NullPointerException)
+//							if(true || t instanceof java.lang.NullPointerException)
 								t.printStackTrace();
 						}
 					}

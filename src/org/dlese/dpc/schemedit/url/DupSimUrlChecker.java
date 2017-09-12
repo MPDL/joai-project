@@ -225,7 +225,7 @@ public class DupSimUrlChecker {
 					if (UrlHelper.isSimilar(url, this.referenceUrl, MAX_DELTA)) {
 						String id = docReader.getId();
 						String type = "sim";
-						String field = "primary";
+//						String field = "primary";
 						String xmlFormat = docReader.getNativeFormat();
 
 						// sims.add(new DupSim(results[i], "primary", this));

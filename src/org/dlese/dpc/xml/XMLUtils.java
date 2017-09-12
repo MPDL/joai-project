@@ -81,9 +81,9 @@ public class XMLUtils {
 	}
 
 
-	private static void prtln(String s) {
-		System.out.println(s);
-	}
+//	private static void prtln(String s) {
+//		System.out.println(s);
+//	}
 
 }
 

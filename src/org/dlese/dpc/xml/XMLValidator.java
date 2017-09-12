@@ -111,11 +111,11 @@ public class XMLValidator {
 
 	private int numXMLFiles = 0;
 	private int numInvalidFiles = 0;
-	private int numWarningFiles = 0;
+//	private int numWarningFiles = 0;
 	private int numMalformedFiles = 0;
 	private int numUpToDateFiles = 0;	
 
-	private boolean useLogFile = false;
+//	private boolean useLogFile = false;
 	private StringBuffer buff = new StringBuffer();
 
 
@@ -153,13 +153,13 @@ public class XMLValidator {
 
 					if (reportFilePath == null)
 						System.out.print(reportTxt + "\n\n");
-					else {
-						// Write validation report:
-						FileWriter writer = new FileWriter(reportFilePath, true);
-						writer.write(reportTxt.toString());
-						writer.write("\n\n");
-						writer.close();
-					}
+//					else {
+//						// Write validation report:
+//						FileWriter writer = new FileWriter(reportFilePath, true);
+//						writer.write(reportTxt.toString());
+//						writer.write("\n\n");
+//						writer.close();
+//					}
 				}
 			}
 		} catch (ParseException e) {
@@ -274,7 +274,7 @@ public class XMLValidator {
 		//prtln("validate: dir.getAbsolutePath() is: " + dir.getAbsolutePath());
 
 		// May include a 2nd argument for the log file.
-		useLogFile = (reportFilePath != null);
+//		useLogFile = (reportFilePath != null);
 
 		if (dir.isFile()) {
 			// Just validating one file.
@@ -331,7 +331,7 @@ public class XMLValidator {
 		long sec1 = (long) Math.floor((end.getTime() - start.getTime()) / 1000);
 		long min = (long) Math.floor(sec1 / 60);
 		long sec = sec1 - 60 * min;
-		long tms = end.getTime() - start.getTime();
+//		long tms = end.getTime() - start.getTime();
 
 		String timeMsg = min + " min " + sec + " sec and " + ms + " ms.\n";
 
@@ -523,8 +523,8 @@ public class XMLValidator {
 			boolean schemaValidation = DEFAULT_SCHEMA_VALIDATION;
 			boolean schemaFullChecking = DEFAULT_SCHEMA_FULL_CHECKING;
 			boolean dynamicValidation = DEFAULT_DYNAMIC_VALIDATION;
-			boolean memoryUsage = DEFAULT_MEMORY_USAGE;
-			boolean tagginess = DEFAULT_TAGGINESS;
+//			boolean memoryUsage = DEFAULT_MEMORY_USAGE;
+//			boolean tagginess = DEFAULT_TAGGINESS;
 
 			SAXParserFactory spfact = SAXParserFactory.newInstance();
 			SAXParser parser = spfact.newSAXParser();
@@ -637,8 +637,8 @@ public class XMLValidator {
 			boolean schemaValidation = DEFAULT_SCHEMA_VALIDATION;
 			boolean schemaFullChecking = DEFAULT_SCHEMA_FULL_CHECKING;
 			boolean dynamicValidation = DEFAULT_DYNAMIC_VALIDATION;
-			boolean memoryUsage = DEFAULT_MEMORY_USAGE;
-			boolean tagginess = DEFAULT_TAGGINESS;
+//			boolean memoryUsage = DEFAULT_MEMORY_USAGE;
+//			boolean tagginess = DEFAULT_TAGGINESS;
 
 			SAXParserFactory spfact = SAXParserFactory.newInstance();
 			SAXParser parser = spfact.newSAXParser();
@@ -744,14 +744,14 @@ public class XMLValidator {
 	// ----------------------------------------------------------------------------
 
 
-	/**
-	 *  DESCRIPTION
-	 *
-	 * @param  s  DESCRIPTION
-	 */
-	private static void prtln(String s) {
-		System.out.println(s);
-	}
+//	/**
+//	 *  DESCRIPTION
+//	 *
+//	 * @param  s  DESCRIPTION
+//	 */
+//	private static void prtln(String s) {
+//		System.out.println(s);
+//	}
 
 
 	/**

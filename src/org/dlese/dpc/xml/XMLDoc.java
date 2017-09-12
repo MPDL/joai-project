@@ -559,7 +559,7 @@ public class XMLDoc {
 		String xpathspec)
 		throws XMLException
 	{
-		int inode;
+//		int inode;
 		int ii;
 		LinkedList reslist = new LinkedList();
 		String xpath = xpathspec;

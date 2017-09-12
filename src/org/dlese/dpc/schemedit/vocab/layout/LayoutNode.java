@@ -22,9 +22,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Element;
-import org.dom4j.Node;
 
 /**
  *  A node in a VocabLayout tree as defined by a vocabLayout (historically
@@ -306,14 +304,14 @@ public class LayoutNode {
 	}
 
 
-	/**
-	 *  NOT YET DOCUMENTED
-	 *
-	 * @param  node  NOT YET DOCUMENTED
-	 */
-	private static void pp(Node node) {
-		prtln(Dom4jUtils.prettyPrint(node));
-	}
+//	/**
+//	 *  NOT YET DOCUMENTED
+//	 *
+//	 * @param  node  NOT YET DOCUMENTED
+//	 */
+//	private static void pp(Node node) {
+//		prtln(Dom4jUtils.prettyPrint(node));
+//	}
 
 
 	/**

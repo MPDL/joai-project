@@ -80,7 +80,7 @@ public final class SimpleLuceneIndex {
 	 *  The number of records updated before the optimizer is run. Use -1 to never run the optimizer based on
 	 *  number of records updated (optimizer will be run based on time elapsed since the last update only)
 	 */
-	private final static long NUM_RECORDS_FOR_OPTIMIZER = -1;
+//	private final static long NUM_RECORDS_FOR_OPTIMIZER = -1;
 
 	// This increases the number of clauses for wildcard and other searches (default is 1024):
 	private final static int MAX_CLAUSE_COUNT = 30000;
@@ -114,7 +114,7 @@ public final class SimpleLuceneIndex {
 
 	private int defaultBooleanOperator = DEFAULT_OR;
 
-	private final static String DEFAULT_DOC_FIELD = "default";
+//	private final static String DEFAULT_DOC_FIELD = "default";
 
 	private long cachedLastModifiedCount = 0;
 	private boolean abortUpdate = false;
@@ -1902,7 +1902,7 @@ public final class SimpleLuceneIndex {
 	}
 
 
-	private long optimize_count = 0;
+//	private long optimize_count = 0;
 	private long last_update_time = System.currentTimeMillis();
 	private boolean is_optimized = true;
 
@@ -1983,69 +1983,46 @@ public final class SimpleLuceneIndex {
 
 				// ---- Add in the new and/or replacement docs ----
 
-				//IndexWriter tmpWriter = null;
-				try {
+				if (addDocs != null && addDocs.length > 0) {
+        	//tmpWriter = new IndexWriter(luceneIndexDir, getAnalyzer(), false);
+//						int count = 0;
+        	for (int i = 0; i < addDocs.length && !abortUpdate; i++) {
 
-					if (addDocs != null && addDocs.length > 0) {
-						//tmpWriter = new IndexWriter(luceneIndexDir, getAnalyzer(), false);
-						int count = 0;
-						for (int i = 0; i < addDocs.length && !abortUpdate; i++) {
+        		if (addDocs[i] != null) {
+        			try {
+        				tmpWriter.addDocument(addDocs[i]);
+////									count++;
+//        				optimize_count++;
+        			} catch (Throwable t) {
+        				// if one add fails for some reason,
+        				// we don't want to abort the rest...
+        				prtlnErr("Problem writing a document: " + t);
+        				if (t instanceof java.lang.NullPointerException)
+        					t.printStackTrace();
+        			}
+        		}
+        	}
+        	/* if (count > 0) {
+        		changed = true;
+        	} */
+        	//prtln("doUpdateIndex() added " + count + " documents.");
 
-							if (addDocs[i] != null) {
-								try {
-									tmpWriter.addDocument(addDocs[i]);
-									count++;
-									optimize_count++;
-								} catch (Throwable t) {
-									// if one add fails for some reason,
-									// we don't want to abort the rest...
-									prtlnErr("Problem writing a document: " + t);
-									if (t instanceof java.lang.NullPointerException)
-										t.printStackTrace();
-								}
-							}
-						}
-						/* if (count > 0) {
-							changed = true;
-						} */
-						//prtln("doUpdateIndex() added " + count + " documents.");
+        }
+        else {
+        	// prtln("no docs to write");
+        }
 
-					}
-					else {
-						// prtln("no docs to write");
-					}
-
-					//if (changed) {
-					last_update_time = System.currentTimeMillis();
-					is_optimized = false;
-					if (NUM_RECORDS_FOR_OPTIMIZER > 0 && optimize_count >= NUM_RECORDS_FOR_OPTIMIZER) {
-						//prtln("Optimizer starting.");
-						tmpWriter.optimize();
-						optimize_count = 0;
-						//prtln("Optimizer finished.");
-						is_optimized = true;
-					}
-					//}
-
-					/* if (tmpWriter != null) {
-						tmpWriter.close();
-						tmpWriter = null;
-					} */
-				} catch (IOException ioe) {
-					// this means we had trouble opening a writer on the writeDirectory?!
-					prtlnErr("doUpdateIndex() write document exception: " + ioe);
-					try {
-						if (tmpWriter != null) {
-							tmpWriter.close();
-							tmpWriter = null;
-						}
-					} catch (Throwable t) {
-						prtlnErr("doUpdateIndex() error closing writer: " + t);
-					}
-					isIndexing = false;
-					loadNewReaderAndSearcher();
-					return false;
-				}
+        //if (changed) {
+        last_update_time = System.currentTimeMillis();
+        is_optimized = false;
+//					if (NUM_RECORDS_FOR_OPTIMIZER > 0 && optimize_count >= NUM_RECORDS_FOR_OPTIMIZER) {
+//						//prtln("Optimizer starting.");
+//						tmpWriter.optimize();
+//						optimize_count = 0;
+//						//prtln("Optimizer finished.");
+//						is_optimized = true;
+//					}
+        //}
 
 				// finsihed processing index updates...
 

@@ -18,7 +18,6 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
-import java.util.Locale;
 
 import javax.security.auth.Subject;
 import javax.servlet.ServletException;
@@ -32,7 +31,6 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.schemedit.security.action.form.LogonForm;
 import org.dlese.dpc.schemedit.security.auth.AuthUtils;
@@ -48,7 +46,7 @@ import org.dlese.dpc.schemedit.security.user.UserManager;
 
 public final class LogonAction extends Action {
 
-	private static boolean debug = true;
+//	private static boolean debug = true;
 
 	// --------------------------------------------------------- Public Methods
 
@@ -74,8 +72,8 @@ public final class LogonAction extends Action {
 		 throws IOException, ServletException {
 
 		// Extract attributes we will need
-		Locale locale = getLocale(request);
-		MessageResources messages = getResources(request);
+//		Locale locale = getLocale(request);
+//		MessageResources messages = getResources(request);
 		User user = null;
 
 		// Validate the request parameters specified by the user

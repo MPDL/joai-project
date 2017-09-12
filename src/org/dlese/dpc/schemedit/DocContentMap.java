@@ -29,7 +29,6 @@ import org.dlese.dpc.util.strings.FindAndReplace;
 import org.dlese.dpc.xml.Dom4jUtils;
 import org.dlese.dpc.xml.schema.SchemaNodeMap;
 import org.dom4j.Document;
-import org.dom4j.Element;
 import org.dom4j.Node;
 
 /**
@@ -107,7 +106,7 @@ public class DocContentMap {
 	 */
 	public static Map getDocContentMap(Document doc, MetaDataFramework framework) {
 		doc.normalize();
-		Element root = doc.getRootElement();
+//		Element root = doc.getRootElement();
 		Map map = new TreeMap();
 
 		// string representation of "cr" that we will remove from all values, since it wreaks
@@ -320,14 +319,14 @@ public class DocContentMap {
 		}
 	}
 
-	/**
-	 *  Description of the Method
-	 *
-	 * @param  node  Description of the Parameter
-	 */
-	private static void pp(Node node) {
-		prtln(Dom4jUtils.prettyPrint(node));
-	}
+//	/**
+//	 *  Description of the Method
+//	 *
+//	 * @param  node  Description of the Parameter
+//	 */
+//	private static void pp(Node node) {
+//		prtln(Dom4jUtils.prettyPrint(node));
+//	}
 
 
 	/**

@@ -42,7 +42,7 @@ import org.dlese.dpc.schemedit.security.util.RoleCollectionComparator;
 
 public final class CollectionAccessForm extends ActionForm {
 
-	private static boolean debug = true;
+//	private static boolean debug = true;
 	
 	public void reset (ActionMapping mapping, HttpServletRequest request) {}
 	

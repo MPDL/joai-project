@@ -26,7 +26,6 @@ import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.dom4j.Node;
 
 /**
  *  Converts user.xml files to a directory of username.xml records<p>
@@ -207,7 +206,7 @@ public class UserdataConverter {
 	public static void main(String[] args) throws Exception {
 		org.dlese.dpc.schemedit.test.TesterUtils.setSystemProps();
 		String userXmlPath = "/Users/ostwald/tmp/auth/users.xml";
-		UserdataConverter udc = null;
+//		UserdataConverter udc = null;
 		try {
 			// udc = new UserdataConverter (userXmlPath);
 			UserdataConverter.convert (userXmlPath);
@@ -221,9 +220,9 @@ public class UserdataConverter {
 
 	}
 
-	private void pp (Node node) {
-		prtln (Dom4jUtils.prettyPrint(node));
-	}
+//	private void pp (Node node) {
+//		prtln (Dom4jUtils.prettyPrint(node));
+//	}
 	
 	/**
 	 *  NOT YET DOCUMENTED

@@ -34,7 +34,7 @@ import org.dlese.dpc.schemedit.security.user.UserManager;
 
 public final class UserInfoForm extends ActionForm {
 
-	private static boolean debug = true;
+//	private static boolean debug = true;
 	
 	public void reset (ActionMapping mapping, HttpServletRequest request) {}
 	

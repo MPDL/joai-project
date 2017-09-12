@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -35,7 +34,6 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.util.LabelValueBean;
-import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.schemedit.SchemEditUtils;
 import org.dlese.dpc.schemedit.SessionBean;
 import org.dlese.dpc.schemedit.action.DCSAction;
@@ -50,7 +48,7 @@ import org.dlese.dpc.schemedit.security.action.form.AccessManagerForm;
 
 public final class AccessManagerAction extends DCSAction {
 
-	private static boolean debug = true;
+//	private static boolean debug = true;
 
 	// --------------------------------------------------------- Public Methods
 
@@ -90,8 +88,8 @@ public final class AccessManagerAction extends DCSAction {
 		
 		AccessManagerForm amForm = (AccessManagerForm)form;
 		
-		Locale locale = getLocale(request);
-		MessageResources messages = getResources(request);
+//		Locale locale = getLocale(request);
+//		MessageResources messages = getResources(request);
 
 		amForm.setActionPaths (accessManager.getActionPaths());
 		amForm.setGuardedPaths (accessManager.getGuardedPaths());

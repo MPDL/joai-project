@@ -17,17 +17,10 @@
 */
 package org.dlese.dpc.schemedit.sif.action.form;
 
-// import java.io.*;
-// import java.text.*;
-// import java.net.*;
-// import java.util.regex.*;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.struts.action.ActionForm;
-// import org.dlese.dpc.schemedit.*;
 import org.dlese.dpc.schemedit.display.CollapseUtils;
 
 /**
@@ -44,7 +37,7 @@ public class SIFReferenceForm extends ActionForm {
 	private String[] sifTypes = null;
 	private String searchString = null;
 	private Map objectMap = null;
-	private HttpServletRequest request;
+//	private HttpServletRequest request;
 	private String selectedType = null;
 	private List typeOptions = null;
 	private String description = null;

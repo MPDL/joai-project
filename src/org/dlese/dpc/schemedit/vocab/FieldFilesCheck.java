@@ -23,7 +23,6 @@ import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -48,9 +47,9 @@ import org.dom4j.Node;
  */
 public class FieldFilesCheck {
 	
-	private HashMap map = null;
+//	private HashMap map = null;
 	private URI listingUri = null;
-	private URI schemaUri = null;
+//	private URI schemaUri = null;
 	private SchemaHelper schemaHelper = null;
 	
 	int filesRead = 0;
@@ -139,7 +138,7 @@ public class FieldFilesCheck {
 	 *  Constructor for the FieldFilesCheck object
 	 */
 	public FieldFilesCheck (URI listingUri, URI schemaUri) throws Exception {
-		this.schemaUri = schemaUri;
+//		this.schemaUri = schemaUri;
 		this.listingUri = listingUri;
 		
 		String dateStamp = new SimpleDateFormat( "MMM d, yyyy h:mm:ss a zzz" ).format( new Date() );
@@ -306,15 +305,15 @@ public class FieldFilesCheck {
 			System.exit(1);
 		}
 		
-		String devel_adn = "file:///devel/ostwald/metadata-frameworks/metadata-ui/adn/filename-list.xml";
+//		String devel_adn = "file:///devel/ostwald/metadata-frameworks/metadata-ui/adn/filename-list.xml";
 		
-		String dlese_adn_0_6_50 = "http://www.dlese.org/Metadata/adn-item/0.6.50/build/filename-list.xml";
-		String dlese_news_opps_1_0_00 = "http://www.dlese.org/Metadata/news-opps/1.0.00/build/filename-list.xml";
-		String dlese_dlese_anno_0_1_01 = "http://www.dlese.org/Metadata/annotation/0.1.01/build/filename-list.xml";
-		String dlese_dlese_anno_1_0_0 = "http://www.dlese.org/Metadata/annotation/1.0.00/build/filename-list.xml";
+//		String dlese_adn_0_6_50 = "http://www.dlese.org/Metadata/adn-item/0.6.50/build/filename-list.xml";
+//		String dlese_news_opps_1_0_00 = "http://www.dlese.org/Metadata/news-opps/1.0.00/build/filename-list.xml";
+//		String dlese_dlese_anno_0_1_01 = "http://www.dlese.org/Metadata/annotation/0.1.01/build/filename-list.xml";
+//		String dlese_dlese_anno_1_0_0 = "http://www.dlese.org/Metadata/annotation/1.0.00/build/filename-list.xml";
 		
-		String listing = devel_adn;
-		String schema = "http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd";
+//		String listing = devel_adn;
+//		String schema = "http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd";
 		
 		try {
 			// FieldFilesCheck checker = new FieldFilesCheck(new URI (listing), new URI (schema));

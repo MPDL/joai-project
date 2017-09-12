@@ -39,7 +39,7 @@ public class RecordList {
 
 	private static boolean debug = false;
 	private List items;
-	private String query;
+//	private String query;
 	private SimpleLuceneIndex index;
 	private String currentRecId;
 
@@ -50,7 +50,7 @@ public class RecordList {
 	public RecordList() {
 		items = new ArrayList();
 		index = null;
-		query = null;
+//		query = null;
 	}
 
 
@@ -74,7 +74,7 @@ public class RecordList {
 	 */
 	public RecordList(String query, SimpleLuceneIndex index) {
 		this(index);
-		this.query = query;
+//		this.query = query;
 		this.items = this.getIdList(query, index);
 	}
 

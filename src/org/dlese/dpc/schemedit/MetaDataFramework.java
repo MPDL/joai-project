@@ -96,7 +96,7 @@ public class MetaDataFramework implements Serializable {
 	private String workingSchemaURI = null;
 	private String workingRenderer = null;
 	private String recordsDir = null;
-	private String urlPath = null;
+//	private String urlPath = null;
 	private FrameworkConfigReader configReader = null;
 	private XMLValidator validator = null;
 	private boolean initialized = false;
@@ -693,8 +693,8 @@ public class MetaDataFramework implements Serializable {
 			}
 
 			URI uri = new URI(uriStr);
-			String scheme = uri.getScheme();
-			String errorMsg = null;
+//			String scheme = uri.getScheme();
+//			String errorMsg = null;
 
 			if (!uri.isAbsolute()) {
 
@@ -1118,8 +1118,8 @@ public class MetaDataFramework implements Serializable {
 				} catch (Exception e) {}
 			}
 
-			if (schemaNode == null)
-				continue;
+//			if (schemaNode == null)
+//				continue;
 			if (schemaNode.getTypeDef().isComplexType() &&
 				!schemaNode.isDerivedTextOnlyModel()) {
 				continue;

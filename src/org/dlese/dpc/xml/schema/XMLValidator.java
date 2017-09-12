@@ -214,7 +214,7 @@ public class XMLValidator {
 
 		private boolean error;
 		private boolean warning;
-		private boolean containsDTD;
+//		private boolean containsDTD;
 		private StringBuffer errorBuff, warningBuff;
 
 

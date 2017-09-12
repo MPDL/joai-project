@@ -337,7 +337,7 @@ public class JspFunctions {
 		while (true) {
 			m = p.matcher(s);
 			if (m.find()) {
-				String index = s.substring(m.start() + 1, m.end() - 1);
+//				String index = s.substring(m.start() + 1, m.end() - 1);
 				String replaceStr = "";
 				s = p.matcher(s).replaceFirst(replaceStr);
 			}

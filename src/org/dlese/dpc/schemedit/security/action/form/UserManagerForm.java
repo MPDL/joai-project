@@ -37,7 +37,7 @@ import org.dlese.dpc.schemedit.security.user.UserManager;
  */
 public final class UserManagerForm extends ActionForm {
 
-	private static boolean debug = false;
+//	private static boolean debug = false;
 
 
 	/**

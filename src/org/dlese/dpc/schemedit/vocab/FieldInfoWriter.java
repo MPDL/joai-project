@@ -361,7 +361,7 @@ public class FieldInfoWriter {
 		String basePath = "C:/tmp/mets_fields_files";
 
 		// make fields file for specified format and field
-		String fieldPath = "/this:mets/this:behaviorSec/this:behavior/this:interfaceDef";
+//		String fieldPath = "/this:mets/this:behaviorSec/this:behavior/this:interfaceDef";
 		// makeFieldsFile(fieldPath, xmlFormat, basePath);
 
 		// make all fields files for specified format
@@ -379,10 +379,10 @@ public class FieldInfoWriter {
 	 */
 	MetaDataFramework getFramework(String xmlFormat) throws Exception {
 		FrameworkTester ft = new FrameworkTester(xmlFormat);
-		if (ft != null) {
+//		if (ft != null) {
 			return ft.framework;
-		}
-		return null;
+//		}
+//		return null;
 	}
 
 
@@ -410,14 +410,14 @@ public class FieldInfoWriter {
 	}
 
 
-	/**
-	 *  NOT YET DOCUMENTED
-	 *
-	 * @param  node  NOT YET DOCUMENTED
-	 */
-	private static void pp(Node node) {
-		prtln(Dom4jUtils.prettyPrint(node));
-	}
+//	/**
+//	 *  NOT YET DOCUMENTED
+//	 *
+//	 * @param  node  NOT YET DOCUMENTED
+//	 */
+//	private static void pp(Node node) {
+//		prtln(Dom4jUtils.prettyPrint(node));
+//	}
 
 }
 

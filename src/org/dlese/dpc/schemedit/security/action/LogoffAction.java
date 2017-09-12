@@ -18,7 +18,6 @@
 package org.dlese.dpc.schemedit.security.action;
 
 import java.io.IOException;
-import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +30,6 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.util.MessageResources;
 import org.dlese.dpc.schemedit.Constants;
 import org.dlese.dpc.schemedit.security.user.User;
 
@@ -72,8 +70,8 @@ public final class LogoffAction extends Action {
 	throws IOException, ServletException {
 
 	// Extract attributes we will need
-	Locale locale = getLocale(request);
-	MessageResources messages = getResources(request);
+//	Locale locale = getLocale(request);
+//	MessageResources messages = getResources(request);
 	HttpSession session = request.getSession();
 	User user = (User) session.getAttribute(Constants.USER_KEY);
 

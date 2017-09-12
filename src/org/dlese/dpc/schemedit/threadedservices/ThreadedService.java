@@ -144,7 +144,7 @@ public abstract class ThreadedService extends MonitoredTask {
 		}
 
 		// perform badcharacter check on localized Document
-		String xmlRecord = docReader.getXmlLocalized();
+//		String xmlRecord = docReader.getXmlLocalized();
 		try {
 			if (indexOnValidation) {
 				prtln("indexing " + docReader.getId());

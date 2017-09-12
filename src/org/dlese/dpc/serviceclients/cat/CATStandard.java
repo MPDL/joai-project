@@ -17,10 +17,7 @@
 */
 package org.dlese.dpc.serviceclients.cat;
 
-import org.dlese.dpc.schemedit.SchemEditUtils;
-import org.dlese.dpc.xml.Dom4jUtils;
 import org.dom4j.Element;
-import org.dom4j.Node;
 
 /**
  *  Wraps standard element returned by SuggestCATStandards call.
@@ -29,14 +26,14 @@ import org.dom4j.Node;
  */
 public class CATStandard {
 
-	private static boolean debug = true;
+//	private static boolean debug = true;
 	private static String defaultValue = null;
 	private Element element;
-	private String identifier;
-	private String author;
-	private String topic;
-	private String gradeLevels;
-	private String benchmark;
+//	private String identifier;
+//	private String author;
+//	private String topic;
+//	private String gradeLevels;
+//	private String benchmark;
 
 
 	/**
@@ -148,27 +145,27 @@ public class CATStandard {
 	}
 
 
-	/**
-	 *  Description of the Method
-	 *
-	 * @param  node  Description of the Parameter
-	 */
-	private static void pp(Node node) {
-		prtln(Dom4jUtils.prettyPrint(node));
-	}
+//	/**
+//	 *  Description of the Method
+//	 *
+//	 * @param  node  Description of the Parameter
+//	 */
+//	private static void pp(Node node) {
+//		prtln(Dom4jUtils.prettyPrint(node));
+//	}
 
 
-	/**
-	 *  Description of the Method
-	 *
-	 * @param  s  Description of the Parameter
-	 */
-	private static void prtln(String s) {
-		String prefix = null;
-		if (debug) {
-			SchemEditUtils.prtln(s, prefix);
-		}
-	}
+//	/**
+//	 *  Description of the Method
+//	 *
+//	 * @param  s  Description of the Parameter
+//	 */
+//	private static void prtln(String s) {
+//		String prefix = null;
+//		if (debug) {
+//			SchemEditUtils.prtln(s, prefix);
+//		}
+//	}
 
 }
 

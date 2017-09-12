@@ -173,7 +173,7 @@ public class UrlPattern {
 	}
 			
 	public static String getUrlMapping (String path) {
-		String urlMapping = null;
+//		String urlMapping = null;
 		if (path == null) return path;
 		prtln ("\n getPattern with \"" + path + "\"");
 		

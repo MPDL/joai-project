@@ -154,9 +154,9 @@ public class FrameworkRegistry implements MetadataVocabReloadListener {
 	 */
 	private void loadFramework(File configFile) throws Exception {
 		MetaDataFramework mdf = new MetaDataFramework(configFile, docRoot);
-		if (mdf == null) {
-			throw new Exception("failed to initialize metadataFramework for " + configFile.getAbsolutePath());
-		}
+//		if (mdf == null) {
+//			throw new Exception("failed to initialize metadataFramework for " + configFile.getAbsolutePath());
+//		}
 		try {
 			mdf.loadSchemaHelper();
 		} catch (Exception e) {
@@ -278,10 +278,10 @@ public class FrameworkRegistry implements MetadataVocabReloadListener {
 					String system = (String) i.next();
 					String[] splits = system.split("/");
 					if (splits != null && splits.length > 3) {
-						String format = splits[0];
-						String version = splits[1];
+//						String format = splits[0];
+//						String version = splits[1];
 						String audience = splits[2];
-						String language = splits[3];
+//						String language = splits[3];
 						for (int j = 0; j < splits.length; j++)
 							if (!muiKnownFormats.contains(splits[0]) && audience.equals(AUDIENCE)) {
 								muiKnownFormats.add(splits[0]);

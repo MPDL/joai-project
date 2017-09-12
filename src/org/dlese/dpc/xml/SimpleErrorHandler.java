@@ -33,7 +33,7 @@ public class SimpleErrorHandler extends DefaultHandler implements LexicalHandler
 
 	private boolean error;
 	private boolean warning;
-	private boolean containsDTD;
+//	private boolean containsDTD;
 	private StringBuffer errorBuff, warningBuff;
 
 
@@ -49,7 +49,7 @@ public class SimpleErrorHandler extends DefaultHandler implements LexicalHandler
 		this.warningBuff = warningBuff;
 		error = false;
 		warning = false;
-		containsDTD = false;
+//		containsDTD = false;
 	}
 
 
@@ -121,7 +121,7 @@ public class SimpleErrorHandler extends DefaultHandler implements LexicalHandler
 	 */
 	public void startDTD(String name, String publicId, String systemId)
 		 throws SAXException {
-		containsDTD = true;
+//		containsDTD = true;
 	}
 
 
