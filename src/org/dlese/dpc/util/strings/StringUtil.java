@@ -25,21 +25,21 @@ package org.dlese.dpc.util.strings;
  */
 public final class StringUtil {
 
-	/**
-	 *  Escape any single or double quotes within a string (usefull for strings
-	 *  that will be placed inside HTML inputs)
-	 *
-	 *@param  str
-	 */
-	public static String escapeQuotes( String str ) {
-		if ( ( str.indexOf( "'" ) == -1 ) && ( str.indexOf( '"' ) == -1 ) ) {
-			return str;
-		}
-		String ret = replace( str, "\\", "\\\\", false );
-		ret = replace( str, "'", "\\'", false );
-		ret = replace( ret, "\"", "\\\"", false );
-		return ret;
-	}
+//	/**
+//	 *  Escape any single or double quotes within a string (usefull for strings
+//	 *  that will be placed inside HTML inputs)
+//	 *
+//	 *@param  str
+//	 */
+//	public static String escapeQuotes( String str ) {
+//		if ( ( str.indexOf( "'" ) == -1 ) && ( str.indexOf( '"' ) == -1 ) ) {
+//			return str;
+//		}
+//		String ret = replace( str, "\\", "\\\\", false );
+//		ret = replace( str, "'", "\\'", false );
+//		ret = replace( ret, "\"", "\\\"", false );
+//		return ret;
+//	}
 
 	/**
 	 *  SQL strings use ' as delimeter, so inner quotes must be converted to ''

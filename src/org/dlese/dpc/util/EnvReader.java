@@ -35,7 +35,7 @@ public class EnvReader {
 	 * @return                The envVars value
 	 * @exception  Throwable  NOT YET DOCUMENTED
 	 */
-	public static Properties getEnvVars() throws Throwable {
+	private static Properties getEnvVars() throws Throwable {
 		Process p = null;
 		Properties envVars = new Properties();
 		Runtime r = Runtime.getRuntime();

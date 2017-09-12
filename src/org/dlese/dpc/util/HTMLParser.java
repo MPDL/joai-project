@@ -21,7 +21,6 @@ import org.htmlparser.Node;
 import org.htmlparser.Parser;
 import org.htmlparser.tags.ImageTag;
 import org.htmlparser.tags.LinkTag;
-import org.htmlparser.tags.MetaTag;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.TagFindingVisitor;
 import org.htmlparser.visitors.TextExtractingVisitor;
@@ -62,18 +61,18 @@ public class HTMLParser {
 	private Parser parser;
 
 
-	/**
-	 *  Constructor of an HTMLParser object
-	 *
-	 * @param  resourcelocn         either a URL or the name of an HTML file 
-	 * @exception  ParserException  
-	 * e.g.:
-         * HTMLParser hp = new HTMLParser("http://www.dlese.org");
-         * HTMLParser hp2 = new HTMLParser(testthis.htm);
-	 */
-	public HTMLParser(String resourcelocn) throws ParserException {
-		parser = new Parser(resourcelocn);
-	}
+//	/**
+//	 *  Constructor of an HTMLParser object
+//	 *
+//	 * @param  resourcelocn         either a URL or the name of an HTML file 
+//	 * @exception  ParserException  
+//	 * e.g.:
+//         * HTMLParser hp = new HTMLParser("http://www.dlese.org");
+//         * HTMLParser hp2 = new HTMLParser(testthis.htm);
+//	 */
+//	public HTMLParser(String resourcelocn) throws ParserException {
+//		parser = new Parser(resourcelocn);
+//	}
 
 
 	/**
@@ -160,98 +159,98 @@ public class HTMLParser {
 	}
 
 
-	/**
-	 *  returns true if the html document contains a Meta tag with a name equal to mname , otherwise returns false
-	 *  e.g. :
-         *  HTMLParser hp = new HTMLParser("http://www.abc.org");
-         *  boolean containskeywords = hp.hasMetaTagName("keywords");
-         *  boolean containsxyz = hp.hasMetaTagName("xyz");
-         *  In this code, containskeywords will be true, and containsxyz will be false. 
-	 *
-	 * @param  name                 name of the Meta Tag
-	 * @return                      true or false, if this tag is present or not
-	 * @exception  ParserException  
-	 */
-	public boolean hasMetaTagName(String name) throws ParserException {
-		boolean hasIt = false;
-
-		String[] tagToBeFound = {"META"};
-		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
-		parser.visitAllNodesWith(visitor);
-		Node[] allMTags = visitor.getTags(0);
-
-		for (int i = 0; i < allMTags.length; i++) {
-			MetaTag metatag = (MetaTag) allMTags[i];
-
-			if (name.equalsIgnoreCase(metatag.getMetaTagName())) {
-				hasIt = true;
-				break;
-			}
-		}
-
-		parser.reset();
-		return hasIt;
-	}
-
-
-	/**
-         * returns the content of the Meta tag whose name equals mname. If such a tag does not exist, returns an empty string. 
-	 * E.g. :
-         * HTMLParser hp = new HTMLParser("http://www.abc.org");
-         * if (hp.hasMetaTagName("organization"))
-         * {
-         *    System.out.println(hp.getMetaTagContentByName("organization"));
-         * }
-         * This prints out the following : 
-	 * 
-         * ABC Program Center
-	 *
-	 * @param  name                 name of the Meta Tag
-	 * @return                      The value of this meta tag
-	 * @exception  ParserException  
-	 */
-	public String getMetaTagContentByName(String name) throws ParserException {
-		String MetaTagContent = "";
-
-		String[] tagToBeFound = {"META"};
-		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
-		parser.visitAllNodesWith(visitor);
-		Node[] allMTags = visitor.getTags(0);
-
-		for (int i = 0; i < allMTags.length; i++) {
-			MetaTag metatag = (MetaTag) allMTags[i];
-
-			if (name.equals(metatag.getMetaTagName())) {
-				MetaTagContent = metatag.getMetaContent();
-				break;
-			}
-		}
-
-		parser.reset();
-		return MetaTagContent;
-	}
+//	/**
+//	 *  returns true if the html document contains a Meta tag with a name equal to mname , otherwise returns false
+//	 *  e.g. :
+//         *  HTMLParser hp = new HTMLParser("http://www.abc.org");
+//         *  boolean containskeywords = hp.hasMetaTagName("keywords");
+//         *  boolean containsxyz = hp.hasMetaTagName("xyz");
+//         *  In this code, containskeywords will be true, and containsxyz will be false. 
+//	 *
+//	 * @param  name                 name of the Meta Tag
+//	 * @return                      true or false, if this tag is present or not
+//	 * @exception  ParserException  
+//	 */
+//	public boolean hasMetaTagName(String name) throws ParserException {
+//		boolean hasIt = false;
+//
+//		String[] tagToBeFound = {"META"};
+//		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
+//		parser.visitAllNodesWith(visitor);
+//		Node[] allMTags = visitor.getTags(0);
+//
+//		for (int i = 0; i < allMTags.length; i++) {
+//			MetaTag metatag = (MetaTag) allMTags[i];
+//
+//			if (name.equalsIgnoreCase(metatag.getMetaTagName())) {
+//				hasIt = true;
+//				break;
+//			}
+//		}
+//
+//		parser.reset();
+//		return hasIt;
+//	}
 
 
-	/**
-	 *  returns a String array of all the links in the html document. 
-	 *
-	 * @return                      a string array of all the links
-	 * @exception  ParserException  
-	 */
-	public String[] getAllLinks() throws ParserException {
+//	/**
+//         * returns the content of the Meta tag whose name equals mname. If such a tag does not exist, returns an empty string. 
+//	 * E.g. :
+//         * HTMLParser hp = new HTMLParser("http://www.abc.org");
+//         * if (hp.hasMetaTagName("organization"))
+//         * {
+//         *    System.out.println(hp.getMetaTagContentByName("organization"));
+//         * }
+//         * This prints out the following : 
+//	 * 
+//         * ABC Program Center
+//	 *
+//	 * @param  name                 name of the Meta Tag
+//	 * @return                      The value of this meta tag
+//	 * @exception  ParserException  
+//	 */
+//	public String getMetaTagContentByName(String name) throws ParserException {
+//		String MetaTagContent = "";
+//
+//		String[] tagToBeFound = {"META"};
+//		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
+//		parser.visitAllNodesWith(visitor);
+//		Node[] allMTags = visitor.getTags(0);
+//
+//		for (int i = 0; i < allMTags.length; i++) {
+//			MetaTag metatag = (MetaTag) allMTags[i];
+//
+//			if (name.equals(metatag.getMetaTagName())) {
+//				MetaTagContent = metatag.getMetaContent();
+//				break;
+//			}
+//		}
+//
+//		parser.reset();
+//		return MetaTagContent;
+//	}
 
-		String[] tagToBeFound = {"A"};
-		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
-		parser.visitAllNodesWith(visitor);
-		Node[] allLinkTags = visitor.getTags(0);
-		String[] allLinks = new String[allLinkTags.length];
-		for (int i = 0; i < allLinkTags.length; i++) {
-			LinkTag l = (LinkTag) allLinkTags[i];
-			allLinks[i] = l.extractLink();
-		}
-		parser.reset();
-		return allLinks;
-	}
+
+//	/**
+//	 *  returns a String array of all the links in the html document. 
+//	 *
+//	 * @return                      a string array of all the links
+//	 * @exception  ParserException  
+//	 */
+//	public String[] getAllLinks() throws ParserException {
+//
+//		String[] tagToBeFound = {"A"};
+//		TagFindingVisitor visitor = new TagFindingVisitor(tagToBeFound);
+//		parser.visitAllNodesWith(visitor);
+//		Node[] allLinkTags = visitor.getTags(0);
+//		String[] allLinks = new String[allLinkTags.length];
+//		for (int i = 0; i < allLinkTags.length; i++) {
+//			LinkTag l = (LinkTag) allLinkTags[i];
+//			allLinks[i] = l.extractLink();
+//		}
+//		parser.reset();
+//		return allLinks;
+//	}
 
 
 	/**
