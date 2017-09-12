@@ -67,7 +67,7 @@ import org.dlese.dpc.vocab.MetadataVocab;
  */
 public abstract class XMLFileIndexingWriter extends FileIndexingServiceWriter {
 
-	private File sourceFile = null;
+//	private File sourceFile = null;
 	private DleseCollectionDocReader myCollectionDocReader = null;
 	private XMLIndexer _xmlIndexer = null;
 	private String[] _collections = null;
@@ -340,9 +340,9 @@ public abstract class XMLFileIndexingWriter extends FileIndexingServiceWriter {
 	 */
 	protected void addCustomFields(Document newDoc, Document existingDoc, File sourceFile) throws Exception {
 		RecordDataService recordDataService = getRecordDataService();
-		MetadataVocab vocab = null;
-		if (recordDataService != null)
-			vocab = recordDataService.getVocab();
+//		MetadataVocab vocab = null;
+//		if (recordDataService != null)
+//			vocab = recordDataService.getVocab();
 
 		// ------ Standard XML indexing handled by XMLIndexer ------------
 

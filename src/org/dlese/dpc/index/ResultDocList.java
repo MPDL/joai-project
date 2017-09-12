@@ -32,7 +32,7 @@ import org.apache.lucene.search.TopDocs;
  * @see       ResultDoc
  */
 public class ResultDocList extends AbstractList {
-	private static boolean debug = true;
+//	private static boolean debug = true;
 
 	private TopDocs _topDocs = null;
 	private ResultDocConfig _resultDocConfig = null;
@@ -69,7 +69,7 @@ public class ResultDocList extends AbstractList {
 	}
 
 
-	private int numGets = 0;
+//	private int numGets = 0;
 
 
 	/**
@@ -131,36 +131,36 @@ public class ResultDocList extends AbstractList {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " ResultDocList ERROR: " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " ResultDocList ERROR: " + s);
+//	}
 
 
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-	 *
-	 * @param  s  The String that will be output.
-	 */
-	private final static void prtln(String s) {
-		if (debug)
-			System.out.println(getDateStamp() + " ResultDocList: " + s);
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+//	 *
+//	 * @param  s  The String that will be output.
+//	 */
+//	private final static void prtln(String s) {
+//		if (debug)
+//			System.out.println(getDateStamp() + " ResultDocList: " + s);
+//	}
 
 
-	/**
-	 *  Sets the debug attribute of the SimpleLuceneIndex object
-	 *
-	 * @param  db  The new debug value
-	 */
-	public static void setDebug(boolean db) {
-		debug = db;
-	}
+//	/**
+//	 *  Sets the debug attribute of the SimpleLuceneIndex object
+//	 *
+//	 * @param  db  The new debug value
+//	 */
+//	public static void setDebug(boolean db) {
+//		debug = db;
+//	}
 }
 
 

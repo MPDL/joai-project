@@ -18,8 +18,6 @@
 package org.dlese.dpc.index.writer;
 
 import java.io.File;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

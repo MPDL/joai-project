@@ -46,7 +46,7 @@ import org.dlese.dpc.xml.XMLDoc;
 public class DleseAnnoFileIndexingServiceWriter extends XMLFileIndexingWriter {
 
 	private static long num_instances = 0;
-	private File sourceFile = null;
+//	private File sourceFile = null;
 	private XMLDoc dleseAnnoXmlDoc;
 	private boolean statusIsCompleted = false;
 	private String statusString = null;
@@ -127,7 +127,7 @@ public class DleseAnnoFileIndexingServiceWriter extends XMLFileIndexingWriter {
 		statusString = null;
 		formatString = null;
 
-		sourceFile = source;
+//		sourceFile = source;
 		// Design note: If making a deleted doc, get content from getFileContent(), not the file:
 		if(isMakingDeletedDoc()){
 			dleseAnnoXmlDoc = new XMLDoc();

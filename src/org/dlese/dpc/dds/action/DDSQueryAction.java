@@ -129,9 +129,9 @@ public final class DDSQueryAction extends Action {
 		};
 
 	private static boolean debug = false;
-	private String SELECT_ALL = " -- All --";
+//	private String SELECT_ALL = " -- All --";
 	private static ClfLogger logger = null;
-	private static StandardAnalyzer standardAnalyzer = new StandardAnalyzer(SimpleLuceneIndex.getLuceneVersion());
+//	private static StandardAnalyzer standardAnalyzer = new StandardAnalyzer(SimpleLuceneIndex.getLuceneVersion());
 
 	// --------------------------------------------------------- Public Methods
 
@@ -239,7 +239,7 @@ public final class DDSQueryAction extends Action {
 
 		ActionErrors errors = new ActionErrors();
 
-		String view = request.getParameter("view");
+//		String view = request.getParameter("view");
 
 		queryForm.setStart(0);
 
@@ -250,7 +250,7 @@ public final class DDSQueryAction extends Action {
 		queryForm.getVocabInputState().setState(request, "dds.descr.en-us");
 		request.getSession().setAttribute("MetadataVocabInputState", queryForm.getVocabInputState());
 		queryForm.clearVocabCache();
-		String paramVal = "";
+//		String paramVal = "";
 		try {
 
 			String searchOver = request.getParameter("over");
@@ -352,9 +352,6 @@ public final class DDSQueryAction extends Action {
 					"There was a server problem: " + t));
 				saveErrors(request, errors);
 				prtlnErr("There was a server problem: " + t);
-			}
-			else {
-				prtlnErr("There was a problem: " + t);
 			}
 			t.printStackTrace();
 			return mapping.findForward("simple.query");
@@ -793,7 +790,7 @@ public final class DDSQueryAction extends Action {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			sdf.setTimeZone(TimeZone.getDefault());
 			int RECENT_WEEKS = 6;
-			final String START_FROM_DATE = "2003-07-01";
+//			final String START_FROM_DATE = "2003-07-01";
 			cal.add(Calendar.WEEK_OF_MONTH, -RECENT_WEEKS);
 			wnfrom = sdf.format(cal.getTime());
 			whatsNewFilter = DateRangeFilter.After("wndate", MetadataUtils.parseUnionDateType(wnfrom));

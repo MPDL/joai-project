@@ -111,7 +111,7 @@ public final class FileIndexingService {
 	private boolean saveDeletes = false;
 	private static boolean debug = true;
 	private String idFieldToRemove = null;
-	private boolean isIndexing = false;
+//	private boolean isIndexing = false;
 	private boolean stopIndexing = false;
 	// Max num files to index at one time
 	int maxNumFilesToIndex = 500;
@@ -831,7 +831,7 @@ public final class FileIndexingService {
 			// Grab all the dirs that each doc in the index has been indexed under:
 			List indexedDirs = index.getTerms("docdir_remove");
 			String indexedDir;
-			File dirFile;
+//			File dirFile;
 			if (indexedDirs != null) {
 				for (int i = 0; i < indexedDirs.size(); i++) {
 					indexedDir = (String) indexedDirs.get(i);
@@ -1387,7 +1387,7 @@ public final class FileIndexingService {
 				num_remove = 0;
 				num_replace = 0;
 				ArrayList removeFilesByPath = new ArrayList(MAX_SIZE);
-				ArrayList removeFilesById = new ArrayList(MAX_SIZE);
+//				ArrayList removeFilesById = new ArrayList(MAX_SIZE);
 				HashMap indexingSessionAttributes = new HashMap();
 				HashMap removeItemsHashMap = new HashMap();
 				ArrayList addDocs = new ArrayList(MAX_SIZE);
@@ -1398,7 +1398,7 @@ public final class FileIndexingService {
 				FileIndexingServiceData newDocData;
 				Document doc;
 				//Document newDoc;
-				Document dupIdDoc;
+//				Document dupIdDoc;
 				List dupsToRemove = null;
 				String newID;
 				String rmAb;

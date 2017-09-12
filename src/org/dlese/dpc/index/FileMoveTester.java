@@ -39,7 +39,7 @@ public final class FileMoveTester
 
 	private File inputFilesDir = null;
 	private File tempFilesDir = null;
-	private String tempFilesDirLoc = null;
+//	private String tempFilesDirLoc = null;
 	private boolean terminateMoveFilesThread = false;
 
 
@@ -235,14 +235,14 @@ public final class FileMoveTester
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " " + s);
+//	}
 
 
 

@@ -227,21 +227,21 @@ public final class DDSAdminAction extends Action {
 
 
 
-	/**
-
-	 *  DESCRIPTION
-
-	 *
-
-	 * @param  s  DESCRIPTION
-
-	 */
-
-	private void prtln(String s) {
-
-		System.out.println(s);
-
-	}
+//	/**
+//
+//	 *  DESCRIPTION
+//
+//	 *
+//
+//	 * @param  s  DESCRIPTION
+//
+//	 */
+//
+//	private void prtln(String s) {
+//
+//		System.out.println(s);
+//
+//	}
 
 }
 

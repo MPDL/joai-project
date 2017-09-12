@@ -360,7 +360,7 @@ public final class DDSAdminQueryAction extends Action {
 					prtln("query: " + query + " had zero results");
 
 				queryForm.setResults(resultDocs);
-				StringBuffer str;
+//				StringBuffer str;
 
 				prtln("setResults done");
 
@@ -573,7 +573,7 @@ public final class DDSAdminQueryAction extends Action {
 		// Grab the form bean:
 		DDSAdminQueryForm queryForm = (DDSAdminQueryForm) form;
 
-		String paramVal = "";
+//		String paramVal = "";
 		try {
 
 			// Handle queries:

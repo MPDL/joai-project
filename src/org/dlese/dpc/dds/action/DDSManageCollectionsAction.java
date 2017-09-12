@@ -41,7 +41,7 @@ import org.dlese.dpc.repository.RepositoryManager;
  */
 public final class DDSManageCollectionsAction extends Action {
 
-	private static boolean debug = false;
+//	private static boolean debug = false;
 
 
 	// --------------------------------------------------------- Public Methods
@@ -77,7 +77,7 @@ public final class DDSManageCollectionsAction extends Action {
 		 *  variables (the JVM will handle these properly using the stack). Pass
 		 *  all variables via method signatures rather than instance vars.
 		 */
-		DDSManageCollectionsForm mf = (DDSManageCollectionsForm) form;
+//		DDSManageCollectionsForm mf = (DDSManageCollectionsForm) form;
 		
 
 		RepositoryManager rm =
@@ -135,20 +135,20 @@ public final class DDSManageCollectionsAction extends Action {
 	// -------------- Debug ------------------
 
 
-	public static void setDebug(boolean isDebugOutput) {
-		debug = isDebugOutput;
-	}
+//	public static void setDebug(boolean isDebugOutput) {
+//		debug = isDebugOutput;
+//	}
 
 
 
-	/**
-	 *  Print a line to standard out.
-	 *
-	 * @param  s  The String to print.
-	 */
-	private void prtln(String s) {
-		if (debug)
-			System.out.println("DDSManageCollectionsAction: " + s);
-	}
+//	/**
+//	 *  Print a line to standard out.
+//	 *
+//	 * @param  s  The String to print.
+//	 */
+//	private void prtln(String s) {
+//		if (debug)
+//			System.out.println("DDSManageCollectionsAction: " + s);
+//	}
 }
 

@@ -35,7 +35,7 @@ import org.dlese.dpc.index.SimpleLuceneIndex;
  * @author     John Weatherley
  */
 public class ExtractorQueryParser extends QueryParser {
-	private static boolean debug = true;
+//	private static boolean debug = true;
 	private List fieldTerms = new ArrayList();
 	private String extractField = null;
 
@@ -98,36 +98,36 @@ public class ExtractorQueryParser extends QueryParser {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " FieldQueryParser ERROR: " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " FieldQueryParser ERROR: " + s);
+//	}
 
 
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-	 *
-	 * @param  s  The String that will be output.
-	 */
-	private final static void prtln(String s) {
-		if (debug)
-			System.out.println(getDateStamp() + " FieldQueryParser: " + s);
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+//	 *
+//	 * @param  s  The String that will be output.
+//	 */
+//	private final static void prtln(String s) {
+//		if (debug)
+//			System.out.println(getDateStamp() + " FieldQueryParser: " + s);
+//	}
 
 
-	/**
-	 *  Sets the debug attribute of the FieldQueryParser object
-	 *
-	 * @param  db  The new debug value
-	 */
-	public static void setDebug(boolean db) {
-		debug = db;
-	}
+//	/**
+//	 *  Sets the debug attribute of the FieldQueryParser object
+//	 *
+//	 * @param  db  The new debug value
+//	 */
+//	public static void setDebug(boolean db) {
+//		debug = db;
+//	}
 }
 
 

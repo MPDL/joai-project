@@ -899,7 +899,7 @@ public class ItemDocReader extends XMLDocReader {
 		if (multiDoc == null)
 			return getGradeRanges();
 		String t = multiDoc.get(getFieldId("gradeRange", getDoctype())).trim();
-		String[] vals;
+//		String[] vals;
 		if (t == null || t.length() == 0)
 			return null;
 		return t.split("\\+");
@@ -2404,7 +2404,7 @@ public class ItemDocReader extends XMLDocReader {
 		for (int i = 0; i < annoResults.size(); i++) {
 			DleseAnnoDocReader anno = (DleseAnnoDocReader) annoResults.get(i).getDocReader();
 			String annoType = anno.getType();
-			String annoStatus = anno.getStatus();
+//			String annoStatus = anno.getStatus();
 			String annoFormat = anno.getFormat();
 			isCompleted = anno.getIsCompleted();
 			isInProgress = anno.getIsInProgress();

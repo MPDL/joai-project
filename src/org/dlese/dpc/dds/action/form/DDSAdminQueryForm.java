@@ -60,7 +60,7 @@ public final class DDSAdminQueryForm extends VocabForm implements Serializable {
 
 	private String queryString = null;
 	private String refineQueryString = null;
-	private XMLDocReader docReader = null;
+//	private XMLDocReader docReader = null;
 	private String metadata = null;
 	private String reportTitle = null;
 	private String selectedCollection = null;
@@ -71,10 +71,11 @@ public final class DDSAdminQueryForm extends VocabForm implements Serializable {
 	private List collections = null;
 	private List idMapperErrors = null;
 	private List idMapperErrorLabels = null;
-	private List collectionLabels = null;
-	private List formats = null, indexedFormats = null;
+//	private List collectionLabels = null;
+	private List formats = null;
+	private List indexedFormats = null;
 	private List indexedFormatsLabels = null;
-	private List indexedAccessionStatus = null;
+//	private List indexedAccessionStatus = null;
 	private String contextURL = null;
 	private ResultDoc resultDoc = null;
 	private ResultDocList resultDocs = null;

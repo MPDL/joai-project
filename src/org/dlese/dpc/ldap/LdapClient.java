@@ -382,7 +382,7 @@ throws LdapException
 public void isAlive()
 throws LdapException
 {
-	LdapEntry entry = null;
+//	LdapEntry entry = null;
 	DirContext dirctx = getDirContext( adminDn, adminPswd);
 	Attributes attrraw = null;
 	try { attrraw = dirctx.getAttributes( adminDn); }

@@ -36,7 +36,7 @@ import org.dlese.dpc.repository.RecordDataService;
  * @see        org.dlese.dpc.index.writer.NewsOppsFileIndexingWriter
  */
 public class NewsOppsDocReader extends XMLDocReader {
-	private final String DEFAULT = "(null)";
+//	private final String DEFAULT = "(null)";
 
 
 	/**  Constructor for the NewsOppsDocReader object */

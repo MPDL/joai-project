@@ -20,7 +20,6 @@ package org.dlese.dpc.datamgr;
 //import org.dlese.dpc.oai.datamgr.*;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.Random;
 
 import org.dlese.dpc.junit.TestTools;
 
@@ -219,8 +218,8 @@ public class SerializedDataManagerPerformanceTests extends TestCase
 		// Init on first run.
 
 		String decoded;
-		Random randgen = new Random(new Date().getTime());
-		char c;
+//		Random randgen = new Random(new Date().getTime());
+//		char c;
 
 		final int ID_LEN = 15;
 		final int NUM_IDS = 60;

@@ -136,9 +136,9 @@ public class XMLIndexerFieldsConfig {
 	}
 
 
-	private void prtln(String s) {
-		System.out.println("XMLIndexerFieldsConfig: " + s);
-	}
+//	private void prtln(String s) {
+//		System.out.println("XMLIndexerFieldsConfig: " + s);
+//	}
 
 
 	private void prtlnErr(String s) {

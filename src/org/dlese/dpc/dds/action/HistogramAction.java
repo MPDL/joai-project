@@ -23,7 +23,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -74,7 +73,7 @@ public final class HistogramAction extends Action {
 		 */
 		HistogramForm histogramForm = (HistogramForm)form;
 		histogramForm.setServletContext( getServlet().getServletContext() );
-		ActionErrors errors = new ActionErrors();
+//		ActionErrors errors = new ActionErrors();
 		MetadataVocab vocab = (MetadataVocab)getServlet().getServletContext().getAttribute( "MetadataVocab" );
 		histogramForm.setVocab( vocab );
 		SimpleLuceneIndex index = (SimpleLuceneIndex)servlet.getServletContext().getAttribute( "index" );
@@ -102,7 +101,7 @@ public final class HistogramAction extends Action {
 				String collectionKey = req.getParameter( "key" );
 				if ( ( collectionKey != null ) && ( !collectionKey.equals( "null" ) ) ) {
 					histogramForm.setHasCollectionSpecified( "true" );
-					String collectionId = vocab.getTranslatedValue( "dlese_collect", "key", collectionKey );
+//					String collectionId = vocab.getTranslatedValue( "dlese_collect", "key", collectionKey );
 					histogramForm.setCollectionMetaName( collectionKey );
 					//	vocab.getMetaNameOfId( "dds.descr.en-us", "ky", collectionId ) );
 					ResultDocList resultDocs = null;
@@ -152,14 +151,14 @@ public final class HistogramAction extends Action {
 	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr( String s ) {
-		System.err.println( getDateStamp() + " " + s );
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr( String s ) {
+//		System.err.println( getDateStamp() + " " + s );
+//	}
 
 
 	/**

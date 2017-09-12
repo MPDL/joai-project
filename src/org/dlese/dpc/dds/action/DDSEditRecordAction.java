@@ -82,7 +82,7 @@ public final class DDSEditRecordAction extends Action {
 			RepositoryManager rm =
 					(RepositoryManager) servlet.getServletContext().getAttribute("repositoryManager");
 
-			SimpleLuceneIndex index = rm.getIndex();
+//			SimpleLuceneIndex index = rm.getIndex();
 
 			String verb = request.getParameter("verb");
 			if (verb == null) {

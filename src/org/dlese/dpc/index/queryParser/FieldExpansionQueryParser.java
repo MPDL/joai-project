@@ -18,9 +18,7 @@
 package org.dlese.dpc.index.queryParser;
 
 import java.io.StringReader;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -44,9 +42,9 @@ import org.dlese.dpc.index.VirtualSearchFieldMapper;
  * @see        org.dlese.dpc.index.VirtualSearchFieldMapper
  */
 public class FieldExpansionQueryParser extends QueryParser {
-	private static boolean debug = true;
+//	private static boolean debug = true;
 
-	private Analyzer analyzer = null;
+//	private Analyzer analyzer = null;
 
 	private String[] expansionFields = null;
 	private String[] boostingFields = null;
@@ -72,7 +70,7 @@ public class FieldExpansionQueryParser extends QueryParser {
 	                                  Map bv,
 	                                  VirtualSearchFieldMapper mappedFields) {
 		super(SimpleLuceneIndex.getLuceneVersion(),null, izer);
-		analyzer = izer;
+//		analyzer = izer;
 
 		expansionFields = ef;
 		boostingFields = bf;
@@ -231,47 +229,47 @@ public class FieldExpansionQueryParser extends QueryParser {
 
 
 	// ---------------------- Debug methods -------------------------------
-	/**
-	 *  Gets a datestamp of the current time formatted for display with logs and output.
-	 *
-	 * @return    A datestamp for display purposes.
-	 */
-	private final static String getDateStamp() {
-		return
-			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
-	}
+//	/**
+//	 *  Gets a datestamp of the current time formatted for display with logs and output.
+//	 *
+//	 * @return    A datestamp for display purposes.
+//	 */
+//	private final static String getDateStamp() {
+//		return
+//			new SimpleDateFormat("MMM d, yyyy h:mm:ss a zzz").format(new Date());
+//	}
 
 
-	/**
-	 *  Output a line of text to error out, with datestamp.
-	 *
-	 * @param  s  The text that will be output to error out.
-	 */
-	private final void prtlnErr(String s) {
-		System.err.println(getDateStamp() + " FieldQueryParser ERROR: " + s);
-	}
+//	/**
+//	 *  Output a line of text to error out, with datestamp.
+//	 *
+//	 * @param  s  The text that will be output to error out.
+//	 */
+//	private final void prtlnErr(String s) {
+//		System.err.println(getDateStamp() + " FieldQueryParser ERROR: " + s);
+//	}
 
 
 
-	/**
-	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
-	 *
-	 * @param  s  The String that will be output.
-	 */
-	private final static void prtln(String s) {
-		if (debug)
-			System.out.println(getDateStamp() + " FieldQueryParser: " + s);
-	}
+//	/**
+//	 *  Output a line of text to standard out, with datestamp, if debug is set to true.
+//	 *
+//	 * @param  s  The String that will be output.
+//	 */
+//	private final static void prtln(String s) {
+//		if (debug)
+//			System.out.println(getDateStamp() + " FieldQueryParser: " + s);
+//	}
 
 
-	/**
-	 *  Sets the debug attribute of the FieldQueryParser object
-	 *
-	 * @param  db  The new debug value
-	 */
-	public static void setDebug(boolean db) {
-		debug = db;
-	}
+//	/**
+//	 *  Sets the debug attribute of the FieldQueryParser object
+//	 *
+//	 * @param  db  The new debug value
+//	 */
+//	public static void setDebug(boolean db) {
+//		debug = db;
+//	}
 }
 
 
