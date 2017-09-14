@@ -133,7 +133,7 @@
 	
 	<context-param>        
 		<param-name>debug</param-name>
-		<param-value>false</param-value>
+		<param-value>true</param-value>
 		<description>
 			Indicates whether or not debugging messages will
 			be output to standard out. Must be [true | false].
@@ -219,6 +219,12 @@
       <param-name>xslconverter - lar to oai_dc converter</param-name>  
       <param-value>lar2oai_dc.xsl|lar|oai_dc</param-value>  
     </context-param>	
+
+	<context-param>  
+      <param-name>xslconverter - escidoc to test_dc converter</param-name>  
+      <param-value>test_dc.xsl|escidoc|test_dc</param-value>  
+    </context-param>	
+
 	
 	<!-- To configure a format converter that uses a Java class, the param-name must begin with
 	the string 'javaconverter' and must be unique. The param-value 
