@@ -28,51 +28,6 @@
 	<xsl:param name="COMPONENT_IDS" select="''"/>
 	<xsl:param name="VISIBILITY" select="''"/>
 	
-<!--	<xsl:variable name="genreMappingEscidocToOpenAire">
-		<genre type="http://purl.org/eprint/type/Book">info:eu-repo/semantics/book</genre>
-		<genre type="http://purl.org/eprint/type/BookItem">info:eu-repo/semantics/bookPart</genre>
-		<genre type="http://purl.org/eprint/type/ConferencePaper">info:eu-repo/semantics/conferenceObject</genre>
-		<genre type="http://purl.org/eprint/type/ConferencePoster">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/eprint/type/Patent">info:eu-repo/semantics/patent</genre>
-		<genre type="http://purl.org/eprint/type/Report">info:eu-repo/semantics/report</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/article">info:eu-repo/semantics/article</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/book-review">info:eu-repo/semantics/review</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/case-note">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/case-study">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/collected-edition">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/commentary">info:eu-repo/semantics/annotation</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/conference-report">info:eu-repo/semantics/conferenceObject</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-collected-edition">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-commentary">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-encyclopedia">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-festschrift">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-handbook">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/courseware-lecture">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/editorial">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/encyclopedia">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/festschrift">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/film">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/handbook">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/issue">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/journal">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/manual">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/manuscript">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/meeting-abstract">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/monograph">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/multi-volume">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/newspaper">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/newspaper-article">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/opinion">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/other">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/paper">info:eu-repo/semantics/workingPaper</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/proceedings">info:eu-repo/semantics/conferenceObject</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/series">info:eu-repo/semantics/other</genre>
-		<genre type="http://purl.org/escidoc/metadata/ves/publication-types/talk-at-event">info:eu-repo/semantics/lecture</genre>
-	</xsl:variable>
-	
-	<xsl:variable name="genreMapping" select="saxon:nodeSet($genreMappingEscidocToOpenAire)"/>
--->
-	
 <!-- <xsl:variable name="visibilityMappingEscidocToOpenAire">
 		<visibility type="public">info:eu-repo/semantics/openAccess</visibility>
 		<visibility type="audience">info:eu-repo/semantics/restrictedAccess</visibility>
@@ -108,6 +63,7 @@
 				<xsl:variable name="publication-type">
 					<xsl:value-of select="./@type"/>
 				</xsl:variable>
+				
 				<xsl:choose>
 					<xsl:when test="@type = 'http://purl.org/eprint/type/Thesis'">
 						<xsl:choose>
@@ -138,10 +94,161 @@
 						</xsl:choose>
 					</xsl:when>
 
-<!--					<xsl:when test="$genreMapping/genre[@type=$publication-type]">
-						<xsl:value-of select="$genreMapping/genre[@type=$publication-type]"/>
+					<xsl:when test="@type = 'http://purl.org/eprint/type/Book'">
+						<xsl:value-of select="'info:eu-repo/semantics/book'"/>
 					</xsl:when>
--->
+
+					<xsl:when test="@type = 'http://purl.org/eprint/type/BookItem'">
+						<xsl:value-of select="'info:eu-repo/semantics/bookPart'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/eprint/type/ConferencePaper'">
+						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/eprint/type/ConferencePoster'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/eprint/type/Patent'">
+						<xsl:value-of select="'info:eu-repo/semantics/patent'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/eprint/type/Report'">
+						<xsl:value-of select="'info:eu-repo/semantics/report'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/article'">
+						<xsl:value-of select="'info:eu-repo/semantics/article'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/book-review'">
+						<xsl:value-of select="'info:eu-repo/semantics/review'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/case-note'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/case-study'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/collected-edition'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/commentary'">
+						<xsl:value-of select="'info:eu-repo/semantics/annotation'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/conference-report'">
+						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-collected-edition'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-commentary'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-encyclopedia'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-festschrift'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-handbook'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/courseware-lecture'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/editorial'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/encyclopedia'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/festschrift'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/film'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/handbook'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/issue'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/journal'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/manual'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/manuscript'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/meeting-abstract'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/monograph'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/multi-volume'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/newspaper'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/newspaper-article'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/opinion'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/other'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/paper'">
+						<xsl:value-of select="'info:eu-repo/semantics/workingPaper'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/proceedings'">
+						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/series'">
+						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
+					</xsl:when>
+					
+					<xsl:when test="@type = 'http://purl.org/escidoc/metadata/ves/publication-types/talk-at-event'">
+						<xsl:value-of select="'info:eu-repo/semantics/lecture'"/>
+					</xsl:when>
 
 					<xsl:otherwise>
 						<xsl:value-of select="@type"/>
