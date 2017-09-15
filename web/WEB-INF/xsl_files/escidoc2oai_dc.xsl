@@ -341,6 +341,7 @@
 										<xsl:with-param name="person" select="./person:person"/>
 									</xsl:call-template>
 								</xsl:when>
+								
 								<xsl:when test="./organization:organization">
 									<xsl:call-template name="organization">
 										<xsl:with-param name="organization" select="./organization:organization"/>
