@@ -221,7 +221,7 @@
     </context-param>	
 
 	<context-param>  
-      <param-name>xslconverter - escidoc to test_dc converter</param-name>  
+      <param-name>xslconverter - escidoc to oai_dc converter</param-name>  
       <param-value>escidoc2oai_dc.xsl|escidoc|oai_dc</param-value>  
     </context-param>	
 
