@@ -2,7 +2,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/" 
 	xmlns:dcterms="http://purl.org/dc/terms/" 
     xmlns:escidocComponents="http://www.escidoc.de/schemas/components/0.9"
-    xmlns:escidocItem="https://www.escidoc.org/schemas/rest/item/0.10"
+	xmlns:escidocItem="http://www.escidoc.de/schemas/item/0.10"
     xmlns:escidocMetadataRecords="http://www.escidoc.de/schemas/metadatarecords/0.5"
 	xmlns:eterms="http://purl.org/escidoc/metadata/terms/0.1/" 
 	xmlns:event="http://purl.org/escidoc/metadata/profiles/0.1/event" 
@@ -42,19 +42,19 @@
 			</xsl:if>
 		
 		    <!--  dc:identifier Object Handle -->
-		    <xsl:variable name="pid" select="./escidocItem:properties/prop:pid"/>
-		    <xsl:if test="$pid != ''">
+		    <xsl:variable name="pidObject" select="./escidocItem:properties/prop:pid"/>
+		    <xsl:if test="$pidObject != ''">
 			    <dc:identifier>
-				    <xsl:value-of select="concat($handle-service-url, substring-after($pid, 'hdl:'))"/>
+				    <xsl:value-of select="concat($handle-service-url, substring-after($pidObject, 'hdl:'))"/>
     			</dc:identifier>
 	    	</xsl:if>
 
 			<!--  dc:identifier File Handles -->
 			<xsl:for-each select="./escidocComponents:components/escidocComponents:component/escidocComponents:properties">
-			    <xsl:variable name="pid" select="prop:pid"/>
-			    <xsl:if test="$pid != ''">
+			    <xsl:variable name="pidFile" select="prop:pid"/>
+			    <xsl:if test="$pidFile != ''">
 				    <dc:identifier>
-					    <xsl:value-of select="concat($handle-service-url, substring-after($pid, 'hdl:'))"/>
+					    <xsl:value-of select="concat($handle-service-url, substring-after($pidFile, 'hdl:'))"/>
 	    			</dc:identifier>
 		    	</xsl:if>
 			</xsl:for-each>
