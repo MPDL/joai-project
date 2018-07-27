@@ -45,7 +45,7 @@
 		    <xsl:variable name="pidObject" select="./escidocItem:properties/prop:pid"/>
 		    <xsl:if test="$pidObject != ''">
 			    <dc:identifier>
-				    <xsl:value-of select="concat($handle-service-url, substring-after($pidObject, 'hdl:'))"/>
+				    <xsl:value-of select="concat($handle-service-url, $pidObject)"/>
     			</dc:identifier>
 	    	</xsl:if>
 
@@ -54,7 +54,7 @@
 			    <xsl:variable name="pidFile" select="prop:pid"/>
 			    <xsl:if test="$pidFile != ''">
 				    <dc:identifier>
-					    <xsl:value-of select="concat($handle-service-url, substring-after($pidFile, 'hdl:'))"/>
+					    <xsl:value-of select="concat($handle-service-url, $pidFile)"/>
 	    			</dc:identifier>
 		    	</xsl:if>
 			</xsl:for-each>
