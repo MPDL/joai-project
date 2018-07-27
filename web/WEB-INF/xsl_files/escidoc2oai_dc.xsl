@@ -77,10 +77,10 @@
 						<xsl:choose>
 							<xsl:when test="$visibility = 'public'">
 								<xsl:choose>
-									<xsl:when test="$category = 'any-fulltext'
-									             or $category = 'publisher-version'
-									             or $category = 'post-print'
-									             or $category = 'pre-print'">
+									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/openAccess'"/>				
                 	    			    </dc:rights>
@@ -90,10 +90,10 @@
 							
 							<xsl:when test="$visibility = 'audience'">
 								<xsl:choose>
-									<xsl:when test="$category = 'any-fulltext'
-									             or $category = 'publisher-version'
-									             or $category = 'post-print'
-									             or $category = 'pre-print'">
+									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/restrictedAccess'"/>				
                 	    			    </dc:rights>
@@ -103,10 +103,10 @@
 							
 							<xsl:when test="$visibility = 'private'">
 								<xsl:choose>
-									<xsl:when test="$category = 'any-fulltext'
-									             or $category = 'publisher-version'
-									             or $category = 'post-print'
-									             or $category = 'pre-print'">
+									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
+									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/closedAccess'"/>				
                 	    			    </dc:rights>
@@ -124,33 +124,33 @@
 				</xsl:variable>
 				
 				<xsl:choose>
-					<xsl:when test="$publication-type = 'Thesis'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/Thesis'">
 						<xsl:choose>
-							<xsl:when test="eterms:degree = 'master'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/master'">
 								<xsl:value-of select="'info:eu-repo/semantics/masterThesis'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'diploma'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/diploma'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'magister'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/magister'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'phd'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/phd'">
 								<xsl:value-of select="'info:eu-repo/semantics/doctoralThesis'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'staatsexamen'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/staatsexamen'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'habilitation'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/habilitation'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'bachelor'">
+							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/bachelor'">
 								<xsl:value-of select="'info:eu-repo/semantics/bachelorThesis'"/>
 							</xsl:when>
 							
@@ -160,159 +160,159 @@
 						</xsl:choose>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'Book'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/Book'">
 						<xsl:value-of select="'info:eu-repo/semantics/book'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'BookItem'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/BookItem'">
 						<xsl:value-of select="'info:eu-repo/semantics/bookPart'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'ConferencePaper'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/ConferencePaper'">
 						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'ConferencePoster'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/ConferencePoster'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'Patent'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/Patent'">
 						<xsl:value-of select="'info:eu-repo/semantics/patent'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'Report'">
+					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/Report'">
 						<xsl:value-of select="'info:eu-repo/semantics/report'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'article'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/article'">
 						<xsl:value-of select="'info:eu-repo/semantics/article'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'book-review'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/book-review'">
 						<xsl:value-of select="'info:eu-repo/semantics/review'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'case-note'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/case-note'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'case-study'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/case-study'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'collected-edition'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/collected-edition'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'commentary'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/commentary'">
 						<xsl:value-of select="'info:eu-repo/semantics/annotation'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'conference-report'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/conference-report'">
 						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'contribution-to-collected-edition'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-collected-edition'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'contribution-to-commentary'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-commentary'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'contribution-to-encyclopedia'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-encyclopedia'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'contribution-to-festschrift'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-festschrift'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'contribution-to-handbook'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/contribution-to-handbook'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'courseware-lecture'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/courseware-lecture'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'editorial'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/editorial'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'encyclopedia'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/encyclopedia'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'festschrift'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/festschrift'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'film'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/film'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'handbook'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/handbook'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'issue'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/issue'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'journal'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/journal'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'manual'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/manual'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'manuscript'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/manuscript'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'meeting-abstract'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/meeting-abstract'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'monograph'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/monograph'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'multi-volume'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/multi-volume'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 
-					<xsl:when test="$publication-type = 'newspaper'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/newspaper'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'newspaper-article'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/newspaper-article'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'opinion'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/opinion'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'other'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/other'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'paper'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/paper'">
 						<xsl:value-of select="'info:eu-repo/semantics/workingPaper'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'proceedings'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/proceedings'">
 						<xsl:value-of select="'info:eu-repo/semantics/conferenceObject'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'series'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/series'">
 						<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 					</xsl:when>
 					
-					<xsl:when test="$publication-type = 'talk-at-event'">
+					<xsl:when test="$publication-type = 'http://purl.org/escidoc/metadata/ves/publication-types/talk-at-event'">
 						<xsl:value-of select="'info:eu-repo/semantics/lecture'"/>
 					</xsl:when>
 
