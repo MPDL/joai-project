@@ -45,7 +45,7 @@
 		    <xsl:variable name="pidObject" select="./escidocItem:properties/prop:pid"/>
 		    <xsl:if test="$pidObject != ''">
 			    <dc:identifier>
-				    <xsl:value-of select="concat($handle-service-url, $pidObject)"/>
+			    	<xsl:value-of select="concat($handle-service-url, replace($pidObject, 'hdl:', ''))"/>
     			</dc:identifier>
 	    	</xsl:if>
 
@@ -54,7 +54,7 @@
 			    <xsl:variable name="pidFile" select="prop:pid"/>
 			    <xsl:if test="$pidFile != ''">
 				    <dc:identifier>
-					    <xsl:value-of select="concat($handle-service-url, $pidFile)"/>
+				    	<xsl:value-of select="concat($handle-service-url, replace($pidFile, 'hdl:', ''))"/>
 	    			</dc:identifier>
 		    	</xsl:if>
 			</xsl:for-each>
@@ -77,10 +77,10 @@
 						<xsl:choose>
 							<xsl:when test="$visibility = 'public'">
 								<xsl:choose>
-									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
+									<xsl:when test="$category = 'any-fulltext'
+									             or $category = 'publisher-version'
+									             or $category = 'post-print'
+									             or $category = 'pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/openAccess'"/>				
                 	    			    </dc:rights>
@@ -90,10 +90,10 @@
 							
 							<xsl:when test="$visibility = 'audience'">
 								<xsl:choose>
-									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
+									<xsl:when test="$category = 'any-fulltext'
+									             or $category = 'publisher-version'
+									             or $category = 'post-print'
+									             or $category = 'pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/restrictedAccess'"/>				
                 	    			    </dc:rights>
@@ -103,10 +103,10 @@
 							
 							<xsl:when test="$visibility = 'private'">
 								<xsl:choose>
-									<xsl:when test="$category = 'http://purl.org/escidoc/metadata/ves/content-categories/any-fulltext'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/publisher-version'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/post-print'
-									             or $category = 'http://purl.org/escidoc/metadata/ves/content-categories/pre-print'">
+									<xsl:when test="$category = 'any-fulltext'
+									             or $category = 'publisher-version'
+									             or $category = 'post-print'
+									             or $category = 'pre-print'">
                       				    <dc:rights>
             								<xsl:value-of select="'info:eu-repo/semantics/closedAccess'"/>				
                 	    			    </dc:rights>
@@ -125,32 +125,35 @@
 				
 				<xsl:choose>
 					<xsl:when test="$publication-type = 'http://purl.org/eprint/type/Thesis'">
+						<xsl:variable name="degree">
+							<xsl:value-of select="./escidocMetadataRecords:md-records/escidocMetadataRecords:md-record/publication:publication/eterms:degree"/>
+						</xsl:variable>
 						<xsl:choose>
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/master'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/master'">
 								<xsl:value-of select="'info:eu-repo/semantics/masterThesis'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/diploma'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/diploma'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/magister'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/magister'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/phd'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/phd'">
 								<xsl:value-of select="'info:eu-repo/semantics/doctoralThesis'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/staatsexamen'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/staatsexamen'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/habilitation'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/habilitation'">
 								<xsl:value-of select="'info:eu-repo/semantics/other'"/>
 							</xsl:when>
 							
-							<xsl:when test="eterms:degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/bachelor'">
+							<xsl:when test="$degree = 'http://purl.org/escidoc/metadata/ves/academic-degrees/bachelor'">
 								<xsl:value-of select="'info:eu-repo/semantics/bachelorThesis'"/>
 							</xsl:when>
 							
