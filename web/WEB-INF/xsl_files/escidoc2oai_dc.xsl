@@ -420,10 +420,15 @@
 			</xsl:if>
 
 			<!--  dc:relation  -->
-			<dc:relation>
-				<xsl:variable name="relationString" select="concat('info:eu-repo/grantAgreement/', ./project:project-info/project:funding-info/project:funding-organization/dc:identifier, '/', ./project:project-info/project:funding-info/project:funding-program/dc:identifier, '/', ./project:project-info/dc:identifier )"/>
-				<xsl:value-of select="$relationString"/>
-			</dc:relation>
+			<xsl:variable name="identifier1" select="./project:project-info/project:funding-info/project:funding-organization/dc:identifier"/>
+			<xsl:variable name="identifier2" select="./project:project-info/project:funding-info/project:funding-program/dc:identifier"/>
+			<xsl:variable name="identifier3" select="./project:project-info/dc:identifier"/>
+			<xsl:if test="$identifier1 != '' and $identifier2 != '' $identifier3 != ''">
+				<dc:relation>
+					<xsl:variable name="relationString" select="concat('info:eu-repo/grantAgreement/', $identifer1, '/', $identifer2, '/', $indentifer3 )"/>
+					<xsl:value-of select="$relationString"/>
+				</dc:relation>
+			</xsl:if>
 			
 			<xsl:for-each select="./dc:identifier">
 				<dc:relation>
@@ -493,9 +498,8 @@
 		
 		<xsl:value-of select="$person/eterms:family-name"/>
 		
-		<xsl:text>,</xsl:text>
-		
 		<xsl:if test="$person/eterms:given-name != ''">
+			<xsl:text>, </xsl:text>
 			<xsl:value-of select="concat(substring($person/eterms:given-name, 1, 1), '.')"/>
 		</xsl:if>
 	</xsl:template>
