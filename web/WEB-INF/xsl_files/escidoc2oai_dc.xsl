@@ -425,7 +425,7 @@
 			<xsl:variable name="identifier3" select="./project:project-info/dc:identifier"/>
 			<xsl:if test="$identifier1 != '' and $identifier2 != '' $identifier3 != ''">
 				<dc:relation>
-					<xsl:variable name="relationString" select="concat('info:eu-repo/grantAgreement/', $identifer1, '/', $identifer2, '/', $indentifer3 )"/>
+					<xsl:variable name="relationString" select="concat('info:eu-repo/grantAgreement/', $identifier1, '/', $identifier2, '/', $identifier3 )"/>
 					<xsl:value-of select="$relationString"/>
 				</dc:relation>
 			</xsl:if>
